@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find trusted local and official help in Liberty County, Georgia for food, housing, health, work, family needs, animals, safety, and more.">
+  <meta name="theme-color" content="#0b2d2b">
+  <link rel="canonical" href="https://singlestepforward.com/find-help.html">
+  <title>Find Help | Single Step Forward</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/resources.js" defer></script>
+  <script src="assets/guide.js" defer></script>
+</head>
+<body class="finder-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="urgent-bar" role="region" aria-label="Emergency information">
+    <div class="shell urgent-inner">
+      <p><strong>Immediate danger?</strong> Call <a href="tel:911">911</a>.</p>
+      <p>Mental health or suicide crisis? Call or text <a href="tel:988">988</a>.</p>
+    </div>
+  </div>
+
+  <header class="site-header finder-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Single Step Forward home">
+        <img src="assets/brand-mark.svg" alt="" width="48" height="48">
+        <span><strong>Single Step Forward</strong><small>Liberty County, Georgia</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="#all-resources">Browse all</a>
+        <a class="button button-small" href="#guide">Ask Dawn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="finder-main">
+    <section class="finder-hero shell">
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> About Single Step Forward</a>
+      <div class="finder-title-row">
+        <h1>What do you need<br>help with?</h1>
+        <p>Use everyday words or browse by topic. You will get a short list of direct next steps—not a maze of search results.</p>
+      </div>
+    </section>
+
+    <section id="guide" class="shell finder-layout" aria-labelledby="guide-title">
+      <div class="guide-panel">
+        <div class="guide-panel-head">
+          <div class="guide-identity">
+            <span class="guide-avatar" aria-hidden="true"><img src="assets/dawn-guide.png" alt="" width="82" height="88"></span>
+            <div>
+              <h2 id="guide-title">Dawn’s next-step guide</h2>
+              <p>Friendly direction from a checked local directory.</p>
+            </div>
+          </div>
+          <span class="privacy-pill">Private on this device</span>
+        </div>
+
+        <p class="guide-question">Tell me what is going on.</p>
+        <p class="guide-help">You do not need to share your name, address, medical details, or anyone else’s private information.</p>
+        <form id="help-search" role="search">
+          <label class="sr-only" for="help-query">Describe the help you need</label>
+          <div class="guide-input-wrap">
+            <textarea id="help-query" name="help-query" rows="4" placeholder="Example: I’m behind on rent and worried about losing my apartment."></textarea>
+            <button class="button" type="submit">Find a next step <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+        <div class="guide-examples" aria-label="Example searches">
+          <span>Try:</span>
+          <button class="example-chip" type="button" data-query="I need groceries this week">Groceries this week</button>
+          <button class="example-chip" type="button" data-query="I need help updating my resume and finding work">Résumé and work</button>
+          <button class="example-chip" type="button" data-query="I need affordable dental or medical care">Medical or dental</button>
+          <button class="example-chip" type="button" data-query="I need help with my pet">Help with a pet</button>
+        </div>
+        <p class="guide-privacy">Prototype note: matching happens in this page. Nothing you type here is sent, saved, diagnosed, or used to determine eligibility.</p>
+      </div>
+
+      <aside class="urgent-cards" aria-label="Urgent help">
+        <a class="urgent-card" href="tel:911">
+          <span>Immediate danger</span>
+          <div><strong>Call 911</strong><p>For an active emergency, serious injury, fire, crime in progress, or immediate threat.</p></div>
+        </a>
+        <a class="urgent-card" href="tel:988">
+          <span>Mental health or suicide crisis</span>
+          <div><strong>Call or text 988</strong><p>Free, confidential crisis support is available 24 hours a day.</p></div>
+        </a>
+      </aside>
+    </section>
+
+    <div class="shell answer-panel" id="guide-answer" hidden role="status" aria-live="polite">
+      <span class="answer-mark" aria-hidden="true">D</span>
+      <div class="answer-copy">
+        <strong id="answer-title">Here are a few good places to start.</strong>
+        <p id="answer-text">I matched your words to the checked directory below.</p>
+      </div>
+      <button class="button button-quiet button-small" id="reset-guide" type="button">Start over</button>
+    </div>
+
+    <section id="all-resources" class="section shell directory-section" aria-labelledby="directory-title">
+      <div class="directory-head">
+        <div>
+          <p class="eyebrow"><span></span> Checked directory</p>
+          <h2 id="directory-title">Trusted places to start.</h2>
+        </div>
+        <div class="directory-actions">
+          <button class="button button-quiet" id="print-directory" type="button">Print this list</button>
+          <a class="button" href="#guide">Describe your situation</a>
+        </div>
+      </div>
+
+      <div class="filter-wrap">
+        <p class="filter-label">Browse by topic</p>
+        <div class="filter-list" id="filter-list" role="group" aria-label="Filter resources">
+          <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-filter="food" aria-pressed="false">Food</button>
+          <button class="filter-chip" type="button" data-filter="housing" aria-pressed="false">Housing & utilities</button>
+          <button class="filter-chip" type="button" data-filter="health" aria-pressed="false">Health</button>
+          <button class="filter-chip" type="button" data-filter="mental-health" aria-pressed="false">Mental health</button>
+          <button class="filter-chip" type="button" data-filter="safety" aria-pressed="false">Safety</button>
+          <button class="filter-chip" type="button" data-filter="work" aria-pressed="false">Work</button>
+          <button class="filter-chip" type="button" data-filter="education" aria-pressed="false">Education</button>
+          <button class="filter-chip" type="button" data-filter="family" aria-pressed="false">Family & daily life</button>
+          <button class="filter-chip" type="button" data-filter="animals" aria-pressed="false">Animals</button>
+          <button class="filter-chip" type="button" data-filter="recovery" aria-pressed="false">Recovery</button>
+          <button class="filter-chip" type="button" data-filter="veterans" aria-pressed="false">Military & veterans</button>
+          <button class="filter-chip" type="button" data-filter="tax" aria-pressed="false">Tax help</button>
+          <button class="filter-chip" type="button" data-filter="legal" aria-pressed="false">Legal help</button>
+          <button class="filter-chip" type="button" data-filter="transportation" aria-pressed="false">Transportation</button>
+          <button class="filter-chip" type="button" data-filter="weather" aria-pressed="false">Weather & preparedness</button>
+          <button class="filter-chip" type="button" data-filter="volunteer" aria-pressed="false">Volunteer</button>
+        </div>
+      </div>
+
+      <div class="results-meta">
+        <p id="results-count">Loading checked resources…</p>
+        <button class="clear-button" id="clear-filters" type="button" hidden>Clear search and filters</button>
+      </div>
+
+      <div class="resource-grid" id="resource-grid" aria-live="polite"></div>
+
+      <noscript>
+        <div class="no-results">
+          <h3>This directory needs JavaScript to filter.</h3>
+          <p>You can still start with Georgia 211 at <a href="tel:211">211</a>, Georgia Gateway at <a href="https://www.gateway.ga.gov/access/">gateway.ga.gov</a>, or the <a href="https://www.libertycountyga.com/Directory.aspx">Liberty County directory</a>. For crisis support, call or text <a href="tel:988">988</a>.</p>
+        </div>
+      </noscript>
+
+      <div class="public-note">
+        <article class="notice-card alerts">
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Use official county and National Weather Service pages for evacuation, severe weather, freeze, school, and public-safety updates.</p>
+          <div class="notice-links">
+            <a href="https://www.libertycountyga.gov/258/Alert-Liberty-Sign-Up-Information" target="_blank" rel="noopener noreferrer">Sign up for Alert Liberty ↗</a>
+            <a href="https://www.weather.gov/chs/forecast" target="_blank" rel="noopener noreferrer">NWS Charleston ↗</a>
+            <a href="https://www.ready.gov/" target="_blank" rel="noopener noreferrer">Prepare at Ready.gov ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams">
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://consumer.georgia.gov/" target="_blank" rel="noopener noreferrer">Georgia Consumer Protection ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="directory-disclaimer">
+        <p><strong>What “checked” means:</strong> the link, phone number, service area, and basic purpose were reviewed against the organization’s own website or an official public directory on September 8, 2026. It does not mean there is a current opening, appointment, bed, funding, or guarantee of eligibility. Call or visit the provider’s website to confirm current details.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-top">
+      <div class="brand footer-brand">
+        <img src="assets/brand-mark.svg" alt="" width="54" height="54">
+        <span><strong>Single Step Forward</strong><small>Local help, clearly connected.</small></span>
+      </div>
+      <a class="button button-light" href="#main">Back to the top <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-label">Emergency</p>
+        <a href="tel:911">Call 911</a>
+        <a href="tel:988">Call or text 988</a>
+        <a href="tel:211">Call 211</a>
+      </div>
+      <div>
+        <p class="footer-label">Project</p>
+        <a href="index.html#about">What this is</a>
+        <a href="index.html#standards">Our standards</a>
+        <a href="index.html#get-involved">Suggest a resource</a>
+      </div>
+      <div class="footer-fineprint">
+        <p><strong>This is a navigation guide, not a service provider.</strong> Single Step Forward is not an emergency service, medical provider, government agency, or eligibility decision-maker.</p>
+        <p>Prototype directory reviewed September 8, 2026. Always confirm current hours, requirements, and availability with the listed organization.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
