@@ -11,6 +11,7 @@
     return [
       "SINGLE STEP FORWARD — RESOURCE SUGGESTION",
       "",
+      "Local edition: " + (window.SSF_CURRENT_AREA?.label || "Not selected"),
       "Organization or resource: " + value("resource-name"),
       "Topic: " + value("resource-category"),
       "Area served: " + value("resource-area"),

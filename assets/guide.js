@@ -1,7 +1,11 @@
 (function () {
   "use strict";
 
-  const resources = Array.isArray(window.SSF_RESOURCES) ? window.SSF_RESOURCES : [];
+  const area = window.SSF_CURRENT_AREA || window.SSF_RESOURCE_AREAS?.liberty || {};
+  const resources = Array.isArray(area.resources)
+    ? area.resources
+    : (Array.isArray(window.SSF_RESOURCES) ? window.SSF_RESOURCES : []);
+  const routing = area.routing || {};
   const grid = document.querySelector("#resource-grid");
   const count = document.querySelector("#results-count");
   const filterList = document.querySelector("#filter-list");
@@ -158,7 +162,7 @@
       const empty = makeElement("div", "no-results");
       empty.append(
         makeElement("h3", "", "No close match yet."),
-        makeElement("p", "", "Try fewer words, choose a topic above, or call Georgia 211 for a person who can help search across services.")
+        makeElement("p", "", "Try fewer words, choose a topic above, or call 211 for a person who can help search across local services.")
       );
       empty.append(makeLink("Call 211", "tel:211", "button", false));
       grid.append(empty);
@@ -297,7 +301,7 @@
     const urgency = urgentIntent(cleanQuery);
     if (urgency === "emergency") {
       const emergencyResults = resources.filter((resource) =>
-        ["988-lifeline", "gcal", "tri-county"].includes(resource.id)
+        (routing.emergency || ["988-lifeline"]).includes(resource.id)
       );
       render(emergencyResults, "Urgent support options");
       showAnswer(
@@ -307,7 +311,7 @@
       );
     } else if (urgency === "suicide") {
       const crisisResults = resources.filter((resource) =>
-        ["988-lifeline", "gcal", "gateway-csb"].includes(resource.id)
+        (routing.suicide || ["988-lifeline"]).includes(resource.id)
       );
       render(crisisResults, "Immediate crisis support");
       showAnswer(
@@ -317,12 +321,12 @@
       );
     } else if (urgency === "violence") {
       const safetyResults = resources.filter((resource) =>
-        ["tri-county", "ga-legal-services", "gcal", "988-lifeline"].includes(resource.id)
+        (routing.violence || ["988-lifeline"]).includes(resource.id)
       );
       render(safetyResults, "Confidential safety options");
       showAnswer(
         "Your safety comes first.",
-        "Call 911 for immediate danger. Tri-County Protective Agency has a 24-hour confidential line at 912-368-9200; use a safe device if possible.",
+        routing.violenceText || "Call 911 for immediate danger. Use a safe device if possible when contacting a confidential support service.",
         true
       );
     } else {
@@ -342,12 +346,12 @@
         );
       } else {
         const startingPoints = resources.filter((resource) =>
-          ["ga-211", "georgia-gateway", "liberty-dfcs", "hinesville-library"].includes(resource.id)
+          (routing.fallback || []).includes(resource.id)
         );
         render(startingPoints, "Broad starting points");
         showAnswer(
           "I’m not seeing a close match yet.",
-          "Try fewer words, browse a topic, or call Georgia 211 for a person who can search across services.",
+          routing.fallbackText || "Try fewer words, browse a topic, or call 211 for a person who can search across local services.",
           false
         );
       }
