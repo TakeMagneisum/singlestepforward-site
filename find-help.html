@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Find trusted local and official help in Liberty County, Georgia for food, housing, health, work, family needs, animals, safety, and more.">
+  <meta name="description" content="Find trusted local and official help for food, housing, health, work, family needs, animals, safety, and more.">
   <meta name="theme-color" content="#0b2d2b">
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/resources.js" defer></script>
+  <script src="assets/area.js" defer></script>
   <script src="assets/guide.js" defer></script>
 </head>
 <body class="finder-page">
@@ -26,13 +27,24 @@
     <div class="shell nav-wrap">
       <a class="brand" href="index.html" aria-label="Single Step Forward home">
         <img src="assets/brand-mark.svg" alt="" width="48" height="48">
-        <span><strong>Single Step Forward</strong><small>Liberty County, Georgia</small></span>
+        <span><strong>Single Step Forward</strong><small data-area-label>Liberty County, Georgia</small></span>
       </a>
       <nav aria-label="Main navigation">
         <a href="index.html#about">About</a>
         <a href="#all-resources">Browse all</a>
         <a class="button button-small" href="#guide">Ask Dawn</a>
       </nav>
+    </div>
+    <div class="location-bar">
+      <div class="shell location-inner">
+        <label for="area-select-help"><span>Local edition</span>
+          <select id="area-select-help" data-area-select aria-label="Choose a local directory">
+            <option value="liberty">Liberty County, GA</option>
+            <option value="dallas">Dallas County, TX</option>
+          </select>
+        </label>
+        <p>Browsing <strong data-area-label>Liberty County, Georgia</strong> resources.</p>
+      </div>
     </div>
   </header>
 
@@ -41,7 +53,7 @@
       <a class="back-link" href="index.html"><span aria-hidden="true">←</span> About Single Step Forward</a>
       <div class="finder-title-row">
         <h1>What do you need<br>help with?</h1>
-        <p>Use everyday words or browse by topic. You will get a short list of direct next steps—not a maze of search results.</p>
+        <p>Use everyday words or browse by topic. Dawn will search the <span data-area-label>Liberty County, Georgia</span> edition for direct next steps—not a maze of results.</p>
       </div>
     </section>
 
@@ -143,12 +155,12 @@
       <noscript>
         <div class="no-results">
           <h3>This directory needs JavaScript to filter.</h3>
-          <p>You can still start with Georgia 211 at <a href="tel:211">211</a>, Georgia Gateway at <a href="https://www.gateway.ga.gov/access/">gateway.ga.gov</a>, or the <a href="https://www.libertycountyga.com/Directory.aspx">Liberty County directory</a>. For crisis support, call or text <a href="tel:988">988</a>.</p>
+          <p>You can still call <a href="tel:211">211</a> for local service referrals or call or text <a href="tel:988">988</a> for crisis support.</p>
         </div>
       </noscript>
 
       <div class="public-note">
-        <article class="notice-card alerts">
+        <article class="notice-card alerts" data-area-only="liberty">
           <p class="mini-label">Weather & public notices</p>
           <h2>Check the source before the storm.</h2>
           <p>This prototype does not show live alerts. Use official county and National Weather Service pages for evacuation, severe weather, freeze, school, and public-safety updates.</p>
@@ -158,7 +170,7 @@
             <a href="https://www.ready.gov/" target="_blank" rel="noopener noreferrer">Prepare at Ready.gov ↗</a>
           </div>
         </article>
-        <article class="notice-card scams">
+        <article class="notice-card scams" data-area-only="liberty">
           <p class="mini-label">Scam warning</p>
           <h2>Pause before you pay or share.</h2>
           <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
@@ -167,10 +179,29 @@
             <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
           </div>
         </article>
+        <article class="notice-card alerts" data-area-only="dallas" hidden>
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Dallas County contains several cities, so check both your municipality and the National Weather Service for severe weather, freeze, evacuation, and public-safety updates.</p>
+          <div class="notice-links">
+            <a href="https://www.dallascityhall.com/departments/officeemergencymanagement/Pages/Dallas-Alert.aspx" target="_blank" rel="noopener noreferrer">City of Dallas alerts ↗</a>
+            <a href="https://www.weather.gov/fwd/" target="_blank" rel="noopener noreferrer">NWS Fort Worth/Dallas ↗</a>
+            <a href="https://www.ready.gov/" target="_blank" rel="noopener noreferrer">Prepare at Ready.gov ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="dallas" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://www.texasattorneygeneral.gov/consumer-protection" target="_blank" rel="noopener noreferrer">Texas Consumer Protection ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
       </div>
 
       <div class="directory-disclaimer">
-        <p><strong>What “checked” means:</strong> the link, phone number, service area, and basic purpose were reviewed against the organization’s own website or an official public directory on September 8, 2026. It does not mean there is a current opening, appointment, bed, funding, or guarantee of eligibility. Call or visit the provider’s website to confirm current details.</p>
+        <p><strong>What “checked” means:</strong> the link, phone number, service area, and basic purpose were reviewed against the organization’s own website or an official public directory on <span data-area-review-date>September 8, 2026</span>. It does not mean there is a current opening, appointment, bed, funding, or guarantee of eligibility. Call or visit the provider’s website to confirm current details.</p>
       </div>
     </section>
   </main>
@@ -198,7 +229,7 @@
       </div>
       <div class="footer-fineprint">
         <p><strong>This is a navigation guide, not a service provider.</strong> Single Step Forward is not an emergency service, medical provider, government agency, or eligibility decision-maker.</p>
-        <p>Prototype directory reviewed September 8, 2026. Always confirm current hours, requirements, and availability with the listed organization.</p>
+        <p><span data-area-label>Liberty County, Georgia</span> prototype directory reviewed <span data-area-review-date>September 8, 2026</span>. Always confirm current hours, requirements, and availability with the listed organization.</p>
       </div>
     </div>
   </footer>

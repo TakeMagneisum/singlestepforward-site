@@ -6,4 +6,10 @@
   <url>
     <loc>https://singlestepforward.com/find-help.html</loc>
   </url>
+  <url>
+    <loc>https://singlestepforward.com/?area=dallas</loc>
+  </url>
+  <url>
+    <loc>https://singlestepforward.com/find-help.html?area=dallas</loc>
+  </url>
 </urlset>

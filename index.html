@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Single Step Forward helps people in Liberty County, Georgia find clear paths to trusted local services, official applications, crisis contacts, and practical support.">
+  <meta name="description" content="Single Step Forward helps people find clear paths to trusted local services, official applications, crisis contacts, and practical support.">
   <meta name="theme-color" content="#0b2d2b">
   <meta property="og:title" content="Single Step Forward | Find the next right step">
-  <meta property="og:description" content="Local help, clearly connected for Liberty County, Georgia.">
+  <meta property="og:description" content="Local help, clearly connected.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://singlestepforward.com/">
   <link rel="canonical" href="https://singlestepforward.com/">
-  <title>Single Step Forward | Liberty County, Georgia</title>
+  <title>Single Step Forward | Local help, clearly connected</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/resources.js" defer></script>
+  <script src="assets/area.js" defer></script>
   <script src="assets/site.js" defer></script>
 </head>
 <body class="home-page">
@@ -29,7 +31,7 @@
     <div class="shell nav-wrap">
       <a class="brand" href="index.html" aria-label="Single Step Forward home">
         <img src="assets/brand-mark.svg" alt="" width="52" height="52">
-        <span><strong>Single Step Forward</strong><small>Liberty County, Georgia</small></span>
+        <span><strong>Single Step Forward</strong><small data-area-label>Liberty County, Georgia</small></span>
       </a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
@@ -38,6 +40,17 @@
         <a class="button button-small" href="find-help.html">Find help</a>
       </nav>
     </div>
+    <div class="location-bar">
+      <div class="shell location-inner">
+        <label for="area-select-home"><span>Local edition</span>
+          <select id="area-select-home" data-area-select aria-label="Choose a local directory">
+            <option value="liberty">Liberty County, GA</option>
+            <option value="dallas">Dallas County, TX</option>
+          </select>
+        </label>
+        <p>Showing checked local pathways for <strong data-area-label>Liberty County, Georgia</strong>.</p>
+      </div>
+    </div>
   </header>
 
   <main id="main">
@@ -45,7 +58,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span></span> Practical help. Clear direction.</p>
         <h1 id="hero-title">Find the next<br><em>right step.</em></h1>
-        <p class="hero-lede">One calm place to find trusted local services, official applications, crisis contacts, community programs, and practical guidance across Liberty County.</p>
+        <p class="hero-lede">One calm place to find trusted local services, official applications, crisis contacts, community programs, and practical guidance across <span data-area-name>Liberty County</span>.</p>
         <div class="hero-actions">
           <a class="button" href="find-help.html">Tell us what you need <span aria-hidden="true">→</span></a>
           <a class="text-link" href="#about">See what this is <span aria-hidden="true">↓</span></a>
@@ -216,7 +229,7 @@
           <h2>Local enough to be useful.<br>Simple enough to grow.</h2>
         </div>
         <div class="roadmap-copy">
-          <p>Liberty County is the starting point. The long-term model is a dependable front door for each community: local service knowledge, official pathways, timely public warnings, and human-friendly guidance in one place.</p>
+          <p>Liberty County, Georgia and Dallas County, Texas are the first local editions. The long-term model is a dependable front door for each community: local service knowledge, official pathways, timely public warnings, and human-friendly guidance in one place.</p>
           <p>A future secure assistant can help people navigate forms and choices. It should never diagnose, decide eligibility, impersonate an agency, or replace emergency and professional services.</p>
         </div>
       </div>
@@ -292,8 +305,8 @@
         <a href="find-help.html?need=mental-health">Mental health</a>
       </div>
       <div class="footer-fineprint">
-        <p><strong>Prototype for Liberty County, Georgia.</strong> This directory is not an emergency service or government agency. It does not guarantee eligibility or availability.</p>
-        <p>Directory reviewed September 8, 2026. Always confirm current hours and requirements with the listed organization.</p>
+        <p><strong>Prototype for <span data-area-label>Liberty County, Georgia</span>.</strong> This directory is not an emergency service or government agency. It does not guarantee eligibility or availability.</p>
+        <p>Directory reviewed <span data-area-review-date>September 8, 2026</span>. Always confirm current hours and requirements with the listed organization.</p>
       </div>
     </div>
   </footer>

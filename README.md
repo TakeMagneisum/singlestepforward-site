@@ -1,12 +1,13 @@
 # Single Step Forward
 
-A two-page, privacy-first community resource prototype for Liberty County, Georgia.
+A two-page, privacy-first community resource prototype with selectable local editions for Liberty County, Georgia and Dallas County, Texas.
 
 ## What is included
 
 - index.html — brand, mission, operating standards, and resource-suggestion flow
 - find-help.html — working next-step guide and filterable local resource directory
-- assets/resources.js — the checked resource dataset
+- assets/resources.js — the checked Liberty County and Dallas County resource datasets
+- assets/area.js — local-edition selection, saved preference, dynamic labels, and area-aware links
 - assets/guide.js — private, client-side matching and urgent-language routing
 - assets/site.js — local suggestion-note generator
 - CNAME — custom-domain configuration for singlestepforward.com
@@ -30,12 +31,14 @@ If you are not ready to use singlestepforward.com, remove the CNAME file before 
 
 ## Updating the directory
 
-Edit the objects in assets/resources.js. Each listing includes categories, search keywords, source type, scope, summary, direct next step, official URL, and optional phone/address.
+Edit the appropriate county array in assets/resources.js. Each listing includes categories, search keywords, source type, scope, summary, direct next step, official URL, and optional phone/address.
 
 Re-check time-sensitive information regularly and update both:
 
-- window.SSF_RESOURCE_VERSION in assets/resources.js
-- the review date in the two HTML footers
+- the edition's `reviewed` value in `window.SSF_RESOURCE_AREAS`
+- the linked source, phone, scope, and next-step language for every changed listing
+
+The selector uses `?area=liberty` and `?area=dallas`, remembers the last edition in the visitor's browser, and carries the selection between the landing page and directory.
 
 ## Adding a real AI assistant later
 
