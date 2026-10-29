@@ -145,7 +145,7 @@
     const checked = makeElement(
       "p",
       "resource-check",
-      "Checked " + (window.SSF_RESOURCE_VERSION || "recently") + " · Confirm current hours, requirements, and availability."
+      "Source checked " + (window.SSF_RESOURCE_VERSION || "recently") + " · Confirm current hours, requirements, and availability."
     );
 
     card.append(sourceRow, heading, summary, next);
@@ -173,7 +173,7 @@
     const fragment = document.createDocumentFragment();
     sorted.forEach((resource) => fragment.append(resourceCard(resource)));
     grid.append(fragment);
-    count.textContent = message || sorted.length + " checked resources";
+    count.textContent = message || sorted.length + " source-checked resources";
   }
 
   function updateFilterButtons(category) {
@@ -191,8 +191,8 @@
       : resources.filter((resource) => resource.categories.includes(resolved));
 
     const message = resolved === "all"
-      ? filtered.length + " checked resources · local and urgent options are shown first"
-      : filtered.length + " checked resources for " + categoryLabels[resolved];
+      ? filtered.length + " source-checked resources · local and urgent options are shown first"
+      : filtered.length + " source-checked resources for " + categoryLabels[resolved];
     render(filtered, message);
 
     clearButton.hidden = resolved === "all";
@@ -213,36 +213,7 @@
     }
   }
 
-  function urgentIntent(query) {
-    const q = normalize(query);
-    const words = new Set(q.split(" "));
-    const emergency = [
-      "cant breathe", "cannot breathe", "chest pain", "unconscious", "not breathing",
-      "overdose", "overdosing", "bleeding badly", "severe bleeding", "gun", "weapon",
-      "fire", "shots fired", "stabbed", "crime in progress", "immediate danger",
-      "life threatening", "being attacked", "breaking in"
-    ].some((phrase) => containsTerm(q, phrase));
-
-    const suicide = [
-      "suicide", "suicidal", "kill myself", "want to die", "hurt myself", "self harm",
-      "end my life", "dont want to live", "cant go on", "someone wants to die",
-      "someone is suicidal"
-    ].some((phrase) => containsTerm(q, phrase));
-
-    const violence = [
-      "domestic violence", "partner hurting", "abuse at home", "unsafe at home",
-      "being abused", "protective order", "escape my partner", "hit me", "being hit"
-    ].some((phrase) => containsTerm(q, phrase)) ||
-      (
-        (words.has("partner") || words.has("husband") || words.has("wife")) &&
-        (words.has("hurt") || words.has("hurting") || words.has("abuse") || words.has("abusing"))
-      );
-
-    if (emergency) return "emergency";
-    if (suicide) return "suicide";
-    if (violence) return "violence";
-    return "";
-  }
+  const urgentIntent = window.SSF_URGENT_INTENT || (() => "");
 
   function scoreResource(resource, rawQuery) {
     const query = normalize(rawQuery);
@@ -287,6 +258,11 @@
     answerPanel.classList.toggle("urgent-answer", Boolean(urgent));
   }
 
+  function resourcesInRouteOrder(ids) {
+    const byId = new Map(resources.map((resource) => [resource.id, resource]));
+    return (ids || []).map((id) => byId.get(id)).filter(Boolean);
+  }
+
   function search(query) {
     const cleanQuery = query.trim();
     if (!cleanQuery) {
@@ -300,30 +276,24 @@
 
     const urgency = urgentIntent(cleanQuery);
     if (urgency === "emergency") {
-      const emergencyResults = resources.filter((resource) =>
-        (routing.emergency || ["988-lifeline"]).includes(resource.id)
-      );
-      render(emergencyResults, "Urgent support options");
+      const emergencyResults = resourcesInRouteOrder(routing.emergency || ["988-lifeline"]);
+      render(emergencyResults, "Urgent support options", true);
       showAnswer(
         "Call 911 now for an immediate or life-threatening emergency.",
         "Do not wait for a website response. If it is safe to do so, move away from danger and call 911.",
         true
       );
     } else if (urgency === "suicide") {
-      const crisisResults = resources.filter((resource) =>
-        (routing.suicide || ["988-lifeline"]).includes(resource.id)
-      );
-      render(crisisResults, "Immediate crisis support");
+      const crisisResults = resourcesInRouteOrder(routing.suicide || ["988-lifeline"]);
+      render(crisisResults, "Immediate crisis support", true);
       showAnswer(
         "Please call or text 988 now.",
         "You can reach a crisis counselor 24/7. If someone is in immediate physical danger, call 911.",
         true
       );
     } else if (urgency === "violence") {
-      const safetyResults = resources.filter((resource) =>
-        (routing.violence || ["988-lifeline"]).includes(resource.id)
-      );
-      render(safetyResults, "Confidential safety options");
+      const safetyResults = resourcesInRouteOrder(routing.violence || ["988-lifeline"]);
+      render(safetyResults, "Confidential safety options", true);
       showAnswer(
         "Your safety comes first.",
         routing.violenceText || "Call 911 for immediate danger. Use a safe device if possible when contacting a confidential support service.",
@@ -341,7 +311,7 @@
         render(scored, scored.length + " likely matches for your situation", true);
         showAnswer(
           "Here are a few good places to start.",
-          "I matched your words to the checked directory. Start with the first option that fits, and confirm details with the provider.",
+          "Dawn matched your words to the source-checked directory. She cannot judge your situation. Start with the first option that fits, and confirm details with the provider.",
           false
         );
       } else {

@@ -2073,6 +2073,114 @@ window.SSF_RESOURCE_AREAS = {
       violenceText: "Call 911 for immediate danger. The Domestic Abuse Council of Volusia County has a confidential 24-hour hotline at 386-255-2102; use a safe device if possible.",
       fallbackText: "Try fewer words, browse a topic, or call Volusia-Flagler 211 for a person who can search across local services."
     }
+  },
+  denver: {
+    id: "denver",
+    name: "Denver County",
+    state: "Colorado",
+    stateCode: "CO",
+    label: "Denver County, Colorado",
+    shortLabel: "Denver County, CO",
+    reviewed: "October 29, 2026",
+    resources: window.SSF_DENVER_RESOURCES,
+    routing: {
+      emergency: ["988-lifeline", "co-crisis-services", "safehouse-denver"],
+      suicide: ["988-lifeline", "co-crisis-services"],
+      violence: ["safehouse-denver", "co-legal-services", "988-lifeline"],
+      fallback: ["co-211", "co-peak", "denver-human-services", "denver-libraries"],
+      violenceText: "Call 911 for immediate danger. SafeHouse Denver has a free, confidential 24-hour crisis line at 303-318-9989; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 Colorado for a person who can search across local services."
+    }
+  },
+  elpaso: {
+    id: "elpaso",
+    name: "El Paso County",
+    state: "Colorado",
+    stateCode: "CO",
+    label: "El Paso County, Colorado",
+    shortLabel: "El Paso County, CO",
+    reviewed: "October 29, 2026",
+    resources: window.SSF_EL_PASO_RESOURCES,
+    routing: {
+      emergency: ["988-lifeline", "diversus-lighthouse", "tessa"],
+      suicide: ["988-lifeline", "diversus-lighthouse", "co-crisis-services"],
+      violence: ["tessa", "co-legal-services", "988-lifeline"],
+      fallback: ["co-211", "co-peak", "elpaso-dhs", "pikes-peak-library"],
+      violenceText: "Call 911 for immediate danger. TESSA has a free, confidential 24/7 Safeline at 719-633-3819; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 Colorado for a person who can search across local services."
+    }
+  },
+  plymouth: {
+    id: "plymouth",
+    name: "Plymouth County",
+    state: "Massachusetts",
+    stateCode: "MA",
+    label: "Plymouth County, Massachusetts",
+    shortLabel: "Plymouth County, MA",
+    reviewed: "October 29, 2026",
+    resources: window.SSF_PLYMOUTH_RESOURCES,
+    routing: {
+      emergency: ["988-lifeline", "ma-bhhl", "south-shore-resource-advocacy"],
+      suicide: ["988-lifeline", "ma-bhhl"],
+      violence: ["south-shore-resource-advocacy", "ma-safelink", "south-coastal-legal", "988-lifeline"],
+      fallback: ["ma-211", "bamsi-helpline", "ma-dta-connect", "ocln"],
+      violenceText: "Call 911 for immediate danger. The South Shore Resource and Advocacy Center has a confidential 24-hour hotline at 1-888-746-2664; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call Mass 211 for a person who can search across local services."
+    }
+  },
+  erie: {
+    id: "erie",
+    name: "Erie County",
+    state: "New York",
+    stateCode: "NY",
+    label: "Erie County, New York",
+    shortLabel: "Erie County, NY",
+    reviewed: "October 29, 2026",
+    resources: window.SSF_ERIE_RESOURCES,
+    routing: {
+      emergency: ["988-lifeline", "crisis-services-erie", "haven-house-erie"],
+      suicide: ["988-lifeline", "crisis-services-erie"],
+      violence: ["haven-house-erie", "crisis-services-erie", "neighborhood-legal-services-wny", "988-lifeline"],
+      fallback: ["211-wny", "ny-mybenefits", "erie-dss", "buffalo-erie-library"],
+      violenceText: "Call 911 for immediate danger. Haven House has a confidential 24-hour hotline at 716-884-6000; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 WNY for a person who can search across local services."
+    }
+  },
+  madison: {
+    id: "madison",
+    name: "Madison County",
+    state: "New York",
+    stateCode: "NY",
+    label: "Madison County, New York",
+    shortLabel: "Madison County, NY",
+    reviewed: "October 29, 2026",
+    resources: window.SSF_MADISON_RESOURCES,
+    routing: {
+      emergency: ["988-lifeline", "madison-mental-health", "help-restore-hope"],
+      suicide: ["988-lifeline", "madison-mental-health"],
+      violence: ["help-restore-hope", "legal-aid-midny", "ny-dv-hotline", "988-lifeline"],
+      fallback: ["211-cny", "ny-mybenefits", "madison-dss", "midyork-libraries"],
+      violenceText: "Call 911 for immediate danger. Help Restore Hope Center has a confidential 24-hour safeline at 1-855-966-9723; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 CNY for a person who can search across local services."
+    }
+  },
+  plainfield: {
+    id: "plainfield",
+    name: "Plainfield",
+    state: "Illinois",
+    stateCode: "IL",
+    label: "Plainfield, Illinois",
+    shortLabel: "Plainfield, IL",
+    reviewed: "October 29, 2026",
+    resources: window.SSF_PLAINFIELD_RESOURCES,
+    routing: {
+      emergency: ["988-lifeline", "will-behavioral", "guardian-angel"],
+      suicide: ["988-lifeline", "will-behavioral", "kendall-health"],
+      violence: ["guardian-angel", "il-dv-hotline", "prairie-state-legal", "988-lifeline"],
+      fallback: ["il-211", "il-abe", "plainfield-township-assistance", "plainfield-library"],
+      violenceText: "Call 911 for immediate danger. Guardian Angel has 24-hour confidential domestic-violence support at 815-729-1228 and sexual-assault support at 815-730-8984; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 Illinois. Plainfield spans Will and Kendall counties, so confirm the county tied to your home address."
+    }
   }
 };
 
