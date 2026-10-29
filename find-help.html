@@ -8,10 +8,15 @@
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261029">
-  <script src="assets/resources.js?v=20261029" defer></script>
-  <script src="assets/area.js?v=20261029" defer></script>
-  <script src="assets/guide.js?v=20261029" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261029-4">
+  <script src="assets/colorado-resources.js?v=20261029-4" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261029-4" defer></script>
+  <script src="assets/new-york-resources.js?v=20261029-4" defer></script>
+  <script src="assets/illinois-resources.js?v=20261029-4" defer></script>
+  <script src="assets/resources.js?v=20261029-4" defer></script>
+  <script src="assets/area.js?v=20261029-4" defer></script>
+  <script src="assets/urgent.js?v=20261029-4" defer></script>
+  <script src="assets/guide.js?v=20261029-4" defer></script>
 </head>
 <body class="finder-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -43,6 +48,12 @@
             <option value="dallas">Dallas County, TX</option>
             <option value="wake">Wake County, NC</option>
             <option value="volusia">Volusia County, FL</option>
+            <option value="denver">Denver County, CO</option>
+            <option value="elpaso">El Paso County, CO</option>
+            <option value="plymouth">Plymouth County, MA</option>
+            <option value="erie">Erie County, NY</option>
+            <option value="madison">Madison County, NY</option>
+            <option value="plainfield">Plainfield, IL</option>
           </select>
         </label>
         <p>Browsing <strong data-area-label>Liberty County, Georgia</strong> resources.</p>
@@ -66,7 +77,7 @@
             <span class="guide-avatar" aria-hidden="true"><img src="assets/dawn-guide.png" alt="" width="82" height="88"></span>
             <div>
               <h2 id="guide-title">Dawn’s next-step guide</h2>
-              <p>Friendly direction from a checked local directory.</p>
+              <p>Friendly direction from a source-checked local directory.</p>
             </div>
           </div>
           <span class="privacy-pill">Private on this device</span>
@@ -88,7 +99,7 @@
           <button class="example-chip" type="button" data-query="I need affordable dental or medical care">Medical or dental</button>
           <button class="example-chip" type="button" data-query="I need help with my pet">Help with a pet</button>
         </div>
-        <p class="guide-privacy">Prototype note: matching happens in this page. Nothing you type here is sent, saved, diagnosed, or used to determine eligibility.</p>
+        <p class="guide-privacy">Dawn matches your words to listings; she cannot judge your situation. What you type stays on this page and is not sent or saved. Your selected local edition is remembered in this browser so it remains selected next time.</p>
       </div>
 
       <aside class="urgent-cards" aria-label="Urgent help">
@@ -107,7 +118,7 @@
       <span class="answer-mark" aria-hidden="true">D</span>
       <div class="answer-copy">
         <strong id="answer-title">Here are a few good places to start.</strong>
-        <p id="answer-text">I matched your words to the checked directory below.</p>
+        <p id="answer-text">Dawn matched your words to the source-checked directory below.</p>
       </div>
       <button class="button button-quiet button-small" id="reset-guide" type="button">Start over</button>
     </div>
@@ -115,7 +126,7 @@
     <section id="all-resources" class="section shell directory-section" aria-labelledby="directory-title">
       <div class="directory-head">
         <div>
-          <p class="eyebrow"><span></span> Checked directory</p>
+          <p class="eyebrow"><span></span> Source-checked directory</p>
           <h2 id="directory-title">Trusted places to start.</h2>
         </div>
         <div class="directory-actions">
@@ -148,7 +159,7 @@
       </div>
 
       <div class="results-meta">
-        <p id="results-count">Loading checked resources…</p>
+        <p id="results-count">Loading source-checked resources…</p>
         <button class="clear-button" id="clear-filters" type="button" hidden>Clear search and filters</button>
       </div>
 
@@ -238,10 +249,125 @@
             <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
           </div>
         </article>
+        <article class="notice-card alerts" data-area-only="denver" hidden>
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Keep Wireless Emergency Alerts enabled and use official Denver and National Weather Service sources for wildfire, snow, severe weather, flooding, extreme heat, evacuation, and public-safety updates.</p>
+          <div class="notice-links">
+            <a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Office-of-Emergency-Management" target="_blank" rel="noopener noreferrer">Denver emergency information ↗</a>
+            <a href="https://www.weather.gov/bou/" target="_blank" rel="noopener noreferrer">NWS Denver/Boulder ↗</a>
+            <a href="https://dhsem.colorado.gov/readyco" target="_blank" rel="noopener noreferrer">Prepare with ReadyColorado ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="denver" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://coag.gov/protecting-consumers/" target="_blank" rel="noopener noreferrer">Colorado Consumer Protection ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
+        <article class="notice-card alerts" data-area-only="elpaso" hidden>
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Register for Peak Alerts and use official emergency-management and National Weather Service sources for wildfire, flash flooding, snow, severe weather, evacuation, and public-safety updates.</p>
+          <div class="notice-links">
+            <a href="https://www.elpasoteller911.org/peak-alerts" target="_blank" rel="noopener noreferrer">Sign up for Peak Alerts ↗</a>
+            <a href="https://www.weather.gov/pub/" target="_blank" rel="noopener noreferrer">NWS Pueblo ↗</a>
+            <a href="https://www.elpasoco.com/ready/" target="_blank" rel="noopener noreferrer">Prepare with EPC Ready ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="elpaso" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://coag.gov/protecting-consumers/" target="_blank" rel="noopener noreferrer">Colorado Consumer Protection ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
+        <article class="notice-card alerts" data-area-only="plymouth" hidden>
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Plymouth County includes many municipalities, so check your town’s notices as well as state and National Weather Service sources for coastal flooding, hurricanes, winter weather, extreme heat, road conditions, and local emergencies.</p>
+          <div class="notice-links">
+            <a href="https://www.mass.gov/alerts" target="_blank" rel="noopener noreferrer">Massachusetts public alerts ↗</a>
+            <a href="https://www.weather.gov/box/" target="_blank" rel="noopener noreferrer">NWS Boston/Norton ↗</a>
+            <a href="https://www.mass.gov/info-details/be-informed-and-receive-emergency-alerts" target="_blank" rel="noopener noreferrer">Choose local alert sources ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="plymouth" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://www.mass.gov/orgs/office-of-consumer-affairs-and-business-regulation" target="_blank" rel="noopener noreferrer">Massachusetts Consumer Affairs ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
+        <article class="notice-card alerts" data-area-only="erie" hidden>
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Register for county and municipal notices, and use the National Weather Service for lake-effect snow, severe weather, flooding, extreme heat, road closures, boil-water notices, and public-safety updates.</p>
+          <div class="notice-links">
+            <a href="https://www3.erie.gov/dhses/alert-systems-erie-county" target="_blank" rel="noopener noreferrer">ReadyErie and local alert systems ↗</a>
+            <a href="https://www.weather.gov/buf/" target="_blank" rel="noopener noreferrer">NWS Buffalo ↗</a>
+            <a href="https://alert.ny.gov/" target="_blank" rel="noopener noreferrer">Enroll in NY-Alert ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="erie" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://ag.ny.gov/resources/individuals/consumer-issues" target="_blank" rel="noopener noreferrer">New York consumer resources ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
+        <article class="notice-card alerts" data-area-only="madison" hidden>
+          <p class="mini-label">Weather & public notices</p>
+          <h2>Check the source before the storm.</h2>
+          <p>This prototype does not show live alerts. Enroll for county notifications and use the National Weather Service for snow, ice, flooding, severe thunderstorms, road conditions, evacuation, and other public-safety updates.</p>
+          <div class="notice-links">
+            <a href="https://www.madisoncounty.ny.gov/1984/Receive-Emergency-Notification" target="_blank" rel="noopener noreferrer">Madison County notifications ↗</a>
+            <a href="https://www.weather.gov/bgm/" target="_blank" rel="noopener noreferrer">NWS Binghamton ↗</a>
+            <a href="https://alert.ny.gov/" target="_blank" rel="noopener noreferrer">Enroll in NY-Alert ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="madison" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://ag.ny.gov/resources/individuals/consumer-issues" target="_blank" rel="noopener noreferrer">New York consumer resources ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
+        <article class="notice-card alerts" data-area-only="plainfield" hidden>
+          <p class="mini-label">County line & public notices</p>
+          <h2>Check your county before you apply.</h2>
+          <p>Plainfield includes addresses in Will and Kendall counties. County programs can have different eligibility rules, intake offices, transit, veteran services, and alert systems. Confirm the county tied to your home address before applying.</p>
+          <div class="notice-links">
+            <a href="https://www.willcountyema.org/alerts" target="_blank" rel="noopener noreferrer">Will County alerts ↗</a>
+            <a href="https://www.kendallcountyil.gov/departments/other-agencies/kencom/emergency-notification" target="_blank" rel="noopener noreferrer">Kendall County alerts ↗</a>
+            <a href="https://www.weather.gov/lot/" target="_blank" rel="noopener noreferrer">NWS Chicago ↗</a>
+          </div>
+        </article>
+        <article class="notice-card scams" data-area-only="plainfield" hidden>
+          <p class="mini-label">Scam warning</p>
+          <h2>Pause before you pay or share.</h2>
+          <p>Government agencies and legitimate aid programs should not require gift cards, cryptocurrency, wire transfers, or your password to release benefits. Use a phone number from an official website—not one from an unexpected message.</p>
+          <div class="notice-links">
+            <a href="https://illinoisattorneygeneral.gov/consumer-protection/" target="_blank" rel="noopener noreferrer">Illinois Consumer Protection ↗</a>
+            <a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener noreferrer">Report fraud to the FTC ↗</a>
+          </div>
+        </article>
       </div>
 
       <div class="directory-disclaimer">
-        <p><strong>What “checked” means:</strong> the link, phone number, service area, and basic purpose were reviewed against the organization’s own website or an official public directory on <span data-area-review-date>September 8, 2026</span>. It does not mean there is a current opening, appointment, bed, funding, or guarantee of eligibility. Call or visit the provider’s website to confirm current details.</p>
+        <p><strong>Pilot review status:</strong> the link, phone number, service area, and basic purpose were source checked against the organization’s own website or an official public directory on <span data-area-review-date>September 8, 2026</span>. Local reviewer confirmation is still pending unless a listing says otherwise. A source check does not mean there is a current opening, appointment, bed, funding, or guarantee of eligibility.</p>
+        <p><strong>Why not just 211?</strong> This directory links to 211 and also surfaces concrete first actions and official sources. Call or visit the provider’s website to confirm current details.</p>
       </div>
     </section>
   </main>
@@ -269,7 +395,7 @@
       </div>
       <div class="footer-fineprint">
         <p><strong>This is a navigation guide, not a service provider.</strong> Single Step Forward is not an emergency service, medical provider, government agency, or eligibility decision-maker.</p>
-        <p><span data-area-label>Liberty County, Georgia</span> prototype directory reviewed <span data-area-review-date>September 8, 2026</span>. Always confirm current hours, requirements, and availability with the listed organization.</p>
+        <p><span data-area-label>Liberty County, Georgia</span> sources checked <span data-area-review-date>September 8, 2026</span>; local reviewer confirmation is still pending. Always confirm current hours, requirements, and availability with the listed organization.</p>
       </div>
     </div>
   </footer>
