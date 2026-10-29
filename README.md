@@ -1,12 +1,12 @@
 # Single Step Forward
 
-A two-page, privacy-first community resource prototype with selectable local editions for Liberty County, Georgia and Dallas County, Texas.
+A two-page, privacy-first community resource prototype with selectable local editions for Liberty County, Georgia; Dallas County, Texas; Wake County, North Carolina; and Volusia County, Florida.
 
 ## What is included
 
 - index.html — brand, mission, operating standards, and resource-suggestion flow
 - find-help.html — working next-step guide and filterable local resource directory
-- assets/resources.js — the checked Liberty County and Dallas County resource datasets
+- assets/resources.js — the checked Liberty, Dallas, Wake, and Volusia County resource datasets
 - assets/area.js — local-edition selection, saved preference, dynamic labels, and area-aware links
 - assets/guide.js — private, client-side matching and urgent-language routing
 - assets/site.js — local suggestion-note generator
@@ -38,7 +38,7 @@ Re-check time-sensitive information regularly and update both:
 - the edition's `reviewed` value in `window.SSF_RESOURCE_AREAS`
 - the linked source, phone, scope, and next-step language for every changed listing
 
-The selector uses `?area=liberty` and `?area=dallas`, remembers the last edition in the visitor's browser, and carries the selection between the landing page and directory.
+The selector uses `?area=liberty`, `?area=dallas`, `?area=wake`, and `?area=volusia`, remembers the last edition in the visitor's browser, and carries the selection between the landing page and directory.
 
 ## Adding a real AI assistant later
 
