@@ -154,9 +154,9 @@
     return card;
   }
 
-  function render(list, message) {
+  function render(list, message, preserveOrder) {
     grid.replaceChildren();
-    const sorted = sortResources(list);
+    const sorted = preserveOrder ? [...list] : sortResources(list);
 
     if (!sorted.length) {
       const empty = makeElement("div", "no-results");
@@ -338,7 +338,7 @@
         .map((item) => item.resource);
 
       if (scored.length) {
-        render(scored, scored.length + " likely matches for your situation");
+        render(scored, scored.length + " likely matches for your situation", true);
         showAnswer(
           "Here are a few good places to start.",
           "I matched your words to the checked directory. Start with the first option that fits, and confirm details with the provider.",
