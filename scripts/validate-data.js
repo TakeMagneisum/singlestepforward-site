@@ -30,6 +30,77 @@ function loadDirectory() {
   return context.window.SSF_RESOURCE_AREAS;
 }
 
+function loadDiscovery() {
+  const context = vm.createContext({ window: {} });
+  vm.runInContext(
+    fs.readFileSync(path.join(root, "assets/discovery-data.js"), "utf8"),
+    context,
+    { filename: "assets/discovery-data.js" }
+  );
+  return {
+    groups: context.window.SSF_REVIEWED_ZIP_GROUPS,
+    categories: context.window.SSF_DISCOVERY_CATEGORIES
+  };
+}
+
+function validateDiscovery(discovery, areas) {
+  const groups = Array.isArray(discovery.groups) ? discovery.groups : [];
+  const categories = Array.isArray(discovery.categories) ? discovery.categories : [];
+  const areaIds = new Set(Object.keys(areas || {}));
+  const zipOwners = new Map();
+  const categoryIds = new Set();
+
+  if (groups.length !== areaIds.size) {
+    fail("Discovery ZIP groups must match all 10 reviewed local guides.");
+  }
+
+  groups.forEach((group, groupIndex) => {
+    const label = "Discovery ZIP group " + groupIndex;
+    if (!areaIds.has(group.areaId)) fail(label + ": unknown areaId " + group.areaId + ".");
+    if (!group.label) fail(label + ": label is required.");
+    if (!Array.isArray(group.zips) || !group.zips.length) fail(label + ": ZIP list is missing.");
+
+    (group.zips || []).forEach((zip) => {
+      if (!/^\d{5}$/.test(zip)) fail(label + ": malformed ZIP " + zip + ".");
+      if (zipOwners.has(zip)) {
+        fail("Discovery ZIP " + zip + " is assigned to both " + zipOwners.get(zip) + " and " + group.areaId + ".");
+      } else {
+        zipOwners.set(zip, group.areaId);
+      }
+    });
+  });
+
+  if (zipOwners.get("80202") !== "denver") fail("ZIP regression: 80202 must suggest the Denver guide.");
+  if (zipOwners.get("60544") !== "plainfield") fail("ZIP regression: 60544 must suggest the Plainfield guide.");
+  if (zipOwners.has("99999")) fail("ZIP regression: 99999 must remain an unmatched fallback example.");
+
+  if (categories.length < 11) fail("Universal discovery must contain at least 11 topic categories.");
+  categories.forEach((category, index) => {
+    const label = "Discovery category " + index;
+    if (!category.id || !/^[a-z0-9-]+$/.test(category.id)) fail(label + ": invalid id.");
+    if (categoryIds.has(category.id)) fail("Duplicate discovery category id " + category.id + ".");
+    categoryIds.add(category.id);
+    if (!category.title || !category.summary || !category.searchLabel) {
+      fail(label + ": title, summary, and search label are required.");
+    }
+    if (!category.query || !category.query.includes("{zip}")) {
+      fail(label + ": prepared search query must contain the ZIP placeholder.");
+    }
+    if (!Array.isArray(category.official) || !category.official.length) {
+      fail(label + ": at least one direct starting point is required.");
+    }
+    (category.official || []).forEach((item) => {
+      if (!item.label || !/^(https:\/\/|tel:)/.test(item.url || "")) {
+        fail(label + ": direct starting points require a label and HTTPS or telephone URL.");
+      }
+    });
+  });
+
+  const directUrls = categories.flatMap((category) => category.official || []).map((item) => item.url);
+  if (!directUrls.includes("tel:911")) fail("Universal discovery is missing direct 911 routing.");
+  if (!directUrls.includes("tel:988")) fail("Universal discovery is missing direct 988 routing.");
+}
+
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
   if (areaEntries.length !== 10) fail(`Expected 10 local editions; found ${areaEntries.length}.`);
@@ -78,6 +149,7 @@ function validateAreas(areas) {
 function validateMarkup(areas) {
   const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const finder = fs.readFileSync(path.join(root, "find-help.html"), "utf8");
+  const discovery = fs.readFileSync(path.join(root, "discover.html"), "utf8");
   const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 
   Object.keys(areas).forEach((areaId) => {
@@ -91,6 +163,33 @@ function validateMarkup(areas) {
     if (!finder.includes(file)) fail(`find-help.html: missing script ${file}.`);
   });
   if (!index.includes("illinois-resources.js")) fail("index.html: missing Illinois dataset script.");
+
+  if (!index.includes("data-zip-form") || !index.includes("data-zip-input")) {
+    fail("index.html: accessible ZIP discovery form is missing.");
+  }
+  ["id=\"zip-result\"", "id=\"discovery-grid\"", "data-zip-form"].forEach((required) => {
+    if (!discovery.includes(required)) fail("discover.html: missing required structure " + required + ".");
+  });
+  ["tel:911", "tel:988", "tel:211"].forEach((route) => {
+    if (!discovery.includes(route)) fail("discover.html: missing direct route " + route + ".");
+  });
+  if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
+
+  const expectedCacheToken = "20261030-1";
+  [
+    ["index.html", index],
+    ["find-help.html", finder],
+    ["discover.html", discovery]
+  ].forEach(([pageName, markup]) => {
+    const refs = Array.from(markup.matchAll(/(?:src|href)="(assets\/[^"?]+)\?v=([^"]+)"/g));
+    if (!refs.length) fail(pageName + ": no cache-versioned assets found.");
+    refs.forEach((match) => {
+      const asset = match[1];
+      const token = match[2];
+      if (token !== expectedCacheToken) fail(pageName + ": inconsistent cache token for " + asset + ".");
+      if (!fs.existsSync(path.join(root, asset))) fail(pageName + ": missing referenced asset " + asset + ".");
+    });
+  });
 }
 
 function validateUrgentRules() {
@@ -169,9 +268,12 @@ function validateReviewSheets(areas) {
 }
 
 let areas;
+let discovery;
 try {
   areas = loadDirectory();
+  discovery = loadDiscovery();
   validateAreas(areas);
+  validateDiscovery(discovery, areas);
   validateMarkup(areas);
   validateUrgentRules();
   validateReviewSheets(areas);
