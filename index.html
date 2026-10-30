@@ -3,23 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Single Step Forward helps people find clear paths to trusted local services, official applications, crisis contacts, and practical support.">
+  <meta name="description" content="Single Step Forward helps you discover forms of local assistance you may not know exist, learn what to search for, and find a practical place to begin.">
   <meta name="theme-color" content="#0b2d2b">
-  <meta property="og:title" content="Single Step Forward | Find the next right step">
-  <meta property="og:description" content="Local help, clearly connected.">
+  <meta property="og:title" content="Single Step Forward | Learn what help may exist">
+  <meta property="og:description" content="Discover options, learn what to look for, and find a practical place to begin.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://singlestepforward.com/">
   <link rel="canonical" href="https://singlestepforward.com/">
-  <title>Single Step Forward | Local help, clearly connected</title>
+  <title>Single Step Forward | Learn what help may exist</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261029-4">
-  <script src="assets/colorado-resources.js?v=20261029-4" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261029-4" defer></script>
-  <script src="assets/new-york-resources.js?v=20261029-4" defer></script>
-  <script src="assets/illinois-resources.js?v=20261029-4" defer></script>
-  <script src="assets/resources.js?v=20261029-4" defer></script>
-  <script src="assets/area.js?v=20261029-4" defer></script>
-  <script src="assets/site.js?v=20261029-4" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261030-1">
+  <script src="assets/colorado-resources.js?v=20261030-1" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261030-1" defer></script>
+  <script src="assets/new-york-resources.js?v=20261030-1" defer></script>
+  <script src="assets/illinois-resources.js?v=20261030-1" defer></script>
+  <script src="assets/resources.js?v=20261030-1" defer></script>
+  <script src="assets/area.js?v=20261030-1" defer></script>
+  <script src="assets/discovery.js?v=20261030-1" defer></script>
+  <script src="assets/site.js?v=20261030-1" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,19 +36,19 @@
     <div class="shell nav-wrap">
       <a class="brand" href="index.html" aria-label="Single Step Forward home">
         <img src="assets/brand-mark.svg" alt="" width="52" height="52">
-        <span><strong>Single Step Forward</strong><small data-area-label>Liberty County, Georgia</small></span>
+        <span><strong>Single Step Forward</strong><small>Awareness and local navigation</small></span>
       </a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#possibilities">Explore help</a>
         <a href="#standards">Our standards</a>
-        <a href="#get-involved">Get involved</a>
-        <a class="button button-small" href="find-help.html">Find help</a>
+        <a class="button button-small" href="discover.html">Find a starting point</a>
       </nav>
     </div>
     <div class="location-bar">
       <div class="shell location-inner">
-        <label for="area-select-home"><span>Local edition</span>
-          <select id="area-select-home" data-area-select aria-label="Choose a local directory">
+        <label for="area-select-home"><span>Reviewed local guide</span>
+          <select id="area-select-home" data-area-select aria-label="Choose a reviewed local guide">
             <option value="liberty">Liberty County, GA</option>
             <option value="dallas">Dallas County, TX</option>
             <option value="wake">Wake County, NC</option>
@@ -60,7 +61,7 @@
             <option value="plainfield">Plainfield, IL</option>
           </select>
         </label>
-        <p>Showing source-checked local pathways for <strong data-area-label>Liberty County, Georgia</strong>.</p>
+        <p>Source-checked local guide currently selected: <strong data-area-label>Liberty County, Georgia</strong>.</p>
       </div>
     </div>
   </header>
@@ -68,13 +69,10 @@
   <main id="main">
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Practical help. Clear direction.</p>
-        <h1 id="hero-title">Find the next<br><em>right step.</em></h1>
-        <p class="hero-lede">One calm place to find trusted local services, official applications, crisis contacts, community programs, and practical guidance across <span data-area-name>Liberty County</span>.</p>
-        <div class="hero-actions">
-          <a class="button" href="find-help.html">Tell us what you need <span aria-hidden="true">→</span></a>
-          <a class="text-link" href="#about">See what this is <span aria-hidden="true">↓</span></a>
-        </div>
+        <p class="eyebrow"><span></span> A starting point for options you may not know exist</p>
+        <h1 id="hero-title">You don’t need to know the right program to start looking for help.</h1>
+        <p class="hero-lede">Single Step Forward shows you the kinds of assistance that may exist for food, dental care, housing, bills, transportation, pet care, health, legal concerns, work, and more—then helps you find a practical place to begin near you.</p>
+        <a class="text-link hero-topic-link" href="#possibilities">Explore types of help <span aria-hidden="true">↓</span></a>
         <ul class="trust-list" aria-label="Privacy and quality promises">
           <li>No account</li>
           <li>No tracking</li>
@@ -82,96 +80,104 @@
         </ul>
       </div>
 
-      <div class="hero-system" aria-label="How Single Step Forward works">
-        <div class="hero-mark"><img src="assets/brand-mark.svg" alt="" width="220" height="220"></div>
-        <ol class="steps-list">
-          <li><span>01</span><div><strong>Say what is happening</strong><small>Use ordinary words. You do not need to know the program name.</small></div></li>
-          <li><span>02</span><div><strong>See trusted options</strong><small>Local help appears first, with clear phone and eligibility details.</small></div></li>
-          <li><span>03</span><div><strong>Go to the official source</strong><small>Continue on the agency or provider website when you are ready.</small></div></li>
-        </ol>
+      <div class="hero-system hero-zip-panel" aria-label="Find possible next steps by ZIP code">
+        <div class="zip-panel-mark" aria-hidden="true">
+          <img src="assets/brand-mark.svg" alt="" width="100" height="100">
+        </div>
+        <p class="mini-label light-label">Start near you</p>
+        <h2>What might be available in your area?</h2>
+        <form class="zip-form zip-form-dark" action="discover.html" method="get" data-zip-form novalidate>
+          <label for="home-zip">Enter your ZIP code</label>
+          <div class="zip-input-row">
+            <input id="home-zip" name="zip" data-zip-input type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" placeholder="Example: 31320" aria-describedby="home-zip-note home-zip-error" required>
+            <button class="button button-light" type="submit">Show me possible next steps <span aria-hidden="true">→</span></button>
+          </div>
+          <p id="home-zip-note" class="zip-note">If we have not reviewed your area, you will still receive useful search terms, official starting points, and prepared local searches.</p>
+          <p id="home-zip-error" class="zip-error" data-zip-error role="alert" hidden></p>
+        </form>
       </div>
     </section>
 
-    <section class="quick-band" aria-label="Popular needs">
+    <section class="quick-band" aria-label="Common starting points">
       <div class="shell quick-links">
-        <span>Start with:</span>
-        <a href="find-help.html?need=food">Food</a>
-        <a href="find-help.html?need=housing">Housing</a>
-        <a href="find-help.html?need=health">Health</a>
-        <a href="find-help.html?need=work">Jobs</a>
-        <a href="find-help.html?need=animals">Animal help</a>
-        <a href="find-help.html?need=mental-health">Crisis support</a>
+        <span>Explore:</span>
+        <a href="discover.html?topic=dental#topics">Dental care</a>
+        <a href="discover.html?topic=medical-costs#topics">Medical bills</a>
+        <a href="discover.html?topic=bills#topics">Household bills</a>
+        <a href="discover.html?topic=animals#topics">Pet care</a>
+        <a href="discover.html?topic=transportation#topics">Transportation</a>
+        <a href="discover.html?topic=legal#topics">Legal help</a>
       </div>
     </section>
 
-    <section id="about" class="section shell intro-section">
+    <section id="about" class="section shell intro-section awareness-section">
       <div>
-        <p class="eyebrow"><span></span> What this is</p>
-        <h2>A local guide for complicated moments.</h2>
+        <p class="eyebrow"><span></span> The awareness gap</p>
+        <h2>Sometimes the first barrier is not knowing that an option exists.</h2>
       </div>
       <div class="intro-copy">
-        <p>Help exists, but finding it often means knowing the right agency, phrase, form, or phone number. Single Step Forward reduces that search into one useful next action.</p>
-        <p>It is a navigation layer—not a government agency, emergency service, case manager, crowdfunding platform, or replacement for professional care.</p>
-        <a class="arrow-link" href="find-help.html">Open the help directory <span aria-hidden="true">→</span></a>
+        <p>A painful tooth becomes a do-it-yourself problem. A veterinary bill feels impossible. A utility notice appears with no obvious next step. Someone needs transportation, legal guidance, food, or help understanding a medical bill—but does not know what kind of organization to call.</p>
+        <p>Many communities have programs, clinics, advocates, navigators, payment options, and local organizations designed for situations like these. They can still be difficult to find if nobody tells you what they are called.</p>
+        <p class="awareness-close"><strong>Single Step Forward helps you learn what to look for before asking you to find it.</strong></p>
       </div>
     </section>
 
-    <section class="section shell needs-section" aria-labelledby="needs-title">
+    <section id="possibilities" class="section shell needs-section" aria-labelledby="needs-title">
       <div class="section-heading split-heading">
         <div>
-          <p class="eyebrow"><span></span> One front door</p>
-          <h2 id="needs-title">Start where you are.</h2>
+          <p class="eyebrow"><span></span> Did you know?</p>
+          <h2 id="needs-title">Help may have a name you have never heard.</h2>
         </div>
-        <p>You do not have to sort your life into agency language first. Choose a topic or describe the situation in your own words.</p>
+        <p>These are possibilities to investigate, not promises that every option exists in every area. Choose one to learn useful terms and prepare a local search.</p>
       </div>
 
-      <div class="needs-grid">
-        <a class="need-card tone-amber" href="find-help.html?need=food">
+      <div class="needs-grid possibility-grid">
+        <a class="need-card tone-amber" href="discover.html?topic=dental#topics">
           <span class="card-number">01</span>
-          <h3>Food & essentials</h3>
-          <p>Food banks, SNAP, WIC, meals, and household support.</p>
+          <h3>Lower-cost dental care</h3>
+          <p>Community health centers, dental schools, charitable clinics, and sliding-scale providers may offer care.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-sage" href="find-help.html?need=housing">
+        <a class="need-card tone-sage" href="discover.html?topic=medical-costs#topics">
           <span class="card-number">02</span>
-          <h3>Housing & utilities</h3>
-          <p>Homelessness prevention, rent, shelter, energy, and housing.</p>
+          <h3>Medical-bill guidance</h3>
+          <p>Financial assistance, patient advocates, billing reviews, charity care, and payment plans may be available.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-sea" href="find-help.html?need=health">
+        <a class="need-card tone-sea" href="discover.html?topic=animals#topics">
           <span class="card-number">03</span>
-          <h3>Health & care</h3>
-          <p>Clinics, dental care, benefits, mental health, and recovery.</p>
+          <h3>Pet assistance</h3>
+          <p>Some shelters and programs offer pet food, lower-cost care, temporary fostering, or spay and neuter help.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-paper" href="find-help.html?need=work">
+        <a class="need-card tone-paper" href="discover.html?topic=bills#topics">
           <span class="card-number">04</span>
-          <h3>Work & learning</h3>
-          <p>Job centers, résumés, GED pathways, college, and tax help.</p>
+          <h3>Household bills</h3>
+          <p>Community action agencies may help with energy, weatherization, benefits, and emergency expenses.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-paper" href="find-help.html?need=family">
+        <a class="need-card tone-paper" href="discover.html?topic=transportation#topics">
           <span class="card-number">05</span>
-          <h3>Family & daily life</h3>
-          <p>School enrollment, transportation, libraries, and older adults.</p>
+          <h3>Transportation options</h3>
+          <p>Medical rides, reduced fares, paratransit, senior transportation, or community rides may exist.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-sea" href="find-help.html?need=animals">
+        <a class="need-card tone-sea" href="discover.html?topic=legal#topics">
           <span class="card-number">06</span>
-          <h3>Animal assistance</h3>
-          <p>Local animal services, lost pets, shelter support, and safety.</p>
+          <h3>Legal and consumer help</h3>
+          <p>Legal aid, tenant advocates, ombudsmen, and consumer offices may provide free information or assistance.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-sage" href="find-help.html?need=safety">
+        <a class="need-card tone-sage" href="discover.html?topic=food#topics">
           <span class="card-number">07</span>
-          <h3>Safety & recovery</h3>
-          <p>Crisis lines, domestic violence support, AA, NA, and scam help.</p>
+          <h3>Food and essentials</h3>
+          <p>Food pantries, community meals, mobile distributions, SNAP, WIC, and senior food programs may help.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="need-card tone-amber" href="find-help.html?need=volunteer">
+        <a class="need-card tone-amber" href="discover.html?topic=work#topics">
           <span class="card-number">08</span>
-          <h3>Give help locally</h3>
-          <p>Volunteer, donate, share a resource, or strengthen the directory.</p>
+          <h3>Work and benefits</h3>
+          <p>Workforce centers, benefits navigators, vocational rehabilitation, tax help, and training may be available.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
@@ -184,14 +190,69 @@
           <img src="assets/dawn-guide.png" alt="" width="562" height="600" loading="lazy">
         </div>
         <div class="dawn-copy">
-          <p class="eyebrow light"><span></span> Meet Dawn</p>
-          <h2>A little guidance,<br>right when it helps.</h2>
-          <p>Dawn is the friendly guide inside the directory. Tell her what is going on in everyday language and she will match your words to practical, source-checked resources. She cannot judge your situation.</p>
+          <p class="eyebrow light"><span></span> One manageable step</p>
+          <h2>Learn what may exist. Find the words. Start locally.</h2>
+          <ol class="home-how-list">
+            <li><span>1</span><p><strong>Choose a need or enter a ZIP.</strong> You do not need to know the agency or program name.</p></li>
+            <li><span>2</span><p><strong>Learn what to look for.</strong> See common services, advocates, programs, and useful search terms.</p></li>
+            <li><span>3</span><p><strong>Open a starting point.</strong> Use a reviewed local guide, official locator, 211, or prepared local search.</p></li>
+            <li><span>4</span><p><strong>Confirm directly.</strong> Ask about service area, eligibility, availability, cost, and the next action.</p></li>
+          </ol>
           <div class="dawn-note">
-            <span class="did-you-know">Privacy here</span>
-            <p>Dawn’s matching happens only on your device. Your words are not sent or saved. The local edition you choose is remembered in this browser so it stays selected next time.</p>
+            <span class="did-you-know">Dawn in reviewed guides</span>
+            <p>Dawn matches ordinary words to source-checked local listings on your device. She is a deterministic guide, not an AI, and cannot judge your situation.</p>
           </div>
-          <a class="button button-light" href="find-help.html#guide">Ask Dawn for a next step <span aria-hidden="true">→</span></a>
+          <a class="button button-light" href="discover.html">Find a possible next step <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell possibility-section" aria-labelledby="forms-title">
+      <div class="section-heading centered-heading">
+        <p class="eyebrow center"><span></span> More than benefit programs <span></span></p>
+        <h2 id="forms-title">Help can take many forms.</h2>
+        <p>Sometimes the useful step is learning that you have another option, a question you can ask, or a person who can help you avoid an unnecessary expense.</p>
+      </div>
+      <div class="standards-grid">
+        <article class="standard-card">
+          <span class="standard-mark amber-mark" aria-hidden="true"></span>
+          <h3>A person who can explain</h3>
+          <p>A patient advocate, ombudsman, benefits navigator, caseworker, librarian, or local coordinator may know the system.</p>
+        </article>
+        <article class="standard-card">
+          <span class="standard-mark sage-mark" aria-hidden="true"></span>
+          <h3>A different way to pay</h3>
+          <p>Income-based pricing, financial assistance, discounts, payment plans, negotiation, or charity care may reduce a cost.</p>
+        </article>
+        <article class="standard-card">
+          <span class="standard-mark sea-mark" aria-hidden="true"></span>
+          <h3>A service built for the problem</h3>
+          <p>Transportation, temporary fostering, legal aid, food support, training, or another local program may solve a logistical barrier.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section roadmap-section coverage-section">
+      <div class="shell roadmap-grid">
+        <div>
+          <p class="eyebrow"><span></span> Nationwide starting point</p>
+          <h2>Useful everywhere.<br>More detailed where we have completed a local review.</h2>
+        </div>
+        <div class="roadmap-copy">
+          <p>Every valid U.S. ZIP code can open educational guidance, official starting points, and prepared local searches. These searches are places to investigate, not results reviewed by Single Step Forward.</p>
+          <p>Ten enhanced local guides add researched organizations, direct links, phone numbers, service notes, and visible source-check dates.</p>
+          <div class="edition-links" aria-label="Reviewed local guides">
+            <a href="find-help.html?area=liberty">Liberty County, GA</a>
+            <a href="find-help.html?area=dallas">Dallas County, TX</a>
+            <a href="find-help.html?area=wake">Wake County, NC</a>
+            <a href="find-help.html?area=volusia">Volusia County, FL</a>
+            <a href="find-help.html?area=denver">Denver County, CO</a>
+            <a href="find-help.html?area=elpaso">El Paso County, CO</a>
+            <a href="find-help.html?area=plymouth">Plymouth County, MA</a>
+            <a href="find-help.html?area=erie">Erie County, NY</a>
+            <a href="find-help.html?area=madison">Madison County, NY</a>
+            <a href="find-help.html?area=plainfield">Plainfield, IL</a>
+          </div>
         </div>
       </div>
     </section>
@@ -199,99 +260,87 @@
     <section id="standards" class="section shell standards-section" aria-labelledby="standards-title">
       <div class="section-heading centered-heading">
         <p class="eyebrow center"><span></span> Designed with care <span></span></p>
-        <h2 id="standards-title">Useful without becoming another obstacle.</h2>
-        <p>Every choice should make it easier to understand what to do next—especially on a difficult day.</p>
+        <h2 id="standards-title">A starting point—not a promise or eligibility decision.</h2>
+        <p>Single Step Forward helps people investigate possibilities while keeping the limits visible.</p>
       </div>
 
       <div class="standards-grid">
         <article class="standard-card">
           <span class="standard-mark amber-mark" aria-hidden="true"></span>
-          <h3>Safety before browsing</h3>
-          <p>911 and 988 stay visible. Urgent language is routed to crisis options before ordinary directory results.</p>
+          <h3>Safety before searching</h3>
+          <p>911 and 988 remain visible. Established crisis services come before open-ended web searches for urgent needs.</p>
         </article>
         <article class="standard-card">
           <span class="standard-mark sage-mark" aria-hidden="true"></span>
           <h3>Official source first</h3>
-          <p>We point to the agency or provider that owns the information, and label local, state, federal, and nonprofit sources.</p>
+          <p>Official locators and provider websites are labeled clearly. Prepared web searches are identified as unreviewed results.</p>
         </article>
         <article class="standard-card">
           <span class="standard-mark sea-mark" aria-hidden="true"></span>
           <h3>Privacy by default</h3>
-          <p>No login, no saved searches, no hidden profile, and no need to share a name to look for help.</p>
+          <p>No login, analytics, saved ZIP code, or need to explain your personal situation before exploring possible next steps.</p>
         </article>
       </div>
-
-      <div class="verification-panel">
-        <div>
-          <p class="mini-label">How a listing earns trust</p>
-          <h3>Source-checked links. Plain labels. Honest limits.</h3>
-        </div>
-        <ol class="verification-list">
-          <li><span>1</span><p><strong>Confirm the source</strong> Start with local, state, or federal websites and established providers.</p></li>
-          <li><span>2</span><p><strong>Show the next action</strong> Say whether to call, apply, visit, or read—without burying the step.</p></li>
-          <li><span>3</span><p><strong>Date the source check</strong> Services change. Every listing shows when sources were checked and asks visitors to confirm details.</p></li>
-        </ol>
-      </div>
     </section>
 
-    <section class="section roadmap-section">
-      <div class="shell roadmap-grid">
+    <section class="share-band">
+      <div class="shell share-band-inner">
         <div>
-          <p class="eyebrow"><span></span> The larger vision</p>
-          <h2>Built one community<br>at a time.</h2>
+          <p class="eyebrow light"><span></span> Pass the possibility forward</p>
+          <h2>What you learn may help someone later.</h2>
+          <p>You may not need a particular program today. Knowing that it exists can still help a relative, neighbor, coworker, student, client, or friend tomorrow.</p>
+          <p>Single Step Forward is designed to make useful possibilities easier to recognize, remember, and share.</p>
         </div>
-        <div class="roadmap-copy">
-          <p>Ten local editions now cover Liberty County, Georgia; Dallas County, Texas; Wake County, North Carolina; Volusia County, Florida; Denver and El Paso counties in Colorado; Plymouth County, Massachusetts; Erie and Madison counties in New York; and Plainfield, Illinois. Plainfield spans Will and Kendall counties, so county-dependent programs are labeled before the next step.</p>
-          <p>A future secure assistant can help people navigate forms and choices. It should never diagnose, decide eligibility, impersonate an agency, or replace emergency and professional services.</p>
+        <div class="share-action">
+          <button class="button button-light" type="button" data-share-page data-share-url="https://singlestepforward.com/" data-status-target="#share-status">Share Single Step Forward</button>
+          <p id="share-status" class="share-status" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>
 
-    <section id="get-involved" class="section shell involved-section" aria-labelledby="involved-title">
-      <div class="involved-intro">
-        <p class="eyebrow"><span></span> Help improve the map</p>
-        <h2 id="involved-title">Know a resource we should include?</h2>
-        <p>Local knowledge makes this useful. Suggest a service, correct a detail, or tell us where someone gets stuck.</p>
-        <div class="involved-points">
-          <p><strong>Especially helpful:</strong> official links, current phone numbers, service area, application steps, accessibility information, and language support.</p>
-          <p><strong>Please do not include:</strong> anyone’s case details, medical history, Social Security number, or other private information.</p>
-        </div>
+    <section id="get-involved" class="section shell compact-involved" aria-labelledby="involved-title">
+      <div>
+        <p class="eyebrow"><span></span> Help improve a reviewed guide</p>
+        <h2 id="involved-title">Know a service or correction we should include?</h2>
+        <p>Local knowledge can reveal missing programs and outdated details. Do not include anyone’s case details, medical history, Social Security number, or other private information.</p>
       </div>
-
-      <form class="suggestion-form" id="suggestion-form">
-        <div class="form-heading">
-          <span class="mini-label">Resource suggestion</span>
-          <p>This prototype prepares a note on your device; it does not send or store the information.</p>
-        </div>
-        <label for="resource-name">Organization or resource</label>
-        <input id="resource-name" name="resource-name" type="text" required autocomplete="off" placeholder="Example: a local food pantry">
-        <div class="form-row">
-          <div>
-            <label for="resource-category">Topic</label>
-            <select id="resource-category" name="resource-category">
-              <option>Food & essentials</option>
-              <option>Housing & utilities</option>
-              <option>Health & care</option>
-              <option>Work & education</option>
-              <option>Safety & recovery</option>
-              <option>Animals</option>
-              <option>Family & daily life</option>
-              <option>Volunteer or donate</option>
-              <option>Correction or feedback</option>
-            </select>
+      <details class="suggestion-disclosure">
+        <summary>Prepare a resource suggestion</summary>
+        <form class="suggestion-form" id="suggestion-form">
+          <div class="form-heading">
+            <span class="mini-label">Resource suggestion</span>
+            <p>This prototype prepares a note on your device; it does not send or store the information.</p>
           </div>
-          <div>
-            <label for="resource-area">Area served</label>
-            <input id="resource-area" name="resource-area" type="text" autocomplete="off" placeholder="City, county, or statewide">
+          <label for="resource-name">Organization or resource</label>
+          <input id="resource-name" name="resource-name" type="text" required autocomplete="off" placeholder="Example: a local food pantry">
+          <div class="form-row">
+            <div>
+              <label for="resource-category">Topic</label>
+              <select id="resource-category" name="resource-category">
+                <option>Food & essentials</option>
+                <option>Housing & utilities</option>
+                <option>Health & care</option>
+                <option>Work & education</option>
+                <option>Safety & recovery</option>
+                <option>Animals</option>
+                <option>Family & daily life</option>
+                <option>Volunteer or donate</option>
+                <option>Correction or feedback</option>
+              </select>
+            </div>
+            <div>
+              <label for="resource-area">Area served</label>
+              <input id="resource-area" name="resource-area" type="text" autocomplete="off" placeholder="City, county, or statewide">
+            </div>
           </div>
-        </div>
-        <label for="resource-url">Official website or phone</label>
-        <input id="resource-url" name="resource-url" type="text" autocomplete="off" placeholder="https://… or (912) …">
-        <label for="resource-note">What should someone know?</label>
-        <textarea id="resource-note" name="resource-note" rows="4" placeholder="What it helps with, who can use it, and the first step"></textarea>
-        <button class="button" type="submit">Prepare suggestion <span aria-hidden="true">→</span></button>
-        <div class="form-result" id="suggestion-result" hidden role="status" aria-live="polite"></div>
-      </form>
+          <label for="resource-url">Official website or phone</label>
+          <input id="resource-url" name="resource-url" type="text" autocomplete="off" placeholder="https://… or (912) …">
+          <label for="resource-note">What should someone know?</label>
+          <textarea id="resource-note" name="resource-note" rows="4" placeholder="What it helps with, who can use it, and the first step"></textarea>
+          <button class="button" type="submit">Prepare suggestion <span aria-hidden="true">→</span></button>
+          <div class="form-result" id="suggestion-result" hidden role="status" aria-live="polite"></div>
+        </form>
+      </details>
     </section>
   </main>
 
@@ -299,26 +348,26 @@
     <div class="shell footer-top">
       <div class="brand footer-brand">
         <img src="assets/brand-mark.svg" alt="" width="54" height="54">
-        <span><strong>Single Step Forward</strong><small>Local help, clearly connected.</small></span>
+        <span><strong>Single Step Forward</strong><small>Learn what may exist. Find a place to begin.</small></span>
       </div>
-      <a class="button button-light" href="find-help.html">Find help now <span aria-hidden="true">→</span></a>
+      <a class="button button-light" href="discover.html">Find a starting point <span aria-hidden="true">→</span></a>
     </div>
     <div class="shell footer-grid">
       <div>
-        <p class="footer-label">Explore</p>
-        <a href="#about">About the project</a>
-        <a href="#standards">Our standards</a>
-        <a href="#get-involved">Suggest a resource</a>
+        <p class="footer-label">Immediate support</p>
+        <a href="tel:911">Call 911</a>
+        <a href="tel:988">Call or text 988</a>
+        <a href="tel:211">Call 211</a>
       </div>
       <div>
-        <p class="footer-label">Start here</p>
-        <a href="find-help.html?need=food">Food help</a>
-        <a href="find-help.html?need=housing">Housing help</a>
-        <a href="find-help.html?need=mental-health">Mental health</a>
+        <p class="footer-label">Continue</p>
+        <a href="discover.html">Explore types of help</a>
+        <a href="find-help.html">Reviewed local guides</a>
+        <a href="#get-involved">Suggest a resource</a>
       </div>
       <div class="footer-fineprint">
-        <p><strong>Prototype for <span data-area-label>Liberty County, Georgia</span>.</strong> This directory is not an emergency service or government agency. It does not guarantee eligibility or availability.</p>
-        <p>Sources checked <span data-area-review-date>September 8, 2026</span>; local reviewer confirmation is still pending. Always confirm current hours and requirements with the listed organization.</p>
+        <p><strong>This is a navigation guide, not a service provider.</strong> Single Step Forward is not an emergency service, medical provider, government agency, or eligibility decision-maker.</p>
+        <p>Programs, service areas, eligibility, and availability change. Confirm current details directly with the organization.</p>
       </div>
     </div>
   </footer>

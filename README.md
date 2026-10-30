@@ -1,11 +1,16 @@
 # Single Step Forward
 
-A two-page, privacy-first community resource prototype with ten selectable local editions: Liberty County, Georgia; Dallas County, Texas; Wake County, North Carolina; Volusia County, Florida; Denver County, Colorado; El Paso County, Colorado; Plymouth County, Massachusetts; Erie County, New York; Madison County, New York; and Plainfield, Illinois.
+A privacy-first awareness and navigation prototype that offers useful starting points for any five-digit U.S. ZIP code, plus ten selectable, source-checked local guides: Liberty County, Georgia; Dallas County, Texas; Wake County, North Carolina; Volusia County, Florida; Denver County, Colorado; El Paso County, Colorado; Plymouth County, Massachusetts; Erie County, New York; Madison County, New York; and Plainfield, Illinois.
+
+Single Step Forward helps visitors discover forms of assistance they may not know exist, learn useful service terminology, and reach a practical next step. The universal discovery layer provides educational guidance, established national starting points, 211, and prepared local web searches. Reviewed local guides add researched organizations, direct links, phone numbers, service notes, and visible source-check dates.
 
 ## What is included
 
-- index.html — brand, mission, operating standards, and resource-suggestion flow
-- find-help.html — working next-step guide and filterable local resource directory
+- index.html — nationwide awareness message, ZIP entry, operating standards, sharing, and resource-suggestion flow
+- discover.html — universal ZIP-based education, official starting points, and prepared local searches
+- find-help.html — working next-step guide and filterable reviewed local directory
+- assets/discovery-data.js — universal discovery topics, search templates, official starting points, and the reviewed-area ZIP snapshot
+- assets/discovery.js — ZIP validation, local-guide suggestions, prepared-search generation, and deliberate share/copy behavior
 - assets/resources.js — the source-checked Liberty, Dallas, Wake, and Volusia County resource datasets and ten-edition registry
 - assets/colorado-resources.js — the source-checked Colorado statewide, Denver County, and El Paso County resource datasets
 - assets/massachusetts-resources.js — the source-checked Massachusetts statewide and Plymouth County resource dataset
@@ -21,7 +26,7 @@ A two-page, privacy-first community resource prototype with ten selectable local
 - CNAME — custom-domain configuration for singlestepforward.com
 - .nojekyll — tells GitHub Pages to serve the static files directly
 
-No build step, database, account, analytics service, or API key is required. The selected local edition is remembered in the visitor's browser; search text is not sent or saved.
+No build step, database, account, analytics service, external ZIP API, or API key is required. The selected reviewed local guide is remembered in the visitor's browser. A ZIP entered for universal discovery is placed only in the page URL, is not saved by Single Step Forward, and is not sent to an outside service until the visitor deliberately opens an external search. Search text entered into Dawn is not sent or saved.
 
 ## Preview locally
 
@@ -47,6 +52,16 @@ Re-check time-sensitive information regularly and update both:
 - the linked source, phone, scope, and next-step language for every changed listing
 
 The selector uses `?area=liberty`, `?area=dallas`, `?area=wake`, `?area=volusia`, `?area=denver`, `?area=elpaso`, `?area=plymouth`, `?area=erie`, `?area=madison`, and `?area=plainfield`, remembers the last edition in the visitor's browser, and carries the selection between the landing page and directory.
+
+## Updating universal discovery
+
+Edit the discovery category array in assets/discovery-data.js to maintain the educational descriptions, prepared search templates, and official or established national starting points. Every topic must have a unique lowercase ID, a summary that avoids promising availability or eligibility, a query containing the ZIP placeholder, and at least one direct starting point. Urgent topics must keep established crisis services before open-ended web search.
+
+The reviewed ZIP groups in assets/discovery-data.js are used only to suggest that a reviewed guide may cover the visitor's ZIP. They do not make an eligibility or jurisdiction decision.
+
+The October 30, 2026 snapshot was generated at build time from the zipcodes 3.0.0 dataset. That dataset combines county and postal metadata from UnitedStatesZipCodes and GeoNames and reconciles active delivery ZIPs against the USPS ZIP Locale Detail file. The package is not a runtime dependency and is not shipped with the site.
+
+Important limitation: ZIP codes are postal delivery constructs, not county boundaries. A ZIP can cross county or municipal lines, and a single primary county label can hide that overlap. The public interface therefore says a guide “may cover” a ZIP and tells visitors to confirm their county before relying on county-specific programs. Refresh this snapshot when reviewed areas change or when the postal dataset is updated.
 
 Before packaging or publishing, run:
 
