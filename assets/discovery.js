@@ -57,6 +57,19 @@
     return link;
   }
 
+  function makeDecorativeImage(src, className, width, height) {
+    const image = document.createElement("img");
+    image.src = src;
+    image.alt = "";
+    image.className = className || "";
+    image.width = width;
+    image.height = height;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.setAttribute("aria-hidden", "true");
+    return image;
+  }
+
   function reviewedMatches(zip) {
     const groups = Array.isArray(window.SSF_REVIEWED_ZIP_GROUPS)
       ? window.SSF_REVIEWED_ZIP_GROUPS
@@ -72,13 +85,19 @@
     const heading = document.createElement("h2");
     const copy = document.createElement("p");
     const actions = document.createElement("div");
+    const content = document.createElement("div");
     actions.className = "zip-result-actions";
+    content.className = "zip-result-content";
 
     if (!validZip(zip)) {
       panel.className = "zip-result zip-result-neutral";
       heading.textContent = "Enter a ZIP code to prepare local starting points.";
       copy.textContent = "Your ZIP stays in this page address. Single Step Forward does not save it or send it anywhere.";
-      panel.append(heading, copy);
+      content.append(heading, copy);
+      panel.append(
+        makeDecorativeImage("assets/icon-prepared-search.webp", "functional-icon zip-result-icon", 150, 150),
+        content
+      );
       return;
     }
 
@@ -97,7 +116,11 @@
           )
         );
       });
-      panel.append(heading, copy, actions);
+      content.append(heading, copy, actions);
+      panel.append(
+        makeDecorativeImage("assets/icon-reviewed-guide.webp", "functional-icon zip-result-icon", 150, 150),
+        content
+      );
       return;
     }
 
@@ -105,7 +128,11 @@
     heading.textContent = "We have not completed a reviewed local guide for ZIP " + zip + " yet.";
     copy.textContent = "You can still learn what may exist, use official starting points, and open prepared local searches below.";
     actions.append(makeLink("Call 211", "tel:211", "button button-outline", false));
-    panel.append(heading, copy, actions);
+    content.append(heading, copy, actions);
+    panel.append(
+      makeDecorativeImage("assets/icon-prepared-search.webp", "functional-icon zip-result-icon", 150, 150),
+      content
+    );
   }
 
   function renderCategories(zip) {
@@ -129,6 +156,8 @@
       const eyebrow = document.createElement("p");
       eyebrow.className = "mini-label";
       eyebrow.textContent = "Did you know?";
+
+      const icon = makeDecorativeImage(category.icon, "category-icon discovery-card-icon", 150, 150);
 
       const heading = document.createElement("h3");
       heading.textContent = category.title;
@@ -160,11 +189,17 @@
         searchNote.textContent = "Prepared web search for ZIP " + zip + "; results are not reviewed by SSF.";
         searchWrap.append(searchNote);
       } else {
-        const disabled = document.createElement("span");
-        disabled.className = "button button-small is-disabled";
-        disabled.setAttribute("aria-disabled", "true");
-        disabled.textContent = "Enter a ZIP above to prepare this search";
-        searchWrap.append(disabled);
+        const addZip = document.createElement("button");
+        addZip.className = "button button-small button-outline add-zip-button";
+        addZip.type = "button";
+        addZip.textContent = "Add a ZIP to prepare a local search";
+        addZip.addEventListener("click", () => {
+          const input = document.querySelector("#discover-zip");
+          if (!input) return;
+          input.scrollIntoView({ behavior: "smooth", block: "center" });
+          input.focus({ preventScroll: true });
+        });
+        searchWrap.append(addZip);
       }
 
       const number = document.createElement("span");
@@ -172,7 +207,7 @@
       number.setAttribute("aria-hidden", "true");
       number.textContent = String(index + 1).padStart(2, "0");
 
-      card.append(number, eyebrow, heading, summary);
+      card.append(number, icon, eyebrow, heading, summary);
       if (category.urgent) {
         card.append(officialWrap, searchWrap);
       } else {

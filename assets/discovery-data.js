@@ -57,6 +57,7 @@
   window.SSF_DISCOVERY_CATEGORIES = [
     {
       id: "food",
+      icon: "assets/icon-food.webp",
       title: "Food & essentials",
       summary: "Your area may have food pantries, community meals, mobile distributions, school meals, SNAP, WIC, or senior food programs.",
       searchLabel: "Search for food help",
@@ -68,6 +69,7 @@
     },
     {
       id: "housing",
+      icon: "assets/icon-housing.webp",
       title: "Housing & shelter",
       summary: "Housing counselors, homelessness-response teams, tenant programs, shelters, and rent-assistance programs may offer different kinds of support.",
       searchLabel: "Search for housing help",
@@ -79,6 +81,7 @@
     },
     {
       id: "dental",
+      icon: "assets/icon-dental-health.webp",
       title: "Dental & health care",
       summary: "Community health centers, dental schools, charitable clinics, and sliding-scale providers may offer lower-cost care.",
       searchLabel: "Search for lower-cost care",
@@ -90,6 +93,7 @@
     },
     {
       id: "medical-costs",
+      icon: "assets/icon-medical-costs.webp",
       title: "Medical bills & costs",
       summary: "Hospitals and clinics may have financial-assistance policies, patient advocates, billing reviews, charity care, or payment plans.",
       searchLabel: "Search for medical-cost help",
@@ -101,6 +105,7 @@
     },
     {
       id: "bills",
+      icon: "assets/icon-household-bills.webp",
       title: "Household bills & benefits",
       summary: "Community action agencies may help with energy bills, weatherization, benefits, rent emergencies, and other household costs.",
       searchLabel: "Search for bill assistance",
@@ -112,6 +117,7 @@
     },
     {
       id: "work",
+      icon: "assets/icon-work-learning.webp",
       title: "Work, learning & benefits",
       summary: "Workforce centers, benefits navigators, vocational rehabilitation, adult education, tax help, and training programs may be available.",
       searchLabel: "Search for work and training help",
@@ -123,6 +129,7 @@
     },
     {
       id: "transportation",
+      icon: "assets/icon-transportation.webp",
       title: "Transportation",
       summary: "Your area may offer medical rides, reduced fares, paratransit, senior transportation, disability transportation, or community ride programs.",
       searchLabel: "Search for transportation options",
@@ -133,6 +140,7 @@
     },
     {
       id: "legal",
+      icon: "assets/icon-legal-consumer.webp",
       title: "Legal & consumer concerns",
       summary: "Legal-aid organizations, tenant advocates, ombudsmen, and consumer-protection offices may provide free information or assistance.",
       searchLabel: "Search for legal help",
@@ -144,6 +152,7 @@
     },
     {
       id: "animals",
+      icon: "assets/icon-pet-assistance.webp",
       title: "Pet & animal assistance",
       summary: "Some shelters, rescues, food banks, and veterinary programs offer pet food, reduced-cost care, temporary fostering, or spay-and-neuter help.",
       searchLabel: "Search for pet assistance",
@@ -154,6 +163,7 @@
     },
     {
       id: "family",
+      icon: "assets/icon-family-support.webp",
       title: "Family, seniors & disability",
       summary: "Caregiver support, aging agencies, disability organizations, child-care assistance, and benefit counselors may help with daily logistics.",
       searchLabel: "Search for family and care support",
@@ -165,6 +175,7 @@
     },
     {
       id: "mental-health",
+      icon: "assets/icon-mental-health.webp",
       title: "Mental health & recovery",
       summary: "Crisis lines, counseling, peer support, substance-use treatment, recovery meetings, and community behavioral-health services may be available.",
       searchLabel: "Search for additional local care",
@@ -177,6 +188,7 @@
     },
     {
       id: "safety",
+      icon: "assets/icon-safety-support.webp",
       title: "Safety & abuse support",
       summary: "Advocates may help with safety planning, domestic violence, sexual assault, stalking, trafficking, emergency shelter, and legal protection.",
       searchLabel: "Search for additional local support",
