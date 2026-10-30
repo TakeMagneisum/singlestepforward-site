@@ -12,15 +12,15 @@
   <link rel="canonical" href="https://singlestepforward.com/">
   <title>Single Step Forward | Learn what help may exist</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261030-1">
-  <script src="assets/colorado-resources.js?v=20261030-1" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261030-1" defer></script>
-  <script src="assets/new-york-resources.js?v=20261030-1" defer></script>
-  <script src="assets/illinois-resources.js?v=20261030-1" defer></script>
-  <script src="assets/resources.js?v=20261030-1" defer></script>
-  <script src="assets/area.js?v=20261030-1" defer></script>
-  <script src="assets/discovery.js?v=20261030-1" defer></script>
-  <script src="assets/site.js?v=20261030-1" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261030-2">
+  <script src="assets/colorado-resources.js?v=20261030-2" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261030-2" defer></script>
+  <script src="assets/new-york-resources.js?v=20261030-2" defer></script>
+  <script src="assets/illinois-resources.js?v=20261030-2" defer></script>
+  <script src="assets/resources.js?v=20261030-2" defer></script>
+  <script src="assets/area.js?v=20261030-2" defer></script>
+  <script src="assets/discovery.js?v=20261030-2" defer></script>
+  <script src="assets/site.js?v=20261030-2" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -47,21 +47,31 @@
     </div>
     <div class="location-bar">
       <div class="shell location-inner">
-        <label for="area-select-home"><span>Reviewed local guide</span>
-          <select id="area-select-home" data-area-select aria-label="Choose a reviewed local guide">
-            <option value="liberty">Liberty County, GA</option>
-            <option value="dallas">Dallas County, TX</option>
-            <option value="wake">Wake County, NC</option>
-            <option value="volusia">Volusia County, FL</option>
-            <option value="denver">Denver County, CO</option>
-            <option value="elpaso">El Paso County, CO</option>
-            <option value="plymouth">Plymouth County, MA</option>
-            <option value="erie">Erie County, NY</option>
-            <option value="madison">Madison County, NY</option>
-            <option value="plainfield">Plainfield, IL</option>
-          </select>
-        </label>
-        <p>Source-checked local guide currently selected: <strong data-area-label>Liberty County, Georgia</strong>.</p>
+        <div class="area-picker" data-area-picker>
+          <img class="functional-icon area-picker-icon" src="assets/icon-reviewed-guide.webp" alt="" width="150" height="150" aria-hidden="true">
+          <div class="area-picker-main">
+            <label for="area-select-home">Choose a reviewed local guide</label>
+            <div class="area-picker-controls">
+              <span class="select-shell">
+                <select id="area-select-home" data-area-select data-area-neutral aria-label="Choose a reviewed local guide">
+                  <option value="" selected disabled>Select a county or city…</option>
+                  <option value="liberty">Liberty County, GA</option>
+                  <option value="dallas">Dallas County, TX</option>
+                  <option value="wake">Wake County, NC</option>
+                  <option value="volusia">Volusia County, FL</option>
+                  <option value="denver">Denver County, CO</option>
+                  <option value="elpaso">El Paso County, CO</option>
+                  <option value="plymouth">Plymouth County, MA</option>
+                  <option value="erie">Erie County, NY</option>
+                  <option value="madison">Madison County, NY</option>
+                  <option value="plainfield">Plainfield, IL</option>
+                </select>
+              </span>
+              <button class="button area-open-button" type="button" data-area-open disabled>Open guide</button>
+            </div>
+          </div>
+        </div>
+        <p class="location-context">Select an area, then open its source-checked local guide.</p>
       </div>
     </div>
   </header>
@@ -72,7 +82,10 @@
         <p class="eyebrow"><span></span> A starting point for options you may not know exist</p>
         <h1 id="hero-title">You don’t need to know the right program to start looking for help.</h1>
         <p class="hero-lede">Single Step Forward shows you the kinds of assistance that may exist for food, dental care, housing, bills, transportation, pet care, health, legal concerns, work, and more—then helps you find a practical place to begin near you.</p>
-        <a class="text-link hero-topic-link" href="#possibilities">Explore types of help <span aria-hidden="true">↓</span></a>
+        <div class="hero-entry-actions">
+          <a class="button button-outline" href="discover.html#topics">Browse types of help <span class="no-zip-note">— no ZIP needed</span></a>
+          <a class="text-link" href="#home-zip">Use my ZIP <span aria-hidden="true">→</span></a>
+        </div>
         <ul class="trust-list" aria-label="Privacy and quality promises">
           <li>No account</li>
           <li>No tracking</li>
@@ -82,7 +95,7 @@
 
       <div class="hero-system hero-zip-panel" aria-label="Find possible next steps by ZIP code">
         <div class="zip-panel-mark" aria-hidden="true">
-          <img src="assets/brand-mark.svg" alt="" width="100" height="100">
+          <img src="assets/icon-use-zip.webp" alt="" width="150" height="150">
         </div>
         <p class="mini-label light-label">Start near you</p>
         <h2>What might be available in your area?</h2>
@@ -133,61 +146,68 @@
 
       <div class="needs-grid possibility-grid">
         <a class="need-card tone-amber" href="discover.html?topic=dental#topics">
-          <span class="card-number">01</span>
+          <img class="category-icon card-icon" src="assets/icon-dental-health.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Lower-cost dental care</h3>
           <p>Community health centers, dental schools, charitable clinics, and sliding-scale providers may offer care.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-sage" href="discover.html?topic=medical-costs#topics">
-          <span class="card-number">02</span>
+          <img class="category-icon card-icon" src="assets/icon-medical-costs.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Medical-bill guidance</h3>
           <p>Financial assistance, patient advocates, billing reviews, charity care, and payment plans may be available.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-sea" href="discover.html?topic=animals#topics">
-          <span class="card-number">03</span>
+          <img class="category-icon card-icon" src="assets/icon-pet-assistance.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Pet assistance</h3>
           <p>Some shelters and programs offer pet food, lower-cost care, temporary fostering, or spay and neuter help.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-paper" href="discover.html?topic=bills#topics">
-          <span class="card-number">04</span>
+          <img class="category-icon card-icon" src="assets/icon-household-bills.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Household bills</h3>
           <p>Community action agencies may help with energy, weatherization, benefits, and emergency expenses.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-paper" href="discover.html?topic=transportation#topics">
-          <span class="card-number">05</span>
+          <img class="category-icon card-icon" src="assets/icon-transportation.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Transportation options</h3>
           <p>Medical rides, reduced fares, paratransit, senior transportation, or community rides may exist.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-sea" href="discover.html?topic=legal#topics">
-          <span class="card-number">06</span>
+          <img class="category-icon card-icon" src="assets/icon-legal-consumer.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Legal and consumer help</h3>
           <p>Legal aid, tenant advocates, ombudsmen, and consumer offices may provide free information or assistance.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-sage" href="discover.html?topic=food#topics">
-          <span class="card-number">07</span>
+          <img class="category-icon card-icon" src="assets/icon-food.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Food and essentials</h3>
           <p>Food pantries, community meals, mobile distributions, SNAP, WIC, and senior food programs may help.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
         <a class="need-card tone-amber" href="discover.html?topic=work#topics">
-          <span class="card-number">08</span>
+          <img class="category-icon card-icon" src="assets/icon-work-learning.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Work and benefits</h3>
           <p>Workforce centers, benefits navigators, vocational rehabilitation, tax help, and training may be available.</p>
           <span class="card-arrow" aria-hidden="true">↗</span>
         </a>
+      </div>
+      <div class="browse-all-cta">
+        <img class="dawn-flavor" src="assets/dawn-full.webp" alt="" width="118" height="150" loading="lazy" decoding="async" aria-hidden="true">
+        <div>
+          <strong>Not sure which topic fits?</strong>
+          <p>Browse every type of help first. Add a ZIP only when you want a prepared local search.</p>
+        </div>
+        <a class="button" href="discover.html#topics">Browse all types of help <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
     <section class="dawn-section">
       <div class="shell dawn-grid">
         <div class="dawn-art" aria-hidden="true">
-          <div class="dawn-sun"></div>
-          <img src="assets/dawn-guide.png" alt="" width="562" height="600" loading="lazy">
+          <img src="assets/dawn-full.png" alt="" width="395" height="500" loading="lazy" decoding="async">
         </div>
         <div class="dawn-copy">
           <p class="eyebrow light"><span></span> One manageable step</p>
@@ -266,17 +286,17 @@
 
       <div class="standards-grid">
         <article class="standard-card">
-          <span class="standard-mark amber-mark" aria-hidden="true"></span>
+          <img class="functional-icon standard-icon" src="assets/icon-safety-support.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Safety before searching</h3>
           <p>911 and 988 remain visible. Established crisis services come before open-ended web searches for urgent needs.</p>
         </article>
         <article class="standard-card">
-          <span class="standard-mark sage-mark" aria-hidden="true"></span>
+          <img class="functional-icon standard-icon" src="assets/icon-official-source.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Official source first</h3>
           <p>Official locators and provider websites are labeled clearly. Prepared web searches are identified as unreviewed results.</p>
         </article>
         <article class="standard-card">
-          <span class="standard-mark sea-mark" aria-hidden="true"></span>
+          <img class="functional-icon standard-icon" src="assets/icon-private-device.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <h3>Privacy by default</h3>
           <p>No login, analytics, saved ZIP code, or need to explain your personal situation before exploring possible next steps.</p>
         </article>
@@ -292,6 +312,7 @@
           <p>Single Step Forward is designed to make useful possibilities easier to recognize, remember, and share.</p>
         </div>
         <div class="share-action">
+          <img class="share-icon" src="assets/icon-share-knowledge.webp" alt="" width="150" height="150" loading="lazy" decoding="async" aria-hidden="true">
           <button class="button button-light" type="button" data-share-page data-share-url="https://singlestepforward.com/" data-status-target="#share-status">Share Single Step Forward</button>
           <p id="share-status" class="share-status" role="status" aria-live="polite"></p>
         </div>

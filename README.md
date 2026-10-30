@@ -9,14 +9,17 @@ Single Step Forward helps visitors discover forms of assistance they may not kno
 - index.html — nationwide awareness message, ZIP entry, operating standards, sharing, and resource-suggestion flow
 - discover.html — universal ZIP-based education, official starting points, and prepared local searches
 - find-help.html — working next-step guide and filterable reviewed local directory
-- assets/discovery-data.js — universal discovery topics, search templates, official starting points, and the reviewed-area ZIP snapshot
+- assets/discovery-data.js — universal discovery topics, category-icon paths, search templates, official starting points, and the reviewed-area ZIP snapshot
 - assets/discovery.js — ZIP validation, local-guide suggestions, prepared-search generation, and deliberate share/copy behavior
 - assets/resources.js — the source-checked Liberty, Dallas, Wake, and Volusia County resource datasets and ten-edition registry
 - assets/colorado-resources.js — the source-checked Colorado statewide, Denver County, and El Paso County resource datasets
 - assets/massachusetts-resources.js — the source-checked Massachusetts statewide and Plymouth County resource dataset
 - assets/new-york-resources.js — the source-checked New York statewide, Erie County, and Madison County resource datasets
 - assets/illinois-resources.js — the source-checked Illinois statewide and Plainfield resource dataset, with Will/Kendall County boundaries labeled in the next steps
-- assets/area.js — local-edition selection, saved preference, dynamic labels, and area-aware links
+- assets/area.js — explicit select-then-open local-guide controls, saved deliberate guide preference, and dynamic guide labels
+- assets/icon-*.webp — twelve topic pictograms and eight compact functional symbols used as visual recognition cues
+- assets/dawn-full.png and assets/dawn-portait.png — production-size Dawn artwork for the main illustration and guide avatar
+- assets/dawn-full.webp and assets/dawn-portait.webp — lightweight Dawn variants for small decorative placements
 - assets/urgent.js — fixed urgent-language routing rules shared by the directory and validation suite
 - assets/guide.js — private, deterministic client-side matching
 - assets/site.js — local suggestion-note generator
@@ -51,11 +54,13 @@ Re-check time-sensitive information regularly and update both:
 - the edition's `reviewed` value in `window.SSF_RESOURCE_AREAS`
 - the linked source, phone, scope, and next-step language for every changed listing
 
-The selector uses `?area=liberty`, `?area=dallas`, `?area=wake`, `?area=volusia`, `?area=denver`, `?area=elpaso`, `?area=plymouth`, `?area=erie`, `?area=madison`, and `?area=plainfield`, remembers the last edition in the visitor's browser, and carries the selection between the landing page and directory.
+The selector uses `?area=liberty`, `?area=dallas`, `?area=wake`, `?area=volusia`, `?area=denver`, `?area=elpaso`, `?area=plymouth`, `?area=erie`, `?area=madison`, and `?area=plainfield`. Choosing an item does not navigate unexpectedly: the visitor explicitly activates the adjacent Open guide button. The homepage begins in a neutral state; a guide is remembered only after the visitor deliberately opens it.
 
 ## Updating universal discovery
 
-Edit the discovery category array in assets/discovery-data.js to maintain the educational descriptions, prepared search templates, and official or established national starting points. Every topic must have a unique lowercase ID, a summary that avoids promising availability or eligibility, a query containing the ZIP placeholder, and at least one direct starting point. Urgent topics must keep established crisis services before open-ended web search.
+Edit the discovery category array in assets/discovery-data.js to maintain the educational descriptions, icon path, prepared search template, and official or established national starting points. Every topic must have a unique lowercase ID, an existing transparent icon in `assets/`, a summary that avoids promising availability or eligibility, a query containing the ZIP placeholder, and at least one direct starting point. Urgent topics must keep established crisis services before open-ended web search.
+
+Category icons are supporting cues, not replacements for text labels. Keep the 150×150 source assets proportional, render them at roughly 56–78 CSS pixels, preserve empty alternative text when the adjacent heading already names the topic, and do not force unrelated icons onto local-guide categories that lack an exact match.
 
 The reviewed ZIP groups in assets/discovery-data.js are used only to suggest that a reviewed guide may cover the visitor's ZIP. They do not make an eligibility or jurisdiction decision.
 

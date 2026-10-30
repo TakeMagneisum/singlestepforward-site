@@ -8,15 +8,15 @@
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261030-1">
-  <script src="assets/colorado-resources.js?v=20261030-1" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261030-1" defer></script>
-  <script src="assets/new-york-resources.js?v=20261030-1" defer></script>
-  <script src="assets/illinois-resources.js?v=20261030-1" defer></script>
-  <script src="assets/resources.js?v=20261030-1" defer></script>
-  <script src="assets/area.js?v=20261030-1" defer></script>
-  <script src="assets/urgent.js?v=20261030-1" defer></script>
-  <script src="assets/guide.js?v=20261030-1" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261030-2">
+  <script src="assets/colorado-resources.js?v=20261030-2" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261030-2" defer></script>
+  <script src="assets/new-york-resources.js?v=20261030-2" defer></script>
+  <script src="assets/illinois-resources.js?v=20261030-2" defer></script>
+  <script src="assets/resources.js?v=20261030-2" defer></script>
+  <script src="assets/area.js?v=20261030-2" defer></script>
+  <script src="assets/urgent.js?v=20261030-2" defer></script>
+  <script src="assets/guide.js?v=20261030-2" defer></script>
 </head>
 <body class="finder-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -43,21 +43,31 @@
     </div>
     <div class="location-bar">
       <div class="shell location-inner">
-        <label for="area-select-help"><span>Reviewed local guide</span>
-          <select id="area-select-help" data-area-select aria-label="Choose a reviewed local guide">
-            <option value="liberty">Liberty County, GA</option>
-            <option value="dallas">Dallas County, TX</option>
-            <option value="wake">Wake County, NC</option>
-            <option value="volusia">Volusia County, FL</option>
-            <option value="denver">Denver County, CO</option>
-            <option value="elpaso">El Paso County, CO</option>
-            <option value="plymouth">Plymouth County, MA</option>
-            <option value="erie">Erie County, NY</option>
-            <option value="madison">Madison County, NY</option>
-            <option value="plainfield">Plainfield, IL</option>
-          </select>
-        </label>
-        <p>Browsing the source-checked <strong data-area-label>Liberty County, Georgia</strong> guide.</p>
+        <div class="area-picker" data-area-picker>
+          <img class="functional-icon area-picker-icon" src="assets/icon-reviewed-guide.webp" alt="" width="150" height="150" aria-hidden="true">
+          <div class="area-picker-main">
+            <label for="area-select-help">Choose a reviewed local guide</label>
+            <div class="area-picker-controls">
+              <span class="select-shell">
+                <select id="area-select-help" data-area-select aria-label="Choose a reviewed local guide">
+                  <option value="" disabled>Select a county or city…</option>
+                  <option value="liberty">Liberty County, GA</option>
+                  <option value="dallas">Dallas County, TX</option>
+                  <option value="wake">Wake County, NC</option>
+                  <option value="volusia">Volusia County, FL</option>
+                  <option value="denver">Denver County, CO</option>
+                  <option value="elpaso">El Paso County, CO</option>
+                  <option value="plymouth">Plymouth County, MA</option>
+                  <option value="erie">Erie County, NY</option>
+                  <option value="madison">Madison County, NY</option>
+                  <option value="plainfield">Plainfield, IL</option>
+                </select>
+              </span>
+              <button class="button area-open-button" type="button" data-area-open>Open guide</button>
+            </div>
+          </div>
+        </div>
+        <p class="location-context viewing-context"><strong>Viewing: <span data-area-label>Liberty County, Georgia</span></strong><br>Source checked <span data-area-review-date>September 8, 2026</span></p>
       </div>
     </div>
   </header>
@@ -75,13 +85,13 @@
       <div class="guide-panel">
         <div class="guide-panel-head">
           <div class="guide-identity">
-            <span class="guide-avatar" aria-hidden="true"><img src="assets/dawn-guide.png" alt="" width="82" height="88"></span>
+            <span class="guide-avatar" aria-hidden="true"><img src="assets/dawn-portait.png" alt="" width="300" height="300" decoding="async"></span>
             <div>
               <h2 id="guide-title">Dawn’s next-step guide</h2>
               <p>Friendly direction from a source-checked local directory.</p>
             </div>
           </div>
-          <span class="privacy-pill">Private on this device</span>
+          <span class="privacy-pill"><img src="assets/icon-private-device.webp" alt="" width="150" height="150" aria-hidden="true">Private on this device</span>
         </div>
 
         <p class="guide-question">Tell me what is going on.</p>
@@ -136,7 +146,7 @@
         </div>
       </div>
 
-      <div class="filter-wrap">
+      <div class="filter-wrap" id="topic-filters">
         <p class="filter-label">Browse by topic</p>
         <div class="filter-list" id="filter-list" role="group" aria-label="Filter resources">
           <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -165,6 +175,10 @@
       </div>
 
       <div class="resource-grid" id="resource-grid" aria-live="polite"></div>
+
+      <div class="back-to-topics-wrap">
+        <a class="button button-quiet button-small" href="#topic-filters">Back to topics <span aria-hidden="true">↑</span></a>
+      </div>
 
       <noscript>
         <div class="no-results">
