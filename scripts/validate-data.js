@@ -11,6 +11,32 @@ const requiredCategories = [
   "animals", "education", "family", "food", "health", "housing", "legal", "mental-health",
   "recovery", "safety", "tax", "transportation", "veterans", "volunteer", "weather", "work"
 ];
+const requiredVisualAssets = [
+  "assets/icon-call-211.webp",
+  "assets/icon-confirm-directly.webp",
+  "assets/icon-dental-health.webp",
+  "assets/icon-family-support.webp",
+  "assets/icon-food.webp",
+  "assets/icon-household-bills.webp",
+  "assets/icon-housing.webp",
+  "assets/icon-legal-consumer.webp",
+  "assets/icon-medical-costs.webp",
+  "assets/icon-mental-health.webp",
+  "assets/icon-official-source.webp",
+  "assets/icon-pet-assistance.webp",
+  "assets/icon-prepared-search.webp",
+  "assets/icon-private-device.webp",
+  "assets/icon-reviewed-guide.webp",
+  "assets/icon-safety-support.webp",
+  "assets/icon-share-knowledge.webp",
+  "assets/icon-transportation.webp",
+  "assets/icon-use-zip.webp",
+  "assets/icon-work-learning.webp",
+  "assets/dawn-full.png",
+  "assets/dawn-portait.png",
+  "assets/dawn-full.webp",
+  "assets/dawn-portait.webp"
+];
 
 function fail(message) {
   errors.push(message);
@@ -82,6 +108,11 @@ function validateDiscovery(discovery, areas) {
     categoryIds.add(category.id);
     if (!category.title || !category.summary || !category.searchLabel) {
       fail(label + ": title, summary, and search label are required.");
+    }
+    if (!category.icon || !/^assets\/icon-[a-z0-9-]+\.webp$/.test(category.icon)) {
+      fail(label + ": a valid category icon path is required.");
+    } else if (!fs.existsSync(path.join(root, category.icon))) {
+      fail(label + ": missing category icon " + category.icon + ".");
     }
     if (!category.query || !category.query.includes("{zip}")) {
       fail(label + ": prepared search query must contain the ZIP placeholder.");
@@ -167,15 +198,28 @@ function validateMarkup(areas) {
   if (!index.includes("data-zip-form") || !index.includes("data-zip-input")) {
     fail("index.html: accessible ZIP discovery form is missing.");
   }
+  if (!index.includes("data-area-neutral") || !index.includes("data-area-open disabled")) {
+    fail("index.html: neutral select-then-open reviewed-guide control is missing.");
+  }
+  if (!finder.includes("data-area-open") || !finder.includes("data-area-review-date")) {
+    fail("find-help.html: reviewed-guide open control or visible review date is missing.");
+  }
+  if (!finder.includes("assets/dawn-portait.png") || !index.includes("assets/dawn-full.png")) {
+    fail("Production Dawn PNG references are missing.");
+  }
   ["id=\"zip-result\"", "id=\"discovery-grid\"", "data-zip-form"].forEach((required) => {
     if (!discovery.includes(required)) fail("discover.html: missing required structure " + required + ".");
   });
+  const discoveryScript = fs.readFileSync(path.join(root, "assets/discovery.js"), "utf8");
+  if (!discoveryScript.includes("Add a ZIP to prepare a local search")) {
+    fail("Universal discovery is missing the no-ZIP local-search prompt.");
+  }
   ["tel:911", "tel:988", "tel:211"].forEach((route) => {
     if (!discovery.includes(route)) fail("discover.html: missing direct route " + route + ".");
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
 
-  const expectedCacheToken = "20261030-1";
+  const expectedCacheToken = "20261030-2";
   [
     ["index.html", index],
     ["find-help.html", finder],
@@ -190,6 +234,15 @@ function validateMarkup(areas) {
       if (!fs.existsSync(path.join(root, asset))) fail(pageName + ": missing referenced asset " + asset + ".");
     });
   });
+}
+
+function validateVisualAssets() {
+  requiredVisualAssets.forEach((asset) => {
+    if (!fs.existsSync(path.join(root, asset))) fail("Missing required visual asset: " + asset + ".");
+  });
+  if (fs.existsSync(path.join(root, "assets/desktop.ini"))) {
+    fail("Packaging metadata assets/desktop.ini must be removed.");
+  }
 }
 
 function validateUrgentRules() {
@@ -275,6 +328,7 @@ try {
   validateAreas(areas);
   validateDiscovery(discovery, areas);
   validateMarkup(areas);
+  validateVisualAssets();
   validateUrgentRules();
   validateReviewSheets(areas);
 } catch (error) {
