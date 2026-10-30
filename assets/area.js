@@ -47,7 +47,7 @@
 
     try {
       const url = new URL(raw, window.location.href);
-      url.searchParams.set("area", areaId);
+      if (!url.searchParams.has("area")) url.searchParams.set("area", areaId);
       link.href = url.href;
     } catch {
       /* A malformed optional link should not stop the page. */
@@ -58,22 +58,24 @@
     const isFinder = document.body.classList.contains("finder-page");
     document.title = isFinder
       ? "Find Help in " + area.label + " | Single Step Forward"
-      : "Single Step Forward | " + area.label;
+      : "Single Step Forward | Learn what help may exist";
 
     const description = isFinder
       ? "Find trusted local and official help in " + area.label + " for food, housing, health, work, family needs, animals, safety, and more."
-      : "Single Step Forward helps people in " + area.label + " find clear paths to trusted local services, official applications, crisis contacts, and practical support.";
+      : "Single Step Forward helps you discover forms of local assistance you may not know exist, learn what to search for, and find a practical place to begin.";
     document.querySelector('meta[name="description"]')?.setAttribute("content", description);
     document.querySelector('meta[property="og:description"]')?.setAttribute(
       "content",
-      "Local help, clearly connected for " + area.label + "."
+      isFinder
+        ? "Source-checked local starting points for " + area.label + "."
+        : "Discover options, learn what to look for, and find a practical place to begin."
     );
 
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       const url = new URL(canonical.href);
-      if (areaId === defaultAreaId) url.searchParams.delete("area");
-      else url.searchParams.set("area", areaId);
+      if (isFinder && areaId !== defaultAreaId) url.searchParams.set("area", areaId);
+      else url.searchParams.delete("area");
       canonical.href = url.href;
     }
   }
