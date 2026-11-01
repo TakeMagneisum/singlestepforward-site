@@ -1,6 +1,6 @@
 # Single Step Forward
 
-A privacy-first awareness and navigation prototype that offers useful starting points for any five-digit U.S. ZIP code, plus ten selectable, source-checked local guides: Liberty County, Georgia; Dallas County, Texas; Wake County, North Carolina; Volusia County, Florida; Denver County, Colorado; El Paso County, Colorado; Plymouth County, Massachusetts; Erie County, New York; Madison County, New York; and Plainfield, Illinois.
+A privacy-first awareness and navigation prototype that offers useful starting points for any five-digit U.S. ZIP code, plus nineteen selectable, source-checked local guides. The reviewed editions cover Liberty County, Dallas County, Wake County, Volusia County, Denver County, El Paso County, Plymouth County, Erie County, Madison County, Plainfield, New York City, Chicago, Los Angeles, Philadelphia, Houston, Phoenix, San Diego, San Antonio, and Fort Worth.
 
 Single Step Forward helps visitors discover forms of assistance they may not know exist, learn useful service terminology, and reach a practical next step. The universal discovery layer provides educational guidance, established national starting points, 211, and prepared local web searches. Reviewed local guides add researched organizations, direct links, phone numbers, service notes, and visible source-check dates.
 
@@ -11,11 +11,12 @@ Single Step Forward helps visitors discover forms of assistance they may not kno
 - find-help.html — working next-step guide and filterable reviewed local directory
 - assets/discovery-data.js — universal discovery topics, category-icon paths, search templates, official starting points, and the reviewed-area ZIP snapshot
 - assets/discovery.js — ZIP validation, local-guide suggestions, prepared-search generation, and deliberate share/copy behavior
-- assets/resources.js — the source-checked Liberty, Dallas, Wake, and Volusia County resource datasets and ten-edition registry
+- assets/resources.js — the source-checked Liberty, Dallas, Wake, and Volusia County resource datasets and nineteen-edition registry
 - assets/colorado-resources.js — the source-checked Colorado statewide, Denver County, and El Paso County resource datasets
 - assets/massachusetts-resources.js — the source-checked Massachusetts statewide and Plymouth County resource dataset
 - assets/new-york-resources.js — the source-checked New York statewide, Erie County, and Madison County resource datasets
 - assets/illinois-resources.js — the source-checked Illinois statewide and Plainfield resource dataset, with Will/Kendall County boundaries labeled in the next steps
+- assets/city-resources.js — generated browser-ready datasets for the nine city editions added from reviewer CSVs
 - assets/area.js — explicit select-then-open local-guide controls, saved deliberate guide preference, and dynamic guide labels
 - assets/icon-*.webp — twelve topic pictograms and eight compact functional symbols used as visual recognition cues
 - assets/dawn-full.png and assets/dawn-portait.png — production-size Dawn artwork for the main illustration and guide avatar
@@ -25,6 +26,7 @@ Single Step Forward helps visitors discover forms of assistance they may not kno
 - assets/site.js — local suggestion-note generator
 - scripts/validate-data.js — deploy-time checks for IDs, routing targets, HTTPS URLs, phones, dates, selectors, categories, reviewer sheets, and 100+ urgent-language cases
 - scripts/export-review-sheets.js — creates one reviewer-friendly CSV for each local edition
+- scripts/import-city-review-sheets.js — converts the nine maintained city reviewer CSVs into browser-ready directory data
 - review-sheets/ — per-edition worksheets with “still correct?”, correction, and missing-resource columns for local reviewers
 - CNAME — custom-domain configuration for singlestepforward.com
 - .nojekyll — tells GitHub Pages to serve the static files directly
@@ -47,14 +49,14 @@ If you are not ready to use singlestepforward.com, remove the CNAME file before 
 
 ## Updating the directory
 
-Edit the appropriate local array in assets/resources.js, assets/colorado-resources.js, assets/massachusetts-resources.js, assets/new-york-resources.js, or assets/illinois-resources.js. Each listing includes categories, search keywords, source type, scope, summary, direct next step, official URL, and optional phone/address.
+Edit the appropriate local array in assets/resources.js, assets/colorado-resources.js, assets/massachusetts-resources.js, assets/new-york-resources.js, or assets/illinois-resources.js. For the nine city editions, edit the matching file in review-sheets/ and run `node scripts/import-city-review-sheets.js` to regenerate assets/city-resources.js. Each listing includes categories, search keywords, source type, scope, summary, direct next step, official URL, and optional phone/address.
 
 Re-check time-sensitive information regularly and update both:
 
 - the edition's `reviewed` value in `window.SSF_RESOURCE_AREAS`
 - the linked source, phone, scope, and next-step language for every changed listing
 
-The selector uses `?area=liberty`, `?area=dallas`, `?area=wake`, `?area=volusia`, `?area=denver`, `?area=elpaso`, `?area=plymouth`, `?area=erie`, `?area=madison`, and `?area=plainfield`. Choosing an item does not navigate unexpectedly: the visitor explicitly activates the adjacent Open guide button. The homepage begins in a neutral state; a guide is remembered only after the visitor deliberately opens it.
+Each selector value matches an edition ID in `window.SSF_RESOURCE_AREAS`, including the nine new city IDs. Choosing an item does not navigate unexpectedly: the visitor explicitly activates the adjacent Open guide button. The homepage begins in a neutral state; a guide is remembered only after the visitor deliberately opens it.
 
 ## Updating universal discovery
 
@@ -64,13 +66,14 @@ Category icons are supporting cues, not replacements for text labels. Keep the 1
 
 The reviewed ZIP groups in assets/discovery-data.js are used only to suggest that a reviewed guide may cover the visitor's ZIP. They do not make an eligibility or jurisdiction decision.
 
-The October 30, 2026 snapshot was generated at build time from the zipcodes 3.0.0 dataset. That dataset combines county and postal metadata from UnitedStatesZipCodes and GeoNames and reconciles active delivery ZIPs against the USPS ZIP Locale Detail file. The package is not a runtime dependency and is not shipped with the site.
+The reviewed-area ZIP snapshot was refreshed on November 1, 2026. The original county mappings were generated at build time from the zipcodes 3.0.0 dataset; the new city editions add city-associated ZIP sets. The package is not a runtime dependency and is not shipped with the site.
 
 Important limitation: ZIP codes are postal delivery constructs, not county boundaries. A ZIP can cross county or municipal lines, and a single primary county label can hide that overlap. The public interface therefore says a guide “may cover” a ZIP and tells visitors to confirm their county before relying on county-specific programs. Refresh this snapshot when reviewed areas change or when the postal dataset is updated.
 
 Before packaging or publishing, run:
 
 ```sh
+node scripts/import-city-review-sheets.js
 node scripts/export-review-sheets.js
 node scripts/validate-data.js
 ```
