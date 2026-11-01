@@ -133,6 +133,10 @@
         element.hidden = element.dataset.areaOnly !== areaId;
       });
 
+      document.querySelectorAll(".public-note").forEach((container) => {
+        container.hidden = !Array.from(container.children).some((element) => !element.hidden);
+      });
+
       const areaInput = document.querySelector("#resource-area");
       if (areaInput && !areaInput.value) areaInput.placeholder = area.label + " or another area";
     }

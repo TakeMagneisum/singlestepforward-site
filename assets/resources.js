@@ -2181,6 +2181,168 @@ window.SSF_RESOURCE_AREAS = {
       violenceText: "Call 911 for immediate danger. Guardian Angel has 24-hour confidential domestic-violence support at 815-729-1228 and sexual-assault support at 815-730-8984; use a safe device if possible.",
       fallbackText: "Try fewer words, browse a topic, or call 211 Illinois. Plainfield spans Will and Kendall counties, so confirm the county tied to your home address."
     }
+  },
+  "new-york-city": {
+    id: "new-york-city",
+    name: "New York City",
+    state: "New York",
+    stateCode: "NY",
+    label: "New York City, New York",
+    shortLabel: "New York City, NY",
+    reviewed: "October 31, 2026",
+    resources: window.SSF_NEW_YORK_CITY_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "new-york-domestic-and-sexual-violence-hotline", "nyc-family-justice-centers"],
+      suicide: ["988-suicide-and-crisis-lifeline"],
+      violence: ["new-york-domestic-and-sexual-violence-hotline", "nyc-family-justice-centers", "lawhelpny", "988-suicide-and-crisis-lifeline"],
+      fallback: ["nyc-311", "access-nyc", "new-york-mybenefits", "new-york-public-library"],
+      violenceText: "Call 911 for immediate danger. New York's confidential domestic and sexual violence hotline is 1-800-942-6906; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call NYC 311 for help finding the right city service."
+    }
+  },
+  chicago: {
+    id: "chicago",
+    name: "Chicago",
+    state: "Illinois",
+    stateCode: "IL",
+    label: "Chicago, Illinois",
+    shortLabel: "Chicago, IL",
+    reviewed: "October 31, 2026",
+    resources: window.SSF_CHICAGO_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "chicago-mental-health-centers", "chicago-domestic-violence-help"],
+      suicide: ["988-suicide-and-crisis-lifeline", "chicago-mental-health-centers"],
+      violence: ["chicago-domestic-violence-help", "legal-aid-chicago", "illinois-domestic-violence-hotline", "988-suicide-and-crisis-lifeline"],
+      fallback: ["211-metro-chicago", "illinois-abe-benefits-portal", "dfss-community-service-centers", "chicago-public-library-community-resources"],
+      violenceText: "Call 911 for immediate danger. The Illinois Domestic Violence Hotline is 1-877-863-6338; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 Metro Chicago for a person who can search across local services."
+    }
+  },
+  "los-angeles": {
+    id: "los-angeles",
+    name: "Los Angeles",
+    state: "California",
+    stateCode: "CA",
+    label: "Los Angeles, California",
+    shortLabel: "Los Angeles, CA",
+    reviewed: "October 31, 2026",
+    resources: window.SSF_LOS_ANGELES_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "los-angeles-county-mental-health-help-line", "los-angeles-county-domestic-violence-hotline"],
+      suicide: ["988-suicide-and-crisis-lifeline", "los-angeles-county-mental-health-help-line"],
+      violence: ["los-angeles-county-domestic-violence-hotline", "legal-aid-foundation-of-los-angeles", "988-suicide-and-crisis-lifeline"],
+      fallback: ["211-la", "benefitscal", "los-angeles-county-dpss", "los-angeles-public-library"],
+      violenceText: "Call 911 for immediate danger. The Los Angeles County Domestic Violence Hotline is 800-978-3600; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 LA for a person who can search across Los Angeles County services."
+    }
+  },
+  philadelphia: {
+    id: "philadelphia",
+    name: "Philadelphia",
+    state: "Pennsylvania",
+    stateCode: "PA",
+    label: "Philadelphia, Pennsylvania",
+    shortLabel: "Philadelphia, PA",
+    reviewed: "October 31, 2026",
+    resources: window.SSF_PHILADELPHIA_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "philadelphia-crisis-line", "philadelphia-domestic-violence-hotline"],
+      suicide: ["988-suicide-and-crisis-lifeline", "philadelphia-crisis-line"],
+      violence: ["philadelphia-domestic-violence-hotline", "community-legal-services-of-philadelphia", "pa-law-help", "988-suicide-and-crisis-lifeline"],
+      fallback: ["pa-211", "pennsylvania-compass", "benephilly", "free-library-of-philadelphia"],
+      violenceText: "Call 911 for immediate danger. The Philadelphia Domestic Violence Hotline is 866-723-3014; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call PA 211 for a person who can search across local services."
+    }
+  },
+  houston: {
+    id: "houston",
+    name: "Houston",
+    state: "Texas",
+    stateCode: "TX",
+    label: "Houston, Texas",
+    shortLabel: "Houston, TX",
+    reviewed: "November 1, 2026",
+    resources: window.SSF_HOUSTON_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "the-harris-center-for-mental-health-and-idd", "houston-area-women-s-center"],
+      suicide: ["988-suicide-and-crisis-lifeline", "the-harris-center-for-mental-health-and-idd"],
+      violence: ["houston-area-women-s-center", "lone-star-legal-aid", "texas-family-violence-program", "988-suicide-and-crisis-lifeline"],
+      fallback: ["2-1-1-texas", "your-texas-benefits", "hcph-connect", "houston-public-library"],
+      violenceText: "Call 911 for immediate danger. The Houston Area Women's Center has a domestic-violence hotline at 713-528-2121; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 2-1-1 Texas for a person who can search across local services."
+    }
+  },
+  phoenix: {
+    id: "phoenix",
+    name: "Phoenix",
+    state: "Arizona",
+    stateCode: "AZ",
+    label: "Phoenix, Arizona",
+    shortLabel: "Phoenix, AZ",
+    reviewed: "November 1, 2026",
+    resources: window.SSF_PHOENIX_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "phoenix-crisis-hotlines-and-treatment-centers", "arizona-domestic-violence-services"],
+      suicide: ["988-suicide-and-crisis-lifeline", "phoenix-crisis-hotlines-and-treatment-centers"],
+      violence: ["arizona-domestic-violence-services", "community-legal-services", "azlawhelp", "988-suicide-and-crisis-lifeline"],
+      fallback: ["211-arizona", "health-e-arizona-plus", "phoenix-crisis-assistance-and-social-services", "phoenix-public-library"],
+      violenceText: "Call 911 for immediate danger. Arizona's domestic-violence services line is 800-782-6400; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 Arizona for a person who can search across local services."
+    }
+  },
+  "san-diego": {
+    id: "san-diego",
+    name: "San Diego",
+    state: "California",
+    stateCode: "CA",
+    label: "San Diego, California",
+    shortLabel: "San Diego, CA",
+    reviewed: "November 1, 2026",
+    resources: window.SSF_SAN_DIEGO_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "san-diego-access-and-crisis-line", "san-diego-domestic-violence-resources"],
+      suicide: ["988-suicide-and-crisis-lifeline", "san-diego-access-and-crisis-line"],
+      violence: ["san-diego-domestic-violence-resources", "legal-aid-society-of-san-diego", "lawhelpca", "988-suicide-and-crisis-lifeline"],
+      fallback: ["211-san-diego", "benefitscal", "county-of-san-diego-access", "san-diego-public-library"],
+      violenceText: "Call 911 for immediate danger. San Diego's domestic-violence resource line is 888-385-4657; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 San Diego for a person who can search across county services."
+    }
+  },
+  "san-antonio": {
+    id: "san-antonio",
+    name: "San Antonio",
+    state: "Texas",
+    stateCode: "TX",
+    label: "San Antonio, Texas",
+    shortLabel: "San Antonio, TX",
+    reviewed: "November 1, 2026",
+    resources: window.SSF_SAN_ANTONIO_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "the-center-for-health-care-services", "san-antonio-domestic-violence-resources"],
+      suicide: ["988-suicide-and-crisis-lifeline", "the-center-for-health-care-services"],
+      violence: ["san-antonio-domestic-violence-resources", "texas-riogrande-legal-aid", "texas-family-violence-program", "988-suicide-and-crisis-lifeline"],
+      fallback: ["2-1-1-texas", "your-texas-benefits", "community-connections-hotline", "san-antonio-public-library"],
+      violenceText: "Call 911 for immediate danger. San Antonio's domestic-violence resource line is 210-733-8810; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 2-1-1 Texas for a person who can search across local services."
+    }
+  },
+  "fort-worth": {
+    id: "fort-worth",
+    name: "Fort Worth",
+    state: "Texas",
+    stateCode: "TX",
+    label: "Fort Worth, Texas",
+    shortLabel: "Fort Worth, TX",
+    reviewed: "November 1, 2026",
+    resources: window.SSF_FORT_WORTH_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "mhmr-of-tarrant-county-crisis-services", "safehaven-of-tarrant-county"],
+      suicide: ["988-suicide-and-crisis-lifeline", "mhmr-of-tarrant-county-crisis-services"],
+      violence: ["safehaven-of-tarrant-county", "legal-aid-of-northwest-texas", "texas-family-violence-program", "988-suicide-and-crisis-lifeline"],
+      fallback: ["2-1-1-texas", "your-texas-benefits", "community-action-partners", "fort-worth-public-library"],
+      violenceText: "Call 911 for immediate danger. SafeHaven of Tarrant County has a 24-hour hotline at 1-877-701-7233; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 2-1-1 Texas for a person who can search across local services."
+    }
   }
 };
 

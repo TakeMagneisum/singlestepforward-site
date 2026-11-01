@@ -1,6 +1,13 @@
 (function () {
   "use strict";
 
+  const zipRange = (start, end) => Array.from(
+    { length: end - start + 1 },
+    (_, index) => String(start + index).padStart(5, "0")
+  );
+  const zipList = (value) => value.split(" ");
+  const combineZips = (...groups) => [...new Set(groups.flat())];
+
   window.SSF_REVIEWED_ZIP_GROUPS = [
     {
       areaId: "liberty",
@@ -51,6 +58,65 @@
       areaId: "plainfield",
       label: "Plainfield, Illinois",
       zips: "60544 60585 60586".split(" ")
+    },
+    {
+      areaId: "new-york-city",
+      label: "New York City, New York",
+      zips: combineZips(
+        zipRange(10001, 10014), zipRange(10016, 10041),
+        zipList("10044 10065 10069 10075 10128 10280 10281 10282"),
+        zipRange(10301, 10314), zipRange(10451, 10475),
+        zipList("11004 11005"), zipRange(11101, 11106),
+        zipRange(11201, 11239), zipRange(11351, 11385),
+        zipRange(11411, 11436), zipRange(11691, 11694), zipList("11697")
+      )
+    },
+    {
+      areaId: "chicago",
+      label: "Chicago, Illinois",
+      zips: zipRange(60601, 60661)
+    },
+    {
+      areaId: "los-angeles",
+      label: "Los Angeles, California",
+      zips: combineZips(
+        zipRange(90004, 90008), zipRange(90010, 90020),
+        zipRange(90023, 90049), zipRange(90057, 90058),
+        zipRange(90061, 90066), zipRange(90068, 90071),
+        zipList("90073 90077 90079 90089 90094 90095 90272 90291 90292 90293 90710 90731 90732 90744 90748 91040 91042"),
+        zipRange(91303, 91307), zipList("91311 91316 91324 91325 91326 91330 91331 91335 91340 91342 91343 91344 91345 91352 91356 91364 91367"),
+        zipRange(91401, 91411), zipRange(91601, 91608)
+      )
+    },
+    {
+      areaId: "philadelphia",
+      label: "Philadelphia, Pennsylvania",
+      zips: zipRange(19102, 19154)
+    },
+    {
+      areaId: "houston",
+      label: "Houston, Texas",
+      zips: zipRange(77002, 77099)
+    },
+    {
+      areaId: "phoenix",
+      label: "Phoenix, Arizona",
+      zips: zipRange(85003, 85054)
+    },
+    {
+      areaId: "san-diego",
+      label: "San Diego, California",
+      zips: combineZips(zipRange(92101, 92139), zipList("92145 92154 92161 92173 92182"))
+    },
+    {
+      areaId: "san-antonio",
+      label: "San Antonio, Texas",
+      zips: zipRange(78201, 78264)
+    },
+    {
+      areaId: "fort-worth",
+      label: "Fort Worth, Texas",
+      zips: combineZips(zipRange(76102, 76140), zipList("76148 76155 76161 76162 76163 76164"))
     }
   ];
 
