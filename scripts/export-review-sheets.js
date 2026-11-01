@@ -14,6 +14,7 @@ const context = vm.createContext({ window: {} });
   "assets/massachusetts-resources.js",
   "assets/new-york-resources.js",
   "assets/illinois-resources.js",
+  "assets/city-resources.js",
   "assets/resources.js"
 ].forEach((file) => {
   vm.runInContext(fs.readFileSync(path.join(root, file), "utf8"), context, { filename: file });

@@ -49,6 +49,7 @@ function loadDirectory() {
     "assets/massachusetts-resources.js",
     "assets/new-york-resources.js",
     "assets/illinois-resources.js",
+    "assets/city-resources.js",
     "assets/resources.js"
   ].forEach((file) => {
     vm.runInContext(fs.readFileSync(path.join(root, file), "utf8"), context, { filename: file });
@@ -77,7 +78,7 @@ function validateDiscovery(discovery, areas) {
   const categoryIds = new Set();
 
   if (groups.length !== areaIds.size) {
-    fail("Discovery ZIP groups must match all 10 reviewed local guides.");
+    fail("Discovery ZIP groups must match every reviewed local guide.");
   }
 
   groups.forEach((group, groupIndex) => {
@@ -98,6 +99,13 @@ function validateDiscovery(discovery, areas) {
 
   if (zipOwners.get("80202") !== "denver") fail("ZIP regression: 80202 must suggest the Denver guide.");
   if (zipOwners.get("60544") !== "plainfield") fail("ZIP regression: 60544 must suggest the Plainfield guide.");
+  [
+    ["10001", "new-york-city"], ["60601", "chicago"], ["90012", "los-angeles"],
+    ["19103", "philadelphia"], ["77002", "houston"], ["85003", "phoenix"],
+    ["92101", "san-diego"], ["78205", "san-antonio"], ["76102", "fort-worth"]
+  ].forEach(([zip, areaId]) => {
+    if (zipOwners.get(zip) !== areaId) fail(`ZIP regression: ${zip} must suggest the ${areaId} guide.`);
+  });
   if (zipOwners.has("99999")) fail("ZIP regression: 99999 must remain an unmatched fallback example.");
 
   if (categories.length < 11) fail("Universal discovery must contain at least 11 topic categories.");
@@ -134,7 +142,7 @@ function validateDiscovery(discovery, areas) {
 
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
-  if (areaEntries.length !== 10) fail(`Expected 10 local editions; found ${areaEntries.length}.`);
+  if (areaEntries.length !== 19) fail(`Expected 19 local editions; found ${areaEntries.length}.`);
 
   areaEntries.forEach(([areaId, area]) => {
     if (!Array.isArray(area.resources) || !area.resources.length) {
@@ -190,10 +198,12 @@ function validateMarkup(areas) {
     if (areaId !== "liberty" && !sitemap.includes(`area=${areaId}`)) fail(`sitemap.xml: missing ${areaId}.`);
   });
 
-  ["illinois-resources.js", "urgent.js"].forEach((file) => {
+  ["illinois-resources.js", "city-resources.js", "urgent.js"].forEach((file) => {
     if (!finder.includes(file)) fail(`find-help.html: missing script ${file}.`);
   });
-  if (!index.includes("illinois-resources.js")) fail("index.html: missing Illinois dataset script.");
+  ["illinois-resources.js", "city-resources.js"].forEach((file) => {
+    if (!index.includes(file)) fail(`index.html: missing dataset script ${file}.`);
+  });
 
   if (!index.includes("data-zip-form") || !index.includes("data-zip-input")) {
     fail("index.html: accessible ZIP discovery form is missing.");
@@ -219,7 +229,7 @@ function validateMarkup(areas) {
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
 
-  const expectedCacheToken = "20261030-2";
+  const expectedCacheToken = "20261101-1";
   [
     ["index.html", index],
     ["find-help.html", finder],
