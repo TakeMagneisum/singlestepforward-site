@@ -1,0 +1,773 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-01",
+  "resources": [
+    {
+      "resource_id": "2-1-1-texas",
+      "resource": "2-1-1 Texas",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "navigation",
+        "benefits",
+        "referrals"
+      ],
+      "phone": "211 · 1-877-541-7905",
+      "official_link": "https://www.211texas.org/",
+      "current_next_step": "Call or search for current local services; choose the benefits option for state-benefit questions. Confirm hours, service area, and intake directly.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "your-texas-benefits",
+      "resource": "Your Texas Benefits",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "benefits",
+        "food",
+        "health"
+      ],
+      "phone": "2-1-1 · 1-877-541-7905",
+      "official_link": "https://www.yourtexasbenefits.com/Learn/Home",
+      "current_next_step": "Screen, apply, or manage SNAP, Medicaid, TANF, or other benefits and save the confirmation and notices.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "The portal returned an error page during verification, but the page identified the official benefits help number and Option 2."
+    },
+    {
+      "resource_id": "healthcare-gov",
+      "resource": "HealthCare.gov",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "health insurance"
+      ],
+      "phone": "1-800-318-2596",
+      "official_link": "https://www.healthcare.gov/",
+      "current_next_step": "Compare Marketplace plans and financial help or request enrollment assistance. Confirm deadlines and effective dates before ending other coverage.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "texas-wic",
+      "resource": "Texas WIC",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "food",
+        "maternal health",
+        "children"
+      ],
+      "phone": "1-800-942-3678",
+      "official_link": "https://texaswic.org/apply",
+      "current_next_step": "Use the official application and clinic finder, then confirm eligibility, appointment requirements, and documents with the local clinic.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tdhca-help-for-texans",
+      "resource": "TDHCA Help for Texans",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "housing",
+        "utilities",
+        "rent"
+      ],
+      "phone": "1-877-399-8939 · 1-877-541-7905",
+      "official_link": "https://www.tdhca.texas.gov/help-for-texans",
+      "current_next_step": "Use the official provider links for utility, rent, and housing help, then confirm current funding, service area, deadlines, and documents.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "TDHCA funds local providers rather than accepting individual applications; provider capacity may vary."
+    },
+    {
+      "resource_id": "texas-family-violence-program",
+      "resource": "Texas Family Violence Program",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "domestic violence",
+        "safety"
+      ],
+      "phone": "1-800-799-7233 · Text START to 88788",
+      "official_link": "https://www.hhs.texas.gov/services/safety/family-violence-program",
+      "current_next_step": "Contact the hotline from a safe device if possible for confidential support and local referrals. Call 911 for immediate danger.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "texaslawhelp",
+      "resource": "TexasLawHelp",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "legal"
+      ],
+      "phone": "",
+      "official_link": "https://texaslawhelp.org/",
+      "current_next_step": "Choose the legal issue and location, then follow the listed program's intake instructions. A directory result does not guarantee representation.",
+      "source_type": "designated provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "texas-attorney-general-consumer-protection",
+      "resource": "Texas Attorney General Consumer Protection",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "consumer protection",
+        "fraud"
+      ],
+      "phone": "",
+      "official_link": "https://www.texasattorneygeneral.gov/consumer-protection",
+      "current_next_step": "Review the issue guidance and use the official complaint process. Contact your bank promptly if an account may be compromised.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "state-of-texas-emergency-assistance-registry-stear",
+      "resource": "State of Texas Emergency Assistance Registry (STEAR)",
+      "layer": "state",
+      "jurisdiction": "Texas",
+      "scope": "Texas",
+      "categories": [
+        "emergency preparedness",
+        "disability"
+      ],
+      "phone": "Register through 211",
+      "official_link": "https://tdem.texas.gov/stear/",
+      "current_next_step": "Register if extra assistance may be needed during an emergency and keep the information current. Registration does not guarantee evacuation or services.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "988-suicide-crisis-lifeline",
+      "resource": "988 Suicide & Crisis Lifeline",
+      "layer": "national",
+      "jurisdiction": "United States",
+      "scope": "United States",
+      "categories": [
+        "mental health",
+        "crisis"
+      ],
+      "phone": "Call or text 988",
+      "official_link": "https://988lifeline.org/",
+      "current_next_step": "Call or text 988 now, or use the official chat. Call 911 for immediate physical danger or a life-threatening medical emergency.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "national-call-center-for-homeless-veterans",
+      "resource": "National Call Center for Homeless Veterans",
+      "layer": "national",
+      "jurisdiction": "United States",
+      "scope": "United States",
+      "categories": [
+        "veterans",
+        "homelessness"
+      ],
+      "phone": "1-877-424-3838",
+      "official_link": "https://department.va.gov/homeless/",
+      "current_next_step": "Call the national center and provide the veteran's current location and immediate need. Call 911 for immediate danger.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "irs-free-tax-preparation-vita-tce",
+      "resource": "IRS Free Tax Preparation (VITA/TCE)",
+      "layer": "national",
+      "jurisdiction": "United States",
+      "scope": "United States",
+      "categories": [
+        "tax assistance"
+      ],
+      "phone": "1-800-906-9887",
+      "official_link": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+      "current_next_step": "Use the official locator during tax season, then call the site to confirm dates, eligibility, appointment rules, and required documents.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "Seasonal service; local site schedules and appointments vary."
+    },
+    {
+      "resource_id": "fort-worth-311",
+      "resource": "Fort Worth 311",
+      "layer": "local",
+      "jurisdiction": "City of Fort Worth",
+      "scope": "City of Fort Worth",
+      "categories": [
+        "city services",
+        "navigation"
+      ],
+      "phone": "311 · 817-392-1234 · Text 817311",
+      "official_link": "https://www.fortworthtexas.gov/departments/communications/customercare",
+      "current_next_step": "Call, text, use MyFW, or submit an online request for the responsible City service and keep any service-request number. Use 911 only for emergencies.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "community-action-partners",
+      "resource": "Community Action Partners",
+      "layer": "local",
+      "jurisdiction": "City of Fort Worth",
+      "scope": "Tarrant County",
+      "categories": [
+        "utilities",
+        "case management",
+        "veterans"
+      ],
+      "phone": "817-392-2276",
+      "official_link": "https://www.fortworthtexas.gov/departments/neighborhoods/cap",
+      "current_next_step": "Check the current application schedule and available programs, then gather household, income, utility, or veteran records before applying. Funding and capacity are limited.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "Emergency rental and water-payment assistance were listed as unavailable on the verification date; utility assistance and certain veteran services remained listed."
+    },
+    {
+      "resource_id": "tarrant-area-food-bank-find-local-food",
+      "resource": "Tarrant Area Food Bank — Find Local Food",
+      "layer": "local",
+      "jurisdiction": "Tarrant Area Food Bank",
+      "scope": "North Texas, including Fort Worth and Tarrant County",
+      "categories": [
+        "food",
+        "benefits navigation"
+      ],
+      "phone": "817-857-7100",
+      "official_link": "https://tafb.org/find-food-main-x/",
+      "current_next_step": "Search by address or ZIP code and call the listed pantry before traveling because schedules, cancellations, supplies, and intake rules can change.",
+      "source_type": "first-party provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tarrant-county-homeless-coalition-coordinated-entry",
+      "resource": "Tarrant County Homeless Coalition coordinated entry",
+      "layer": "local",
+      "jurisdiction": "Tarrant County Homeless Coalition",
+      "scope": "Fort Worth and Tarrant County",
+      "categories": [
+        "homelessness",
+        "housing navigation"
+      ],
+      "phone": "Call or text 817-996-8800",
+      "official_link": "https://ahomewithhope.org/",
+      "current_next_step": "Call or text the homeless helpline or visit a coordinated-entry assessment location and explain where you will stay tonight and who is in the household.",
+      "source_type": "designated provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "true-worth-place",
+      "resource": "True Worth Place",
+      "layer": "local",
+      "jurisdiction": "True Worth Place",
+      "scope": "Adults experiencing homelessness in Fort Worth",
+      "categories": [
+        "homelessness",
+        "day shelter",
+        "case management"
+      ],
+      "phone": "817-289-7474",
+      "official_link": "https://trueworthplace.org/",
+      "current_next_step": "Visit or call for current day-shelter services, basic needs, case management, and housing navigation. Confirm hours before traveling.",
+      "source_type": "first-party provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "journey-home-emergency-shelter",
+      "resource": "Journey Home emergency shelter",
+      "layer": "local",
+      "jurisdiction": "Journey Home",
+      "scope": "People experiencing homelessness in Fort Worth",
+      "categories": [
+        "homelessness",
+        "emergency shelter"
+      ],
+      "phone": "817-632-7400",
+      "official_link": "https://www.journeyhome.org/",
+      "current_next_step": "Call before traveling to confirm current check-in instructions, available space, household eligibility, and required information. Call 911 for immediate danger.",
+      "source_type": "first-party provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "fort-worth-housing-solutions",
+      "resource": "Fort Worth Housing Solutions",
+      "layer": "local",
+      "jurisdiction": "Fort Worth Housing Solutions",
+      "scope": "Fort Worth",
+      "categories": [
+        "affordable housing",
+        "housing vouchers"
+      ],
+      "phone": "817-333-3400",
+      "official_link": "https://fwhs.org/housing-programs/housing-choice-voucher/",
+      "current_next_step": "Review current wait-list status and affordable-property options, then contact the agency about the correct application route. A closed wait list does not accept new applications.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "The Housing Choice Voucher wait list was closed to new applications on the verification date."
+    },
+    {
+      "resource_id": "jps-connection",
+      "resource": "JPS Connection",
+      "layer": "local",
+      "jurisdiction": "JPS Health Network",
+      "scope": "Tarrant County",
+      "categories": [
+        "health care",
+        "financial assistance"
+      ],
+      "phone": "817-702-1001",
+      "official_link": "https://www.jpshealthnet.org/financial-resources/jps-connection",
+      "current_next_step": "Review residency and financial-assistance requirements, complete the current application, and submit the requested identification, income, address, and household records.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tarrant-county-public-health-clinics-and-immunizations",
+      "resource": "Tarrant County Public Health clinics and immunizations",
+      "layer": "local",
+      "jurisdiction": "Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "public health",
+        "vaccination",
+        "clinics"
+      ],
+      "phone": "817-248-6299",
+      "official_link": "https://www.tarrantcountytx.gov/en/public-health/public-health-locations.html",
+      "current_next_step": "Choose a clinic and call before traveling to confirm services, vaccine availability, walk-in capacity, hours, fees, eligibility, and required documents.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "Clinic hours and walk-in capacity vary by location."
+    },
+    {
+      "resource_id": "mhmr-of-tarrant-county-crisis-services",
+      "resource": "MHMR of Tarrant County crisis services",
+      "layer": "local",
+      "jurisdiction": "My Health My Resources of Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "mental health",
+        "substance use",
+        "crisis"
+      ],
+      "phone": "Call or text 1-800-866-2465",
+      "official_link": "https://mhmrtarrant.org/crisis-services/",
+      "current_next_step": "Call or text for 24-hour mental-health or substance-use crisis screening and referral. Call 911 for immediate physical danger or a medical emergency.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "safehaven-of-tarrant-county",
+      "resource": "SafeHaven of Tarrant County",
+      "layer": "local",
+      "jurisdiction": "SafeHaven of Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "domestic violence",
+        "emergency shelter",
+        "safety"
+      ],
+      "phone": "24-hour hotline: 1-877-701-7233",
+      "official_link": "https://www.safehaventc.org/",
+      "current_next_step": "Call from a safe device if possible for confidential safety planning, shelter, and service referrals. If you are in immediate danger, call 911.",
+      "source_type": "designated provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "legal-aid-of-northwest-texas",
+      "resource": "Legal Aid of NorthWest Texas",
+      "layer": "local",
+      "jurisdiction": "Legal Aid of NorthWest Texas",
+      "scope": "Fort Worth and North Texas",
+      "categories": [
+        "civil legal aid",
+        "housing",
+        "benefits"
+      ],
+      "phone": "Fort Worth: 817-336-3943 · Legal Aid Line: 888-529-5277",
+      "official_link": "https://legalaidtx.org/get-help/",
+      "current_next_step": "Apply online or by phone and identify any court date, eviction, shutoff, or other deadline. Help depends on eligibility, issue, conflicts, and capacity.",
+      "source_type": "designated provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "workforce-solutions-for-tarrant-county",
+      "resource": "Workforce Solutions for Tarrant County",
+      "layer": "local",
+      "jurisdiction": "Workforce Solutions for Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "employment",
+        "training"
+      ],
+      "phone": "817-413-4000",
+      "official_link": "https://workforcesolutions.net/workforce-center-locations/",
+      "current_next_step": "Find the workforce center serving your area and ask about registration, job leads, workshops, training, and supportive services. Participation does not guarantee employment.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tarrant-county-college-adult-education-and-literacy",
+      "resource": "Tarrant County College Adult Education and Literacy",
+      "layer": "local",
+      "jurisdiction": "Tarrant County College",
+      "scope": "Tarrant County and participating nearby counties",
+      "categories": [
+        "adult education",
+        "GED",
+        "English language"
+      ],
+      "phone": "817-515-2568",
+      "official_link": "https://www.tccd.edu/community/adult-education-literacy/",
+      "current_next_step": "Review the current GED, basic-skills, English, and career-training options, then complete the interest and orientation steps for the appropriate program.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tarrant-county-child-care-assistance",
+      "resource": "Tarrant County child-care assistance",
+      "layer": "local",
+      "jurisdiction": "Workforce Solutions for Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "child care",
+        "financial assistance"
+      ],
+      "phone": "",
+      "official_link": "https://workforcesolutions.net/childcare/",
+      "current_next_step": "Review eligibility and the current application or wait-list process, then submit household, work or school, and provider information. Funding and wait times can change.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": "The program reported a substantial wait at the time of verification; applicants should confirm current processing dates."
+    },
+    {
+      "resource_id": "trinity-metro-reduced-fares",
+      "resource": "Trinity Metro reduced fares",
+      "layer": "local",
+      "jurisdiction": "Trinity Metro",
+      "scope": "Fort Worth and Trinity Metro service area",
+      "categories": [
+        "transportation",
+        "reduced fares"
+      ],
+      "phone": "817-215-8600",
+      "official_link": "https://ridetrinitymetro.org/trinity-metro-offers-reduced-fares-for-veterans/",
+      "current_next_step": "Confirm the current reduced-fare category, required identification, eligible services, and fare before traveling or purchasing a pass.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "trinity-metro-on-demand-paratransit",
+      "resource": "Trinity Metro On-Demand Paratransit",
+      "layer": "local",
+      "jurisdiction": "Trinity Metro",
+      "scope": "Trinity Metro ADA service area",
+      "categories": [
+        "paratransit",
+        "disability",
+        "transportation"
+      ],
+      "phone": "817-215-8600",
+      "official_link": "https://ridetrinitymetro.org/rider-services/paratransit/",
+      "current_next_step": "Request an eligibility application before relying on service and confirm certification, service area, reservations, fare, pickup rules, and processing time.",
+      "source_type": "public authority",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tarrant-county-aging-and-disability-resource-center",
+      "resource": "Tarrant County Aging and Disability Resource Center",
+      "layer": "local",
+      "jurisdiction": "United Way of Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "aging",
+        "disability",
+        "caregivers"
+      ],
+      "phone": "1-855-937-2372, option 1",
+      "official_link": "https://www.unitedwaytarrant.org/what-we-do/area-agency-aging-aaa/aging-disability-resource-center",
+      "current_next_step": "Call and describe the older or disabled person's location, daily-living needs, caregiver situation, and most urgent concern.",
+      "source_type": "designated provider",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "fort-worth-animal-care-and-control",
+      "resource": "Fort Worth Animal Care and Control",
+      "layer": "local",
+      "jurisdiction": "City of Fort Worth",
+      "scope": "City of Fort Worth",
+      "categories": [
+        "animals",
+        "pets"
+      ],
+      "phone": "817-392-1234",
+      "official_link": "https://www.fortworthtexas.gov/departments/code-compliance/animals/animals-at-fwacc",
+      "current_next_step": "Check current animal-control, lost-pet, adoption, reclaim, surrender, and owner-support instructions before visiting. Hours and capacity can change.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "tarrant-county-veteran-services",
+      "resource": "Tarrant County Veteran Services",
+      "layer": "local",
+      "jurisdiction": "Tarrant County",
+      "scope": "Tarrant County",
+      "categories": [
+        "veterans",
+        "benefits"
+      ],
+      "phone": "817-531-5645",
+      "official_link": "https://www.tarrantcountytx.gov/en/veteran-services.html",
+      "current_next_step": "Complete the current intake process for claims or benefits help and ask which discharge, identity, medical, income, and dependent documents to provide.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "readyfw-emergency-alerts",
+      "resource": "ReadyFW emergency alerts",
+      "layer": "local",
+      "jurisdiction": "City of Fort Worth",
+      "scope": "City of Fort Worth",
+      "categories": [
+        "emergency alerts",
+        "preparedness"
+      ],
+      "phone": "Emergency Management: 817-392-6170 · Text START to 77295",
+      "official_link": "https://www.fortworthtexas.gov/departments/emc/emo/ready-fw",
+      "current_next_step": "Enroll in official alerts, select locations and topics, and keep contact information current. Follow official emergency instructions when issued.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "national-weather-service-fort-worth-dallas",
+      "resource": "National Weather Service Fort Worth/Dallas",
+      "layer": "local",
+      "jurisdiction": "National Weather Service",
+      "scope": "North and Central Texas, including Fort Worth",
+      "categories": [
+        "weather",
+        "emergency warnings"
+      ],
+      "phone": "817-429-2631",
+      "official_link": "https://www.weather.gov/fwd/",
+      "current_next_step": "Check the current forecast and active warnings before travel or outdoor plans and follow official protective instructions.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "fort-worth-public-library",
+      "resource": "Fort Worth Public Library",
+      "layer": "local",
+      "jurisdiction": "City of Fort Worth",
+      "scope": "City of Fort Worth",
+      "categories": [
+        "libraries",
+        "computers",
+        "education"
+      ],
+      "phone": "817-392-7128",
+      "official_link": "https://www.fortworthtexas.gov/departments/library/branches",
+      "current_next_step": "Find a branch and confirm hours, card rules, computer access, printing, classes, meeting spaces, and registration requirements.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    },
+    {
+      "resource_id": "city-of-fort-worth-volunteer-opportunities",
+      "resource": "City of Fort Worth volunteer opportunities",
+      "layer": "local",
+      "jurisdiction": "City of Fort Worth",
+      "scope": "City of Fort Worth",
+      "categories": [
+        "volunteering",
+        "community"
+      ],
+      "phone": "",
+      "official_link": "https://www.fortworthtexas.gov/volunteer",
+      "current_next_step": "Search current opportunities and confirm location, schedule, age, waiver, screening, and registration requirements with the host department.",
+      "source_type": "government",
+      "verified_on": "2026-11-01",
+      "verification_status": "verified",
+      "used_in": [
+        "Fort Worth, Texas"
+      ],
+      "notes": ""
+    }
+  ]
+}
