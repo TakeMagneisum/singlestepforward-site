@@ -1729,7 +1729,7 @@ textarea { min-height: 104px; }
   margin: 0 0 10px;
 }
 
-.possibility-grid .need-card { min-height: 294px; padding: 22px; justify-content: flex-end; }
+.possibility-grid .need-card { min-height: 294px; padding: 22px; justify-content: flex-start; }
 .possibility-grid .need-card h3 { margin-right: 30px; }
 .browse-all-cta {
   display: grid;
