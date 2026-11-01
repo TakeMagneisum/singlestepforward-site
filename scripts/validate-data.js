@@ -229,7 +229,7 @@ function validateMarkup(areas) {
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
 
-  const expectedCacheToken = "20261101-1";
+  const expectedCacheToken = "20261101-2";
   [
     ["index.html", index],
     ["find-help.html", finder],
