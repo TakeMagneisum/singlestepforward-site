@@ -8,24 +8,24 @@
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261101-2">
-  <script src="assets/colorado-resources.js?v=20261101-2" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261101-2" defer></script>
-  <script src="assets/new-york-resources.js?v=20261101-2" defer></script>
-  <script src="assets/illinois-resources.js?v=20261101-2" defer></script>
-  <script src="assets/city-resources.js?v=20261101-2" defer></script>
-  <script src="assets/resources.js?v=20261101-2" defer></script>
-  <script src="assets/area.js?v=20261101-2" defer></script>
-  <script src="assets/urgent.js?v=20261101-2" defer></script>
-  <script src="assets/guide.js?v=20261101-2" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261104-1">
+  <script src="assets/colorado-resources.js?v=20261104-1" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261104-1" defer></script>
+  <script src="assets/new-york-resources.js?v=20261104-1" defer></script>
+  <script src="assets/illinois-resources.js?v=20261104-1" defer></script>
+  <script src="assets/city-resources.js?v=20261104-1" defer></script>
+  <script src="assets/resources.js?v=20261104-1" defer></script>
+  <script src="assets/area.js?v=20261104-1" defer></script>
+  <script src="assets/urgent.js?v=20261104-1" defer></script>
+  <script src="assets/guide.js?v=20261104-1" defer></script>
 </head>
 <body class="finder-page">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="urgent-bar" role="region" aria-label="Emergency information">
     <div class="shell urgent-inner">
-      <p><strong>Immediate danger?</strong> Call <a href="tel:911">911</a>.</p>
-      <p>Mental health or suicide crisis? Call or text <a href="tel:988">988</a>.</p>
+      <p><strong>Immediate danger?</strong> <a href="tel:911" data-global-emergency>Call 911</a>.</p>
+      <p>Mental health or suicide crisis? <a href="tel:988" data-global-crisis>Call or text 988</a>.</p>
     </div>
   </div>
 
@@ -49,6 +49,11 @@
           <div class="area-picker-main">
             <label for="area-select-help">Choose a reviewed local guide</label>
             <div class="area-picker-controls">
+              <label class="country-select-shell" title="Choose country">
+                <span class="sr-only">Country</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
+                <select data-country-select aria-label="Choose country"><option value="US">United States</option><option value="CL">Chile</option></select>
+              </label>
               <span class="select-shell">
                 <select id="area-select-help" data-area-select aria-label="Choose a reviewed local guide">
                   <option value="" disabled>Select a county or city…</option>
@@ -71,6 +76,9 @@
                   <option value="san-diego">San Diego, CA</option>
                   <option value="san-antonio">San Antonio, TX</option>
                   <option value="fort-worth">Fort Worth, TX</option>
+                  <option value="santiago">Santiago Metropolitan Area, Chile</option>
+                  <option value="greater-valparaiso">Greater Valparaíso, Chile</option>
+                  <option value="greater-concepcion">Greater Concepción, Chile</option>
                 </select>
               </span>
               <button class="button area-open-button" type="button" data-area-open>Open guide</button>
@@ -124,24 +132,28 @@
       </div>
 
       <aside class="urgent-cards" aria-label="Urgent help">
-        <a class="urgent-card" href="tel:911">
+        <a class="urgent-card" href="tel:911" data-emergency-card>
           <span>Immediate danger</span>
-          <div><strong>Call 911</strong><p>For an active emergency, serious injury, fire, crime in progress, or immediate threat.</p></div>
+          <div><strong data-emergency-label>Call 911</strong><p data-emergency-description>For an active emergency, serious injury, fire, crime in progress, or immediate threat.</p></div>
         </a>
-        <a class="urgent-card" href="tel:988">
+        <a class="urgent-card" href="tel:988" data-crisis-card>
           <span>Mental health or suicide crisis</span>
-          <div><strong>Call or text 988</strong><p>Free, confidential crisis support is available 24 hours a day.</p></div>
+          <div><strong data-crisis-label>Call or text 988</strong><p data-crisis-description>Free, confidential crisis support is available 24 hours a day.</p></div>
         </a>
       </aside>
     </section>
 
-    <div class="shell answer-panel" id="guide-answer" hidden role="status" aria-live="polite">
+    <div class="shell answer-panel" id="guide-answer" hidden role="region" aria-live="polite" aria-labelledby="answer-title">
       <span class="answer-mark" aria-hidden="true">D</span>
       <div class="answer-copy">
         <strong id="answer-title">Here are a few good places to start.</strong>
         <p id="answer-text">Dawn matched your words to the source-checked directory below.</p>
+        <p class="answer-direction" id="answer-direction">Your matching resources are directly below this message.</p>
       </div>
-      <button class="button button-quiet button-small" id="reset-guide" type="button">Start over</button>
+      <div class="answer-actions">
+        <button class="button button-small" id="view-results" type="button">View matching resources <span aria-hidden="true">↓</span></button>
+        <button class="button button-quiet button-small" id="reset-guide" type="button">Start over</button>
+      </div>
     </div>
 
     <section id="all-resources" class="section shell directory-section" aria-labelledby="directory-title">
@@ -408,8 +420,8 @@
     <div class="shell footer-grid">
       <div>
         <p class="footer-label">Emergency</p>
-        <a href="tel:911">Call 911</a>
-        <a href="tel:988">Call or text 988</a>
+        <a href="tel:911" data-global-emergency>Call 911</a>
+        <a href="tel:988" data-global-crisis>Call or text 988</a>
         <a href="tel:211">Call 211</a>
       </div>
       <div>
