@@ -8,16 +8,17 @@
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261104-1">
-  <script src="assets/colorado-resources.js?v=20261104-1" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261104-1" defer></script>
-  <script src="assets/new-york-resources.js?v=20261104-1" defer></script>
-  <script src="assets/illinois-resources.js?v=20261104-1" defer></script>
-  <script src="assets/city-resources.js?v=20261104-1" defer></script>
-  <script src="assets/resources.js?v=20261104-1" defer></script>
-  <script src="assets/area.js?v=20261104-1" defer></script>
-  <script src="assets/urgent.js?v=20261104-1" defer></script>
-  <script src="assets/guide.js?v=20261104-1" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261104-2">
+  <script src="assets/colorado-resources.js?v=20261104-2" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261104-2" defer></script>
+  <script src="assets/new-york-resources.js?v=20261104-2" defer></script>
+  <script src="assets/illinois-resources.js?v=20261104-2" defer></script>
+  <script src="assets/city-resources.js?v=20261104-2" defer></script>
+  <script src="assets/resources.js?v=20261104-2" defer></script>
+  <script src="assets/area.js?v=20261104-2" defer></script>
+  <script src="assets/urgent.js?v=20261104-2" defer></script>
+  <script src="assets/guide.js?v=20261104-2" defer></script>
+  <script src="assets/i18n.js?v=20261104-2" defer></script>
 </head>
 <body class="finder-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -40,6 +41,7 @@
         <a href="discover.html">Explore anywhere</a>
         <a href="#all-resources">Browse all</a>
         <a class="button button-small" href="#guide">Ask Dawn</a>
+        <label class="language-control"><span aria-hidden="true">文/A</span><span class="sr-only">Language</span><select data-language-select aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></label>
       </nav>
     </div>
     <div class="location-bar">
@@ -52,7 +54,7 @@
               <label class="country-select-shell" title="Choose country">
                 <span class="sr-only">Country</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
-                <select data-country-select aria-label="Choose country"><option value="US">United States</option><option value="CL">Chile</option></select>
+                <select data-country-select aria-label="Choose country"><option value="US">United States</option><option value="PR">Puerto Rico</option><option value="CL">Chile</option></select>
               </label>
               <span class="select-shell">
                 <select id="area-select-help" data-area-select aria-label="Choose a reviewed local guide">
@@ -79,6 +81,10 @@
                   <option value="santiago">Santiago Metropolitan Area, Chile</option>
                   <option value="greater-valparaiso">Greater Valparaíso, Chile</option>
                   <option value="greater-concepcion">Greater Concepción, Chile</option>
+                  <option value="san-juan-pr">San Juan, Puerto Rico</option>
+                  <option value="bayamon-pr">Bayamón, Puerto Rico</option>
+                  <option value="carolina-pr">Carolina, Puerto Rico</option>
+                  <option value="ponce-pr">Ponce, Puerto Rico</option>
                 </select>
               </span>
               <button class="button area-open-button" type="button" data-area-open>Open guide</button>
