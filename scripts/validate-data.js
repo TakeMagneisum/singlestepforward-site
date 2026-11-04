@@ -73,7 +73,7 @@ function loadDiscovery() {
 function validateDiscovery(discovery, areas) {
   const groups = Array.isArray(discovery.groups) ? discovery.groups : [];
   const categories = Array.isArray(discovery.categories) ? discovery.categories : [];
-  const areaIds = new Set(Object.entries(areas || {}).filter(([, area]) => (area.country || "US") === "US").map(([id]) => id));
+  const areaIds = new Set(Object.entries(areas || {}).filter(([, area]) => ["US", "PR"].includes(area.country || "US")).map(([id]) => id));
   const zipOwners = new Map();
   const categoryIds = new Set();
 
@@ -99,6 +99,10 @@ function validateDiscovery(discovery, areas) {
 
   if (zipOwners.get("80202") !== "denver") fail("ZIP regression: 80202 must suggest the Denver guide.");
   if (zipOwners.get("60544") !== "plainfield") fail("ZIP regression: 60544 must suggest the Plainfield guide.");
+  if (zipOwners.get("00901") !== "san-juan-pr") fail("ZIP regression: 00901 must suggest the San Juan guide.");
+  if (zipOwners.get("00959") !== "bayamon-pr") fail("ZIP regression: 00959 must suggest the Bayamón guide.");
+  if (zipOwners.get("00985") !== "carolina-pr") fail("ZIP regression: 00985 must suggest the Carolina guide.");
+  if (zipOwners.get("00730") !== "ponce-pr") fail("ZIP regression: 00730 must suggest the Ponce guide.");
   [
     ["10001", "new-york-city"], ["60601", "chicago"], ["90012", "los-angeles"],
     ["19103", "philadelphia"], ["77002", "houston"], ["85003", "phoenix"],
@@ -142,7 +146,7 @@ function validateDiscovery(discovery, areas) {
 
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
-  if (areaEntries.length !== 22) fail(`Expected 22 local editions; found ${areaEntries.length}.`);
+  if (areaEntries.length !== 26) fail(`Expected 26 local editions; found ${areaEntries.length}.`);
 
   areaEntries.forEach(([areaId, area]) => {
     if (!Array.isArray(area.resources) || !area.resources.length) {
@@ -214,6 +218,11 @@ function validateMarkup(areas) {
   if (!finder.includes("data-area-open") || !finder.includes("data-area-review-date")) {
     fail("find-help.html: reviewed-guide open control or visible review date is missing.");
   }
+  [index, finder, discovery].forEach((markup, index) => {
+    if (!markup.includes("data-language-select") || !markup.includes("assets/i18n.js")) {
+      fail(["index.html", "find-help.html", "discover.html"][index] + ": local English/Spanish selector is missing.");
+    }
+  });
   if (!finder.includes("assets/dawn-portait.png") || !index.includes("assets/dawn-full.png")) {
     fail("Production Dawn PNG references are missing.");
   }
@@ -229,7 +238,7 @@ function validateMarkup(areas) {
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
 
-  const expectedCacheToken = "20261104-1";
+  const expectedCacheToken = "20261104-2";
   [
     ["index.html", index],
     ["find-help.html", finder],
@@ -358,7 +367,7 @@ function validateReviewSheets(areas) {
     if (!/^[a-z0-9-]+$/.test(location.id || "")) fail(`${label}: invalid id.`);
     if (!/^[A-Z0-9_]+$/.test(location.constant || "")) fail(`${label}: invalid constant.`);
     if (!/^[A-Z]{2}$/.test(location.state_code || "")) fail(`${label}: invalid state_code.`);
-    if (!/^(city|county|metro)$/.test(location.type || "")) fail(`${label}: type must be city, county, or metro.`);
+    if (!/^(city|county|metro|municipality)$/.test(location.type || "")) fail(`${label}: type must be city, county, metro, or municipality.`);
     if (location.country && !/^[A-Z]{2}$/.test(location.country)) fail(`${label}: country must use a two-letter code.`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(location.reviewed || "")) fail(`${label}: reviewed must use YYYY-MM-DD.`);
     if (!location.name || !location.state) fail(`${label}: name and state are required.`);
