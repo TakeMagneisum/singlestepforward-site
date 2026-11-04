@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "locations": [
+    { "id": "liberty", "file": "liberty-review.csv", "constant": "LIBERTY", "name": "Liberty County", "type": "county", "state": "Georgia", "state_code": "GA", "reviewed": "2026-09-08" },
+    { "id": "dallas", "file": "dallas-review.csv", "constant": "DALLAS", "name": "Dallas County", "type": "county", "state": "Texas", "state_code": "TX", "reviewed": "2026-10-28" },
+    { "id": "wake", "file": "wake-review.csv", "constant": "WAKE", "name": "Wake County", "type": "county", "state": "North Carolina", "state_code": "NC", "reviewed": "2026-10-29" },
+    { "id": "volusia", "file": "volusia-review.csv", "constant": "VOLUSIA", "name": "Volusia County", "type": "county", "state": "Florida", "state_code": "FL", "reviewed": "2026-10-29" },
+    { "id": "denver", "file": "denver-review.csv", "constant": "DENVER", "name": "Denver County", "type": "county", "state": "Colorado", "state_code": "CO", "reviewed": "2026-10-29" },
+    { "id": "elpaso", "file": "elpaso-review.csv", "constant": "EL_PASO", "name": "El Paso County", "type": "county", "state": "Colorado", "state_code": "CO", "reviewed": "2026-10-29" },
+    { "id": "plymouth", "file": "plymouth-review.csv", "constant": "PLYMOUTH", "name": "Plymouth County", "type": "county", "state": "Massachusetts", "state_code": "MA", "reviewed": "2026-10-29" },
+    { "id": "erie", "file": "erie-review.csv", "constant": "ERIE", "name": "Erie County", "type": "county", "state": "New York", "state_code": "NY", "reviewed": "2026-10-29" },
+    { "id": "madison", "file": "madison-review.csv", "constant": "MADISON", "name": "Madison County", "type": "county", "state": "New York", "state_code": "NY", "reviewed": "2026-10-29" },
+    { "id": "plainfield", "file": "plainfield-review.csv", "constant": "PLAINFIELD", "name": "Plainfield", "type": "city", "state": "Illinois", "state_code": "IL", "reviewed": "2026-10-29" },
+    { "id": "new-york-city", "file": "new-york-city-review.csv", "constant": "NEW_YORK_CITY", "name": "New York City", "type": "city", "state": "New York", "state_code": "NY", "reviewed": "2026-10-31", "generate": true },
+    { "id": "chicago", "file": "chicago-review.csv", "constant": "CHICAGO", "name": "Chicago", "type": "city", "state": "Illinois", "state_code": "IL", "reviewed": "2026-10-31", "generate": true },
+    { "id": "los-angeles", "file": "los-angeles-review.csv", "constant": "LOS_ANGELES", "name": "Los Angeles", "type": "city", "state": "California", "state_code": "CA", "reviewed": "2026-10-31", "generate": true },
+    { "id": "philadelphia", "file": "philadelphia-review.csv", "constant": "PHILADELPHIA", "name": "Philadelphia", "type": "city", "state": "Pennsylvania", "state_code": "PA", "reviewed": "2026-10-31", "generate": true },
+    { "id": "houston", "file": "houston-review.csv", "constant": "HOUSTON", "name": "Houston", "type": "city", "state": "Texas", "state_code": "TX", "reviewed": "2026-11-01", "generate": true },
+    { "id": "phoenix", "file": "phoenix-review.csv", "constant": "PHOENIX", "name": "Phoenix", "type": "city", "state": "Arizona", "state_code": "AZ", "reviewed": "2026-11-01", "generate": true },
+    { "id": "san-diego", "file": "san-diego-review.csv", "constant": "SAN_DIEGO", "name": "San Diego", "type": "city", "state": "California", "state_code": "CA", "reviewed": "2026-11-01", "generate": true },
+    { "id": "san-antonio", "file": "san-antonio-review.csv", "constant": "SAN_ANTONIO", "name": "San Antonio", "type": "city", "state": "Texas", "state_code": "TX", "reviewed": "2026-11-01", "generate": true },
+    { "id": "fort-worth", "file": "fort-worth-review.csv", "constant": "FORT_WORTH", "name": "Fort Worth", "type": "city", "state": "Texas", "state_code": "TX", "reviewed": "2026-11-01", "generate": true },
+    { "id": "santiago", "file": "santiago-review.csv", "constant": "SANTIAGO", "name": "Santiago Metropolitan Area", "type": "metro", "state": "Región Metropolitana", "state_code": "RM", "country": "CL", "reviewed": "2026-11-04", "generate": true },
+    { "id": "greater-valparaiso", "file": "greater-valparaiso-review.csv", "constant": "GREATER_VALPARAISO", "name": "Greater Valparaíso", "type": "metro", "state": "Región de Valparaíso", "state_code": "VS", "country": "CL", "reviewed": "2026-11-04", "generate": true },
+    { "id": "greater-concepcion", "file": "greater-concepcion-review.csv", "constant": "GREATER_CONCEPCION", "name": "Greater Concepción", "type": "metro", "state": "Región del Biobío", "state_code": "BI", "country": "CL", "reviewed": "2026-11-04", "generate": true }
+  ]
+}
