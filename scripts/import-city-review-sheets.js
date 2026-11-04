@@ -7,35 +7,55 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const output = path.join(root, "assets", "city-resources.js");
 
-const cities = [
-  { id: "new-york-city", constant: "NEW_YORK_CITY", file: "new-york-city-review.csv" },
-  { id: "chicago", constant: "CHICAGO", file: "chicago-review.csv" },
-  { id: "los-angeles", constant: "LOS_ANGELES", file: "los-angeles-review.csv" },
-  { id: "philadelphia", constant: "PHILADELPHIA", file: "philadelphia-review.csv" },
-  { id: "houston", constant: "HOUSTON", file: "houston-review.csv" },
-  { id: "phoenix", constant: "PHOENIX", file: "phoenix-review.csv" },
-  { id: "san-diego", constant: "SAN_DIEGO", file: "san-diego-review.csv" },
-  { id: "san-antonio", constant: "SAN_ANTONIO", file: "san-antonio-review.csv" },
-  { id: "fort-worth", constant: "FORT_WORTH", file: "fort-worth-review.csv" }
-];
+const sheetsDirectory = path.join(root, "review-sheets");
+const manifestPath = path.join(sheetsDirectory, "locations.json");
+const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+if (manifest.schema_version !== 1 || !Array.isArray(manifest.locations)) {
+  throw new Error("review-sheets/locations.json must use schema_version 1 and contain a locations array.");
+}
+
+const discoveredFiles = fs.readdirSync(sheetsDirectory)
+  .filter((file) => file.endsWith("-review.csv"))
+  .sort();
+const cities = [...manifest.locations].sort((a, b) => a.id.localeCompare(b.id));
+const configuredFiles = cities.map((city) => city.file).sort();
+if (JSON.stringify(discoveredFiles) !== JSON.stringify(configuredFiles)) {
+  const missingFromManifest = discoveredFiles.filter((file) => !configuredFiles.includes(file));
+  const missingFromFolder = configuredFiles.filter((file) => !discoveredFiles.includes(file));
+  throw new Error([
+    missingFromManifest.length ? `Reviewer sheets missing from locations.json: ${missingFromManifest.join(", ")}.` : "",
+    missingFromFolder.length ? `Manifest files missing from review-sheets: ${missingFromFolder.join(", ")}.` : ""
+  ].filter(Boolean).join(" "));
+}
+
+const seenIds = new Set();
+const seenConstants = new Set();
+cities.forEach((city) => {
+  if (!/^[a-z0-9-]+$/.test(city.id || "")) throw new Error(`Invalid location id: ${city.id || "(blank)"}.`);
+  if (!/^[A-Z0-9_]+$/.test(city.constant || "")) throw new Error(`${city.id}: invalid constant name.`);
+  if (seenIds.has(city.id)) throw new Error(`Duplicate location id: ${city.id}.`);
+  if (seenConstants.has(city.constant)) throw new Error(`Duplicate location constant: ${city.constant}.`);
+  seenIds.add(city.id);
+  seenConstants.add(city.constant);
+});
 
 const categoryKeywords = {
-  animals: ["animal", "pet", "veterinary", "humane", "shelter pet"],
+  animals: ["animal", "pet", "veterinary", "veterinaria", "mascota", "humane", "shelter pet"],
   education: ["adult education", "college", "school", "library", "learning", "GED", "literacy", "class"],
-  family: ["family", "child", "childcare", "child care", "WIC", "senior", "aging", "disability", "caregiver", "Head Start"],
-  food: ["food", "pantry", "meal", "SNAP", "groceries", "WIC", "nutrition"],
-  health: ["health", "healthcare", "medical", "clinic", "immunization", "vaccine", "insurance", "Medicaid"],
-  housing: ["housing", "rent", "rental", "homeless", "shelter", "eviction", "utility", "energy", "LIHEAP", "HEAP"],
-  legal: ["legal", "law", "lawhelp", "attorney", "consumer", "tenant", "renter", "rights", "counsel"],
-  "mental-health": ["mental health", "behavioral health", "suicide", "counseling", "MHMR"],
-  recovery: ["substance", "opioid", "recovery", "addiction", "treatment", "alcohol", "drug"],
-  safety: ["domestic violence", "sexual violence", "violence", "abuse", "safety", "emergency", "crisis", "shelter", "alert"],
-  tax: ["tax", "VITA", "TCE", "IRS"],
-  transportation: ["transit", "transportation", "paratransit", "fare", "ride", "metro", "bus", "Cityride", "Dial-a-Ride"],
-  veterans: ["veteran", "veterans", "military"],
-  volunteer: ["volunteer", "give back", "community service"],
-  weather: ["weather", "forecast", "alert", "preparedness", "warning", "Notify", "Ready"],
-  work: ["workforce", "work", "job", "career", "employment", "training", "WorkSource"]
+  family: ["family", "familia", "child", "niñez", "childcare", "child care", "JUNJI", "JUNAEB", "WIC", "senior", "adulto mayor", "SENAMA", "aging", "disability", "discapacidad", "SENADIS", "caregiver", "Head Start"],
+  food: ["food", "pantry", "meal", "aliment", "JUNAEB", "SNAP", "groceries", "WIC", "nutrition"],
+  health: ["health", "salud", "FONASA", "CESFAM", "SAMU", "healthcare", "medical", "clinic", "immunization", "vaccine", "insurance", "Medicaid"],
+  housing: ["housing", "vivienda", "arriendo", "rent", "rental", "homeless", "calle", "albergue", "shelter", "eviction", "utility", "energy", "LIHEAP", "HEAP"],
+  legal: ["legal", "juríd", "asistencia judicial", "SERNAC", "consumidor", "law", "lawhelp", "attorney", "consumer", "tenant", "renter", "rights", "counsel"],
+  "mental-health": ["mental health", "salud mental", "suicid", "*4141", "behavioral health", "suicide", "counseling", "MHMR"],
+  recovery: ["substance", "opioid", "recovery", "addiction", "treatment", "alcohol", "drog", "SENDA", "1412", "drug"],
+  safety: ["domestic violence", "sexual violence", "violence", "violencia", "Carabineros", "Bomberos", "SENAPRED", "abuse", "safety", "emergency", "emergencia", "crisis", "shelter", "alert"],
+  tax: ["tax", "tributari", "impuestos internos", "SII", "VITA", "TCE", "IRS"],
+  transportation: ["transit", "transportation", "transporte", "Biotren", "Red Movilidad", "EFE", "paratransit", "fare", "ride", "metro", "bus", "Cityride", "Dial-a-Ride"],
+  veterans: ["veteran", "veterans", "military", "Armed Forces", "CAPREDENA", "fuerzas armadas"],
+  volunteer: ["volunteer", "voluntari", "Servicio País", "give back", "community service"],
+  weather: ["weather", "meteorológ", "forecast", "SENAPRED", "alert", "preparedness", "warning", "Notify", "Ready"],
+  work: ["workforce", "work", "trabajo", "empleo", "OMIL", "SENCE", "job", "career", "employment", "training", "WorkSource"]
 };
 
 const keywordBank = {
@@ -139,11 +159,13 @@ function categoriesFor(row, includeFallback = true) {
 
 function phoneFor(display) {
   const text = String(display || "");
-  const leadingShort = text.match(/^\D*\b(211|311|988)\b/);
+  const star = text.match(/\*4141/);
+  if (star) return "*4141";
+  const leadingShort = text.match(/^\D*\b(101|131|132|133|1412|1455|149|211|311|988)\b/);
   if (leadingShort) return leadingShort[1];
   const full = text.match(/\b(?:1[-.\s]?)?\d{3}[-.\s]\d{3}[-.\s]\d{4}\b/);
   if (full) return full[0].replace(/\D/g, "");
-  const short = text.match(/\b(?:211|311|988)\b/);
+  const short = text.match(/\b(?:101|131|132|133|1412|1455|149|211|311|988)\b/);
   if (short) return short[0];
   const local = text.match(/\b\d{3}[-.\s]\d{4}\b/);
   return local ? local[0].replace(/\D/g, "") : "";
@@ -151,7 +173,7 @@ function phoneFor(display) {
 
 function sourceFor(url) {
   const host = new URL(url).hostname.toLowerCase();
-  if (host.endsWith(".gov") || host.includes(".gov.")) return "Government official";
+  if (host.endsWith(".gov") || host.includes(".gov.") || host.endsWith(".gob.cl") || host.endsWith(".cl") && /chileatiende|munistgo|concepcion|municipalidaddevalparaiso|senapred|senda|sernac|minsal/.test(host)) return "Government official";
   if (host.includes("211") || host.includes("988")) return "Official helpline";
   return "Official or designated provider";
 }
@@ -264,12 +286,13 @@ function buildResources(city) {
   });
 
   const categorySet = new Set(resources.flatMap((resource) => resource.categories));
-  Object.keys(categoryKeywords).forEach((category) => {
-    if (!categorySet.has(category)) throw new Error(`${city.file}: generated data is missing ${category}.`);
-  });
+  if (categorySet.size < 6) {
+    throw new Error(`${city.file}: generated data covers only ${categorySet.size} categories; review the sheet or classification rules.`);
+  }
   return resources;
 }
 
+const generatedCities = cities.filter((city) => city.generate === true);
 const generated = [
   "/* Generated from review-sheets/*-review.csv by scripts/import-city-review-sheets.js. */",
   "(function () {",
@@ -277,15 +300,15 @@ const generated = [
   ""
 ];
 
-cities.forEach((city, cityIndex) => {
+generatedCities.forEach((city, cityIndex) => {
   const json = JSON.stringify(buildResources(city), null, 2)
     .split("\n")
     .map((line) => `  ${line}`)
     .join("\n");
   generated.push(`  window.SSF_${city.constant}_RESOURCES = ${json};`);
-  if (cityIndex < cities.length - 1) generated.push("");
+  if (cityIndex < generatedCities.length - 1) generated.push("");
 });
 
 generated.push("})();", "");
 fs.writeFileSync(output, generated.join("\n"), "utf8");
-console.log(`Wrote ${cities.length} city datasets to ${path.relative(root, output)}.`);
+console.log(`Validated ${cities.length} locations and wrote ${generatedCities.length} generated datasets to ${path.relative(root, output)}.`);

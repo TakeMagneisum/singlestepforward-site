@@ -73,7 +73,7 @@ function loadDiscovery() {
 function validateDiscovery(discovery, areas) {
   const groups = Array.isArray(discovery.groups) ? discovery.groups : [];
   const categories = Array.isArray(discovery.categories) ? discovery.categories : [];
-  const areaIds = new Set(Object.keys(areas || {}));
+  const areaIds = new Set(Object.entries(areas || {}).filter(([, area]) => (area.country || "US") === "US").map(([id]) => id));
   const zipOwners = new Map();
   const categoryIds = new Set();
 
@@ -142,7 +142,7 @@ function validateDiscovery(discovery, areas) {
 
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
-  if (areaEntries.length !== 19) fail(`Expected 19 local editions; found ${areaEntries.length}.`);
+  if (areaEntries.length !== 22) fail(`Expected 22 local editions; found ${areaEntries.length}.`);
 
   areaEntries.forEach(([areaId, area]) => {
     if (!Array.isArray(area.resources) || !area.resources.length) {
@@ -165,7 +165,7 @@ function validateAreas(areas) {
       (resource.categories || []).forEach((category) => categories.add(category));
       if (!Array.isArray(resource.keywords) || !resource.keywords.length) fail(`${label}: keywords are required.`);
       if (!resource.url || !resource.url.startsWith("https://")) fail(`${label}: URL must use HTTPS.`);
-      if (resource.phone && !/^\d{3,15}$/.test(resource.phone)) fail(`${label}: phone must contain 3–15 digits only.`);
+      if (resource.phone && !/^(?:\d{3,15}|\*4141)$/.test(resource.phone)) fail(`${label}: phone must contain 3–15 digits or the verified *4141 short code.`);
     });
 
     requiredCategories.forEach((category) => {
@@ -229,7 +229,7 @@ function validateMarkup(areas) {
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
 
-  const expectedCacheToken = "20261101-2";
+  const expectedCacheToken = "20261104-1";
   [
     ["index.html", index],
     ["find-help.html", finder],
@@ -324,9 +324,47 @@ function validateUrgentRules() {
 }
 
 function validateReviewSheets(areas) {
-  Object.keys(areas).forEach((areaId) => {
-    const file = path.join(root, "review-sheets", `${areaId}-review.csv`);
-    if (!fs.existsSync(file)) fail(`Missing reviewer sheet: review-sheets/${areaId}-review.csv.`);
+  const manifestFile = path.join(root, "review-sheets", "locations.json");
+  if (!fs.existsSync(manifestFile)) {
+    fail("Missing reviewer-sheet location manifest: review-sheets/locations.json.");
+    return;
+  }
+
+  const manifest = JSON.parse(fs.readFileSync(manifestFile, "utf8"));
+  if (manifest.schema_version !== 1) fail("Location manifest must use schema_version 1.");
+  if (!Array.isArray(manifest.locations)) {
+    fail("Location manifest must contain a locations array.");
+    return;
+  }
+
+  const liveIds = Object.keys(areas).sort();
+  const manifestIds = manifest.locations.map((location) => location.id).sort();
+  const sheetFiles = fs.readdirSync(path.join(root, "review-sheets"))
+    .filter((file) => file.endsWith("-review.csv"))
+    .sort();
+  const manifestFiles = manifest.locations.map((location) => location.file).sort();
+
+  if (new Set(manifestIds).size !== manifestIds.length) fail("Location manifest contains duplicate ids.");
+  if (new Set(manifestFiles).size !== manifestFiles.length) fail("Location manifest contains duplicate reviewer-sheet filenames.");
+  if (JSON.stringify(liveIds) !== JSON.stringify(manifestIds)) {
+    fail("Location manifest ids must exactly match the live reviewed guides.");
+  }
+  if (JSON.stringify(sheetFiles) !== JSON.stringify(manifestFiles)) {
+    fail("Every reviewer CSV must appear exactly once in the location manifest.");
+  }
+
+  manifest.locations.forEach((location) => {
+    const label = `Location manifest ${location.id || "(blank id)"}`;
+    if (!/^[a-z0-9-]+$/.test(location.id || "")) fail(`${label}: invalid id.`);
+    if (!/^[A-Z0-9_]+$/.test(location.constant || "")) fail(`${label}: invalid constant.`);
+    if (!/^[A-Z]{2}$/.test(location.state_code || "")) fail(`${label}: invalid state_code.`);
+    if (!/^(city|county|metro)$/.test(location.type || "")) fail(`${label}: type must be city, county, or metro.`);
+    if (location.country && !/^[A-Z]{2}$/.test(location.country)) fail(`${label}: country must use a two-letter code.`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(location.reviewed || "")) fail(`${label}: reviewed must use YYYY-MM-DD.`);
+    if (!location.name || !location.state) fail(`${label}: name and state are required.`);
+    if (!fs.existsSync(path.join(root, "review-sheets", location.file || ""))) {
+      fail(`${label}: missing reviewer sheet ${location.file || "(blank)"}.`);
+    }
   });
 }
 
