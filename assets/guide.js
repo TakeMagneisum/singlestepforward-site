@@ -15,6 +15,8 @@
   const answerPanel = document.querySelector("#guide-answer");
   const answerTitle = document.querySelector("#answer-title");
   const answerText = document.querySelector("#answer-text");
+  const answerDirection = document.querySelector("#answer-direction");
+  const viewResults = document.querySelector("#view-results");
   const resetGuide = document.querySelector("#reset-guide");
   const printButton = document.querySelector("#print-directory");
 
@@ -137,6 +139,7 @@
       let callLabel = "Call";
       if (resource.phone === "988") callLabel = "Call 988";
       if (resource.phone === "211") callLabel = "Call 211";
+      if (resource.phone === "*4141") callLabel = "Call *4141";
       actions.append(makeLink(callLabel, "tel:" + resource.phone, "primary", false));
     }
     const webLabel = resource.source.toLowerCase().includes("official") ? "Official website ↗" : "Visit website ↗";
@@ -251,9 +254,20 @@
     return score;
   }
 
-  function showAnswer(title, text, urgent) {
+  function showAnswer(title, text, urgent, resultCount) {
     answerTitle.textContent = title;
     answerText.textContent = text;
+    if (answerDirection) {
+      const countLabel = Number.isInteger(resultCount) && resultCount > 0
+        ? `${resultCount} matching ${resultCount === 1 ? "resource is" : "resources are"}`
+        : "The recommended resources are";
+      answerDirection.textContent = `${countLabel} directly below this message.`;
+    }
+    if (viewResults) {
+      viewResults.innerHTML = Number.isInteger(resultCount) && resultCount > 0
+        ? `View ${resultCount} ${resultCount === 1 ? "resource" : "resources"} <span aria-hidden="true">↓</span>`
+        : `View recommended resources <span aria-hidden="true">↓</span>`;
+    }
     answerPanel.hidden = false;
     answerPanel.classList.toggle("urgent-answer", Boolean(urgent));
   }
@@ -267,7 +281,7 @@
     const cleanQuery = query.trim();
     if (!cleanQuery) {
       queryInput.focus();
-      showAnswer("Tell me a little more.", "A few ordinary words are enough—for example, “food this week” or “behind on rent.”", false);
+      showAnswer("Tell me a little more.", "A few ordinary words are enough—for example, “food this week” or “behind on rent.”", false, 0);
       return;
     }
 
@@ -278,18 +292,22 @@
     if (urgency === "emergency") {
       const emergencyResults = resourcesInRouteOrder(routing.emergency || ["988-lifeline"]);
       render(emergencyResults, "Urgent support options", true);
+      const emergencyInfo = window.SSF_CURRENT_AREA?.emergency;
       showAnswer(
-        "Call 911 now for an immediate or life-threatening emergency.",
-        "Do not wait for a website response. If it is safe to do so, move away from danger and call 911.",
-        true
+        emergencyInfo ? `${emergencyInfo.callLabel} now for an immediate emergency.` : "Call 911 now for an immediate or life-threatening emergency.",
+        emergencyInfo ? `${emergencyInfo.description} Do not wait for a website response.` : "Do not wait for a website response. If it is safe to do so, move away from danger and call 911.",
+        true,
+        emergencyResults.length
       );
     } else if (urgency === "suicide") {
       const crisisResults = resourcesInRouteOrder(routing.suicide || ["988-lifeline"]);
       render(crisisResults, "Immediate crisis support", true);
+      const emergencyInfo = window.SSF_CURRENT_AREA?.emergency;
       showAnswer(
-        "Please call or text 988 now.",
-        "You can reach a crisis counselor 24/7. If someone is in immediate physical danger, call 911.",
-        true
+        emergencyInfo ? `Please ${emergencyInfo.crisisLabel.toLowerCase()} now.` : "Please call or text 988 now.",
+        emergencyInfo ? `${emergencyInfo.crisisDescription} For immediate physical danger, ${emergencyInfo.callLabel.toLowerCase()}.` : "You can reach a crisis counselor 24/7. If someone is in immediate physical danger, call 911.",
+        true,
+        crisisResults.length
       );
     } else if (urgency === "violence") {
       const safetyResults = resourcesInRouteOrder(routing.violence || ["988-lifeline"]);
@@ -297,7 +315,8 @@
       showAnswer(
         "Your safety comes first.",
         routing.violenceText || "Call 911 for immediate danger. Use a safe device if possible when contacting a confidential support service.",
-        true
+        true,
+        safetyResults.length
       );
     } else {
       const scored = resources
@@ -312,7 +331,8 @@
         showAnswer(
           "Here are a few good places to start.",
           "Dawn matched your words to the source-checked directory. She cannot judge your situation. Start with the first option that fits, and confirm details with the provider.",
-          false
+          false,
+          scored.length
         );
       } else {
         const startingPoints = resources.filter((resource) =>
@@ -322,7 +342,8 @@
         showAnswer(
           "I’m not seeing a close match yet.",
           routing.fallbackText || "Try fewer words, browse a topic, or call 211 for a person who can search across local services.",
-          false
+          false,
+          startingPoints.length
         );
       }
     }
@@ -364,6 +385,10 @@
     showCategory("all", false);
     document.querySelector("#guide").scrollIntoView({ behavior: "smooth", block: "start" });
     queryInput.focus({ preventScroll: true });
+  });
+
+  viewResults?.addEventListener("click", () => {
+    document.querySelector("#all-resources").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
   printButton?.addEventListener("click", () => window.print());

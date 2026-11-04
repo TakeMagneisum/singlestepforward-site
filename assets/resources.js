@@ -2343,8 +2343,54 @@ window.SSF_RESOURCE_AREAS = {
       violenceText: "Call 911 for immediate danger. SafeHaven of Tarrant County has a 24-hour hotline at 1-877-701-7233; use a safe device if possible.",
       fallbackText: "Try fewer words, browse a topic, or call 2-1-1 Texas for a person who can search across local services."
     }
+  },
+  santiago: {
+    id: "santiago", name: "Santiago Metropolitan Area", state: "Región Metropolitana", stateCode: "RM", country: "CL",
+    label: "Santiago Metropolitan Area, Chile", shortLabel: "Santiago, Chile", reviewed: "November 4, 2026",
+    resources: window.SSF_SANTIAGO_RESOURCES,
+    emergency: { call: "133", callLabel: "Call 133", description: "Police emergency. For an ambulance call 131; for fire or rescue call 132.", crisis: "*4141", crisisLabel: "Call *4141 from a mobile", crisisDescription: "Free, confidential suicide-prevention support is available 24 hours every day." },
+    routing: {
+      emergency: ["carabineros-de-chile-emergencias", "samu-emergencia-medica", "bomberos-de-chile"],
+      suicide: ["linea-de-prevencion-del-suicidio-4141", "salud-responde", "samu-emergencia-medica"],
+      violence: ["fono-de-orientacion-en-violencias-de-genero-1455", "carabineros-de-chile-emergencias", "corporacion-de-asistencia-judicial"],
+      fallback: ["chileatiende", "ventanilla-unica-social", "municipalidad-de-santiago-dideco", "omil-santiago"],
+      violenceText: "Call 133 or 149 for immediate danger. Contact 1455 or WhatsApp +56 9 9700 7000 from a safe device for confidential orientation.",
+      fallbackText: "Try fewer words, browse a topic, or call ChileAtiende at 101 for help finding the right official service."
+    }
+  },
+  "greater-valparaiso": {
+    id: "greater-valparaiso", name: "Greater Valparaíso", state: "Región de Valparaíso", stateCode: "VS", country: "CL",
+    label: "Greater Valparaíso, Chile", shortLabel: "Greater Valparaíso", reviewed: "November 4, 2026",
+    resources: window.SSF_GREATER_VALPARAISO_RESOURCES,
+    emergency: { call: "133", callLabel: "Call 133", description: "Police emergency. For an ambulance call 131; for fire or rescue call 132.", crisis: "*4141", crisisLabel: "Call *4141 from a mobile", crisisDescription: "Free, confidential suicide-prevention support is available 24 hours every day." },
+    routing: {
+      emergency: ["carabineros-de-chile-emergencias", "samu-emergencia-medica", "bomberos-de-chile"],
+      suicide: ["linea-de-prevencion-del-suicidio-4141", "salud-responde", "samu-emergencia-medica"],
+      violence: ["fono-de-orientacion-en-violencias-de-genero-1455", "carabineros-de-chile-emergencias", "corporacion-de-asistencia-judicial"],
+      fallback: ["chileatiende", "ventanilla-unica-social", "municipalidad-de-valparaiso-emergencias-sociales", "omil-region-de-valparaiso"],
+      violenceText: "Call 133 or 149 for immediate danger. Contact 1455 or WhatsApp +56 9 9700 7000 from a safe device for confidential orientation.",
+      fallbackText: "Try fewer words, browse a topic, or call ChileAtiende at 101 for help finding the right official service."
+    }
+  },
+  "greater-concepcion": {
+    id: "greater-concepcion", name: "Greater Concepción", state: "Región del Biobío", stateCode: "BI", country: "CL",
+    label: "Greater Concepción, Chile", shortLabel: "Greater Concepción", reviewed: "November 4, 2026",
+    resources: window.SSF_GREATER_CONCEPCION_RESOURCES,
+    emergency: { call: "133", callLabel: "Call 133", description: "Police emergency. For an ambulance call 131; for fire or rescue call 132.", crisis: "*4141", crisisLabel: "Call *4141 from a mobile", crisisDescription: "Free, confidential suicide-prevention support is available 24 hours every day." },
+    routing: {
+      emergency: ["carabineros-de-chile-emergencias", "samu-emergencia-medica", "bomberos-de-chile"],
+      suicide: ["linea-de-prevencion-del-suicidio-4141", "salud-responde", "samu-emergencia-medica"],
+      violence: ["fono-de-orientacion-en-violencias-de-genero-1455", "carabineros-de-chile-emergencias", "corporacion-de-asistencia-judicial"],
+      fallback: ["chileatiende", "ventanilla-unica-social", "municipalidad-de-concepcion-dideco", "omil-concepcion"],
+      violenceText: "Call 133 or 149 for immediate danger. Contact 1455 or WhatsApp +56 9 9700 7000 from a safe device for confidential orientation.",
+      fallbackText: "Try fewer words, browse a topic, or call ChileAtiende at 101 for help finding the right official service."
+    }
   }
 };
+
+Object.values(window.SSF_RESOURCE_AREAS).forEach((area) => {
+  if (!area.country) area.country = "US";
+});
 
 window.SSF_RESOURCES = SSF_LIBERTY_RESOURCES;
 window.SSF_RESOURCE_VERSION = window.SSF_RESOURCE_AREAS.liberty.reviewed;

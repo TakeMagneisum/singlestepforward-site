@@ -4,6 +4,7 @@
   const areas = window.SSF_RESOURCE_AREAS || {};
   const defaultAreaId = "liberty";
   const storageKey = "ssf-selected-area";
+  const countryStorageKey = "ssf-selected-country";
   const isFinder = document.body.classList.contains("finder-page");
 
   function safeStoredArea() {
@@ -20,6 +21,14 @@
     } catch {
       /* Guide selection still works when browser storage is unavailable. */
     }
+  }
+
+  function safeStoredCountry() {
+    try { return window.localStorage.getItem(countryStorageKey) || ""; } catch { return ""; }
+  }
+
+  function storeCountry(country) {
+    try { window.localStorage.setItem(countryStorageKey, country); } catch { /* Selection still works. */ }
   }
 
   function chooseAreaId() {
@@ -85,7 +94,31 @@
   function setupAreaPicker(select) {
     const picker = select.closest("[data-area-picker]");
     const button = picker?.querySelector("[data-area-open]");
+    const countrySelect = picker?.querySelector("[data-country-select]");
     if (!button) return;
+
+    const requestedArea = new URLSearchParams(window.location.search).get("area") || "";
+    const requestedCountry = areas[requestedArea]?.country;
+    const initialCountry = requestedCountry || (isFinder ? area.country : safeStoredCountry()) || "US";
+
+    function filterAreas(country, preserveSelection) {
+      Array.from(select.options).forEach((option) => {
+        if (!option.value) return;
+        option.hidden = (areas[option.value]?.country || "US") !== country;
+      });
+      const currentVisible = select.value && !select.selectedOptions[0]?.hidden;
+      if (!preserveSelection || !currentVisible) select.value = "";
+      updatePickerButton(select, button);
+    }
+
+    if (countrySelect) {
+      countrySelect.value = initialCountry;
+      filterAreas(initialCountry, true);
+      countrySelect.addEventListener("change", () => {
+        storeCountry(countrySelect.value);
+        filterAreas(countrySelect.value, false);
+      });
+    }
 
     select.value = select.hasAttribute("data-area-neutral") ? "" : areaId;
     updatePickerButton(select, button);
@@ -94,6 +127,7 @@
     button.addEventListener("click", () => {
       if (!Object.prototype.hasOwnProperty.call(areas, select.value)) return;
       storeArea(select.value);
+      storeCountry(areas[select.value].country || "US");
       const next = new URL("find-help.html", window.location.href);
       next.searchParams.set("area", select.value);
       window.location.assign(next.href);
@@ -139,6 +173,26 @@
 
       const areaInput = document.querySelector("#resource-area");
       if (areaInput && !areaInput.value) areaInput.placeholder = area.label + " or another area";
+
+      const emergency = area.emergency;
+      if (emergency) {
+        const emergencyCard = document.querySelector("[data-emergency-card]");
+        const crisisCard = document.querySelector("[data-crisis-card]");
+        if (emergencyCard) emergencyCard.href = "tel:" + emergency.call.replace(/[^\d*]/g, "");
+        if (crisisCard) crisisCard.href = "tel:" + emergency.crisis.replace(/[^\d*]/g, "");
+        document.querySelector("[data-emergency-label]")?.replaceChildren(emergency.callLabel);
+        document.querySelector("[data-emergency-description]")?.replaceChildren(emergency.description);
+        document.querySelector("[data-crisis-label]")?.replaceChildren(emergency.crisisLabel);
+        document.querySelector("[data-crisis-description]")?.replaceChildren(emergency.crisisDescription);
+        document.querySelectorAll("[data-global-emergency]").forEach((link) => {
+          link.href = "tel:" + emergency.call.replace(/[^\d*]/g, "");
+          link.textContent = emergency.callLabel;
+        });
+        document.querySelectorAll("[data-global-crisis]").forEach((link) => {
+          link.href = "tel:" + emergency.crisis.replace(/[^\d*]/g, "");
+          link.textContent = emergency.crisisLabel;
+        });
+      }
     }
 
     document.querySelectorAll("[data-area-select]").forEach(setupAreaPicker);

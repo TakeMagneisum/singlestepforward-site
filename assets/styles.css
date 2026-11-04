@@ -534,6 +534,8 @@ input::placeholder, textarea::placeholder { color: #758986; }
 .answer-mark { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 50%; background: var(--cypress); color: white; font-weight: 900; }
 .answer-copy strong { display: block; color: var(--cypress); font-size: 1.03rem; }
 .answer-copy p { margin: 2px 0 0; color: var(--muted); font-size: .88rem; }
+.answer-copy .answer-direction { margin-top: 7px; color: var(--cypress); font-weight: 800; }
+.answer-actions { display: flex; flex-direction: column; gap: 7px; align-items: stretch; }
 .answer-panel button { white-space: nowrap; }
 
 .directory-section { padding-top: 70px; }
@@ -743,7 +745,7 @@ input::placeholder, textarea::placeholder { color: #758986; }
   .urgent-card { min-height: 150px; }
   .answer-panel { grid-template-columns: 44px 1fr; padding: 20px; }
   .answer-mark { width: 42px; height: 42px; }
-  .answer-panel button { grid-column: 1 / -1; }
+  .answer-actions { grid-column: 1 / -1; }
   .directory-actions { width: 100%; flex-direction: column; }
   .directory-actions .button { width: 100%; }
   .resource-card { min-height: 0; }
@@ -1663,6 +1665,23 @@ textarea { min-height: 104px; }
 }
 
 .area-picker-controls { display: flex; align-items: stretch; gap: 7px; }
+.country-select-shell {
+  position: relative;
+  display: flex !important;
+  width: 52px !important;
+  min-width: 52px;
+  align-items: center;
+  justify-content: center !important;
+  border: 1px solid rgba(8, 55, 49, .28);
+  border-radius: 11px;
+  background: var(--cream);
+  color: var(--cypress);
+  cursor: pointer;
+  overflow: hidden;
+}
+.country-select-shell svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; pointer-events: none; }
+.country-select-shell select { position: absolute !important; inset: 0; width: 100% !important; min-width: 0 !important; opacity: 0; cursor: pointer; }
+.country-select-shell:focus-within { outline: 3px solid rgba(244, 180, 55, .5); outline-offset: 2px; }
 .select-shell { position: relative; display: block; min-width: 245px; }
 .select-shell::after {
   content: "▼";
@@ -1729,7 +1748,7 @@ textarea { min-height: 104px; }
   margin: 0 0 10px;
 }
 
-.possibility-grid .need-card { min-height: 294px; padding: 22px; justify-content: flex-start; }
+.possibility-grid .need-card { min-height: 294px; padding: 22px; justify-content: flex-end; }
 .possibility-grid .need-card h3 { margin-right: 30px; }
 .browse-all-cta {
   display: grid;
@@ -1865,6 +1884,8 @@ textarea { min-height: 104px; }
   .area-picker { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: start; }
   .area-picker-icon { width: 36px; height: 36px; margin-top: 18px; }
   .area-picker-controls { display: grid; grid-template-columns: 1fr; gap: 7px; }
+  .country-select-shell { grid-row: 1; width: 100% !important; min-height: 42px; justify-content: flex-start !important; padding-inline: 13px; }
+  .country-select-shell::after { content: "Country"; margin-left: 8px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
   .select-shell { min-width: 0; width: 100%; }
   .location-inner .area-picker select,
   .area-open-button { width: 100%; max-width: none; min-height: 42px; }
