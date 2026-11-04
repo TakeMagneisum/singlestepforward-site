@@ -117,6 +117,26 @@
       areaId: "fort-worth",
       label: "Fort Worth, Texas",
       zips: combineZips(zipRange(76102, 76140), zipList("76148 76155 76161 76162 76163 76164"))
+    },
+    {
+      areaId: "san-juan-pr",
+      label: "San Juan, Puerto Rico",
+      zips: combineZips(zipRange(901, 918), zipRange(920, 927), zipList("00929 00930 00931 00933 00934 00935 00936 00937"))
+    },
+    {
+      areaId: "bayamon-pr",
+      label: "Bayamón, Puerto Rico",
+      zips: zipRange(956, 961)
+    },
+    {
+      areaId: "carolina-pr",
+      label: "Carolina, Puerto Rico",
+      zips: combineZips(zipRange(979, 985), zipList("00987"))
+    },
+    {
+      areaId: "ponce-pr",
+      label: "Ponce, Puerto Rico",
+      zips: zipList("00715 00716 00717 00728 00730 00731 00732 00733 00734")
     }
   ];
 

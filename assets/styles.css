@@ -1682,6 +1682,21 @@ textarea { min-height: 104px; }
 .country-select-shell svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; pointer-events: none; }
 .country-select-shell select { position: absolute !important; inset: 0; width: 100% !important; min-width: 0 !important; opacity: 0; cursor: pointer; }
 .country-select-shell:focus-within { outline: 3px solid rgba(244, 180, 55, .5); outline-offset: 2px; }
+.language-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 35px;
+  padding: 4px 8px;
+  border: 1px solid rgba(8, 55, 49, .24);
+  border-radius: 999px;
+  color: var(--cypress);
+  background: rgba(255, 255, 255, .58);
+  font-size: .72rem;
+  font-weight: 800;
+}
+.language-control select { border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.language-control:focus-within { outline: 3px solid rgba(244, 180, 55, .5); outline-offset: 2px; }
 .select-shell { position: relative; display: block; min-width: 245px; }
 .select-shell::after {
   content: "▼";
@@ -1886,6 +1901,7 @@ textarea { min-height: 104px; }
   .area-picker-controls { display: grid; grid-template-columns: 1fr; gap: 7px; }
   .country-select-shell { grid-row: 1; width: 100% !important; min-height: 42px; justify-content: flex-start !important; padding-inline: 13px; }
   .country-select-shell::after { content: "Country"; margin-left: 8px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+  html[lang="es"] .country-select-shell::after { content: "País"; }
   .select-shell { min-width: 0; width: 100%; }
   .location-inner .area-picker select,
   .area-open-button { width: 100%; max-width: none; min-height: 42px; }

@@ -2385,6 +2385,22 @@ window.SSF_RESOURCE_AREAS = {
       violenceText: "Call 133 or 149 for immediate danger. Contact 1455 or WhatsApp +56 9 9700 7000 from a safe device for confidential orientation.",
       fallbackText: "Try fewer words, browse a topic, or call ChileAtiende at 101 for help finding the right official service."
     }
+  },
+  "san-juan-pr": {
+    id:"san-juan-pr", name:"San Juan", state:"Puerto Rico", stateCode:"PR", country:"PR", label:"San Juan, Puerto Rico", shortLabel:"San Juan, PR", reviewed:"November 4, 2026", resources:window.SSF_SAN_JUAN_PR_RESOURCES,
+    routing:{ emergency:["sistema-de-emergencias-9-1-1","linea-pas-de-assmca","oficina-de-la-procuradora-de-las-mujeres"], suicide:["linea-pas-de-assmca","sistema-de-emergencias-9-1-1"], violence:["oficina-de-la-procuradora-de-las-mujeres","sistema-de-emergencias-9-1-1","servicios-legales-de-puerto-rico"], fallback:["2-1-1-de-puerto-rico","311-familia-en-contacto","san-juan-desarrollo-social-comunitario","conexion-laboral-area-local-san-juan"], violenceText:"Call 911 for immediate danger. Contact the Office of the Women's Advocate from a safe device when possible for orientation and support.", fallbackText:"Try fewer words, browse a topic, call 211 for community-service navigation, or call 311 for Department of the Family programs." }
+  },
+  "bayamon-pr": {
+    id:"bayamon-pr", name:"Bayamón", state:"Puerto Rico", stateCode:"PR", country:"PR", label:"Bayamón, Puerto Rico", shortLabel:"Bayamón, PR", reviewed:"November 4, 2026", resources:window.SSF_BAYAMON_PR_RESOURCES,
+    routing:{ emergency:["sistema-de-emergencias-9-1-1","linea-pas-de-assmca","oficina-de-la-procuradora-de-las-mujeres"], suicide:["linea-pas-de-assmca","sistema-de-emergencias-9-1-1"], violence:["oficina-de-la-procuradora-de-las-mujeres","sistema-de-emergencias-9-1-1","servicios-legales-de-puerto-rico"], fallback:["2-1-1-de-puerto-rico","311-familia-en-contacto","bayamon-oficina-de-ayuda-al-ciudadano","bayamon-departamento-del-trabajo-municipal"], violenceText:"Call 911 for immediate danger. Contact the Office of the Women's Advocate from a safe device when possible for orientation and support.", fallbackText:"Try fewer words, browse a topic, call 211 for community-service navigation, or call 311 for Department of the Family programs." }
+  },
+  "carolina-pr": {
+    id:"carolina-pr", name:"Carolina", state:"Puerto Rico", stateCode:"PR", country:"PR", label:"Carolina, Puerto Rico", shortLabel:"Carolina, PR", reviewed:"November 4, 2026", resources:window.SSF_CAROLINA_PR_RESOURCES,
+    routing:{ emergency:["sistema-de-emergencias-9-1-1","linea-pas-de-assmca","oficina-de-la-procuradora-de-las-mujeres"], suicide:["linea-pas-de-assmca","sistema-de-emergencias-9-1-1"], violence:["oficina-de-la-procuradora-de-las-mujeres","sistema-de-emergencias-9-1-1","servicios-legales-de-puerto-rico"], fallback:["2-1-1-de-puerto-rico","311-familia-en-contacto","carolina-programa-de-bienestar-social","conexion-laboral-carolina"], violenceText:"Call 911 for immediate danger. Contact the Office of the Women's Advocate from a safe device when possible for orientation and support.", fallbackText:"Try fewer words, browse a topic, call 211 for community-service navigation, or call 311 for Department of the Family programs." }
+  },
+  "ponce-pr": {
+    id:"ponce-pr", name:"Ponce", state:"Puerto Rico", stateCode:"PR", country:"PR", label:"Ponce, Puerto Rico", shortLabel:"Ponce, PR", reviewed:"November 4, 2026", resources:window.SSF_PONCE_PR_RESOURCES,
+    routing:{ emergency:["sistema-de-emergencias-9-1-1","linea-pas-de-assmca","oficina-de-la-procuradora-de-las-mujeres"], suicide:["linea-pas-de-assmca","sistema-de-emergencias-9-1-1"], violence:["oficina-de-la-procuradora-de-las-mujeres","sistema-de-emergencias-9-1-1","servicios-legales-de-puerto-rico"], fallback:["2-1-1-de-puerto-rico","311-familia-en-contacto","municipio-autonomo-de-ponce-orientacion-de-servicios","ponce-jobs"], violenceText:"Call 911 for immediate danger. Contact the Office of the Women's Advocate from a safe device when possible for orientation and support.", fallbackText:"Try fewer words, browse a topic, call 211 for community-service navigation, or call 311 for Department of the Family programs." }
   }
 };
 
