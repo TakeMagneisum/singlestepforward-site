@@ -8,17 +8,18 @@
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261104-2">
-  <script src="assets/colorado-resources.js?v=20261104-2" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261104-2" defer></script>
-  <script src="assets/new-york-resources.js?v=20261104-2" defer></script>
-  <script src="assets/illinois-resources.js?v=20261104-2" defer></script>
-  <script src="assets/city-resources.js?v=20261104-2" defer></script>
-  <script src="assets/resources.js?v=20261104-2" defer></script>
-  <script src="assets/area.js?v=20261104-2" defer></script>
-  <script src="assets/urgent.js?v=20261104-2" defer></script>
-  <script src="assets/guide.js?v=20261104-2" defer></script>
-  <script src="assets/i18n.js?v=20261104-2" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261105-1">
+  <script src="assets/colorado-resources.js?v=20261105-1" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261105-1" defer></script>
+  <script src="assets/new-york-resources.js?v=20261105-1" defer></script>
+  <script src="assets/illinois-resources.js?v=20261105-1" defer></script>
+  <script src="assets/city-resources.js?v=20261105-1" defer></script>
+  <script src="assets/resources.js?v=20261105-1" defer></script>
+  <script src="assets/area.js?v=20261105-1" defer></script>
+  <script src="assets/urgent.js?v=20261105-1" defer></script>
+  <script src="assets/guide.js?v=20261105-1" defer></script>
+  <script src="assets/calm.js?v=20261105-1" defer></script>
+  <script src="assets/i18n.js?v=20261105-1" defer></script>
 </head>
 <body class="finder-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -41,6 +42,7 @@
         <a href="discover.html">Explore anywhere</a>
         <a href="#all-resources">Browse all</a>
         <a class="button button-small" href="#guide">Ask Dawn</a>
+        <button class="calm-toggle" type="button" data-calm-toggle aria-pressed="false">Calm View</button>
         <label class="language-control"><span aria-hidden="true">文/A</span><span class="sr-only">Language</span><select data-language-select aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></label>
       </nav>
     </div>
@@ -78,6 +80,9 @@
                   <option value="san-diego">San Diego, CA</option>
                   <option value="san-antonio">San Antonio, TX</option>
                   <option value="fort-worth">Fort Worth, TX</option>
+                  <option value="indian-harbour-beach">Indian Harbour Beach, FL</option>
+                  <option value="carmel">Carmel, IN</option>
+                  <option value="jacksonville">Jacksonville, FL</option>
                   <option value="santiago">Santiago Metropolitan Area, Chile</option>
                   <option value="greater-valparaiso">Greater Valparaíso, Chile</option>
                   <option value="greater-concepcion">Greater Concepción, Chile</option>
@@ -133,6 +138,8 @@
           <button class="example-chip" type="button" data-query="I need help updating my resume and finding work">Résumé and work</button>
           <button class="example-chip" type="button" data-query="I need affordable dental or medical care">Medical or dental</button>
           <button class="example-chip" type="button" data-query="I need help with my pet">Help with a pet</button>
+          <button class="example-chip" type="button" data-query="My thoughts feel too fast">Thoughts feel too fast</button>
+          <button class="example-chip" type="button" data-query="It is hard to tell what is real">Hard to tell what is real</button>
         </div>
         <p class="guide-privacy">Dawn matches your words to listings; she cannot judge your situation. What you type stays on this page and is not sent or saved. Your selected local edition is remembered in this browser so it remains selected next time.</p>
       </div>
@@ -161,6 +168,23 @@
         <button class="button button-quiet button-small" id="reset-guide" type="button">Start over</button>
       </div>
     </div>
+
+    <section class="shell crisis-guidance" aria-label="Crisis support guidance">
+      <details>
+        <summary>What happens when I contact crisis support?</summary>
+        <div>
+          <p>A trained counselor will usually ask about immediate safety, listen, and help identify a next step. You may ask what information is private and what will happen before sharing details.</p>
+          <p>If there is no immediate physical danger and you want in-person help, ask whether a mobile crisis team is available and what kind of response may be sent. Availability varies by location.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Need one quiet minute first?</summary>
+        <div>
+          <p>If it is safe, place both feet on the floor. Name five things you can see, four things you can feel, and three things you can hear. Let your exhale last a little longer than your inhale.</p>
+          <p>This can help create a pause; it is not treatment and should not delay emergency or crisis support.</p>
+        </div>
+      </details>
+    </section>
 
     <section id="all-resources" class="section shell directory-section" aria-labelledby="directory-title">
       <div class="directory-head">
@@ -211,7 +235,7 @@
       <noscript>
         <div class="no-results">
           <h3>This directory needs JavaScript to filter.</h3>
-          <p>You can still call <a href="tel:211">211</a> for local service referrals or call or text <a href="tel:988">988</a> for crisis support.</p>
+          <p>You can still call <a href="tel:211">211</a> for local referrals, call or text <a href="tel:988">988</a> for crisis support, search <a href="https://www.usa.gov/benefits">official benefit information</a>, find a <a href="https://findahealthcenter.hrsa.gov/">community health center</a>, or find <a href="https://www.parentcenterhub.org/find-your-center/">special-education and disability Parent Centers</a>.</p>
         </div>
       </noscript>
 
