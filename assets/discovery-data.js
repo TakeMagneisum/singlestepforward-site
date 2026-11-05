@@ -119,6 +119,21 @@
       zips: combineZips(zipRange(76102, 76140), zipList("76148 76155 76161 76162 76163 76164"))
     },
     {
+      areaId: "indian-harbour-beach",
+      label: "Indian Harbour Beach, Florida",
+      zips: zipList("32937")
+    },
+    {
+      areaId: "carmel",
+      label: "Carmel, Indiana",
+      zips: zipList("46032 46033 46082 46280 46290")
+    },
+    {
+      areaId: "jacksonville",
+      label: "Jacksonville, Florida",
+      zips: combineZips(zipRange(32201, 32260), zipList("32266 32277 32290"))
+    },
+    {
       areaId: "san-juan-pr",
       label: "San Juan, Puerto Rico",
       zips: combineZips(zipRange(901, 918), zipRange(920, 927), zipList("00929 00930 00931 00933 00934 00935 00936 00937"))
@@ -250,13 +265,25 @@
     {
       id: "family",
       icon: "assets/icon-family-support.webp",
-      title: "Family, seniors & disability",
-      summary: "Caregiver support, aging agencies, disability organizations, child-care assistance, and benefit counselors may help with daily logistics.",
+      title: "Family, seniors & caregivers",
+      summary: "Caregiver support, aging agencies, child-care assistance, and benefit counselors may help with daily logistics.",
       searchLabel: "Search for family and care support",
-      query: "senior disability caregiver family support services near ZIP {zip}",
+      query: "senior caregiver child care family support services near ZIP {zip}",
       official: [
         { label: "Eldercare Locator", url: "https://eldercare.acl.gov/" },
         { label: "Call 211", url: "tel:211" }
+      ]
+    },
+    {
+      id: "development-disability",
+      icon: "assets/icon-family-support.webp",
+      title: "Development, disability & school support",
+      summary: "Early-intervention programs, Parent Training and Information Centers, special-education supports, and disability organizations may help families understand next steps.",
+      searchLabel: "Search for developmental and school support",
+      query: "early intervention Part C parent training information center IEP disability support near ZIP {zip}",
+      official: [
+        { label: "Find IDEA state contacts", url: "https://sites.ed.gov/idea/contacts/" },
+        { label: "Find a Parent Center", url: "https://www.parentcenterhub.org/find-your-center/" }
       ]
     },
     {

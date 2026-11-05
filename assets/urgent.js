@@ -31,7 +31,12 @@
       "gun pointed", "gun is pointed", "pointing a gun", "has a gun and", "armed person", "active shooter",
       "house is on fire", "building is on fire", "home is on fire", "fire in my home",
       "there is a fire", "stabbed", "crime in progress", "immediate danger",
-      "life threatening", "being attacked", "breaking in", "choking right now", "choking me right now"
+      "life threatening", "being attacked", "breaking in", "choking right now", "choking me right now",
+      "no puedo respirar", "no puede respirar", "no esta respirando", "dolor de pecho", "esta inconsciente",
+      "sobredosis", "tome demasiadas pastillas", "tomo demasiadas pastillas", "sangrado grave",
+      "disparos", "me apunta con un arma", "tirador activo", "mi casa se esta incendiando",
+      "el edificio se esta incendiando", "hay un incendio", "me apunalaron", "peligro inmediato",
+      "me estan atacando", "estan entrando a mi casa", "me estrangula ahora"
     ]);
 
     const suicide = hasAny(q, [
@@ -40,7 +45,10 @@
       "thinking about ending it", "thinking of ending it", "end it all",
       "dont want to live", "do not want to live", "cant go on", "cannot go on",
       "better off dead", "wants to die", "someone wants to die", "someone is suicidal",
-      "friend wants to die", "thinking about suicide", "thinking of suicide"
+      "friend wants to die", "thinking about suicide", "thinking of suicide",
+      "quiero suicidarme", "estoy pensando en suicidarme", "quiero matarme", "quiero morir",
+      "quiero hacerme dano", "me estoy haciendo dano", "no quiero vivir", "no puedo seguir",
+      "acabar con mi vida", "terminar con mi vida", "pienso en suicidarme", "se quiere morir"
     ]);
 
     const violence = hasAny(q, [
@@ -52,10 +60,14 @@
       "sexually assaulted", "being raped", "was raped", "child abuse",
       "child is being abused", "abusing my child", "human trafficking",
       "being trafficked", "sex trafficking", "labor trafficking", "stalking me",
-      "strangling me", "choking me", "forced me to have sex"
+      "strangling me", "choking me", "forced me to have sex",
+      "violencia domestica", "mi pareja me lastima", "abuso en casa", "no estoy a salvo en casa",
+      "me estan abusando", "me golpea", "me va a matar", "agresion sexual", "me violaron",
+      "abuso infantil", "trata de personas", "me esta acosando", "me estrangula",
+      "me obliga a tener sexo"
     ]) || (
-      (words.has("partner") || words.has("husband") || words.has("wife") || words.has("boyfriend") || words.has("girlfriend")) &&
-      (words.has("hurt") || words.has("hurting") || words.has("abuse") || words.has("abusing") || words.has("threatening"))
+      (words.has("partner") || words.has("husband") || words.has("wife") || words.has("boyfriend") || words.has("girlfriend") || words.has("pareja") || words.has("esposo") || words.has("esposa")) &&
+      (words.has("hurt") || words.has("hurting") || words.has("abuse") || words.has("abusing") || words.has("threatening") || words.has("lastima") || words.has("abusa") || words.has("amenaza"))
     );
 
     if (emergency) return "emergency";

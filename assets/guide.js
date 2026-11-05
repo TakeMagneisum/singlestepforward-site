@@ -55,14 +55,49 @@
     veteran: "veterans",
     taxes: "tax",
     transit: "transportation",
-    weather: "weather"
+    weather: "weather",
+    comida: "food",
+    alimentos: "food",
+    vivienda: "housing",
+    alquiler: "housing",
+    arriendo: "housing",
+    salud: "health",
+    trabajo: "work",
+    empleo: "work",
+    escuela: "education",
+    educacion: "education",
+    mascota: "animals",
+    mascotas: "animals",
+    legal: "legal",
+    transporte: "transportation"
   };
 
   const stopWords = new Set([
     "about", "after", "also", "and", "are", "can", "care", "could", "for", "from", "get",
     "have", "help", "here", "how", "into", "need", "please", "some", "that", "the",
-    "their", "there", "they", "this", "what", "where", "with", "would", "your"
+    "their", "there", "they", "this", "what", "where", "with", "would", "your",
+    "algo", "ayuda", "como", "con", "cual", "cuando", "donde", "esta", "estoy", "hay",
+    "las", "los", "mas", "necesito", "para", "pero", "por", "que", "quiero", "sin", "una", "uno"
   ]);
+
+  const intentPatterns = {
+    food: ["food", "groceries", "meal", "pantry", "comida", "alimentos", "despensa", "mercado"],
+    housing: ["rent", "eviction", "shelter", "homeless", "housing", "utility", "alquiler", "arriendo", "desalojo", "refugio", "vivienda", "sin hogar", "servicios basicos"],
+    health: ["doctor", "clinic", "medical", "dental", "dentist", "vaccine", "health", "medico", "clinica", "salud", "dentista", "vacuna"],
+    "mental-health": ["mental health", "anxiety", "depression", "panic", "thoughts feel too fast", "thoughts are too fast", "hard to tell what is real", "hearing things", "salud mental", "ansiedad", "depresion", "panico", "pensamientos van muy rapido", "dificil saber que es real", "escucho cosas"],
+    safety: ["domestic violence", "abuse", "unsafe", "stalking", "violencia domestica", "abuso", "no estoy a salvo", "acoso"],
+    work: ["job", "work", "resume", "training", "empleo", "trabajo", "curriculum", "capacitacion"],
+    education: ["school", "class", "ged", "literacy", "iep", "special education", "escuela", "clase", "alfabetizacion", "educacion especial"],
+    family: ["child care", "caregiver", "senior", "disability", "iep", "special education", "parent training", "early intervention", "developmental delay", "down syndrome", "autism", "cuidado infantil", "cuidador", "adulto mayor", "discapacidad", "educacion especial", "capacitacion para padres", "intervencion temprana", "retraso del desarrollo", "sindrome de down", "autismo"],
+    animals: ["pet", "dog", "cat", "animal", "mascota", "perro", "gato"],
+    recovery: ["addiction", "substance", "alcohol", "drug", "recovery", "adiccion", "sustancias", "drogas", "recuperacion"],
+    veterans: ["veteran", "military", "veterano", "militar"],
+    tax: ["tax", "taxes", "impuesto", "impuestos"],
+    legal: ["lawyer", "legal", "court", "tenant", "abogado", "tribunal", "inquilino"],
+    transportation: ["bus", "ride", "transportation", "paratransit", "autobus", "viaje", "transporte"],
+    weather: ["weather", "storm", "hurricane", "alert", "clima", "tormenta", "huracan", "alerta"],
+    volunteer: ["volunteer", "give back", "voluntario", "voluntariado"]
+  };
 
   function normalize(value) {
     return String(value || "")
@@ -77,6 +112,13 @@
 
   function containsTerm(text, term) {
     return (" " + text + " ").includes(" " + term + " ");
+  }
+
+  function inferredCategories(query) {
+    const normalized = normalize(query);
+    return Object.entries(intentPatterns)
+      .filter(([, patterns]) => patterns.some((pattern) => containsTerm(normalized, normalize(pattern))))
+      .map(([category]) => category);
   }
 
   function sortResources(list) {
@@ -241,14 +283,24 @@
       if (containsTerm(query, keyword)) score += keyword.includes(" ") ? 12 : 7;
     });
 
+    inferredCategories(query).forEach((category) => {
+      if (resource.categories.includes(category)) score += 15;
+    });
+
     const words = query
       .split(" ")
       .filter((word) => word.length > 2 && !stopWords.has(word));
+    const haystackWords = new Set(haystack.split(" "));
+
+    function hasWordVariant(word) {
+      if (haystackWords.has(word) || haystackWords.has(`${word}s`)) return true;
+      return word.endsWith("s") && word.length > 3 && haystackWords.has(word.slice(0, -1));
+    }
 
     words.forEach((word) => {
       if (containsTerm(title, word)) score += 5;
       else if (containsTerm(categoryText, word)) score += 4;
-      else if (containsTerm(haystack, word)) score += 2;
+      else if (hasWordVariant(word)) score += 6;
     });
 
     return score;

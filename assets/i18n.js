@@ -60,7 +60,29 @@
     "Add a ZIP to prepare a local search":"Añade un código postal para preparar una búsqueda local",
     "Call 211":"Llamar al 211",
     "Back to topics":"Volver a los temas",
-    "Return home":"Volver al inicio"
+    "Return home":"Volver al inicio",
+    "Calm View":"Vista tranquila",
+    "Calm View: On":"Vista tranquila: activada",
+    "Thoughts feel too fast":"Los pensamientos van muy rápido",
+    "Hard to tell what is real":"Es difícil saber qué es real",
+    "What happens when I contact crisis support?":"¿Qué ocurre cuando contacto apoyo para una crisis?",
+    "Need one quiet minute first?":"¿Necesitas primero un minuto tranquilo?",
+    "A trained counselor will usually ask about immediate safety, listen, and help identify a next step. You may ask what information is private and what will happen before sharing details.":"Un consejero capacitado normalmente preguntará por la seguridad inmediata, escuchará y ayudará a identificar un próximo paso. Puedes preguntar qué información es privada y qué ocurrirá antes de compartir detalles.",
+    "If there is no immediate physical danger and you want in-person help, ask whether a mobile crisis team is available and what kind of response may be sent. Availability varies by location.":"Si no hay peligro físico inmediato y deseas ayuda en persona, pregunta si hay un equipo móvil de crisis y qué tipo de respuesta podrían enviar. La disponibilidad varía según el lugar.",
+    "If it is safe, place both feet on the floor. Name five things you can see, four things you can feel, and three things you can hear. Let your exhale last a little longer than your inhale.":"Si es seguro, coloca ambos pies en el suelo. Nombra cinco cosas que ves, cuatro que sientes y tres que oyes. Deja que la exhalación dure un poco más que la inhalación.",
+    "This can help create a pause; it is not treatment and should not delay emergency or crisis support.":"Esto puede ayudar a crear una pausa; no es tratamiento y no debe retrasar el apoyo de emergencia o crisis.",
+    "Here are a few good places to start.":"Estos son algunos buenos lugares para comenzar.",
+    "Dawn matched your words to the source-checked directory below.":"Dawn relacionó tus palabras con el directorio verificado con fuentes que aparece abajo.",
+    "Your matching resources are directly below this message.":"Los recursos relacionados aparecen directamente debajo de este mensaje.",
+    "View matching resources":"Ver recursos relacionados",
+    "Start over":"Empezar de nuevo",
+    "Source-checked directory":"Directorio verificado con fuentes",
+    "Trusted places to start.":"Lugares confiables para comenzar.",
+    "Print this list":"Imprimir esta lista",
+    "Describe your situation":"Describe tu situación",
+    "Browse by topic":"Explorar por tema",
+    "Development, disability & school support":"Desarrollo, discapacidad y apoyo escolar",
+    "Family, seniors & caregivers":"Familia, adultos mayores y cuidadores"
   }));
 
   function storedLanguage() {
@@ -81,6 +103,9 @@
     if (/^Viewing:/.test(core)) return leading + core.replace(/^Viewing:/, "Viendo:") + trailing;
     if (/^Source checked /.test(core)) return leading + core.replace(/^Source checked /, "Fuentes verificadas el ") + trailing;
     if (/^View \d+ resources?/.test(core)) return leading + core.replace(/^View /, "Ver ").replace(/ resource$/, " recurso").replace(/ resources$/, " recursos") + trailing;
+    if (/^\d+ matching resources? (?:is|are) directly below this message\.$/.test(core)) {
+      return leading + core.replace(/^\d+/, (count) => count).replace(/ matching resource is directly below this message\.$/, " recurso relacionado aparece directamente debajo de este mensaje.").replace(/ matching resources are directly below this message\.$/, " recursos relacionados aparecen directamente debajo de este mensaje.") + trailing;
+    }
     return value;
   }
 

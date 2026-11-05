@@ -2344,6 +2344,60 @@ window.SSF_RESOURCE_AREAS = {
       fallbackText: "Try fewer words, browse a topic, or call 2-1-1 Texas for a person who can search across local services."
     }
   },
+  "indian-harbour-beach": {
+    id: "indian-harbour-beach",
+    name: "Indian Harbour Beach",
+    state: "Florida",
+    stateCode: "FL",
+    label: "Indian Harbour Beach, Florida",
+    shortLabel: "Indian Harbour Beach, FL",
+    reviewed: "November 5, 2026",
+    resources: window.SSF_INDIAN_HARBOUR_BEACH_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "circles-of-care-behavioral-health-and-recovery-services", "serene-harbor-domestic-violence-services"],
+      suicide: ["988-suicide-and-crisis-lifeline", "circles-of-care-behavioral-health-and-recovery-services"],
+      violence: ["serene-harbor-domestic-violence-services", "florida-department-of-children-and-families-domestic-violence-services", "community-legal-services", "988-suicide-and-crisis-lifeline"],
+      fallback: ["211-brevard", "myaccess-florida", "brevard-county-housing-and-human-services", "brevard-county-public-libraries"],
+      violenceText: "Call 911 for immediate danger. Serene Harbor has a confidential 24-hour hotline at 321-726-8282; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call 211 Brevard for a person who can search across local services."
+    }
+  },
+  carmel: {
+    id: "carmel",
+    name: "Carmel",
+    state: "Indiana",
+    stateCode: "IN",
+    label: "Carmel, Indiana",
+    shortLabel: "Carmel, IN",
+    reviewed: "November 5, 2026",
+    resources: window.SSF_CARMEL_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "aspire-indiana-health-carmel-behavioral-health-and-recovery", "prevail-victim-assistance"],
+      suicide: ["988-suicide-and-crisis-lifeline", "aspire-indiana-health-carmel-behavioral-health-and-recovery"],
+      violence: ["prevail-victim-assistance", "indiana-coalition-against-domestic-violence", "indiana-legal-help", "988-suicide-and-crisis-lifeline"],
+      fallback: ["indiana-211", "indiana-fssa-benefits-portal", "carmel-community-resources", "carmel-clay-public-library"],
+      violenceText: "Call 911 for immediate danger. Prevail has a confidential 24-hour crisis line at 317-776-3472; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call Indiana 211 for a person who can search across local services."
+    }
+  },
+  jacksonville: {
+    id: "jacksonville",
+    name: "Jacksonville",
+    state: "Florida",
+    stateCode: "FL",
+    label: "Jacksonville, Florida",
+    shortLabel: "Jacksonville, FL",
+    reviewed: "November 5, 2026",
+    resources: window.SSF_JACKSONVILLE_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "mental-health-resource-center", "hubbard-house-domestic-violence-services"],
+      suicide: ["988-suicide-and-crisis-lifeline", "mental-health-resource-center"],
+      violence: ["hubbard-house-domestic-violence-services", "jacksonville-area-legal-aid", "florida-department-of-children-and-families-domestic-violence-services", "988-suicide-and-crisis-lifeline"],
+      fallback: ["united-way-211-northeast-florida", "myaccess-florida", "jacksonville-630-city", "jacksonville-public-library"],
+      violenceText: "Call 911 for immediate danger. Hubbard House has a confidential 24-hour hotline at 904-354-3114; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call United Way 211 Northeast Florida for a person who can search across local services."
+    }
+  },
   santiago: {
     id: "santiago", name: "Santiago Metropolitan Area", state: "Región Metropolitana", stateCode: "RM", country: "CL",
     label: "Santiago Metropolitan Area, Chile", shortLabel: "Santiago, Chile", reviewed: "November 4, 2026",
