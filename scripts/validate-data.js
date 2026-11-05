@@ -103,6 +103,9 @@ function validateDiscovery(discovery, areas) {
   if (zipOwners.get("00959") !== "bayamon-pr") fail("ZIP regression: 00959 must suggest the Bayamón guide.");
   if (zipOwners.get("00985") !== "carolina-pr") fail("ZIP regression: 00985 must suggest the Carolina guide.");
   if (zipOwners.get("00730") !== "ponce-pr") fail("ZIP regression: 00730 must suggest the Ponce guide.");
+  if (zipOwners.get("32937") !== "indian-harbour-beach") fail("ZIP regression: 32937 must suggest the Indian Harbour Beach guide.");
+  if (zipOwners.get("46032") !== "carmel") fail("ZIP regression: 46032 must suggest the Carmel guide.");
+  if (zipOwners.get("32202") !== "jacksonville") fail("ZIP regression: 32202 must suggest the Jacksonville guide.");
   [
     ["10001", "new-york-city"], ["60601", "chicago"], ["90012", "los-angeles"],
     ["19103", "philadelphia"], ["77002", "houston"], ["85003", "phoenix"],
@@ -112,7 +115,7 @@ function validateDiscovery(discovery, areas) {
   });
   if (zipOwners.has("99999")) fail("ZIP regression: 99999 must remain an unmatched fallback example.");
 
-  if (categories.length < 11) fail("Universal discovery must contain at least 11 topic categories.");
+  if (categories.length < 13) fail("Universal discovery must contain at least 13 topic categories.");
   categories.forEach((category, index) => {
     const label = "Discovery category " + index;
     if (!category.id || !/^[a-z0-9-]+$/.test(category.id)) fail(label + ": invalid id.");
@@ -142,11 +145,12 @@ function validateDiscovery(discovery, areas) {
   const directUrls = categories.flatMap((category) => category.official || []).map((item) => item.url);
   if (!directUrls.includes("tel:911")) fail("Universal discovery is missing direct 911 routing.");
   if (!directUrls.includes("tel:988")) fail("Universal discovery is missing direct 988 routing.");
+  if (!categoryIds.has("development-disability")) fail("Universal discovery is missing developmental, disability, and school support.");
 }
 
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
-  if (areaEntries.length !== 26) fail(`Expected 26 local editions; found ${areaEntries.length}.`);
+  if (areaEntries.length !== 29) fail(`Expected 29 local editions; found ${areaEntries.length}.`);
 
   areaEntries.forEach(([areaId, area]) => {
     if (!Array.isArray(area.resources) || !area.resources.length) {
@@ -222,7 +226,13 @@ function validateMarkup(areas) {
     if (!markup.includes("data-language-select") || !markup.includes("assets/i18n.js")) {
       fail(["index.html", "find-help.html", "discover.html"][index] + ": local English/Spanish selector is missing.");
     }
+    if (!markup.includes("data-calm-toggle") || !markup.includes("assets/calm.js")) {
+      fail(["index.html", "find-help.html", "discover.html"][index] + ": Calm View control is missing.");
+    }
   });
+  if (!finder.includes("crisis-guidance") || !finder.includes("mobile crisis team")) {
+    fail("find-help.html: plain-language crisis and mobile-response guidance is missing.");
+  }
   if (!finder.includes("assets/dawn-portait.png") || !index.includes("assets/dawn-full.png")) {
     fail("Production Dawn PNG references are missing.");
   }
@@ -238,7 +248,7 @@ function validateMarkup(areas) {
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
 
-  const expectedCacheToken = "20261104-2";
+  const expectedCacheToken = "20261105-1";
   [
     ["index.html", index],
     ["find-help.html", finder],
@@ -283,7 +293,11 @@ function validateUrgentRules() {
       "active shooter here", "my house is on fire", "the building is on fire", "our home is on fire",
       "there is a fire in my home", "there is a fire next door", "I was stabbed",
       "crime in progress", "I am in immediate danger", "this is life threatening",
-      "I am being attacked", "someone is breaking in", "he is choking me right now"
+      "I am being attacked", "someone is breaking in", "he is choking me right now",
+      "no puedo respirar", "no está respirando", "tengo dolor de pecho", "está inconsciente",
+      "hay una sobredosis", "tomé demasiadas pastillas", "hay un sangrado grave", "escuché disparos",
+      "me apunta con un arma", "hay un incendio", "me apuñalaron", "estoy en peligro inmediato",
+      "me están atacando", "me estrangula ahora"
     ],
     suicide: [
       "I am thinking about suicide", "I feel suicidal", "I might kill myself", "I am killing myself",
@@ -293,7 +307,9 @@ function validateUrgentRules() {
       "I do not want to live", "I can't go on", "I cannot go on", "everyone is better off dead without me",
       "someone wants to die", "someone is suicidal", "my friend wants to die",
       "thinking of suicide", "my brother is suicidal", "she said she wants to die",
-      "I keep thinking about ending it"
+      "I keep thinking about ending it", "quiero suicidarme", "estoy pensando en suicidarme",
+      "quiero matarme", "quiero morir", "quiero hacerme daño", "me estoy haciendo daño",
+      "no quiero vivir", "no puedo seguir", "quiero acabar con mi vida", "pienso en suicidarme"
     ],
     violence: [
       "I need domestic violence help", "my partner is hurting me", "there is abuse at home",
@@ -306,7 +322,10 @@ function validateUrgentRules() {
       "I escaped human trafficking", "I am being trafficked", "this may be sex trafficking",
       "I think this is labor trafficking", "my ex is stalking me", "my boyfriend is strangling me",
       "my wife is choking me", "someone forced me to have sex", "my husband is threatening me",
-      "my girlfriend is abusing me"
+      "my girlfriend is abusing me", "necesito ayuda por violencia doméstica", "mi pareja me lastima",
+      "hay abuso en casa", "no estoy a salvo en casa", "me golpea", "me va a matar",
+      "sufrí una agresión sexual", "me violaron", "hay abuso infantil", "soy víctima de trata de personas",
+      "me está acosando", "me estrangula", "me obliga a tener sexo"
     ],
     "": [
       "fire department jobs", "I need a gun permit", "weapon permit application", "I was fired from my job",
@@ -317,7 +336,10 @@ function validateUrgentRules() {
       "child care while I work", "GED class", "English classes", "utility bill help",
       "housing waitlist", "senior transportation", "food bank volunteer", "consumer complaint",
       "recovery meeting", "I feel anxious", "I feel sad", "marriage counseling",
-      "my partner needs job training", "my husband needs a dentist", "my wife lost her job"
+      "my partner needs job training", "my husband needs a dentist", "my wife lost her job",
+      "necesito comida", "estoy atrasado con el alquiler", "busco trabajo", "necesito un dentista",
+      "mis pensamientos van muy rápido", "es difícil saber qué es real", "me siento ansioso",
+      "necesito transporte", "busco ayuda para mi hijo con su IEP", "quiero ser voluntario"
     ]
   };
 
@@ -329,7 +351,7 @@ function validateUrgentRules() {
       if (actual !== expected) fail(`Urgent rule: expected ${expected || "ordinary"} for “${phrase}”; got ${actual || "ordinary"}.`);
     });
   });
-  if (count < 100) fail(`Urgent-language suite must contain at least 100 cases; found ${count}.`);
+  if (count < 140) fail(`Urgent-language suite must contain at least 140 cases; found ${count}.`);
 }
 
 function validateReviewSheets(areas) {
@@ -399,4 +421,4 @@ if (errors.length) {
 }
 
 const resourceCount = Object.values(areas).reduce((sum, area) => sum + area.resources.length, 0);
-console.log(`Validation passed: ${Object.keys(areas).length} editions, ${resourceCount} edition-listings, 16 categories, routing integrity, HTTPS links, reviewer sheets, and 100+ urgent-language cases.`);
+console.log(`Validation passed: ${Object.keys(areas).length} editions, ${resourceCount} edition-listings, 16 directory categories, 13 discovery topics, routing integrity, HTTPS links, reviewer sheets, Calm View, and 140+ urgent-language cases.`);

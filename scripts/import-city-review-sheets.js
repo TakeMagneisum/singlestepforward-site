@@ -41,7 +41,7 @@ cities.forEach((city) => {
 
 const categoryKeywords = {
   animals: ["animal", "pet", "veterinary", "veterinaria", "mascota", "humane", "shelter pet"],
-  education: ["adult education", "college", "school", "library", "learning", "GED", "literacy", "class"],
+  education: ["adult education", "college", "school", "library", "learning", "GED", "literacy", "class", "special education", "IEP", "parent training"],
   family: ["family", "familia", "child", "niñez", "childcare", "child care", "JUNJI", "JUNAEB", "WIC", "senior", "adulto mayor", "SENAMA", "aging", "disability", "discapacidad", "SENADIS", "caregiver", "Head Start"],
   food: ["food", "pantry", "meal", "aliment", "JUNAEB", "SNAP", "groceries", "WIC", "nutrition"],
   health: ["health", "salud", "FONASA", "CESFAM", "SAMU", "healthcare", "medical", "clinic", "immunization", "vaccine", "insurance", "Medicaid"],
