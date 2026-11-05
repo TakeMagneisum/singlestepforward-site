@@ -1,0 +1,42 @@
+name: Resource freshness audit
+
+on:
+  schedule:
+    - cron: "15 13 1,15 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate site data
+        run: node scripts/validate-data.js
+      - name: Check source dates and links
+        id: audit
+        continue-on-error: true
+        run: node scripts/audit-resources.js --strict --max-age-days=35 --output=output/resource-audit
+      - name: Add audit summary
+        if: always()
+        run: |
+          if [ -f output/resource-audit.md ]; then
+            cat output/resource-audit.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Resource audit did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-audit
+          path: output/resource-audit.*
+          retention-days: 90
+      - name: Flag confirmed maintenance issues
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
