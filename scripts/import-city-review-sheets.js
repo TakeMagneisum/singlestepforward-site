@@ -53,7 +53,7 @@ const categoryKeywords = {
   tax: ["tax", "tributari", "impuestos internos", "SII", "VITA", "TCE", "IRS"],
   transportation: ["transit", "transportation", "transporte", "Biotren", "Red Movilidad", "EFE", "paratransit", "fare", "ride", "metro", "bus", "Cityride", "Dial-a-Ride"],
   veterans: ["veteran", "veterans", "military", "Armed Forces", "CAPREDENA", "fuerzas armadas"],
-  volunteer: ["volunteer", "voluntari", "Servicio País", "give back", "community service"],
+  volunteer: ["volunteer", "voluntari", "Servicio País", "give back"],
   weather: ["weather", "meteorológ", "forecast", "SENAPRED", "alert", "preparedness", "warning", "Notify", "Ready"],
   work: ["workforce", "work", "trabajo", "empleo", "OMIL", "SENCE", "job", "career", "employment", "training", "WorkSource"]
 };
@@ -182,6 +182,7 @@ function primaryCategoryFor(resource, categories) {
   if (/\b(?:2-1-1|211|311)\b/i.test(resource)) return "local service navigation";
   if (/988|crisis lifeline/i.test(resource)) return "mental-health support";
   if (/benefits|compass|access nyc|social services|community connections/i.test(resource)) return "benefits navigation";
+  if (/developmental disabilit|early intervention|parent training/i.test(resource)) return "disability and family support";
 
   const titleOnly = categoriesFor({ resource, scope: "", next: "" }, false);
   const preferredOrder = [

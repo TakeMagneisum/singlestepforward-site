@@ -106,6 +106,9 @@ function validateDiscovery(discovery, areas) {
   if (zipOwners.get("32937") !== "indian-harbour-beach") fail("ZIP regression: 32937 must suggest the Indian Harbour Beach guide.");
   if (zipOwners.get("46032") !== "carmel") fail("ZIP regression: 46032 must suggest the Carmel guide.");
   if (zipOwners.get("32202") !== "jacksonville") fail("ZIP regression: 32202 must suggest the Jacksonville guide.");
+  if (zipOwners.get("59601") !== "lewis-and-clark-county") fail("ZIP regression: 59601 must suggest the Lewis and Clark County guide.");
+  if (zipOwners.get("59101") !== "yellowstone-county") fail("ZIP regression: 59101 must suggest the Yellowstone County guide.");
+  if (zipOwners.get("59801") !== "missoula-county") fail("ZIP regression: 59801 must suggest the Missoula County guide.");
   [
     ["10001", "new-york-city"], ["60601", "chicago"], ["90012", "los-angeles"],
     ["19103", "philadelphia"], ["77002", "houston"], ["85003", "phoenix"],
@@ -150,7 +153,7 @@ function validateDiscovery(discovery, areas) {
 
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
-  if (areaEntries.length !== 29) fail(`Expected 29 local editions; found ${areaEntries.length}.`);
+  if (areaEntries.length !== 32) fail(`Expected 32 local editions; found ${areaEntries.length}.`);
 
   areaEntries.forEach(([areaId, area]) => {
     if (!Array.isArray(area.resources) || !area.resources.length) {
@@ -197,6 +200,8 @@ function validateMarkup(areas) {
   const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const finder = fs.readFileSync(path.join(root, "find-help.html"), "utf8");
   const discovery = fs.readFileSync(path.join(root, "discover.html"), "utf8");
+  const learning = fs.readFileSync(path.join(root, "learn.html"), "utf8");
+  const notFound = fs.readFileSync(path.join(root, "404.html"), "utf8");
   const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 
   Object.keys(areas).forEach((areaId) => {
@@ -222,13 +227,24 @@ function validateMarkup(areas) {
   if (!finder.includes("data-area-open") || !finder.includes("data-area-review-date")) {
     fail("find-help.html: reviewed-guide open control or visible review date is missing.");
   }
-  [index, finder, discovery].forEach((markup, index) => {
+  [index, finder, discovery, learning].forEach((markup, index) => {
     if (!markup.includes("data-language-select") || !markup.includes("assets/i18n.js")) {
-      fail(["index.html", "find-help.html", "discover.html"][index] + ": local English/Spanish selector is missing.");
+      fail(["index.html", "find-help.html", "discover.html", "learn.html"][index] + ": local English/Spanish selector is missing.");
     }
     if (!markup.includes("data-calm-toggle") || !markup.includes("assets/calm.js")) {
-      fail(["index.html", "find-help.html", "discover.html"][index] + ": Calm View control is missing.");
+      fail(["index.html", "find-help.html", "discover.html", "learn.html"][index] + ": Calm View control is missing.");
     }
+  });
+  [index, finder, discovery].forEach((markup, pageIndex) => {
+    if (!markup.includes("class=\"awareness-band\"") || !markup.includes("href=\"learn.html\"")) {
+      fail(["index.html", "find-help.html", "discover.html"][pageIndex] + ": accessibility-and-inclusion entry point is missing.");
+    }
+  });
+  ["id=\"accessibility\"", "id=\"learning-disabilities\"", "id=\"down-syndrome\"", "id=\"autism\"", "id=\"school-support\"", "id=\"developmental-disabilities\""].forEach((required) => {
+    if (!learning.includes(required)) fail("learn.html: missing required learning topic " + required + ".");
+  });
+  ["https://www.w3.org/WAI/", "https://ndss.org/", "https://autisticadvocacy.org/", "https://www.parentcenterhub.org/", "https://thearc.org/"].forEach((source) => {
+    if (!learning.includes(source)) fail("learn.html: missing educational source " + source + ".");
   });
   if (!finder.includes("crisis-guidance") || !finder.includes("mobile crisis team")) {
     fail("find-help.html: plain-language crisis and mobile-response guidance is missing.");
@@ -247,12 +263,15 @@ function validateMarkup(areas) {
     if (!discovery.includes(route)) fail("discover.html: missing direct route " + route + ".");
   });
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
+  if (!sitemap.includes("learn.html")) fail("sitemap.xml: missing accessibility-and-inclusion page.");
 
-  const expectedCacheToken = "20261105-1";
+  const expectedCacheToken = "20261105-4";
   [
     ["index.html", index],
     ["find-help.html", finder],
-    ["discover.html", discovery]
+    ["discover.html", discovery],
+    ["learn.html", learning],
+    ["404.html", notFound]
   ].forEach(([pageName, markup]) => {
     const refs = Array.from(markup.matchAll(/(?:src|href)="(assets\/[^"?]+)\?v=([^"]+)"/g));
     if (!refs.length) fail(pageName + ": no cache-versioned assets found.");
@@ -271,6 +290,13 @@ function validateVisualAssets() {
   });
   if (fs.existsSync(path.join(root, "assets/desktop.ini"))) {
     fail("Packaging metadata assets/desktop.ini must be removed.");
+  }
+  const styles = fs.readFileSync(path.join(root, "assets/styles.css"), "utf8");
+  if (!styles.includes('html[data-calm="true"] .category-icon') || !styles.includes("display: block !important")) {
+    fail("Calm View must keep category pictograms visible as recognition cues.");
+  }
+  if (!styles.includes('html[data-calm="true"] .browse-all-cta') || !styles.includes('html[data-calm="true"] .dawn-section .dawn-grid')) {
+    fail("Calm View must collapse layout columns left by suppressed decorative artwork.");
   }
 }
 
@@ -421,4 +447,4 @@ if (errors.length) {
 }
 
 const resourceCount = Object.values(areas).reduce((sum, area) => sum + area.resources.length, 0);
-console.log(`Validation passed: ${Object.keys(areas).length} editions, ${resourceCount} edition-listings, 16 directory categories, 13 discovery topics, routing integrity, HTTPS links, reviewer sheets, Calm View, and 140+ urgent-language cases.`);
+console.log(`Validation passed: ${Object.keys(areas).length} editions, ${resourceCount} edition-listings, 16 directory categories, 13 discovery topics, accessibility-and-inclusion page, routing integrity, HTTPS links, reviewer sheets, Calm View with pictograms, and 140+ urgent-language cases.`);
