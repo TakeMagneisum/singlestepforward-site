@@ -1,6 +1,8 @@
 # Single Step Forward
 
-A privacy-first awareness and navigation prototype that offers useful starting points for any five-digit U.S. ZIP code, plus 29 selectable, source-checked local guides. The international pilot includes Santiago, Greater Valparaíso, and Greater Concepción in Chile. Puerto Rico is treated as its own service jurisdiction with guides for San Juan, Bayamón, Carolina, and Ponce, while 22 continental U.S. editions—including Indian Harbour Beach, Carmel, and Jacksonville—remain available.
+Single Step Forward is a privacy-first, static navigation guide for discovering possible forms of help, preparing local searches, and opening source-checked local directories. The site also includes a dedicated accessibility-and-inclusion learning page with links to government, standards, disability-led, and established nonprofit sources.
+
+A privacy-first awareness and navigation prototype that offers useful starting points for any five-digit U.S. ZIP code, plus 32 selectable, source-checked local guides. The international pilot includes Santiago, Greater Valparaíso, and Greater Concepción in Chile. Puerto Rico is treated as its own service jurisdiction with guides for San Juan, Bayamón, Carolina, and Ponce, while 25 continental U.S. editions—including Lewis and Clark, Yellowstone, and Missoula Counties in Montana—remain available.
 
 Single Step Forward helps visitors discover forms of assistance they may not know exist, learn useful service terminology, and reach a practical next step. The universal discovery layer provides educational guidance, established national starting points, 211, and prepared local web searches. Reviewed local guides add researched organizations, direct links, phone numbers, service notes, and visible source-check dates.
 
@@ -9,9 +11,11 @@ Single Step Forward helps visitors discover forms of assistance they may not kno
 - index.html — nationwide awareness message, ZIP entry, operating standards, sharing, and resource-suggestion flow
 - discover.html — universal ZIP-based education, official starting points, and prepared local searches
 - find-help.html — working next-step guide and filterable reviewed local directory
+- learn.html — accessibility, respectful-language, learning-disability, Down syndrome, neurodiversity, school-advocacy, and workplace-accommodation learning hub
 - assets/discovery-data.js — universal discovery topics, category-icon paths, search templates, official starting points, and the reviewed-area ZIP snapshot
 - assets/discovery.js — ZIP validation, local-guide suggestions, prepared-search generation, and deliberate share/copy behavior
-- assets/resources.js — the source-checked Liberty, Dallas, Wake, and Volusia County resource datasets and 29-edition international registry
+- assets/calm.js — persistent low-stimulus mode; styles.css keeps the Calm View palette consistent while preserving distinct emergency and crisis colors
+- assets/resources.js — the source-checked Liberty, Dallas, Wake, and Volusia County resource datasets and 32-edition international registry
 - assets/colorado-resources.js — the source-checked Colorado statewide, Denver County, and El Paso County resource datasets
 - assets/massachusetts-resources.js — the source-checked Massachusetts statewide and Plymouth County resource dataset
 - assets/new-york-resources.js — the source-checked New York statewide, Erie County, and Madison County resource datasets
@@ -30,6 +34,7 @@ Single Step Forward helps visitors discover forms of assistance they may not kno
 - scripts/audit-resources.js — non-destructive source-date and link triage; bot-blocked pages are reported for human review and are never removed automatically
 - scripts/export-review-sheets.js — creates one reviewer-friendly CSV for each local edition
 - scripts/import-city-review-sheets.js — verifies every reviewer CSV against the manifest and converts maintained CSV editions into browser-ready directory data
+- scripts/create-montana-review-sheets.js — documents the shared Montana research layer and recreates the three 36-row county reviewer sheets
 - review-sheets/locations.json — versioned manifest for every live edition, its reviewer sheet, jurisdiction type, state, source-check date, and production-data mode
 - review-sheets/ — per-edition worksheets with “still correct?”, correction, and missing-resource columns for local reviewers
 - .github/workflows/resource-audit.yml — scheduled 1st-and-15th validation, freshness, and dead-link report

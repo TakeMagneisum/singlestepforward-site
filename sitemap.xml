@@ -10,6 +10,9 @@
     <loc>https://singlestepforward.com/discover.html</loc>
   </url>
   <url>
+    <loc>https://singlestepforward.com/learn.html</loc>
+  </url>
+  <url>
     <loc>https://singlestepforward.com/?area=dallas</loc>
   </url>
   <url>
@@ -123,6 +126,12 @@
   <url><loc>https://singlestepforward.com/find-help.html?area=carmel</loc></url>
   <url><loc>https://singlestepforward.com/?area=jacksonville</loc></url>
   <url><loc>https://singlestepforward.com/find-help.html?area=jacksonville</loc></url>
+  <url><loc>https://singlestepforward.com/?area=lewis-and-clark-county</loc></url>
+  <url><loc>https://singlestepforward.com/find-help.html?area=lewis-and-clark-county</loc></url>
+  <url><loc>https://singlestepforward.com/?area=yellowstone-county</loc></url>
+  <url><loc>https://singlestepforward.com/find-help.html?area=yellowstone-county</loc></url>
+  <url><loc>https://singlestepforward.com/?area=missoula-county</loc></url>
+  <url><loc>https://singlestepforward.com/find-help.html?area=missoula-county</loc></url>
   <url><loc>https://singlestepforward.com/find-help.html?area=santiago</loc></url>
   <url><loc>https://singlestepforward.com/find-help.html?area=greater-valparaiso</loc></url>
   <url><loc>https://singlestepforward.com/find-help.html?area=greater-concepcion</loc></url>
