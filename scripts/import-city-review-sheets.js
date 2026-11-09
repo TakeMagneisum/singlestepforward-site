@@ -40,7 +40,7 @@ cities.forEach((city) => {
 });
 
 const categoryKeywords = {
-  animals: ["animal", "pet", "veterinary", "veterinaria", "mascota", "humane", "shelter pet"],
+  animals: ["animal", "pet", "dog", "cat", "veterinary", "veterinaria", "mascota", "humane", "shelter pet"],
   education: ["adult education", "college", "school", "library", "learning", "GED", "literacy", "class", "special education", "IEP", "parent training"],
   family: ["family", "familia", "child", "niñez", "childcare", "child care", "JUNJI", "JUNAEB", "WIC", "senior", "adulto mayor", "SENAMA", "aging", "disability", "discapacidad", "SENADIS", "caregiver", "Head Start"],
   food: ["food", "pantry", "meal", "aliment", "JUNAEB", "SNAP", "groceries", "WIC", "nutrition"],
@@ -151,7 +151,10 @@ function categoriesFor(row, includeFallback = true) {
   if (/homeless veterans/.test(resourceName)) categories.push("veterans", "housing", "safety");
 
   let resolved = [...new Set(categories.length ? categories : (includeFallback ? ["family"] : []))];
-  if (/animal shelter/.test(resourceName)) {
+  if (/medicare/.test(resourceName) && !/mental.health/.test(resourceName)) {
+    resolved = [...new Set(resolved.filter((category) => category !== "mental-health").concat("health", "family"))];
+  }
+  if (/(?:animal|dog|cat) shelter/.test(resourceName)) {
     resolved = resolved.filter((category) => category !== "housing" && category !== "safety");
   }
   return resolved;
@@ -159,6 +162,7 @@ function categoriesFor(row, includeFallback = true) {
 
 function phoneFor(display) {
   const text = String(display || "");
+  if (/^\s*text\b/i.test(text) && !/\bcall\b/i.test(text)) return "";
   const star = text.match(/\*4141/);
   if (star) return "*4141";
   const leadingShort = text.match(/^\D*\b(101|131|132|133|1412|1455|149|211|311|988)\b/);
@@ -179,6 +183,7 @@ function sourceFor(url) {
 }
 
 function primaryCategoryFor(resource, categories) {
+  if (/medicare/i.test(resource)) return "Medicare and health-coverage guidance";
   if (/\b(?:2-1-1|211|311)\b/i.test(resource)) return "local service navigation";
   if (/988|crisis lifeline/i.test(resource)) return "mental-health support";
   if (/benefits|compass|access nyc|social services|community connections/i.test(resource)) return "benefits navigation";
@@ -294,6 +299,7 @@ function buildResources(city) {
 }
 
 const generatedCities = cities.filter((city) => city.generate === true);
+const importedAreas = {};
 const generated = [
   "/* Generated from review-sheets/*-review.csv by scripts/import-city-review-sheets.js. */",
   "(function () {",
@@ -302,7 +308,32 @@ const generated = [
 ];
 
 generatedCities.forEach((city, cityIndex) => {
-  const json = JSON.stringify(buildResources(city), null, 2)
+  const resources = buildResources(city);
+  if (city.register === true) {
+    const routing = {};
+    for (const route of ["emergency", "suicide", "violence", "fallback"]) {
+      const titles = city.routing_titles?.[route];
+      if (!Array.isArray(titles) || !titles.length) throw new Error(`${city.id}: missing ${route} routing titles.`);
+      routing[route] = titles.map((title) => {
+        const match = resources.find((resource) => resource.title === title);
+        if (!match) throw new Error(`${city.id}: unknown routing title ${title}.`);
+        return match.id;
+      });
+    }
+    routing.violenceText = "Call 911 for immediate danger. Use a safe device if possible to contact the support service below; confirm its current intake and availability.";
+    routing.fallbackText = "Try fewer words, browse a topic, or contact the local service-navigation resource below for help finding the right provider.";
+    const [year, month, day] = city.reviewed.split("-").map(Number);
+    importedAreas[city.id] = {
+      id: city.id, name: city.name, state: city.state, stateCode: city.state_code,
+      country: city.country || "US", label: `${city.name}, ${city.state}`,
+      shortLabel: `${city.name}, ${city.state_code}`,
+      reviewed: new Date(Date.UTC(year, month - 1, day)).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }),
+      routing
+    };
+    if (city.jurisdiction_note) importedAreas[city.id].jurisdictionNote = city.jurisdiction_note;
+    if (city.coverage_note) importedAreas[city.id].coverageNote = city.coverage_note;
+  }
+  const json = JSON.stringify(resources, null, 2)
     .split("\n")
     .map((line) => `  ${line}`)
     .join("\n");
@@ -310,6 +341,10 @@ generatedCities.forEach((city, cityIndex) => {
   if (cityIndex < generatedCities.length - 1) generated.push("");
 });
 
+generated.push("", `  window.SSF_IMPORTED_RESOURCE_AREAS = ${JSON.stringify(importedAreas, null, 2)};`);
+cities.filter((city) => city.register === true).forEach((city) => {
+  generated.push(`  window.SSF_IMPORTED_RESOURCE_AREAS[${JSON.stringify(city.id)}].resources = window.SSF_${city.constant}_RESOURCES;`);
+});
 generated.push("})();", "");
 fs.writeFileSync(output, generated.join("\n"), "utf8");
 console.log(`Validated ${cities.length} locations and wrote ${generatedCities.length} generated datasets to ${path.relative(root, output)}.`);

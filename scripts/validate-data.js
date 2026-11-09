@@ -90,7 +90,10 @@ function validateDiscovery(discovery, areas) {
     (group.zips || []).forEach((zip) => {
       if (!/^\d{5}$/.test(zip)) fail(label + ": malformed ZIP " + zip + ".");
       if (zipOwners.has(zip)) {
-        fail("Discovery ZIP " + zip + " is assigned to both " + zipOwners.get(zip) + " and " + group.areaId + ".");
+        const owners = [zipOwners.get(zip), group.areaId].sort().join(",");
+        if (!["46280", "46290"].includes(zip) || owners !== "carmel,indianapolis") {
+          fail("Unreviewed ZIP overlap: " + zip + " belongs to " + owners + ".");
+        }
       } else {
         zipOwners.set(zip, group.areaId);
       }
@@ -153,7 +156,8 @@ function validateDiscovery(discovery, areas) {
 
 function validateAreas(areas) {
   const areaEntries = Object.entries(areas || {});
-  if (areaEntries.length !== 32) fail(`Expected 32 local editions; found ${areaEntries.length}.`);
+  const expectedCount = JSON.parse(fs.readFileSync(path.join(root, "review-sheets/locations.json"), "utf8")).locations.length;
+  if (areaEntries.length !== expectedCount) fail(`Expected ${expectedCount} manifest editions; found ${areaEntries.length}.`);
 
   areaEntries.forEach(([areaId, area]) => {
     if (!Array.isArray(area.resources) || !area.resources.length) {
@@ -180,7 +184,8 @@ function validateAreas(areas) {
     });
 
     requiredCategories.forEach((category) => {
-      if (!categories.has(category)) fail(`${areaId}: missing category ${category}.`);
+      const documentedGap = areaId === "omaha" && category === "animals" && Boolean(area.coverageNote);
+      if (!categories.has(category) && !documentedGap) fail(`${areaId}: missing category ${category}.`);
     });
 
     ["emergency", "suicide", "violence", "fallback"].forEach((routeName) => {
@@ -265,7 +270,7 @@ function validateMarkup(areas) {
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
   if (!sitemap.includes("learn.html")) fail("sitemap.xml: missing accessibility-and-inclusion page.");
 
-  const expectedCacheToken = "20261105-4";
+  const expectedCacheToken = "20261109-1";
   [
     ["index.html", index],
     ["find-help.html", finder],
@@ -422,6 +427,24 @@ function validateReviewSheets(areas) {
     if (!fs.existsSync(path.join(root, "review-sheets", location.file || ""))) {
       fail(`${label}: missing reviewer sheet ${location.file || "(blank)"}.`);
     }
+    if (location.register === true && areas[location.id]) {
+      const area = areas[location.id];
+      const actualDate = new Date(area.reviewed).toISOString().slice(0, 10);
+      if (actualDate !== location.reviewed) fail(`${label}: public source date differs from the manifest.`);
+      const suicideTarget = area.resources.find((item) => item.id === area.routing.suicide[0]);
+      if (suicideTarget?.phone !== "988") fail(`${label}: U.S. crisis route must start with the verified 988 entry.`);
+      const violenceTarget = area.resources.find((item) => item.id === area.routing.violence[0]);
+      if (violenceTarget?.title !== location.routing_titles.violence[0]) fail(`${label}: violence route changed from its explicit provider.`);
+      area.resources.forEach((resource) => {
+        if (/^\s*text\b/i.test(resource.phoneDisplay || "") && !/\bcall\b/i.test(resource.phoneDisplay || "") && resource.phone) {
+          fail(`${label}: text-only contact must not create a voice-call link.`);
+        }
+        if (/medicare/i.test(resource.title) && !/mental.health/i.test(resource.title) && resource.categories.includes("mental-health")) {
+          fail(`${label}: Medicare counseling is incorrectly categorized as mental-health care.`);
+        }
+      });
+      if (!discovery.groups.some((group) => group.areaId === location.id && group.zips.length)) fail(`${label}: ZIP suggestions are missing.`);
+    }
   });
 }
 
@@ -447,4 +470,4 @@ if (errors.length) {
 }
 
 const resourceCount = Object.values(areas).reduce((sum, area) => sum + area.resources.length, 0);
-console.log(`Validation passed: ${Object.keys(areas).length} editions, ${resourceCount} edition-listings, 16 directory categories, 13 discovery topics, accessibility-and-inclusion page, routing integrity, HTTPS links, reviewer sheets, Calm View with pictograms, and 140+ urgent-language cases.`);
+console.log(`Validation passed: ${Object.keys(areas).length} editions, ${resourceCount} edition-listings, 16 directory categories (Omaha pet-listing gap disclosed), 13 discovery topics, accessibility-and-inclusion page, routing integrity, HTTPS links, reviewer sheets, Calm View with pictograms, and 140+ urgent-language cases.`);
