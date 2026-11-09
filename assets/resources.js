@@ -2398,6 +2398,60 @@ window.SSF_RESOURCE_AREAS = {
       fallbackText: "Try fewer words, browse a topic, or call United Way 211 Northeast Florida for a person who can search across local services."
     }
   },
+  "lewis-and-clark-county": {
+    id: "lewis-and-clark-county",
+    name: "Lewis and Clark County",
+    state: "Montana",
+    stateCode: "MT",
+    label: "Lewis and Clark County, Montana",
+    shortLabel: "Lewis and Clark County, MT",
+    reviewed: "November 5, 2026",
+    resources: window.SSF_LEWIS_AND_CLARK_COUNTY_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "many-rivers-whole-health-helena", "the-friendship-center"],
+      suicide: ["988-suicide-and-crisis-lifeline", "many-rivers-whole-health-helena"],
+      violence: ["the-friendship-center", "montana-coalition-against-domestic-and-sexual-violence", "montana-legal-services-association", "988-suicide-and-crisis-lifeline"],
+      fallback: ["montana-211", "montana-dphhs-online-benefits-application", "lewis-and-clark-public-health-immunization-clinic", "lewis-and-clark-library"],
+      violenceText: "Call 911 for immediate danger. The Friendship Center has a confidential 24-hour help line at 406-442-6800; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call Montana 211 for a person who can search across Lewis and Clark County services."
+    }
+  },
+  "yellowstone-county": {
+    id: "yellowstone-county",
+    name: "Yellowstone County",
+    state: "Montana",
+    stateCode: "MT",
+    label: "Yellowstone County, Montana",
+    shortLabel: "Yellowstone County, MT",
+    reviewed: "November 5, 2026",
+    resources: window.SSF_YELLOWSTONE_COUNTY_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "community-crisis-center", "ywca-billings"],
+      suicide: ["988-suicide-and-crisis-lifeline", "community-crisis-center"],
+      violence: ["ywca-billings", "montana-coalition-against-domestic-and-sexual-violence", "montana-legal-services-association", "988-suicide-and-crisis-lifeline"],
+      fallback: ["montana-211", "montana-dphhs-online-benefits-application", "riverstone-health", "billings-public-library"],
+      violenceText: "Call 911 for immediate danger. YWCA Billings has a confidential 24-hour help line at 406-245-4472; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call Montana 211 for a person who can search across Yellowstone County services."
+    }
+  },
+  "missoula-county": {
+    id: "missoula-county",
+    name: "Missoula County",
+    state: "Montana",
+    stateCode: "MT",
+    label: "Missoula County, Montana",
+    shortLabel: "Missoula County, MT",
+    reviewed: "November 5, 2026",
+    resources: window.SSF_MISSOULA_COUNTY_RESOURCES,
+    routing: {
+      emergency: ["988-suicide-and-crisis-lifeline", "missoula-mobile-support-team", "ywca-missoula"],
+      suicide: ["988-suicide-and-crisis-lifeline", "missoula-mobile-support-team", "aware-missoula"],
+      violence: ["ywca-missoula", "montana-coalition-against-domestic-and-sexual-violence", "montana-legal-services-association", "988-suicide-and-crisis-lifeline"],
+      fallback: ["montana-211", "montana-dphhs-online-benefits-application", "missoula-public-health-immunization-clinic", "missoula-public-library"],
+      violenceText: "Call 911 for immediate danger. YWCA Missoula has a confidential 24-hour crisis line at 1-800-483-7858; use a safe device if possible.",
+      fallbackText: "Try fewer words, browse a topic, or call Montana 211 for a person who can search across Missoula County services."
+    }
+  },
   santiago: {
     id: "santiago", name: "Santiago Metropolitan Area", state: "Región Metropolitana", stateCode: "RM", country: "CL",
     label: "Santiago Metropolitan Area, Chile", shortLabel: "Santiago, Chile", reviewed: "November 4, 2026",
@@ -2457,6 +2511,8 @@ window.SSF_RESOURCE_AREAS = {
     routing:{ emergency:["sistema-de-emergencias-9-1-1","linea-pas-de-assmca","oficina-de-la-procuradora-de-las-mujeres"], suicide:["linea-pas-de-assmca","sistema-de-emergencias-9-1-1"], violence:["oficina-de-la-procuradora-de-las-mujeres","sistema-de-emergencias-9-1-1","servicios-legales-de-puerto-rico"], fallback:["2-1-1-de-puerto-rico","311-familia-en-contacto","municipio-autonomo-de-ponce-orientacion-de-servicios","ponce-jobs"], violenceText:"Call 911 for immediate danger. Contact the Office of the Women's Advocate from a safe device when possible for orientation and support.", fallbackText:"Try fewer words, browse a topic, call 211 for community-service navigation, or call 311 for Department of the Family programs." }
   }
 };
+
+Object.assign(window.SSF_RESOURCE_AREAS, window.SSF_IMPORTED_RESOURCE_AREAS || {});
 
 Object.values(window.SSF_RESOURCE_AREAS).forEach((area) => {
   if (!area.country) area.country = "US";

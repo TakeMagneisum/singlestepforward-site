@@ -163,6 +163,12 @@
         });
       });
 
+      const scopeNote = document.querySelector("[data-area-scope-note]");
+      if (scopeNote) {
+        scopeNote.textContent = [area.jurisdictionNote, area.coverageNote].filter(Boolean).join(" ");
+        scopeNote.hidden = !scopeNote.textContent;
+      }
+
       document.querySelectorAll("[data-area-only]").forEach((element) => {
         element.hidden = element.dataset.areaOnly !== areaId;
       });
