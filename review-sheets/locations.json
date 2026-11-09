@@ -1,37 +1,1381 @@
 {
   "schema_version": 1,
   "locations": [
-    { "id": "liberty", "file": "liberty-review.csv", "constant": "LIBERTY", "name": "Liberty County", "type": "county", "state": "Georgia", "state_code": "GA", "reviewed": "2026-09-08" },
-    { "id": "dallas", "file": "dallas-review.csv", "constant": "DALLAS", "name": "Dallas County", "type": "county", "state": "Texas", "state_code": "TX", "reviewed": "2026-10-28" },
-    { "id": "wake", "file": "wake-review.csv", "constant": "WAKE", "name": "Wake County", "type": "county", "state": "North Carolina", "state_code": "NC", "reviewed": "2026-10-29" },
-    { "id": "volusia", "file": "volusia-review.csv", "constant": "VOLUSIA", "name": "Volusia County", "type": "county", "state": "Florida", "state_code": "FL", "reviewed": "2026-10-29" },
-    { "id": "denver", "file": "denver-review.csv", "constant": "DENVER", "name": "Denver County", "type": "county", "state": "Colorado", "state_code": "CO", "reviewed": "2026-10-29" },
-    { "id": "elpaso", "file": "elpaso-review.csv", "constant": "EL_PASO", "name": "El Paso County", "type": "county", "state": "Colorado", "state_code": "CO", "reviewed": "2026-10-29" },
-    { "id": "plymouth", "file": "plymouth-review.csv", "constant": "PLYMOUTH", "name": "Plymouth County", "type": "county", "state": "Massachusetts", "state_code": "MA", "reviewed": "2026-10-29" },
-    { "id": "erie", "file": "erie-review.csv", "constant": "ERIE", "name": "Erie County", "type": "county", "state": "New York", "state_code": "NY", "reviewed": "2026-10-29" },
-    { "id": "madison", "file": "madison-review.csv", "constant": "MADISON", "name": "Madison County", "type": "county", "state": "New York", "state_code": "NY", "reviewed": "2026-10-29" },
-    { "id": "plainfield", "file": "plainfield-review.csv", "constant": "PLAINFIELD", "name": "Plainfield", "type": "city", "state": "Illinois", "state_code": "IL", "reviewed": "2026-10-29" },
-    { "id": "new-york-city", "file": "new-york-city-review.csv", "constant": "NEW_YORK_CITY", "name": "New York City", "type": "city", "state": "New York", "state_code": "NY", "reviewed": "2026-10-31", "generate": true },
-    { "id": "chicago", "file": "chicago-review.csv", "constant": "CHICAGO", "name": "Chicago", "type": "city", "state": "Illinois", "state_code": "IL", "reviewed": "2026-10-31", "generate": true },
-    { "id": "los-angeles", "file": "los-angeles-review.csv", "constant": "LOS_ANGELES", "name": "Los Angeles", "type": "city", "state": "California", "state_code": "CA", "reviewed": "2026-10-31", "generate": true },
-    { "id": "philadelphia", "file": "philadelphia-review.csv", "constant": "PHILADELPHIA", "name": "Philadelphia", "type": "city", "state": "Pennsylvania", "state_code": "PA", "reviewed": "2026-10-31", "generate": true },
-    { "id": "houston", "file": "houston-review.csv", "constant": "HOUSTON", "name": "Houston", "type": "city", "state": "Texas", "state_code": "TX", "reviewed": "2026-11-01", "generate": true },
-    { "id": "phoenix", "file": "phoenix-review.csv", "constant": "PHOENIX", "name": "Phoenix", "type": "city", "state": "Arizona", "state_code": "AZ", "reviewed": "2026-11-01", "generate": true },
-    { "id": "san-diego", "file": "san-diego-review.csv", "constant": "SAN_DIEGO", "name": "San Diego", "type": "city", "state": "California", "state_code": "CA", "reviewed": "2026-11-01", "generate": true },
-    { "id": "san-antonio", "file": "san-antonio-review.csv", "constant": "SAN_ANTONIO", "name": "San Antonio", "type": "city", "state": "Texas", "state_code": "TX", "reviewed": "2026-11-01", "generate": true },
-    { "id": "fort-worth", "file": "fort-worth-review.csv", "constant": "FORT_WORTH", "name": "Fort Worth", "type": "city", "state": "Texas", "state_code": "TX", "reviewed": "2026-11-01", "generate": true },
-    { "id": "indian-harbour-beach", "file": "indian-harbour-beach-review.csv", "constant": "INDIAN_HARBOUR_BEACH", "name": "Indian Harbour Beach", "type": "city", "state": "Florida", "state_code": "FL", "reviewed": "2026-11-05", "generate": true },
-    { "id": "carmel", "file": "carmel-review.csv", "constant": "CARMEL", "name": "Carmel", "type": "city", "state": "Indiana", "state_code": "IN", "reviewed": "2026-11-05", "generate": true },
-    { "id": "jacksonville", "file": "jacksonville-review.csv", "constant": "JACKSONVILLE", "name": "Jacksonville", "type": "city", "state": "Florida", "state_code": "FL", "reviewed": "2026-11-05", "generate": true },
-    { "id": "lewis-and-clark-county", "file": "lewis-and-clark-county-review.csv", "constant": "LEWIS_AND_CLARK_COUNTY", "name": "Lewis and Clark County", "type": "county", "state": "Montana", "state_code": "MT", "reviewed": "2026-11-05", "generate": true },
-    { "id": "yellowstone-county", "file": "yellowstone-county-review.csv", "constant": "YELLOWSTONE_COUNTY", "name": "Yellowstone County", "type": "county", "state": "Montana", "state_code": "MT", "reviewed": "2026-11-05", "generate": true },
-    { "id": "missoula-county", "file": "missoula-county-review.csv", "constant": "MISSOULA_COUNTY", "name": "Missoula County", "type": "county", "state": "Montana", "state_code": "MT", "reviewed": "2026-11-05", "generate": true },
-    { "id": "santiago", "file": "santiago-review.csv", "constant": "SANTIAGO", "name": "Santiago Metropolitan Area", "type": "metro", "state": "Región Metropolitana", "state_code": "RM", "country": "CL", "reviewed": "2026-11-04", "generate": true },
-    { "id": "greater-valparaiso", "file": "greater-valparaiso-review.csv", "constant": "GREATER_VALPARAISO", "name": "Greater Valparaíso", "type": "metro", "state": "Región de Valparaíso", "state_code": "VS", "country": "CL", "reviewed": "2026-11-04", "generate": true },
-    { "id": "greater-concepcion", "file": "greater-concepcion-review.csv", "constant": "GREATER_CONCEPCION", "name": "Greater Concepción", "type": "metro", "state": "Región del Biobío", "state_code": "BI", "country": "CL", "reviewed": "2026-11-04", "generate": true },
-    { "id": "san-juan-pr", "file": "san-juan-pr-review.csv", "constant": "SAN_JUAN_PR", "name": "San Juan", "type": "municipality", "state": "Puerto Rico", "state_code": "PR", "country": "PR", "reviewed": "2026-11-04", "generate": true },
-    { "id": "bayamon-pr", "file": "bayamon-pr-review.csv", "constant": "BAYAMON_PR", "name": "Bayamón", "type": "municipality", "state": "Puerto Rico", "state_code": "PR", "country": "PR", "reviewed": "2026-11-04", "generate": true },
-    { "id": "carolina-pr", "file": "carolina-pr-review.csv", "constant": "CAROLINA_PR", "name": "Carolina", "type": "municipality", "state": "Puerto Rico", "state_code": "PR", "country": "PR", "reviewed": "2026-11-04", "generate": true },
-    { "id": "ponce-pr", "file": "ponce-pr-review.csv", "constant": "PONCE_PR", "name": "Ponce", "type": "municipality", "state": "Puerto Rico", "state_code": "PR", "country": "PR", "reviewed": "2026-11-04", "generate": true }
+    {
+      "id": "liberty",
+      "file": "liberty-review.csv",
+      "constant": "LIBERTY",
+      "name": "Liberty County",
+      "type": "county",
+      "state": "Georgia",
+      "state_code": "GA",
+      "reviewed": "2026-09-08"
+    },
+    {
+      "id": "dallas",
+      "file": "dallas-review.csv",
+      "constant": "DALLAS",
+      "name": "Dallas County",
+      "type": "county",
+      "state": "Texas",
+      "state_code": "TX",
+      "reviewed": "2026-10-28"
+    },
+    {
+      "id": "wake",
+      "file": "wake-review.csv",
+      "constant": "WAKE",
+      "name": "Wake County",
+      "type": "county",
+      "state": "North Carolina",
+      "state_code": "NC",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "volusia",
+      "file": "volusia-review.csv",
+      "constant": "VOLUSIA",
+      "name": "Volusia County",
+      "type": "county",
+      "state": "Florida",
+      "state_code": "FL",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "denver",
+      "file": "denver-review.csv",
+      "constant": "DENVER",
+      "name": "Denver County",
+      "type": "county",
+      "state": "Colorado",
+      "state_code": "CO",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "elpaso",
+      "file": "elpaso-review.csv",
+      "constant": "EL_PASO",
+      "name": "El Paso County",
+      "type": "county",
+      "state": "Colorado",
+      "state_code": "CO",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "plymouth",
+      "file": "plymouth-review.csv",
+      "constant": "PLYMOUTH",
+      "name": "Plymouth County",
+      "type": "county",
+      "state": "Massachusetts",
+      "state_code": "MA",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "erie",
+      "file": "erie-review.csv",
+      "constant": "ERIE",
+      "name": "Erie County",
+      "type": "county",
+      "state": "New York",
+      "state_code": "NY",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "madison",
+      "file": "madison-review.csv",
+      "constant": "MADISON",
+      "name": "Madison County",
+      "type": "county",
+      "state": "New York",
+      "state_code": "NY",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "plainfield",
+      "file": "plainfield-review.csv",
+      "constant": "PLAINFIELD",
+      "name": "Plainfield",
+      "type": "city",
+      "state": "Illinois",
+      "state_code": "IL",
+      "reviewed": "2026-10-29"
+    },
+    {
+      "id": "new-york-city",
+      "file": "new-york-city-review.csv",
+      "constant": "NEW_YORK_CITY",
+      "name": "New York City",
+      "type": "city",
+      "state": "New York",
+      "state_code": "NY",
+      "reviewed": "2026-10-31",
+      "generate": true
+    },
+    {
+      "id": "chicago",
+      "file": "chicago-review.csv",
+      "constant": "CHICAGO",
+      "name": "Chicago",
+      "type": "city",
+      "state": "Illinois",
+      "state_code": "IL",
+      "reviewed": "2026-10-31",
+      "generate": true
+    },
+    {
+      "id": "los-angeles",
+      "file": "los-angeles-review.csv",
+      "constant": "LOS_ANGELES",
+      "name": "Los Angeles",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "reviewed": "2026-10-31",
+      "generate": true
+    },
+    {
+      "id": "philadelphia",
+      "file": "philadelphia-review.csv",
+      "constant": "PHILADELPHIA",
+      "name": "Philadelphia",
+      "type": "city",
+      "state": "Pennsylvania",
+      "state_code": "PA",
+      "reviewed": "2026-10-31",
+      "generate": true
+    },
+    {
+      "id": "houston",
+      "file": "houston-review.csv",
+      "constant": "HOUSTON",
+      "name": "Houston",
+      "type": "city",
+      "state": "Texas",
+      "state_code": "TX",
+      "reviewed": "2026-11-01",
+      "generate": true
+    },
+    {
+      "id": "phoenix",
+      "file": "phoenix-review.csv",
+      "constant": "PHOENIX",
+      "name": "Phoenix",
+      "type": "city",
+      "state": "Arizona",
+      "state_code": "AZ",
+      "reviewed": "2026-11-01",
+      "generate": true
+    },
+    {
+      "id": "san-diego",
+      "file": "san-diego-review.csv",
+      "constant": "SAN_DIEGO",
+      "name": "San Diego",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "reviewed": "2026-11-01",
+      "generate": true
+    },
+    {
+      "id": "san-antonio",
+      "file": "san-antonio-review.csv",
+      "constant": "SAN_ANTONIO",
+      "name": "San Antonio",
+      "type": "city",
+      "state": "Texas",
+      "state_code": "TX",
+      "reviewed": "2026-11-01",
+      "generate": true
+    },
+    {
+      "id": "fort-worth",
+      "file": "fort-worth-review.csv",
+      "constant": "FORT_WORTH",
+      "name": "Fort Worth",
+      "type": "city",
+      "state": "Texas",
+      "state_code": "TX",
+      "reviewed": "2026-11-01",
+      "generate": true
+    },
+    {
+      "id": "indian-harbour-beach",
+      "file": "indian-harbour-beach-review.csv",
+      "constant": "INDIAN_HARBOUR_BEACH",
+      "name": "Indian Harbour Beach",
+      "type": "city",
+      "state": "Florida",
+      "state_code": "FL",
+      "reviewed": "2026-11-05",
+      "generate": true
+    },
+    {
+      "id": "carmel",
+      "file": "carmel-review.csv",
+      "constant": "CARMEL",
+      "name": "Carmel",
+      "type": "city",
+      "state": "Indiana",
+      "state_code": "IN",
+      "reviewed": "2026-11-05",
+      "generate": true
+    },
+    {
+      "id": "jacksonville",
+      "file": "jacksonville-review.csv",
+      "constant": "JACKSONVILLE",
+      "name": "Jacksonville",
+      "type": "city",
+      "state": "Florida",
+      "state_code": "FL",
+      "reviewed": "2026-11-05",
+      "generate": true
+    },
+    {
+      "id": "lewis-and-clark-county",
+      "file": "lewis-and-clark-county-review.csv",
+      "constant": "LEWIS_AND_CLARK_COUNTY",
+      "name": "Lewis and Clark County",
+      "type": "county",
+      "state": "Montana",
+      "state_code": "MT",
+      "reviewed": "2026-11-05",
+      "generate": true
+    },
+    {
+      "id": "yellowstone-county",
+      "file": "yellowstone-county-review.csv",
+      "constant": "YELLOWSTONE_COUNTY",
+      "name": "Yellowstone County",
+      "type": "county",
+      "state": "Montana",
+      "state_code": "MT",
+      "reviewed": "2026-11-05",
+      "generate": true
+    },
+    {
+      "id": "missoula-county",
+      "file": "missoula-county-review.csv",
+      "constant": "MISSOULA_COUNTY",
+      "name": "Missoula County",
+      "type": "county",
+      "state": "Montana",
+      "state_code": "MT",
+      "reviewed": "2026-11-05",
+      "generate": true
+    },
+    {
+      "id": "santiago",
+      "file": "santiago-review.csv",
+      "constant": "SANTIAGO",
+      "name": "Santiago Metropolitan Area",
+      "type": "metro",
+      "state": "Región Metropolitana",
+      "state_code": "RM",
+      "country": "CL",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "greater-valparaiso",
+      "file": "greater-valparaiso-review.csv",
+      "constant": "GREATER_VALPARAISO",
+      "name": "Greater Valparaíso",
+      "type": "metro",
+      "state": "Región de Valparaíso",
+      "state_code": "VS",
+      "country": "CL",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "greater-concepcion",
+      "file": "greater-concepcion-review.csv",
+      "constant": "GREATER_CONCEPCION",
+      "name": "Greater Concepción",
+      "type": "metro",
+      "state": "Región del Biobío",
+      "state_code": "BI",
+      "country": "CL",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "san-juan-pr",
+      "file": "san-juan-pr-review.csv",
+      "constant": "SAN_JUAN_PR",
+      "name": "San Juan",
+      "type": "municipality",
+      "state": "Puerto Rico",
+      "state_code": "PR",
+      "country": "PR",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "bayamon-pr",
+      "file": "bayamon-pr-review.csv",
+      "constant": "BAYAMON_PR",
+      "name": "Bayamón",
+      "type": "municipality",
+      "state": "Puerto Rico",
+      "state_code": "PR",
+      "country": "PR",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "carolina-pr",
+      "file": "carolina-pr-review.csv",
+      "constant": "CAROLINA_PR",
+      "name": "Carolina",
+      "type": "municipality",
+      "state": "Puerto Rico",
+      "state_code": "PR",
+      "country": "PR",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "ponce-pr",
+      "file": "ponce-pr-review.csv",
+      "constant": "PONCE_PR",
+      "name": "Ponce",
+      "type": "municipality",
+      "state": "Puerto Rico",
+      "state_code": "PR",
+      "country": "PR",
+      "reviewed": "2026-11-04",
+      "generate": true
+    },
+    {
+      "id": "albuquerque",
+      "file": "albuquerque-review.csv",
+      "constant": "ALBUQUERQUE",
+      "name": "Albuquerque",
+      "type": "city",
+      "state": "New Mexico",
+      "state_code": "NM",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Domestic Violence Resource Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Domestic Violence Resource Center",
+          "New Mexico Legal Aid"
+        ],
+        "fallback": [
+          "United Way 211 New Mexico",
+          "YES.NM benefits portal",
+          "Albuquerque and Bernalillo County Library"
+        ]
+      }
+    },
+    {
+      "id": "atlanta",
+      "file": "atlanta-review.csv",
+      "constant": "ATLANTA",
+      "name": "Atlanta",
+      "type": "city",
+      "state": "Georgia",
+      "state_code": "GA",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Partnership Against Domestic Violence"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Partnership Against Domestic Violence",
+          "Atlanta Legal Aid Society"
+        ],
+        "fallback": [
+          "United Way 211 Greater Atlanta",
+          "Fulton County Library System"
+        ]
+      }
+    },
+    {
+      "id": "austin",
+      "file": "austin-review.csv",
+      "constant": "AUSTIN",
+      "name": "Austin",
+      "type": "city",
+      "state": "Texas",
+      "state_code": "TX",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "SAFE Alliance"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "SAFE Alliance",
+          "Texas RioGrande Legal Aid"
+        ],
+        "fallback": [
+          "2-1-1 Texas",
+          "Your Texas Benefits",
+          "Austin Public Library"
+        ]
+      }
+    },
+    {
+      "id": "baltimore",
+      "file": "baltimore-review.csv",
+      "constant": "BALTIMORE",
+      "name": "Baltimore",
+      "type": "city",
+      "state": "Maryland",
+      "state_code": "MD",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "House of Ruth Maryland"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "House of Ruth Maryland",
+          "Maryland Legal Aid"
+        ],
+        "fallback": [
+          "211 Maryland",
+          "Maryland Benefits",
+          "Maryland veterans benefits offices — Baltimore",
+          "Enoch Pratt Free Library"
+        ]
+      }
+    },
+    {
+      "id": "boston",
+      "file": "boston-review.csv",
+      "constant": "BOSTON",
+      "name": "Boston",
+      "type": "city",
+      "state": "Massachusetts",
+      "state_code": "MA",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "SafeLink domestic-violence hotline"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "SafeLink domestic-violence hotline",
+          "Greater Boston Legal Services"
+        ],
+        "fallback": [
+          "Massachusetts 211",
+          "Boston Public Library"
+        ]
+      }
+    },
+    {
+      "id": "charlotte",
+      "file": "charlotte-review.csv",
+      "constant": "CHARLOTTE",
+      "name": "Charlotte",
+      "type": "city",
+      "state": "North Carolina",
+      "state_code": "NC",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Safe Alliance Greater Charlotte Hope Line"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Safe Alliance Greater Charlotte Hope Line",
+          "Charlotte Center for Legal Advocacy"
+        ],
+        "fallback": [
+          "NC 211",
+          "Mecklenburg County benefits assistance",
+          "Charlotte Mecklenburg Library",
+          "Charlotte Mecklenburg Library volunteer program"
+        ]
+      }
+    },
+    {
+      "id": "columbus",
+      "file": "columbus-review.csv",
+      "constant": "COLUMBUS",
+      "name": "Columbus",
+      "type": "city",
+      "state": "Ohio",
+      "state_code": "OH",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "LSS CHOICES for Victims of Domestic Violence"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "LSS CHOICES for Victims of Domestic Violence",
+          "Legal Aid of Southeast and Central Ohio"
+        ],
+        "fallback": [
+          "Ohio 211",
+          "Ohio Benefits",
+          "Columbus Metropolitan Library adult learning",
+          "Columbus Metropolitan Library"
+        ]
+      }
+    },
+    {
+      "id": "detroit",
+      "file": "detroit-review.csv",
+      "constant": "DETROIT",
+      "name": "Detroit",
+      "type": "city",
+      "state": "Michigan",
+      "state_code": "MI",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Michigan domestic and sexual violence hotline"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Michigan domestic and sexual violence hotline",
+          "Lakeshore Legal Aid"
+        ],
+        "fallback": [
+          "Michigan 211",
+          "MI Bridges",
+          "Detroit Public Library adult literacy and learning",
+          "Detroit Public Library"
+        ]
+      }
+    },
+    {
+      "id": "fresno",
+      "file": "fresno-review.csv",
+      "constant": "FRESNO",
+      "name": "Fresno",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Marjaree Mason Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Marjaree Mason Center",
+          "Central California Legal Services"
+        ],
+        "fallback": [
+          "211 Fresno and Madera Counties",
+          "BenefitsCal",
+          "Fresno County Public Library"
+        ]
+      }
+    },
+    {
+      "id": "indianapolis",
+      "file": "indianapolis-review.csv",
+      "constant": "INDIANAPOLIS",
+      "name": "Indianapolis",
+      "type": "city",
+      "state": "Indiana",
+      "state_code": "IN",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "The Julian Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "The Julian Center",
+          "Indiana Legal Services — Indianapolis"
+        ],
+        "fallback": [
+          "Indiana 211",
+          "Indiana FSSA Benefits Portal",
+          "Indianapolis Public Library",
+          "Indianapolis Public Library volunteer program"
+        ]
+      }
+    },
+    {
+      "id": "kansas-city",
+      "file": "kansas-city-review.csv",
+      "constant": "KANSAS_CITY",
+      "name": "Kansas City",
+      "type": "city",
+      "state": "Missouri",
+      "state_code": "MO",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Rose Brooks Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Rose Brooks Center",
+          "Legal Aid of Western Missouri"
+        ],
+        "fallback": [
+          "United Way of Greater Kansas City 211",
+          "Missouri public-benefit applications",
+          "Kansas City Public Library help desk"
+        ]
+      },
+      "jurisdiction_note": "This guide covers Kansas City, Missouri. Kansas City, Kansas uses different state and local services."
+    },
+    {
+      "id": "las-vegas",
+      "file": "las-vegas-review.csv",
+      "constant": "LAS_VEGAS",
+      "name": "Las Vegas",
+      "type": "city",
+      "state": "Nevada",
+      "state_code": "NV",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "SafeNest"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "SafeNest",
+          "Legal Aid Center of Southern Nevada"
+        ],
+        "fallback": [
+          "Nevada 211",
+          "Las Vegas-Clark County Library District Adult Learning",
+          "Las Vegas-Clark County Library District"
+        ]
+      }
+    },
+    {
+      "id": "long-beach",
+      "file": "long-beach-review.csv",
+      "constant": "LONG_BEACH",
+      "name": "Long Beach",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Interval House domestic-violence services"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Interval House domestic-violence services",
+          "Legal Aid Foundation of Los Angeles locations"
+        ],
+        "fallback": [
+          "211 LA",
+          "California public benefits application guidance",
+          "Long Beach Public Library locations"
+        ]
+      }
+    },
+    {
+      "id": "louisville-jefferson-county",
+      "file": "louisville-jefferson-county-review.csv",
+      "constant": "LOUISVILLE_JEFFERSON_COUNTY",
+      "name": "Louisville/Jefferson County",
+      "type": "city",
+      "state": "Kentucky",
+      "state_code": "KY",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "The Center for Women and Families"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "The Center for Women and Families",
+          "Legal Aid Society Louisville"
+        ],
+        "fallback": [
+          "Kentucky 211",
+          "kynect benefits",
+          "Louisville Free Public Library"
+        ]
+      }
+    },
+    {
+      "id": "memphis",
+      "file": "memphis-review.csv",
+      "constant": "MEMPHIS",
+      "name": "Memphis",
+      "type": "city",
+      "state": "Tennessee",
+      "state_code": "TN",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Family Safety Center of Memphis and Shelby County"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Family Safety Center of Memphis and Shelby County",
+          "Memphis Area Legal Services"
+        ],
+        "fallback": [
+          "Tennessee 211"
+        ]
+      }
+    },
+    {
+      "id": "mesa",
+      "file": "mesa-review.csv",
+      "constant": "MESA",
+      "name": "Mesa",
+      "type": "city",
+      "state": "Arizona",
+      "state_code": "AZ",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "A New Leaf domestic-violence services"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "A New Leaf domestic-violence services",
+          "Community Legal Services"
+        ],
+        "fallback": [
+          "211 Arizona",
+          "Mesa Public Library"
+        ]
+      }
+    },
+    {
+      "id": "miami",
+      "file": "miami-review.csv",
+      "constant": "MIAMI",
+      "name": "Miami",
+      "type": "city",
+      "state": "Florida",
+      "state_code": "FL",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Miami-Dade domestic-violence services"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Miami-Dade domestic-violence services",
+          "Legal Services of Greater Miami"
+        ],
+        "fallback": [
+          "211 Miami",
+          "Florida DCF public benefits and MyACCESS",
+          "Miami-Dade Public Library branch locator"
+        ]
+      }
+    },
+    {
+      "id": "milwaukee",
+      "file": "milwaukee-review.csv",
+      "constant": "MILWAUKEE",
+      "name": "Milwaukee",
+      "type": "city",
+      "state": "Wisconsin",
+      "state_code": "WI",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Sojourner Family Peace Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Sojourner Family Peace Center",
+          "Legal Aid Society of Milwaukee"
+        ],
+        "fallback": [
+          "IMPACT 211",
+          "Milwaukee Public Library"
+        ]
+      }
+    },
+    {
+      "id": "minneapolis",
+      "file": "minneapolis-review.csv",
+      "constant": "MINNEAPOLIS",
+      "name": "Minneapolis",
+      "type": "city",
+      "state": "Minnesota",
+      "state_code": "MN",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Domestic Abuse Project First Call"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Domestic Abuse Project First Call",
+          "Mid-Minnesota Legal Aid"
+        ],
+        "fallback": [
+          "United Way 211",
+          "MNbenefits",
+          "Hennepin County Library"
+        ]
+      }
+    },
+    {
+      "id": "nashville",
+      "file": "nashville-review.csv",
+      "constant": "NASHVILLE",
+      "name": "Nashville",
+      "type": "city",
+      "state": "Tennessee",
+      "state_code": "TN",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Nashville Family Safety Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Nashville Family Safety Center",
+          "Legal Aid Society of Middle Tennessee and the Cumberlands"
+        ],
+        "fallback": [
+          "Tennessee 211",
+          "Nashville Public Library"
+        ]
+      }
+    },
+    {
+      "id": "oakland",
+      "file": "oakland-review.csv",
+      "constant": "OAKLAND",
+      "name": "Oakland",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Alameda County Family Justice Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Alameda County Family Justice Center",
+          "Alameda County senior legal and Medicare referrals"
+        ],
+        "fallback": [
+          "211 Alameda County",
+          "California public benefits application guidance",
+          "Oakland Public Library",
+          "Alameda County benefits self-services"
+        ]
+      }
+    },
+    {
+      "id": "oklahoma-city",
+      "file": "oklahoma-city-review.csv",
+      "constant": "OKLAHOMA_CITY",
+      "name": "Oklahoma City",
+      "type": "city",
+      "state": "Oklahoma",
+      "state_code": "OK",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Palomar Family Justice Center"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Palomar Family Justice Center",
+          "Legal Aid Services of Oklahoma — Oklahoma City"
+        ],
+        "fallback": [
+          "HeartLine 211",
+          "Metropolitan Library System"
+        ]
+      }
+    },
+    {
+      "id": "omaha",
+      "file": "omaha-review.csv",
+      "constant": "OMAHA",
+      "name": "Omaha",
+      "type": "city",
+      "state": "Nebraska",
+      "state_code": "NE",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Women's Center for Advancement"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Women's Center for Advancement",
+          "Legal Aid of Nebraska"
+        ],
+        "fallback": [
+          "United Way 211",
+          "Nebraska benefits and iServe guidance",
+          "Omaha Public Library locations"
+        ]
+      },
+      "coverage_note": "This guide does not yet have a dedicated source-checked pet-help listing. Explore pet assistance through the universal discovery page or ask 211 for current referrals."
+    },
+    {
+      "id": "orlando",
+      "file": "orlando-review.csv",
+      "constant": "ORLANDO",
+      "name": "Orlando",
+      "type": "city",
+      "state": "Florida",
+      "state_code": "FL",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Harbor House of Central Florida"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Harbor House of Central Florida",
+          "Legal Aid Society of the Orange County Bar Association"
+        ],
+        "fallback": [
+          "Heart of Florida United Way 211",
+          "Florida DCF public benefits and MyACCESS",
+          "Orange County Library System"
+        ]
+      }
+    },
+    {
+      "id": "portland",
+      "file": "portland-review.csv",
+      "constant": "PORTLAND",
+      "name": "Portland",
+      "type": "city",
+      "state": "Oregon",
+      "state_code": "OR",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Call to Safety"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Call to Safety",
+          "Oregon Law Center — Portland Regional Office"
+        ],
+        "fallback": [
+          "211info",
+          "Oregon ONE benefits",
+          "Multnomah County Library"
+        ]
+      }
+    },
+    {
+      "id": "sacramento",
+      "file": "sacramento-review.csv",
+      "constant": "SACRAMENTO",
+      "name": "Sacramento",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "California domestic-violence resources"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "California domestic-violence resources",
+          "Legal Services of Northern California — Sacramento"
+        ],
+        "fallback": [
+          "211 Sacramento",
+          "BenefitsCal",
+          "Sacramento Public Library"
+        ]
+      }
+    },
+    {
+      "id": "san-francisco",
+      "file": "san-francisco-review.csv",
+      "constant": "SAN_FRANCISCO",
+      "name": "San Francisco",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "W.O.M.A.N., Inc. support line"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "W.O.M.A.N., Inc. support line",
+          "Bay Area Legal Aid — San Francisco"
+        ],
+        "fallback": [
+          "211 Bay Area — San Francisco",
+          "BenefitsCal",
+          "Project Read at San Francisco Public Library",
+          "Disability and Aging Services Benefits and Resource Hub"
+        ]
+      }
+    },
+    {
+      "id": "san-jose",
+      "file": "san-jose-review.csv",
+      "constant": "SAN_JOSE",
+      "name": "San Jose",
+      "type": "city",
+      "state": "California",
+      "state_code": "CA",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "YWCA Golden Gate Silicon Valley crisis services"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "YWCA Golden Gate Silicon Valley crisis services",
+          "Bay Area Legal Aid"
+        ],
+        "fallback": [
+          "211 Santa Clara County",
+          "BenefitsCal",
+          "San José Public Library adult literacy",
+          "San José Public Library"
+        ]
+      }
+    },
+    {
+      "id": "seattle",
+      "file": "seattle-review.csv",
+      "constant": "SEATTLE",
+      "name": "Seattle",
+      "type": "city",
+      "state": "Washington",
+      "state_code": "WA",
+      "country": "US",
+      "reviewed": "2026-11-06",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "King County domestic-violence support"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "King County domestic-violence support",
+          "Washington LawHelp"
+        ],
+        "fallback": [
+          "Washington 211",
+          "Seattle Public Library adult education",
+          "Seattle Public Library"
+        ]
+      }
+    },
+    {
+      "id": "tucson",
+      "file": "tucson-review.csv",
+      "constant": "TUCSON",
+      "name": "Tucson",
+      "type": "city",
+      "state": "Arizona",
+      "state_code": "AZ",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Emerge Center Against Domestic Abuse"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Emerge Center Against Domestic Abuse",
+          "Southern Arizona Legal Aid"
+        ],
+        "fallback": [
+          "211 Arizona",
+          "Pima County Public Library"
+        ]
+      }
+    },
+    {
+      "id": "tulsa",
+      "file": "tulsa-review.csv",
+      "constant": "TULSA",
+      "name": "Tulsa",
+      "type": "city",
+      "state": "Oklahoma",
+      "state_code": "OK",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Domestic Violence Intervention Services"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Domestic Violence Intervention Services",
+          "Legal Aid Services of Oklahoma"
+        ],
+        "fallback": [
+          "211 Eastern Oklahoma",
+          "Oklahoma child-care benefits",
+          "Tulsa City-County Library"
+        ]
+      }
+    },
+    {
+      "id": "virginia-beach",
+      "file": "virginia-beach-review.csv",
+      "constant": "VIRGINIA_BEACH",
+      "name": "Virginia Beach",
+      "type": "city",
+      "state": "Virginia",
+      "state_code": "VA",
+      "country": "US",
+      "reviewed": "2026-11-08",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "Samaritan House"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "Samaritan House",
+          "Legal Aid Society of Eastern Virginia"
+        ],
+        "fallback": [
+          "211 Virginia",
+          "Virginia CommonHelp benefits guidance",
+          "Virginia veterans benefits and services",
+          "Virginia Beach public-benefit assistance"
+        ]
+      },
+      "jurisdiction_note": "Virginia Beach is an independent city; confirm eligibility with the city agency."
+    },
+    {
+      "id": "washington-dc",
+      "file": "washington-dc-review.csv",
+      "constant": "WASHINGTON_DC",
+      "name": "Washington",
+      "type": "city",
+      "state": "District of Columbia",
+      "state_code": "DC",
+      "country": "US",
+      "reviewed": "2026-11-07",
+      "generate": true,
+      "register": true,
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "DC Victim Hotline"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "DC Victim Hotline",
+          "Legal Aid DC"
+        ],
+        "fallback": [
+          "211 Answers, Please!",
+          "District Direct public benefits",
+          "DC Public Library",
+          "DC Public Library Peer Navigator Program"
+        ]
+      }
+    }
   ]
 }
