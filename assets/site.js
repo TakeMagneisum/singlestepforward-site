@@ -62,7 +62,7 @@
     result.hidden = false;
 
     const message = document.createElement("p");
-    message.textContent = "Your suggestion note is ready. Copy or download it to share when the project’s public contact channel is connected.";
+    message.textContent = "Your note is ready on this device. Review it, then choose Open email app to send it to feedback@singlestepforward.com, or copy/download it. Nothing was sent automatically.";
 
     const actions = document.createElement("div");
     actions.className = "result-actions";
@@ -79,7 +79,11 @@
     downloadButton.textContent = "Download .txt";
     downloadButton.addEventListener("click", () => downloadText(text));
 
-    actions.append(copyButton, downloadButton);
+    const mailLink = document.createElement("a");
+    mailLink.className = "mini-button";
+    mailLink.textContent = "Open email app";
+    mailLink.href = "mailto:feedback@singlestepforward.com?subject=" + encodeURIComponent("SSF resource suggestion") + "&body=" + encodeURIComponent(text);
+    actions.append(mailLink, copyButton, downloadButton);
     result.append(message, actions);
   });
 })();

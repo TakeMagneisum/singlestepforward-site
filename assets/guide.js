@@ -186,6 +186,14 @@
     }
     const webLabel = resource.source.toLowerCase().includes("official") ? "Official website ↗" : "Visit website ↗";
     actions.append(makeLink(webLabel, resource.url, resource.phone ? "" : "primary", true));
+    const reportText = [
+      "Resource: " + resource.title,
+      "Guide: " + (area.label || "Reviewed guide"),
+      "Page: " + window.location.origin + window.location.pathname,
+      "Issue: ",
+      "Official source (optional): "
+    ].join("\n");
+    actions.append(makeLink("Report an issue", "mailto:feedback@singlestepforward.com?subject=" + encodeURIComponent("SSF resource correction") + "&body=" + encodeURIComponent(reportText), "report-resource", false));
 
     const checked = makeElement(
       "p",
