@@ -1,0 +1,75 @@
+{
+  "source_url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/ArcGIS/rest/services/Functional_Urban_Areas_2026_GBV/FeatureServer/0/query?f=json&where=TFUA2026_V1_00+%3D+%271%27&outFields=FUA2026_V1_00%2CFUA2026_V1_00_NAME&returnGeometry=false&returnDistinctValues=true",
+  "checked_on": "2026-11-18",
+  "result": {
+    "objectIdFieldName": "OBJECTID",
+    "uniqueIdField": {
+      "name": "OBJECTID",
+      "isSystemMaintained": true
+    },
+    "globalIdFieldName": "",
+    "geometryType": "esriGeometryPolygon",
+    "spatialReference": {
+      "wkid": 2193,
+      "latestWkid": 2193
+    },
+    "fields": [
+      {
+        "name": "FUA2026_V1_00",
+        "type": "esriFieldTypeString",
+        "alias": "Functional Urban Area Code",
+        "sqlType": "sqlTypeOther",
+        "length": 10,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "FUA2026_V1_00_NAME",
+        "type": "esriFieldTypeString",
+        "alias": "Functional Urban Area Name",
+        "sqlType": "sqlTypeOther",
+        "length": 250,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "features": [
+      {
+        "attributes": {
+          "FUA2026_V1_00": "1001",
+          "FUA2026_V1_00_NAME": "Auckland"
+        }
+      },
+      {
+        "attributes": {
+          "FUA2026_V1_00": "1002",
+          "FUA2026_V1_00_NAME": "Hamilton"
+        }
+      },
+      {
+        "attributes": {
+          "FUA2026_V1_00": "1003",
+          "FUA2026_V1_00_NAME": "Tauranga"
+        }
+      },
+      {
+        "attributes": {
+          "FUA2026_V1_00": "1004",
+          "FUA2026_V1_00_NAME": "Wellington"
+        }
+      },
+      {
+        "attributes": {
+          "FUA2026_V1_00": "1005",
+          "FUA2026_V1_00_NAME": "Christchurch"
+        }
+      },
+      {
+        "attributes": {
+          "FUA2026_V1_00": "1006",
+          "FUA2026_V1_00_NAME": "Dunedin"
+        }
+      }
+    ]
+  }
+}

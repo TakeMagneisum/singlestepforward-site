@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Barking and Dagenham",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/barking-and-dagenham",
+    "official_url": "https://www.lbbd.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Barnet",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/barnet",
+    "official_url": "https://www.barnet.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Bexley",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/bexley",
+    "official_url": "https://www.bexley.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Brent",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/brent",
+    "official_url": "https://www.brent.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Bromley",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/bromley",
+    "official_url": "https://www.bromley.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Camden",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/camden",
+    "official_url": "https://www.camden.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "City of London",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/city-london",
+    "official_url": "https://www.cityoflondon.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Croydon",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/croydon",
+    "official_url": "https://www.croydon.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Ealing",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/ealing",
+    "official_url": "https://www.ealing.gov.uk/site/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Enfield",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/enfield",
+    "official_url": "https://www.enfield.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Greenwich",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/greenwich",
+    "official_url": "https://www.royalgreenwich.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Hackney",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/hackney",
+    "official_url": "https://hackney.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Hammersmith & Fulham",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/hammersmith-fulham",
+    "official_url": "https://www.lbhf.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Haringey",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/haringey",
+    "official_url": "https://new.haringey.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Harrow",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/harrow",
+    "official_url": "http://www.harrow.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Havering",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/havering",
+    "official_url": "https://www.havering.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Hillingdon",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/hillingdon",
+    "official_url": "http://www.hillingdon.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Hounslow",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/hounslow",
+    "official_url": "http://www.hounslow.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Islington",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/islington",
+    "official_url": "http://www.islington.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Kensington and Chelsea",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/kensington-and-chelsea",
+    "official_url": "http://www.rbkc.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Lambeth",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/lambeth",
+    "official_url": "http://www.lambeth.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Lewisham",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/lewisham",
+    "official_url": "http://www.lewisham.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Merton",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/merton",
+    "official_url": "http://www.merton.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Newham",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/newham",
+    "official_url": "http://www.newham.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Redbridge",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/redbridge",
+    "official_url": "http://www.redbridge.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Southwark",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/southwark",
+    "official_url": "http://www.southwark.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Sutton",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/sutton",
+    "official_url": "http://www.sutton.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Tower Hamlets",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/tower-hamlets",
+    "official_url": "http://www.towerhamlets.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Waltham Forest",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/waltham-forest",
+    "official_url": "http://www.walthamforest.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Wandsworth",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/wandsworth",
+    "official_url": "http://www.wandsworth.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Westminster",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/westminster",
+    "official_url": "http://www.westminster.gov.uk/",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Richmond Upon Thames",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/richmond-upon-thames",
+    "official_url": "http://www.richmond.gov.uk",
+    "status": "directory_checked"
+  },
+  {
+    "name": "Kingston Upon Thames",
+    "source_url": "https://www.londoncouncils.gov.uk/london-directory/kingston-upon-thames",
+    "official_url": "https://www.kingston.gov.uk/",
+    "status": "directory_checked"
+  }
+]
