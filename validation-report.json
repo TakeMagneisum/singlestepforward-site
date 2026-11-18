@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checked_on": "2026-11-18",
+  "guides": 41,
+  "resource_placements": 1181,
+  "distinct_source_pages": 250,
+  "category_coverage_cells": 656,
+  "errors": [],
+  "limitations": "Offline integrity checks only. Source retrieval and content review are recorded separately; local operational review remains pending."
+}

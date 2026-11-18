@@ -12,9 +12,9 @@
   <link rel="canonical" href="https://singlestepforward.com/learn.html">
   <title>Accessibility &amp; Inclusion | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261115-2">
-  <script src="assets/calm.js?v=20261115-2" defer></script>
-  <script src="assets/i18n.js?v=20261115-2" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261118-4">
+  <script src="assets/calm.js?v=20261118-4" defer></script>
+  <script src="assets/i18n.js?v=20261118-4" defer></script>
 </head>
 <body class="learning-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -32,14 +32,14 @@
         <img src="assets/brand-mark.svg" alt="" width="52" height="52">
         <span><strong>Single Step Forward</strong><small>Access, respect, participation</small></span>
       </a>
-      <nav aria-label="Main navigation">
+      <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false">Menu</button><nav aria-label="Main navigation" id="main-navigation">
         <a href="index.html#about">About</a>
         <a href="discover.html">Explore help</a>
         <a href="find-help.html">Reviewed local guides</a>
-        <a class="button button-small awareness-nav-button" href="#main" aria-current="page">Learn &amp; include</a>
-        <button class="calm-toggle" type="button" data-calm-toggle aria-pressed="false">Calm View</button>
+        <a class="nav-link" href="#main" aria-current="page">Learn &amp; include</a>
+        <div class="nav-preferences"><button class="calm-toggle" type="button" data-calm-toggle aria-pressed="false">Calm View</button>
         <label class="language-control"><span aria-hidden="true">文/A</span><span class="sr-only">Language</span><select data-language-select aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></label>
-      </nav>
+      </div></nav>
     </div>
   </header>
 

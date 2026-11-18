@@ -1,0 +1,37 @@
+﻿resource,previous_url,status,replacement,note
+Illinois ABE benefits portal,https://abe.illinois.gov/abe/access/,retained_or_refreshed,chicago-006,Current source content checked; older phone details not automatically retained.
+Get Covered Illinois,https://getcovered.illinois.gov/,retained_or_refreshed,chicago-007,Current source content checked; older phone details not automatically retained.
+Illinois LIHEAP,https://dceo.illinois.gov/communityservices/homeweatherization/communityactionagencies/helpillinoisfamilies.html,retained_or_refreshed,chicago-008,Current source content checked; older phone details not automatically retained.
+Illinois WIC,https://dph.illinois.gov/topics-services/life-stages-populations/wic.html,replaced_or_excluded,CEDA WIC,HTTP Error 404: Not Found
+988 Suicide & Crisis Lifeline,https://988lifeline.org/,country_safety_section,US guide safety section,Kept in guide safety guidance using the dedicated helpline lookup; not duplicated as a CSV resource.
+Illinois Helpline for Opioids and Other Substances,https://helplineil.org/,replaced_or_excluded,See category routes in refreshed Chicago guide,Insufficient readable service content in retrieval; not treated as reverified.
+Illinois Domestic Violence Hotline,https://dvfr.illinois.gov/contact/,retained_or_refreshed,chicago-027,Current source content checked; older phone details not automatically retained.
+Illinois Legal Aid Online,https://www.illinoislegalaid.org/,retained_or_refreshed,chicago-009,Current source content checked; older phone details not automatically retained.
+National Call Center for Homeless Veterans,https://department.va.gov/homeless/,retained_or_refreshed,chicago-010,Current source content checked; older phone details not automatically retained.
+IRS Free Tax Preparation (VITA/TCE),https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers,retained_or_refreshed,chicago-011,Current source content checked; older phone details not automatically retained.
+Illinois Attorney General Consumer Protection,https://illinoisattorneygeneral.gov/consumer-protection/,retained_or_refreshed,chicago-012,Current source content checked; older phone details not automatically retained.
+Ready Illinois,https://ready.illinois.gov/,retained_or_refreshed,chicago-013,Current source content checked; older phone details not automatically retained.
+211 Metro Chicago,https://211metrochicago.org/,retained_or_refreshed,chicago-014,Current source content checked; older phone details not automatically retained.
+CHI 311,https://311.chicago.gov/,replaced_or_excluded,See category routes in refreshed Chicago guide,Insufficient readable service content in retrieval; not treated as reverified.
+DFSS Community Service Centers,https://www.chicago.gov/city/en/depts/fss/provdrs/serv/svcs/community_servicecenterlocations.html,replaced_or_excluded,See category routes in refreshed Chicago guide,HTTP Error 403: Forbidden
+Greater Chicago Food Depository — Find Food,https://www.chicagosfoodbank.org/find-food/,retained_or_refreshed,chicago-015,Current source content checked; older phone details not automatically retained.
+Chicago emergency shelter and homeless services,https://www.chicago.gov/city/en/depts/fss/provdrs/emerg.html,replaced_or_excluded,See category routes in refreshed Chicago guide,HTTP Error 403: Forbidden
+DFSS Rental Assistance Program,https://www.chicago.gov/city/en/sites/financial-assistance/home/rental-assist.html,replaced_or_excluded,See category routes in refreshed Chicago guide,HTTP Error 403: Forbidden
+Chicago renters' rights,https://311.chicago.gov/s/article/Landlord-and-tenant-ordinance-information?language=en_US,replaced_or_excluded,See category routes in refreshed Chicago guide,Insufficient readable service content in retrieval; not treated as reverified.
+Chicago Department of Public Health,https://www.chicago.gov/city/en/depts/cdph.html,replaced_or_excluded,"Cook County Health / SAMHSA, according to need",HTTP Error 403: Forbidden
+Chicago immunization clinics,https://www.chicago.gov/city/en/depts/cdph/provdrs/health_protection_and_response/svcs/immunization_clinics.html,replaced_or_excluded,"Cook County Health / SAMHSA, according to need",HTTP Error 403: Forbidden
+Chicago mental health centers,https://www.chicago.gov/city/en/depts/cdph/provdrs/health_services/svcs/mental-health-centers.html,replaced_or_excluded,"Cook County Health / SAMHSA, according to need",HTTP Error 403: Forbidden
+Chicago domestic violence help,https://www.chicago.gov/city/en/depts/fss/provdrs/dom_violence.html,replaced_or_excluded,See category routes in refreshed Chicago guide,HTTP Error 403: Forbidden
+Legal Aid Chicago,https://legalaidchicago.org/get-help/how-do-i-apply-for-legal-aid/,retained_or_refreshed,chicago-001,Current source content checked; older phone details not automatically retained.
+CARPLS Cook County Legal Aid Hotline,https://carpls.org/services/cook-county-hotline/,retained_or_refreshed,chicago-016,Current source content checked; older phone details not automatically retained.
+The Chicago Cook Workforce Partnership,https://chicookworks.org/career-seeker-services/find-your-agency/,replaced_or_excluded,See category routes in refreshed Chicago guide,Historical route was not carried forward; broader verified navigation or a more direct current service was selected.
+City Colleges of Chicago Adult Education,https://www.ccc.edu/departments/adult-education/,retained_or_refreshed,chicago-002,Current source content checked; older phone details not automatically retained.
+Illinois Action for Children — Child Care Assistance Program,https://www.actforchildren.org/child-care/pay-child-care/,retained_or_refreshed,chicago-017,Current source content checked; older phone details not automatically retained.
+CTA reduced-fare programs,https://www.transitchicago.com/reduced-fare-programs/,retained_or_refreshed,chicago-018,Current source content checked; older phone details not automatically retained.
+Pace ADA paratransit,https://www.pacebus.com/paratransit,retained_or_refreshed,chicago-019,Current source content checked; older phone details not automatically retained.
+DFSS Senior Services,https://www.chicago.gov/city/en/depts/fss/provdrs/senior.html,replaced_or_excluded,Illinois Senior HelpLine,HTTP Error 403: Forbidden
+Chicago Animal Care and Control,https://www.chicago.gov/city/en/depts/cacc.html,replaced_or_excluded,Anti-Cruelty pet-owner support,HTTP Error 403: Forbidden
+Veterans Assistance Commission of Cook County,https://vaccookcounty.org/,retained_or_refreshed,chicago-020,Current source content checked; older phone details not automatically retained.
+NotifyChicago,https://www.chicago.gov/city/en/depts/oem/provdrs/alertready/svcs/notify_chicago.html,replaced_or_excluded,See category routes in refreshed Chicago guide,HTTP Error 403: Forbidden
+National Weather Service Chicago,https://www.weather.gov/lot/,retained_or_refreshed,chicago-021,Current source content checked; older phone details not automatically retained.
+Chicago Public Library community resources,https://www.chipublib.org/resources/community-resources/,retained_or_refreshed,chicago-003,Current source content checked; older phone details not automatically retained.

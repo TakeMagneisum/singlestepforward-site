@@ -1,0 +1,1 @@
+All 105 locations use find-help.html. The November 18 source-checked editions load from assets/expanded-editions.js. Previous local-guides URLs forward to the same finder. Local reviewer confirmation is pending.

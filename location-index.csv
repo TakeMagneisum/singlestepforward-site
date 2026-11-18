@@ -1,0 +1,42 @@
+﻿id,name,country_code,resource_rows,local_routes,file,guide_file,status
+chicago,"Chicago, Illinois",US,31,18,review-sheets/pending/chicago-review.csv,guides/chicago.md,source_checked_local_review_pending
+suburban-cook-county,"Suburban Cook County, Illinois",US,32,19,review-sheets/pending/suburban-cook-county-review.csv,guides/suburban-cook-county.md,source_checked_local_review_pending
+london-barking-and-dagenham,"Barking and Dagenham, Greater London",GB,28,3,review-sheets/pending/london-barking-and-dagenham-review.csv,guides/london-barking-and-dagenham.md,source_checked_local_review_pending
+london-barnet,"Barnet, Greater London",GB,29,4,review-sheets/pending/london-barnet-review.csv,guides/london-barnet.md,source_checked_local_review_pending
+london-bexley,"Bexley, Greater London",GB,29,4,review-sheets/pending/london-bexley-review.csv,guides/london-bexley.md,source_checked_local_review_pending
+london-brent,"Brent, Greater London",GB,31,6,review-sheets/pending/london-brent-review.csv,guides/london-brent.md,source_checked_local_review_pending
+london-bromley,"Bromley, Greater London",GB,31,6,review-sheets/pending/london-bromley-review.csv,guides/london-bromley.md,source_checked_local_review_pending
+london-camden,"Camden, Greater London",GB,30,5,review-sheets/pending/london-camden-review.csv,guides/london-camden.md,source_checked_local_review_pending
+london-city-of-london,"City of London, Greater London",GB,29,4,review-sheets/pending/london-city-of-london-review.csv,guides/london-city-of-london.md,source_checked_local_review_pending
+london-croydon,"Croydon, Greater London",GB,30,5,review-sheets/pending/london-croydon-review.csv,guides/london-croydon.md,source_checked_local_review_pending
+london-ealing,"Ealing, Greater London",GB,30,5,review-sheets/pending/london-ealing-review.csv,guides/london-ealing.md,source_checked_local_review_pending
+london-enfield,"Enfield, Greater London",GB,30,5,review-sheets/pending/london-enfield-review.csv,guides/london-enfield.md,source_checked_local_review_pending
+london-greenwich,"Greenwich, Greater London",GB,29,4,review-sheets/pending/london-greenwich-review.csv,guides/london-greenwich.md,source_checked_local_review_pending
+london-hackney,"Hackney, Greater London",GB,29,4,review-sheets/pending/london-hackney-review.csv,guides/london-hackney.md,source_checked_local_review_pending
+london-hammersmith-and-fulham,"Hammersmith and Fulham, Greater London",GB,29,4,review-sheets/pending/london-hammersmith-and-fulham-review.csv,guides/london-hammersmith-and-fulham.md,source_checked_local_review_pending
+london-haringey,"Haringey, Greater London",GB,30,5,review-sheets/pending/london-haringey-review.csv,guides/london-haringey.md,source_checked_local_review_pending
+london-harrow,"Harrow, Greater London",GB,29,4,review-sheets/pending/london-harrow-review.csv,guides/london-harrow.md,source_checked_local_review_pending
+london-havering,"Havering, Greater London",GB,31,6,review-sheets/pending/london-havering-review.csv,guides/london-havering.md,source_checked_local_review_pending
+london-hillingdon,"Hillingdon, Greater London",GB,30,5,review-sheets/pending/london-hillingdon-review.csv,guides/london-hillingdon.md,source_checked_local_review_pending
+london-hounslow,"Hounslow, Greater London",GB,31,6,review-sheets/pending/london-hounslow-review.csv,guides/london-hounslow.md,source_checked_local_review_pending
+london-islington,"Islington, Greater London",GB,29,4,review-sheets/pending/london-islington-review.csv,guides/london-islington.md,source_checked_local_review_pending
+london-kensington-and-chelsea,"Kensington and Chelsea, Greater London",GB,30,5,review-sheets/pending/london-kensington-and-chelsea-review.csv,guides/london-kensington-and-chelsea.md,source_checked_local_review_pending
+london-kingston-upon-thames,"Kingston upon Thames, Greater London",GB,29,4,review-sheets/pending/london-kingston-upon-thames-review.csv,guides/london-kingston-upon-thames.md,source_checked_local_review_pending
+london-lambeth,"Lambeth, Greater London",GB,28,3,review-sheets/pending/london-lambeth-review.csv,guides/london-lambeth.md,source_checked_local_review_pending
+london-lewisham,"Lewisham, Greater London",GB,28,3,review-sheets/pending/london-lewisham-review.csv,guides/london-lewisham.md,source_checked_local_review_pending
+london-merton,"Merton, Greater London",GB,28,3,review-sheets/pending/london-merton-review.csv,guides/london-merton.md,source_checked_local_review_pending
+london-newham,"Newham, Greater London",GB,31,6,review-sheets/pending/london-newham-review.csv,guides/london-newham.md,source_checked_local_review_pending
+london-redbridge,"Redbridge, Greater London",GB,30,5,review-sheets/pending/london-redbridge-review.csv,guides/london-redbridge.md,source_checked_local_review_pending
+london-richmond-upon-thames,"Richmond upon Thames, Greater London",GB,29,4,review-sheets/pending/london-richmond-upon-thames-review.csv,guides/london-richmond-upon-thames.md,source_checked_local_review_pending
+london-southwark,"Southwark, Greater London",GB,30,5,review-sheets/pending/london-southwark-review.csv,guides/london-southwark.md,source_checked_local_review_pending
+london-sutton,"Sutton, Greater London",GB,30,5,review-sheets/pending/london-sutton-review.csv,guides/london-sutton.md,source_checked_local_review_pending
+london-tower-hamlets,"Tower Hamlets, Greater London",GB,28,3,review-sheets/pending/london-tower-hamlets-review.csv,guides/london-tower-hamlets.md,source_checked_local_review_pending
+london-waltham-forest,"Waltham Forest, Greater London",GB,29,4,review-sheets/pending/london-waltham-forest-review.csv,guides/london-waltham-forest.md,source_checked_local_review_pending
+london-wandsworth,"Wandsworth, Greater London",GB,29,4,review-sheets/pending/london-wandsworth-review.csv,guides/london-wandsworth.md,source_checked_local_review_pending
+london-westminster,"Westminster, Greater London",GB,30,5,review-sheets/pending/london-westminster-review.csv,guides/london-westminster.md,source_checked_local_review_pending
+nz-auckland-metro,"Auckland metropolitan area, New Zealand",NZ,24,3,review-sheets/pending/nz-auckland-metro-review.csv,guides/nz-auckland-metro.md,source_checked_local_review_pending
+nz-christchurch-metro,"Christchurch metropolitan area, New Zealand",NZ,24,3,review-sheets/pending/nz-christchurch-metro-review.csv,guides/nz-christchurch-metro.md,source_checked_local_review_pending
+nz-wellington-metro,"Wellington metropolitan area, New Zealand",NZ,25,4,review-sheets/pending/nz-wellington-metro-review.csv,guides/nz-wellington-metro.md,source_checked_local_review_pending
+nz-hamilton-metro,"Hamilton metropolitan area, New Zealand",NZ,24,3,review-sheets/pending/nz-hamilton-metro-review.csv,guides/nz-hamilton-metro.md,source_checked_local_review_pending
+nz-tauranga-metro,"Tauranga metropolitan area, New Zealand",NZ,24,3,review-sheets/pending/nz-tauranga-metro-review.csv,guides/nz-tauranga-metro.md,source_checked_local_review_pending
+nz-dunedin-metro,"Dunedin metropolitan area, New Zealand",NZ,24,3,review-sheets/pending/nz-dunedin-metro-review.csv,guides/nz-dunedin-metro.md,source_checked_local_review_pending

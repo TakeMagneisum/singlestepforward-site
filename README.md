@@ -2,7 +2,7 @@
 
 Single Step Forward is a privacy-first, static navigation guide for discovering possible forms of help, preparing local searches, and opening source-checked local directories. The site also includes a dedicated accessibility-and-inclusion learning page with links to government, standards, disability-led, and established nonprofit sources.
 
-A privacy-first awareness and navigation prototype that offers useful starting points for any five-digit U.S. ZIP code, plus 65 selectable, source-checked local guides. The international pilot includes Santiago, Greater Valparaíso, and Greater Concepción in Chile. Puerto Rico is treated as its own service jurisdiction with guides for San Juan, Bayamón, Carolina, and Ponce, while 58 continental U.S. editions—including Lewis and Clark, Yellowstone, and Missoula Counties in Montana—remain available.
+The shared finder offers 105 selectable local guides across the United States, Puerto Rico, Chile, Greater London, and New Zealand.
 
 Single Step Forward helps visitors discover forms of assistance they may not know exist, learn useful service terminology, and reach a practical next step. The universal discovery layer provides educational guidance, established national starting points, 211, and prepared local web searches. Reviewed local guides add researched organizations, direct links, phone numbers, service notes, and visible source-check dates.
 

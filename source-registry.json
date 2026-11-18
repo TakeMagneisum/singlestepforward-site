@@ -1,0 +1,3505 @@
+{
+  "checked_on": "2026-11-18",
+  "sources": [
+    {
+      "id": "src-b559ae9c7856",
+      "url": "https://211metrochicago.org/",
+      "requested_urls": [
+        "https://211metrochicago.org/"
+      ],
+      "title": "Home - 2-1-1 Metro Chicago",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-eeb32335c0ff",
+      "url": "https://abe.illinois.gov/access/",
+      "requested_urls": [
+        "https://abe.illinois.gov/abe/access/"
+      ],
+      "title": "Illinois.gov - IL Application for Benefits Eligibility (ABE) ABE Home Page",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e1cbf6181383",
+      "url": "https://allchicago.org/need-help-start-here/",
+      "requested_urls": [
+        "https://allchicago.org/need-help-start-here/"
+      ],
+      "title": "Need Help? Start Here - All Chicago",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b192d5ded8ce",
+      "url": "https://anticruelty.org/local-resources",
+      "requested_urls": [
+        "https://anticruelty.org/local-resources"
+      ],
+      "title": "Pet Owner Support Services | Anti-Cruelty",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-2afc7aaa4d6a",
+      "url": "https://anticruelty.org/resourcecenter",
+      "requested_urls": [
+        "https://anticruelty.org/resourcecenter"
+      ],
+      "title": "Pet Resource Center | Anti-Cruelty",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-2138285a8296",
+      "url": "https://at.govt.nz/bus-train-ferry/at-hop-card/card-concessions-and-discounted-fares",
+      "requested_urls": [
+        "https://at.govt.nz/bus-train-ferry/at-hop-card/card-concessions-discount-fares"
+      ],
+      "title": "Card concessions and discounted fares",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6a153605c7a4",
+      "url": "https://aucklandcitymission.org.nz/get-help/",
+      "requested_urls": [
+        "https://www.aucklandcitymission.org.nz/get-help/"
+      ],
+      "title": "I need help | Auckland City Mission | Auckland City Mission",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5189a86b7270",
+      "url": "https://barking.foodbank.org.uk/get-help/",
+      "requested_urls": [
+        "https://barking.foodbank.org.uk/get-help/"
+      ],
+      "title": "Get Help | Barking Foodbank",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-304a1992a091",
+      "url": "https://barnetcab.org.uk/get-advice/col-support/",
+      "requested_urls": [
+        "https://barnetcab.org.uk/get-advice/col-support/"
+      ],
+      "title": "Cost of Living Support - Citizens Advice Barnet",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-4d84a9196f5d",
+      "url": "https://bdcab.org.uk/",
+      "requested_urls": [
+        "https://bdcab.org.uk/"
+      ],
+      "title": "Home | Citizen's Advice Barking & Dagenham",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-016cf7403012",
+      "url": "https://brixtonadvice.org.uk/for-advice/",
+      "requested_urls": [
+        "https://brixtonadvice.org.uk/for-advice/"
+      ],
+      "title": "How to access our advice services | Brixton Advice Centre",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ef189a8052f0",
+      "url": "https://carers.net.nz/",
+      "requested_urls": [
+        "https://carers.net.nz/"
+      ],
+      "title": "Home - CarersNZ",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9c19912341a8",
+      "url": "https://carpls.org/services/cook-county-hotline/",
+      "requested_urls": [
+        "https://carpls.org/services/cook-county-hotline/"
+      ],
+      "title": "CARPLS Cook County Legal Hotline - CARPLS",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e971c13f3f02",
+      "url": "https://chicookworks.org/career-seeker-services/",
+      "requested_urls": [
+        "https://chicookworks.org/career-seeker-services/"
+      ],
+      "title": "Career Seeker Services - Chicago Cook Workforce Partnership",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3e33c3035977",
+      "url": "https://communitylaw.org.nz/centre/auckland/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/auckland/"
+      ],
+      "title": "Auckland - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-20f8c739de38",
+      "url": "https://communitylaw.org.nz/centre/canterbury/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/canterbury/"
+      ],
+      "title": "Canterbury & West Coast - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-83c063d004aa",
+      "url": "https://communitylaw.org.nz/centre/otago/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/otago/"
+      ],
+      "title": "Otago - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b2ae452b8bc9",
+      "url": "https://communitylaw.org.nz/centre/tauranga-whakatane/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/tauranga-whakatane/"
+      ],
+      "title": "Tauranga & Whakatāne - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f76d3eaff49e",
+      "url": "https://communitylaw.org.nz/centre/waikato/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/waikato/"
+      ],
+      "title": "Waikato - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-2bf4f395d184",
+      "url": "https://communitylaw.org.nz/centre/wellington-hutt-valley/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/wellington-hutt-valley/"
+      ],
+      "title": "Wellington & Hutt Valley - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-be0a8d029717",
+      "url": "https://communitylaw.org.nz/centre/whitireia/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/centre/whitireia/"
+      ],
+      "title": "Porirua Kāpiti - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e1f20cc63956",
+      "url": "https://communitylaw.org.nz/our-law-centres/",
+      "requested_urls": [
+        "https://communitylaw.org.nz/our-law-centres/"
+      ],
+      "title": "Our Law Centres - Community Law",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-27fad5c16493",
+      "url": "https://cookcountyhealth.org/",
+      "requested_urls": [
+        "https://cookcountyhealth.org/"
+      ],
+      "title": "Cook County Health – Quality Care for All",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-242cd58fe2ba",
+      "url": "https://costofliving.redbridge.gov.uk/",
+      "requested_urls": [
+        "https://costofliving.redbridge.gov.uk/"
+      ],
+      "title": "Cost of Living",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5421818cbecf",
+      "url": "https://dceo.illinois.gov/communityservices/homeweatherization/communityactionagencies/helpillinoisfamilies.html",
+      "requested_urls": [
+        "https://dceo.illinois.gov/communityservices/homeweatherization/communityactionagencies/helpillinoisfamilies.html"
+      ],
+      "title": "Community Action Agencies",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9cdf487c212c",
+      "url": "https://department.va.gov/homeless/",
+      "requested_urls": [
+        "https://department.va.gov/homeless/"
+      ],
+      "title": "VA Homeless Programs for Veterans",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-79a99b9b2ea1",
+      "url": "https://dvfr.illinois.gov/contact/",
+      "requested_urls": [
+        "https://dvfr.illinois.gov/contact/"
+      ],
+      "title": "Illinois DVFR | Contact",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f3d901beea6e",
+      "url": "https://fincap.org.nz/moneytalks",
+      "requested_urls": [
+        "https://www.moneytalks.co.nz/"
+      ],
+      "title": "MoneyTalks | FinCap",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-2377fdd06c80",
+      "url": "https://getcovered.illinois.gov/",
+      "requested_urls": [
+        "https://getcovered.illinois.gov/"
+      ],
+      "title": "Get Covered Illinois | State Health Insurance Marketplace Global Header Global Alert Global Footer",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-92baaf30e1eb",
+      "url": "https://getready.govt.nz/",
+      "requested_urls": [
+        "https://getready.govt.nz/"
+      ],
+      "title": "Home — Get Ready (NZ Civil Defence) — Emergency preparedness in New Zealand",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-160b51cb5fe1",
+      "url": "https://haringey.gov.uk/benefits-financial-support",
+      "requested_urls": [
+        "https://haringey.gov.uk/benefits-financial-support"
+      ],
+      "title": "Benefits and financial support | Haringey Council WhatsApp",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-45ec39d8c55b",
+      "url": "https://haringey.gov.uk/care-support-adults",
+      "requested_urls": [
+        "https://haringey.gov.uk/care-support-adults"
+      ],
+      "title": "Care and support for adults | Haringey Council WhatsApp",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-066a02b85fd6",
+      "url": "https://haringey.gov.uk/children-young-people-families",
+      "requested_urls": [
+        "https://haringey.gov.uk/children-young-people-families"
+      ],
+      "title": "Children, young people and families | Haringey Council WhatsApp",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f18ebbecb543",
+      "url": "https://haringey.gov.uk/libraries",
+      "requested_urls": [
+        "https://haringey.gov.uk/libraries"
+      ],
+      "title": "Libraries | Haringey Council WhatsApp",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5a0e2fdd4be9",
+      "url": "https://ilaging.illinois.gov/resources/helpline-main.html",
+      "requested_urls": [
+        "https://ilaging.illinois.gov/resources/helpline-main.html"
+      ],
+      "title": "Senior HelpLine",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-bf75ae118a64",
+      "url": "https://illinoisattorneygeneral.gov/consumer-protection/",
+      "requested_urls": [
+        "https://illinoisattorneygeneral.gov/consumer-protection/"
+      ],
+      "title": "Consumer Protection",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-941790556b7a",
+      "url": "https://legalaidchicago.org/get-help/how-do-i-apply-for-legal-aid/",
+      "requested_urls": [
+        "https://legalaidchicago.org/get-help/how-do-i-apply-for-legal-aid/"
+      ],
+      "title": "How Do I Apply For Legal Aid? - Legal Aid Chicago",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d3808b685f33",
+      "url": "https://lewisham.gov.uk/myservices/libraries",
+      "requested_urls": [
+        "https://lewisham.gov.uk/myservices/libraries"
+      ],
+      "title": "Lewisham Council - Libraries",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f545f8743fd2",
+      "url": "https://lewisham.gov.uk/myservices/socialcare/adult",
+      "requested_urls": [
+        "https://lewisham.gov.uk/myservices/socialcare/adult"
+      ],
+      "title": "Lewisham Council - Adult social care",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-db0d0a03b621",
+      "url": "https://myentrypoint.org/",
+      "requested_urls": [
+        "https://myentrypoint.org/"
+      ],
+      "title": "Entry Point: Working Together. Help for Homelessness.",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-69aeea1883e6",
+      "url": "https://nationalcareers.service.gov.uk/",
+      "requested_urls": [
+        "https://nationalcareers.service.gov.uk/"
+      ],
+      "title": "Careers advice - job profiles, information and resources | Get careers information and advice GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c6b44baea874",
+      "url": "https://pre.hillingdon.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://pre.hillingdon.gov.uk/adult-social-care"
+      ],
+      "title": "Adult social care – Hillingdon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b263826d4487",
+      "url": "https://pre.hillingdon.gov.uk/benefits",
+      "requested_urls": [
+        "https://pre.hillingdon.gov.uk/benefits"
+      ],
+      "title": "Benefits – Hillingdon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-94023c7e4126",
+      "url": "https://pre.hillingdon.gov.uk/families",
+      "requested_urls": [
+        "https://pre.hillingdon.gov.uk/families"
+      ],
+      "title": "Children, young people and families – Hillingdon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5d9a01e1fee6",
+      "url": "https://pre.hillingdon.gov.uk/libraries",
+      "requested_urls": [
+        "https://pre.hillingdon.gov.uk/libraries"
+      ],
+      "title": "Libraries – Hillingdon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5ed2ed9fcd03",
+      "url": "https://psotago.org.nz/contact/family-works/",
+      "requested_urls": [
+        "https://psotago.org.nz/family-works/"
+      ],
+      "title": "Family Works » Presbyterian Support Otago",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9917adfbc9e9",
+      "url": "https://ready.illinois.gov/",
+      "requested_urls": [
+        "https://ready.illinois.gov/"
+      ],
+      "title": "Ready Illinois",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-30de60fd67fe",
+      "url": "https://saferfoundation.org/training-education/",
+      "requested_urls": [
+        "https://saferfoundation.org/training-education/"
+      ],
+      "title": "Training + Education Opportunities - Safer Foundation",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-34b6b31f2c0c",
+      "url": "https://taurangafoodbank.co.nz/food-support/",
+      "requested_urls": [
+        "https://taurangafoodbank.co.nz/food-support/"
+      ],
+      "title": "Food Support - Tauranga Community Foodbank",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-974a77b2e3b7",
+      "url": "https://thehacc.org/",
+      "requested_urls": [
+        "https://thehacc.org/"
+      ],
+      "title": "HACC – Helping Citizens of Cook County Find a Home",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-675592a09b6d",
+      "url": "https://vaccookcounty.org/",
+      "requested_urls": [
+        "https://vaccookcounty.org/"
+      ],
+      "title": "Veterans Assistance Commission of Cook County Veterans Assistance Commission of Cook County",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-210015a9b26c",
+      "url": "https://vinnieshamilton.co.nz/food-assistance/",
+      "requested_urls": [
+        "https://vinnieshamilton.co.nz/food-assistance/"
+      ],
+      "title": "Do You Need Help With Food Assistance?",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c995e39080d8",
+      "url": "https://weather.metoffice.gov.uk/warnings-and-advice/uk-warnings",
+      "requested_urls": [
+        "https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings"
+      ],
+      "title": "UK weather warnings - Met Office",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f2ba33e2a6ab",
+      "url": "https://wellingtoncitymission.org.nz/",
+      "requested_urls": [
+        "https://wellingtoncitymission.org.nz/"
+      ],
+      "title": "Wellington City Mission | Creating Lasting, Positive Change",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6acdab197043",
+      "url": "https://www.actforchildren.org/child-care/pay-child-care/",
+      "requested_urls": [
+        "https://www.actforchildren.org/child-care/pay-child-care/"
+      ],
+      "title": "Pay for Child Care | Illinois Action for Children",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5fd6fb35e26f",
+      "url": "https://www.ageoptions.org/",
+      "requested_urls": [
+        "https://www.ageoptions.org/"
+      ],
+      "title": "AgeOptions — services for older adults and caregivers",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "web_content_review",
+      "http_status": null,
+      "evidence_summary": "Provider website reviewed through web retrieval: older adult and caregiver resources, benefits, meal and referral programmes. Suburban Cook service area.",
+      "web_reference": "turn278158870view1"
+    },
+    {
+      "id": "src-6716cfa8d64e",
+      "url": "https://www.areyouok.org.nz/",
+      "requested_urls": [
+        "https://www.areyouok.org.nz/"
+      ],
+      "title": "Are You OK | Family Violence Information and Support",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f14df1177086",
+      "url": "https://www.barnethomes.org/applying-for-housing/help-with-housing-problems/",
+      "requested_urls": [
+        "https://www.barnethomes.org/applying-for-housing/help-with-housing-problems/"
+      ],
+      "title": "Help with housing problems – Barnet Homes",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-eb28c2ad06f8",
+      "url": "https://www.baybus.co.nz/fares-and-bee-card/fares/types-of-fares-and-concessions",
+      "requested_urls": [
+        "https://www.baybus.co.nz/fares-and-bee-card/fares/types-of-fares-and-concessions"
+      ],
+      "title": "Concessions | Bay of Plenty Regional Council Toi Moana",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-60aa9055b158",
+      "url": "https://www.bexley.gov.uk/services/benefits-and-financial-help",
+      "requested_urls": [
+        "https://www.bexley.gov.uk/services/benefits-and-financial-help"
+      ],
+      "title": "Benefits and financial help | London Borough of Bexley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-483f1a24572f",
+      "url": "https://www.bexley.gov.uk/services/children-young-people-and-families",
+      "requested_urls": [
+        "https://www.bexley.gov.uk/services/children-young-people-and-families"
+      ],
+      "title": "Children, young people and families | London Borough of Bexley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-67637264047d",
+      "url": "https://www.bexley.gov.uk/services/housing",
+      "requested_urls": [
+        "https://www.bexley.gov.uk/services/housing"
+      ],
+      "title": "Housing | London Borough of Bexley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6cf32e0b96c0",
+      "url": "https://www.brent.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://www.brent.gov.uk/adult-social-care"
+      ],
+      "title": "Adult Social Care | Brent Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7cf0c01e58c8",
+      "url": "https://www.brent.gov.uk/benefits-and-money-advice",
+      "requested_urls": [
+        "https://www.brent.gov.uk/benefits-and-money-advice"
+      ],
+      "title": "Benefits and money advice | Brent Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-da34b6d53769",
+      "url": "https://www.brent.gov.uk/children-young-people-and-families",
+      "requested_urls": [
+        "https://www.brent.gov.uk/children-young-people-and-families"
+      ],
+      "title": "Children, young people and families | Brent Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9e1eddc27617",
+      "url": "https://www.brent.gov.uk/housing",
+      "requested_urls": [
+        "https://www.brent.gov.uk/housing"
+      ],
+      "title": "Housing | Brent Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b24f8474c2a9",
+      "url": "https://www.brent.gov.uk/libraries-arts-and-heritage",
+      "requested_urls": [
+        "https://www.brent.gov.uk/libraries-arts-and-heritage"
+      ],
+      "title": "Libraries, heritage and arts | Brent Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-03b1c401eb91",
+      "url": "https://www.bromley.gov.uk/advice-benefits",
+      "requested_urls": [
+        "https://www.bromley.gov.uk/advice-benefits"
+      ],
+      "title": "Advice and benefits – London Borough of Bromley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b7a4a49564f0",
+      "url": "https://www.bromley.gov.uk/children-families",
+      "requested_urls": [
+        "https://www.bromley.gov.uk/children-families"
+      ],
+      "title": "Children and families – London Borough of Bromley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d4346fb574a1",
+      "url": "https://www.bromley.gov.uk/help-adults",
+      "requested_urls": [
+        "https://www.bromley.gov.uk/help-adults"
+      ],
+      "title": "Help for adults – London Borough of Bromley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c8f5886439f2",
+      "url": "https://www.bromley.gov.uk/homepage/36/libraries-leisure-and-culture",
+      "requested_urls": [
+        "https://www.bromley.gov.uk/homepage/36/libraries-leisure-and-culture"
+      ],
+      "title": "Libraries, leisure and culture – London Borough of Bromley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0c012282a9ff",
+      "url": "https://www.bromley.gov.uk/housing",
+      "requested_urls": [
+        "https://www.bromley.gov.uk/housing"
+      ],
+      "title": "Housing – London Borough of Bromley",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9744ca6fc641",
+      "url": "https://www.busit.co.nz/fares/concessions/",
+      "requested_urls": [
+        "https://www.busit.co.nz/fares/concessions/"
+      ],
+      "title": "Concessions – BUSIT",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "web_content_review",
+      "http_status": null,
+      "evidence_summary": "Provider page reviewed through web retrieval: SuperGold, Community Connect, Accessibility and PlusOne concessions; application steps and eligibility differ.",
+      "web_reference": "turn278158870view0"
+    },
+    {
+      "id": "src-c3441a837163",
+      "url": "https://www.camden.gov.uk/benefits-support",
+      "requested_urls": [
+        "https://www.camden.gov.uk/benefits-support"
+      ],
+      "title": "Benefits and financial support - Camden Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3714f7ea235f",
+      "url": "https://www.camden.gov.uk/children-families-young-people",
+      "requested_urls": [
+        "https://www.camden.gov.uk/children-families-young-people"
+      ],
+      "title": "Children, families and young people - Camden Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7a6ec56bf17b",
+      "url": "https://www.camden.gov.uk/housing",
+      "requested_urls": [
+        "https://www.camden.gov.uk/housing"
+      ],
+      "title": "Housing - Camden Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-88dcfd4756c7",
+      "url": "https://www.camden.gov.uk/libraries-local-studies",
+      "requested_urls": [
+        "https://www.camden.gov.uk/libraries-local-studies"
+      ],
+      "title": "Libraries, local studies and archives - Camden Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3d9446f5d3cc",
+      "url": "https://www.ccc.edu/site/adult-education/",
+      "requested_urls": [
+        "https://www.ccc.edu/departments/adult-education/"
+      ],
+      "title": "Adult Education (ESL, GED/HiSET) - City Colleges of Chicago",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-61fcff167f2a",
+      "url": "https://www.cedaorg.net/en/find-services/gas-and-electric",
+      "requested_urls": [
+        "https://www.cedaorg.net/en/find-services/gas-and-electric"
+      ],
+      "title": "Utility Bill Assistance | CEDA us",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b79a7ba7c7c0",
+      "url": "https://www.cedaorg.net/en/find-services/women-infants-and-children-wic",
+      "requested_urls": [
+        "https://www.cedaorg.net/en/find-services/women-infants-and-children-wic"
+      ],
+      "title": "WIC (Women, Infants, and Children) | CEDA us",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7403c40281fe",
+      "url": "https://www.chicagosfoodbank.org/find-food-2/",
+      "requested_urls": [
+        "https://www.chicagosfoodbank.org/find-food/"
+      ],
+      "title": "Chicago Food Programs | Greater Chicago Food Depository",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b47c011a2ce5",
+      "url": "https://www.chipublib.org/resources/community-resources/",
+      "requested_urls": [
+        "https://www.chipublib.org/resources/community-resources/"
+      ],
+      "title": "Community Resources | Chicago Public Library Back to top",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-fbd25d618cfb",
+      "url": "https://www.citizensadvice.org.uk/about-us/contact-us/nearby/",
+      "requested_urls": [
+        "https://www.citizensadvice.org.uk/about-us/contact-us/nearby/"
+      ],
+      "title": "Find your local Citizens Advice - Citizens Advice",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-989da6dd1208",
+      "url": "https://www.citymission.org.nz/",
+      "requested_urls": [
+        "https://www.citymission.org.nz/"
+      ],
+      "title": "Christchurch City Mission",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-dffe83d91619",
+      "url": "https://www.cityoflondon.gov.uk/services/community-and-safety/city-advice-helping-you-to-manage-everyday-problems",
+      "requested_urls": [
+        "https://www.cityoflondon.gov.uk/services/community-and-safety/city-advice-helping-you-to-manage-everyday-problems"
+      ],
+      "title": "City Advice - helping you to manage everyday problems - City of London",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5f961c7bfd6c",
+      "url": "https://www.cityoflondon.gov.uk/services/getting-help-with-the-cost-of-living",
+      "requested_urls": [
+        "https://www.cityoflondon.gov.uk/services/getting-help-with-the-cost-of-living"
+      ],
+      "title": "Getting help with the cost of living - City of London",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7909df672648",
+      "url": "https://www.cityoflondon.gov.uk/services/getting-help-with-the-cost-of-living/help-with-food-costs",
+      "requested_urls": [
+        "https://www.cityoflondon.gov.uk/services/getting-help-with-the-cost-of-living/help-with-food-costs"
+      ],
+      "title": "Help with food costs - City of London",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-8bf03e6a606a",
+      "url": "https://www.connect2home.org/",
+      "requested_urls": [
+        "https://www.connect2home.org/"
+      ],
+      "title": "Connections for the Homeless",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-4ab75de6214a",
+      "url": "https://www.corrections.govt.nz/",
+      "requested_urls": [
+        "https://www.corrections.govt.nz/"
+      ],
+      "title": "Ara Poutama Aotearoa | Department of Corrections",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-aaac765fb4a9",
+      "url": "https://www.croydon.gov.uk/adult-social-care-and-health",
+      "requested_urls": [
+        "https://www.croydon.gov.uk/adult-health-and-social-care"
+      ],
+      "title": "Adult social care and health | Croydon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-019e5ac37e2c",
+      "url": "https://www.croydon.gov.uk/benefits/crisis-and-resilience-fund-crf",
+      "requested_urls": [
+        "https://www.croydon.gov.uk/benefits/crisis-and-resilience-fund-crf"
+      ],
+      "title": "Crisis and Resilience Fund (CRF) | Croydon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c8759964f433",
+      "url": "https://www.croydon.gov.uk/children-young-people-and-families",
+      "requested_urls": [
+        "https://www.croydon.gov.uk/children-young-people-and-families"
+      ],
+      "title": "Children, young people and families | Croydon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9cb7344ccd15",
+      "url": "https://www.croydon.gov.uk/housing/housing-support/homelessness",
+      "requested_urls": [
+        "https://www.croydon.gov.uk/housing/housing-support/homelessness"
+      ],
+      "title": "Homelessness | Croydon Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3c4c152fbc41",
+      "url": "https://www.disabilitysupport.govt.nz/",
+      "requested_urls": [
+        "https://www.disabilitysupport.govt.nz/"
+      ],
+      "title": "Disability Support Services",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-76eb50b9adf7",
+      "url": "https://www.ealing.gov.uk/info/201073/health_and_adult_social_care",
+      "requested_urls": [
+        "https://www.ealing.gov.uk/info/201073/health_and_adult_social_care"
+      ],
+      "title": "Health and adult social care | Ealing Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5b7c1d3af86d",
+      "url": "https://www.ealing.gov.uk/info/201086/housing",
+      "requested_urls": [
+        "https://www.ealing.gov.uk/info/201086/housing"
+      ],
+      "title": "Housing | Ealing Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3ade967d7544",
+      "url": "https://www.ealing.gov.uk/info/201103/benefits_and_financial_support",
+      "requested_urls": [
+        "https://www.ealing.gov.uk/info/201103/benefits_and_financial_support"
+      ],
+      "title": "Benefits and financial support | Ealing Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-fe11b5300f07",
+      "url": "https://www.ealing.gov.uk/info/201219/libraries",
+      "requested_urls": [
+        "https://www.ealing.gov.uk/info/201219/libraries"
+      ],
+      "title": "Libraries | Ealing Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-05b3ac4fcc4d",
+      "url": "https://www.enfield.gov.uk/services/benefits-and-money-advice",
+      "requested_urls": [
+        "https://www.enfield.gov.uk/services/benefits-and-money-advice"
+      ],
+      "title": "Benefits and money advice | Enfield Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-8eb3e6969d2b",
+      "url": "https://www.enfield.gov.uk/services/housing",
+      "requested_urls": [
+        "https://www.enfield.gov.uk/services/housing"
+      ],
+      "title": "Housing | Enfield Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0e6ca4b668c2",
+      "url": "https://www.enfield.gov.uk/services/libraries",
+      "requested_urls": [
+        "https://www.enfield.gov.uk/services/libraries"
+      ],
+      "title": "Libraries, archive and community hubs | Enfield Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3b517bb4d27d",
+      "url": "https://www.enfield.gov.uk/services/your-council/cost-of-living-support",
+      "requested_urls": [
+        "https://www.enfield.gov.uk/services/your-council/cost-of-living-support"
+      ],
+      "title": "Cost of living support | Enfield Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-59c2ad8f3970",
+      "url": "https://www.freedompass.org/",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/services/freedom-pass"
+      ],
+      "title": "Freedom Pass | Freedom Pass",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ea836801ee80",
+      "url": "https://www.gov.uk/benefits-calculators",
+      "requested_urls": [
+        "https://www.gov.uk/benefits-calculators"
+      ],
+      "title": "Benefits calculators - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3efc139df11b",
+      "url": "https://www.gov.uk/contact-jobcentre-plus",
+      "requested_urls": [
+        "https://www.gov.uk/contact-jobcentre-plus"
+      ],
+      "title": "Contact Jobcentre Plus: How to contact Jobcentre Plus - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c78933add4d5",
+      "url": "https://www.gov.uk/contact-police",
+      "requested_urls": [
+        "https://www.gov.uk/contact-police"
+      ],
+      "title": "Contact the police - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-2b28947c5293",
+      "url": "https://www.gov.uk/cost-of-living",
+      "requested_urls": [
+        "https://www.gov.uk/cost-of-living"
+      ],
+      "title": "Cost of living support: Overview - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-82d753a0cda8",
+      "url": "https://www.gov.uk/find-an-immigration-adviser",
+      "requested_urls": [
+        "https://www.gov.uk/find-an-immigration-adviser"
+      ],
+      "title": "Find an immigration adviser: Search for an adviser - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-1d633aa08377",
+      "url": "https://www.gov.uk/find-local-council",
+      "requested_urls": [
+        "https://www.gov.uk/find-local-council"
+      ],
+      "title": "Find your local council - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-13db5ae792a4",
+      "url": "https://www.gov.uk/help-with-childcare-costs",
+      "requested_urls": [
+        "https://www.gov.uk/help-with-childcare-costs"
+      ],
+      "title": "Help paying for childcare: Find out what 'approved childcare' is - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-602603c167b3",
+      "url": "https://www.gov.uk/homelessness-help-from-council",
+      "requested_urls": [
+        "https://www.gov.uk/homelessness-help-from-council"
+      ],
+      "title": "Help from your council if you’re homeless or at risk of homelessness - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a81dcfb4a715",
+      "url": "https://www.gov.uk/leaving-prison/support-when-someone-leaves-prison",
+      "requested_urls": [
+        "https://www.gov.uk/leaving-prison/support-when-someone-leaves-prison"
+      ],
+      "title": "Leaving prison: Support when someone leaves prison - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6fae8a950773",
+      "url": "https://www.gov.uk/legal-aid",
+      "requested_urls": [
+        "https://www.gov.uk/legal-aid"
+      ],
+      "title": "Legal aid: What you can get legal aid for - GOV.UK GOV.UK",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ea4e81b602cb",
+      "url": "https://www.habcentre.org/get-help/",
+      "requested_urls": [
+        "https://www.habcentre.org/get-help/"
+      ],
+      "title": "Get Help - Homeless Action in Barnet",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-2c788466610f",
+      "url": "https://www.hackney.gov.uk/council-tax-and-benefits",
+      "requested_urls": [
+        "https://www.hackney.gov.uk/council-tax-and-benefits"
+      ],
+      "title": "Council Tax and benefits | Hackney Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b2752a78932c",
+      "url": "https://www.hackney.gov.uk/housing",
+      "requested_urls": [
+        "https://www.hackney.gov.uk/housing"
+      ],
+      "title": "Housing | Hackney Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-95d1b662cc1a",
+      "url": "https://www.hackney.gov.uk/libraries-parks-and-leisure",
+      "requested_urls": [
+        "https://www.hackney.gov.uk/libraries-parks-and-leisure"
+      ],
+      "title": "Libraries, parks and leisure | Hackney Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c649be693b5c",
+      "url": "https://www.harrow.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://www.harrow.gov.uk/adult-social-care"
+      ],
+      "title": "Adult Social Care – London Borough of Harrow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-8e38f1e59469",
+      "url": "https://www.harrow.gov.uk/benefits",
+      "requested_urls": [
+        "https://www.harrow.gov.uk/benefits"
+      ],
+      "title": "Benefits – London Borough of Harrow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-804cd41bfdd7",
+      "url": "https://www.harrow.gov.uk/housing-property",
+      "requested_urls": [
+        "https://www.harrow.gov.uk/housing-property"
+      ],
+      "title": "Housing and Property – London Borough of Harrow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e98de7648172",
+      "url": "https://www.havering.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://www.havering.gov.uk/adult-social-care"
+      ],
+      "title": "Adult Social Care – London Borough of Havering",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-81700cbaf217",
+      "url": "https://www.havering.gov.uk/children-families",
+      "requested_urls": [
+        "https://www.havering.gov.uk/children-families"
+      ],
+      "title": "Children and families – London Borough of Havering",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9c9dccb113a2",
+      "url": "https://www.havering.gov.uk/community-1/financial-advice",
+      "requested_urls": [
+        "https://www.havering.gov.uk/community-1/financial-advice"
+      ],
+      "title": "Financial help and advice | London Borough of Havering",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-25ef51e62458",
+      "url": "https://www.havering.gov.uk/housing-1",
+      "requested_urls": [
+        "https://www.havering.gov.uk/housing-1"
+      ],
+      "title": "Housing – London Borough of Havering",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e485aae91e6d",
+      "url": "https://www.havering.gov.uk/housing-benefit-council-tax-support",
+      "requested_urls": [
+        "https://www.havering.gov.uk/housing-benefit-council-tax-support"
+      ],
+      "title": "Housing Benefit and Council Tax Support – London Borough of Havering",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6538d3cef2b9",
+      "url": "https://www.healthpoint.co.nz/",
+      "requested_urls": [
+        "https://www.healthpoint.co.nz/"
+      ],
+      "title": "Healthpoint • Find up-to-date information about providers, referral expectations, services offered and common treatments",
+      "source_type": "provider_directory",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f243141ec1c7",
+      "url": "https://www.healthpoint.co.nz/mental-health-addictions/",
+      "requested_urls": [
+        "https://www.healthpoint.co.nz/mental-health-addictions/"
+      ],
+      "title": "Mental Health & Addictions • Healthpoint",
+      "source_type": "provider_directory",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-564e494afd65",
+      "url": "https://www.hounslow.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://www.hounslow.gov.uk/adult-social-care"
+      ],
+      "title": "Adult social care | London Borough of Hounslow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e45717a60225",
+      "url": "https://www.hounslow.gov.uk/benefits-financial-support",
+      "requested_urls": [
+        "https://www.hounslow.gov.uk/benefits-financial-support"
+      ],
+      "title": "Benefits and financial support | London Borough of Hounslow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-02d1bc18f466",
+      "url": "https://www.hounslow.gov.uk/children-families-young-people",
+      "requested_urls": [
+        "https://www.hounslow.gov.uk/children-families-young-people"
+      ],
+      "title": "Children, families and young people | London Borough of Hounslow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7bd9122b8b11",
+      "url": "https://www.hounslow.gov.uk/homelessness",
+      "requested_urls": [
+        "https://www.hounslow.gov.uk/homelessness"
+      ],
+      "title": "Homelessness | London Borough of Hounslow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6c366b3c8652",
+      "url": "https://www.hounslow.gov.uk/libraries",
+      "requested_urls": [
+        "https://www.hounslow.gov.uk/libraries"
+      ],
+      "title": "Community hub and libraries | London Borough of Hounslow",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-03e46ef4e083",
+      "url": "https://www.housingforward.org/find-help",
+      "requested_urls": [
+        "https://www.housingforward.org/find-help"
+      ],
+      "title": "Find Help | Housing Forward",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-cc757eeda630",
+      "url": "https://www.iaa.govt.nz/",
+      "requested_urls": [
+        "https://www.iaa.govt.nz/"
+      ],
+      "title": "New Zealand Immigration Advisers Authority | IAA",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ec93478af6a4",
+      "url": "https://www.icirr.org/programs-and-services",
+      "requested_urls": [
+        "https://www.icirr.org/programs-and-services"
+      ],
+      "title": "PROGRAMS AND SERVICES | ICIRR",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b81290de0fa9",
+      "url": "https://www.illinoislegalaid.org/",
+      "requested_urls": [
+        "https://www.illinoislegalaid.org/"
+      ],
+      "title": "Illinois Legal Aid Online",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-644b32224a8d",
+      "url": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+      "requested_urls": [
+        "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+      ],
+      "title": "Free tax return preparation for qualifying taxpayers | Internal Revenue Service",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-32c7eedc366b",
+      "url": "https://www.islington.gov.uk/benefits-and-support",
+      "requested_urls": [
+        "https://www.islington.gov.uk/benefits-and-support"
+      ],
+      "title": "Benefits and support | Islington Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-42863c87fbe8",
+      "url": "https://www.islington.gov.uk/children-and-families",
+      "requested_urls": [
+        "https://www.islington.gov.uk/children-and-families"
+      ],
+      "title": "Children and families | Islington Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-cfafba575c0e",
+      "url": "https://www.islington.gov.uk/housing",
+      "requested_urls": [
+        "https://www.islington.gov.uk/housing"
+      ],
+      "title": "Housing | Islington Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-bd1012605ce5",
+      "url": "https://www.kingston.gov.uk/benefits-and-support/cost-living-support-and-advice",
+      "requested_urls": [
+        "https://www.kingston.gov.uk/benefits-and-support/cost-living-support-and-advice"
+      ],
+      "title": "Cost of living support and advice | Royal Borough of Kingston upon Thames",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6fed2218d528",
+      "url": "https://www.kingston.gov.uk/children-young-people-and-families",
+      "requested_urls": [
+        "https://www.kingston.gov.uk/children-young-people-and-families"
+      ],
+      "title": "Children, young people and families | Royal Borough of Kingston upon Thames",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-94565f7e6bd8",
+      "url": "https://www.kingston.gov.uk/housing",
+      "requested_urls": [
+        "https://www.kingston.gov.uk/housing"
+      ],
+      "title": "Housing | Royal Borough of Kingston upon Thames",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-8127d0fdbd2d",
+      "url": "https://www.lambethlarder.org/",
+      "requested_urls": [
+        "https://www.lambethlarder.org/"
+      ],
+      "title": "Lambeth Larder - connecting people, food, and support",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-92bfbdf516e8",
+      "url": "https://www.lbhf.gov.uk/benefits",
+      "requested_urls": [
+        "https://www.lbhf.gov.uk/benefits"
+      ],
+      "title": "Benefits | London Borough of Hammersmith & Fulham",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a6995878bcd8",
+      "url": "https://www.lbhf.gov.uk/cost-living-support",
+      "requested_urls": [
+        "https://www.lbhf.gov.uk/costofliving"
+      ],
+      "title": "Cost of living support | London Borough of Hammersmith & Fulham",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d759adf16fdd",
+      "url": "https://www.lbhf.gov.uk/housing",
+      "requested_urls": [
+        "https://www.lbhf.gov.uk/housing"
+      ],
+      "title": "Housing | London Borough of Hammersmith & Fulham",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a69b21d3c382",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/barking-and-dagenham",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/barking-and-dagenham"
+      ],
+      "title": "Barking and Dagenham | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9e2fe713e04a",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/barnet",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/barnet"
+      ],
+      "title": "Barnet | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0254f7b63b87",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/bexley",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/bexley"
+      ],
+      "title": "Bexley | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-64fccb653c89",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/brent",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/brent"
+      ],
+      "title": "Brent | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b487e6f4d21e",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/bromley",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/bromley"
+      ],
+      "title": "Bromley | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d866e14bb9e0",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/camden",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/camden"
+      ],
+      "title": "Camden | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-07d1f816ba3d",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/city-london",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/city-london"
+      ],
+      "title": "City of London | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-fc80549ae4a5",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/croydon",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/croydon"
+      ],
+      "title": "Croydon | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-447539953dc4",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/ealing",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/ealing"
+      ],
+      "title": "Ealing | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d367695bd930",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/enfield",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/enfield"
+      ],
+      "title": "Enfield | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ee6e363c9ac9",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/greenwich",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/greenwich"
+      ],
+      "title": "Greenwich | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6e9fd01a3dbf",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/hackney",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/hackney"
+      ],
+      "title": "Hackney | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a5ec01bb432e",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/hammersmith-fulham",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/hammersmith-fulham"
+      ],
+      "title": "Hammersmith & Fulham | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f1622efd5865",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/haringey",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/haringey"
+      ],
+      "title": "Haringey | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7792e25361e0",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/harrow",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/harrow"
+      ],
+      "title": "Harrow | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-949278a4ad87",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/havering",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/havering"
+      ],
+      "title": "Havering | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f992758c7ab3",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/hillingdon",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/hillingdon"
+      ],
+      "title": "Hillingdon | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f67042961b22",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/hounslow",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/hounslow"
+      ],
+      "title": "Hounslow | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0097bc5c0cdd",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/islington",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/islington"
+      ],
+      "title": "Islington | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7e48580f8b0a",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/kensington-and-chelsea",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/kensington-and-chelsea"
+      ],
+      "title": "Kensington and Chelsea | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-4b8d339d615e",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/kingston-upon-thames",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/kingston-upon-thames"
+      ],
+      "title": "Kingston Upon Thames | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-253aea9cf350",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/lambeth",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/lambeth"
+      ],
+      "title": "Lambeth | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-fa26e111251a",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/lewisham",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/lewisham"
+      ],
+      "title": "Lewisham | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-89f620fa3271",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/merton",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/merton"
+      ],
+      "title": "Merton | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d097592af6dc",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/newham",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/newham"
+      ],
+      "title": "Newham | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-bddedd33447d",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/redbridge",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/redbridge"
+      ],
+      "title": "Redbridge | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-cd852535f138",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/richmond-upon-thames",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/richmond-upon-thames"
+      ],
+      "title": "Richmond Upon Thames | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5a025555c4bf",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/southwark",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/southwark"
+      ],
+      "title": "Southwark | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b6ee955d5731",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/sutton",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/sutton"
+      ],
+      "title": "Sutton | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d5dfcdaf5537",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/tower-hamlets",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/tower-hamlets"
+      ],
+      "title": "Tower Hamlets | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-d7f1f20ed303",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/waltham-forest",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/waltham-forest"
+      ],
+      "title": "Waltham Forest | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-fff0ac2df0de",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/wandsworth",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/wandsworth"
+      ],
+      "title": "Wandsworth | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-912f55a7ca9b",
+      "url": "https://www.londoncouncils.gov.uk/london-directory/westminster",
+      "requested_urls": [
+        "https://www.londoncouncils.gov.uk/london-directory/westminster"
+      ],
+      "title": "Westminster | London Councils",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-e302789f2d42",
+      "url": "https://www.merton.gov.uk/council-tax-benefits-and-housing",
+      "requested_urls": [
+        "https://www.merton.gov.uk/council-tax-benefits-and-housing"
+      ],
+      "title": "Benefits, Council Tax and housing | Merton Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-3267dc1ebeab",
+      "url": "https://www.merton.gov.uk/leisure-recreation-and-culture",
+      "requested_urls": [
+        "https://www.merton.gov.uk/leisure-recreation-and-culture"
+      ],
+      "title": "Leisure, libraries and culture | Merton Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-02b588f8c035",
+      "url": "https://www.metlink.org.nz/tickets-and-fares/tickets-and-fares",
+      "requested_urls": [
+        "https://www.metlink.org.nz/tickets-and-fares/tickets-and-fares"
+      ],
+      "title": "Tickets & fares » Metlink",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-75fae0b4f31f",
+      "url": "https://www.metroinfo.co.nz/",
+      "requested_urls": [
+        "https://www.metroinfo.co.nz/"
+      ],
+      "title": "Home | Metro Christchurch",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b67e7977579d",
+      "url": "https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt/debt-advice-locator",
+      "requested_urls": [
+        "https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt/debt-advice-locator"
+      ],
+      "title": "Debt Advice Locator | Syndication | MoneyHelper",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7026938b14c4",
+      "url": "https://www.nationaldahelpline.org.uk/",
+      "requested_urls": [
+        "https://www.nationaldahelpline.org.uk/"
+      ],
+      "title": "Homepage - National Domestic Abuse Helpline Visualgrey-down Visualgrey-down",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-769beb190bc3",
+      "url": "https://www.newham.gov.uk/advice-support-benefits",
+      "requested_urls": [
+        "https://www.newham.gov.uk/advice-support-benefits"
+      ],
+      "title": "Advice, support and benefits – Newham Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-840eda8dde53",
+      "url": "https://www.newham.gov.uk/children-families",
+      "requested_urls": [
+        "https://www.newham.gov.uk/children-families"
+      ],
+      "title": "Children and families – Newham Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-acc007b46098",
+      "url": "https://www.newham.gov.uk/health-adult-social-care",
+      "requested_urls": [
+        "https://www.newham.gov.uk/health-adult-social-care"
+      ],
+      "title": "Health and adult social care – Newham Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-090cd18b6c47",
+      "url": "https://www.newham.gov.uk/housing-homes-homelessness",
+      "requested_urls": [
+        "https://www.newham.gov.uk/housing-homes-homelessness"
+      ],
+      "title": "Housing, homes and homelessness – Newham Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-1afc8f096cff",
+      "url": "https://www.newham.gov.uk/libraries-arts-culture",
+      "requested_urls": [
+        "https://www.newham.gov.uk/libraries-arts-culture"
+      ],
+      "title": "Culture: Libraries, Events and Heritage – Newham Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-afc8085b034d",
+      "url": "https://www.nhs.uk/live-well/addiction-support/drug-addiction-getting-help/",
+      "requested_urls": [
+        "https://www.nhs.uk/live-well/addiction-support/drug-addiction-getting-help/"
+      ],
+      "title": "Drug addiction: getting help - NHS NHS",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7fc907ec1639",
+      "url": "https://www.nhs.uk/nhs-services/help-with-health-costs/nhs-low-income-scheme-lis/",
+      "requested_urls": [
+        "https://www.nhs.uk/nhs-services/help-with-health-costs/nhs-low-income-scheme-lis/"
+      ],
+      "title": "NHS Low Income Scheme (LIS) - NHS NHS",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-667e2d3be19d",
+      "url": "https://www.nhs.uk/nhs-services/mental-health-services/",
+      "requested_urls": [
+        "https://www.nhs.uk/nhs-services/mental-health-services/"
+      ],
+      "title": "Mental health services - NHS NHS",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-34617ac3cb13",
+      "url": "https://www.nhs.uk/nhs-services/services-near-you/",
+      "requested_urls": [
+        "https://www.nhs.uk/nhs-services/services-near-you/"
+      ],
+      "title": "Find services near you - NHS NHS",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ed3ae2f8ce4e",
+      "url": "https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/getting-a-needs-assessment/",
+      "requested_urls": [
+        "https://www.nhs.uk/social-care-and-support/help-from-social-services-and-charities/getting-a-needs-assessment/"
+      ],
+      "title": "Getting a care needs assessment - Social care and support guide - NHS NHS",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a8e73453f85b",
+      "url": "https://www.nhs.uk/social-care-and-support/support-and-benefits-for-carers/carer-assessments/",
+      "requested_urls": [
+        "https://www.nhs.uk/social-care-and-support/support-and-benefits-for-carers/carer-assessments/"
+      ],
+      "title": "Carer's assessments - Social care and support guide - NHS NHS",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-82684e6d473d",
+      "url": "https://www.oppl.org/",
+      "requested_urls": [
+        "https://www.oppl.org/"
+      ],
+      "title": "Oak Park Public Library - To empower every voice in our community",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a5865bbf236c",
+      "url": "https://www.orc.govt.nz/orbus",
+      "requested_urls": [
+        "https://www.orc.govt.nz/public-transport/"
+      ],
+      "title": "Orbus — Better by bus | brought to you by Otago Regional Council (ORC)",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0935889f1560",
+      "url": "https://www.pacebus.com/paratransit",
+      "requested_urls": [
+        "https://www.pacebus.com/paratransit"
+      ],
+      "title": "Pace's Paratransit Services | Pace Suburban Bus _Icons / Arrows / Up",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-f549b2348084",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/eligibility",
+      "requested_urls": [
+        "https://www.pdsa.org.uk/pet-help-and-advice/eligibility"
+      ],
+      "title": "Eligibility - PDSA",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-cc037d8ce385",
+      "url": "https://www.peoplefirstinfo.org.uk/",
+      "requested_urls": [
+        "https://www.peoplefirstinfo.org.uk/"
+      ],
+      "title": "Homepage | People First",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5e5ba8011777",
+      "url": "https://www.police.govt.nz/call-111",
+      "requested_urls": [
+        "https://www.police.govt.nz/call-111"
+      ],
+      "title": "111 Emergency Services | New Zealand Police",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-9b42e42e21e8",
+      "url": "https://www.prisonersfamilies.org/",
+      "requested_urls": [
+        "https://www.prisonersfamilies.org/"
+      ],
+      "title": "Prisoners' Families Helpline",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-39fbc3efd8b6",
+      "url": "https://www.rbkc.gov.uk/benefits",
+      "requested_urls": [
+        "https://www.rbkc.gov.uk/benefits"
+      ],
+      "title": "Benefits | Royal Borough of Kensington and Chelsea",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-99ed5d90f4c7",
+      "url": "https://www.rbkc.gov.uk/cost-living-support-hub",
+      "requested_urls": [
+        "https://www.rbkc.gov.uk/cost-living-support-hub"
+      ],
+      "title": "Cost of living support hub | Royal Borough of Kensington and Chelsea",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6c58c5562994",
+      "url": "https://www.rbkc.gov.uk/housing/homelessness/help-homelessness",
+      "requested_urls": [
+        "https://www.rbkc.gov.uk/housing/homelessness/help-homelessness"
+      ],
+      "title": "Help with homelessness | Royal Borough of Kensington and Chelsea",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0c85d3ae6531",
+      "url": "https://www.rbkc.gov.uk/libraries-0",
+      "requested_urls": [
+        "https://www.rbkc.gov.uk/libraries-0"
+      ],
+      "title": "Libraries | Royal Borough of Kensington and Chelsea",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-4790cc4a3f3e",
+      "url": "https://www.redbridge.gov.uk/benefits-and-financial-support/",
+      "requested_urls": [
+        "https://www.redbridge.gov.uk/benefits-and-financial-support/"
+      ],
+      "title": "Benefits and financial support",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-dacd91793b9f",
+      "url": "https://www.redbridge.gov.uk/housing/homeless-or-at-risk/",
+      "requested_urls": [
+        "https://www.redbridge.gov.uk/housing/homeless-or-at-risk/"
+      ],
+      "title": "Homeless or at risk",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-49d92b4e8ada",
+      "url": "https://www.redbridge.gov.uk/libraries/",
+      "requested_urls": [
+        "https://www.redbridge.gov.uk/libraries/"
+      ],
+      "title": "Libraries",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6aa1414c7533",
+      "url": "https://www.richmond.gov.uk/services/cost_of_living_hub",
+      "requested_urls": [
+        "https://www.richmond.gov.uk/services/cost_of_living_hub"
+      ],
+      "title": "Richmond Cost of Living Hub - London Borough of Richmond upon Thames",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5d818d6f6860",
+      "url": "https://www.richmond.gov.uk/services/cost_of_living_hub/help_in_a_crisis",
+      "requested_urls": [
+        "https://www.richmond.gov.uk/services/cost_of_living_hub/help_in_a_crisis"
+      ],
+      "title": "Help in a crisis - London Borough of Richmond upon Thames",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-4840c79c3e31",
+      "url": "https://www.richmond.gov.uk/services/libraries",
+      "requested_urls": [
+        "https://www.richmond.gov.uk/services/libraries"
+      ],
+      "title": "Libraries - London Borough of Richmond upon Thames",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-589ddde400ad",
+      "url": "https://www.royalgreenwich.gov.uk/adult-care-and-health",
+      "requested_urls": [
+        "https://www.royalgreenwich.gov.uk/adult-care-and-health"
+      ],
+      "title": "Adult care and health | Royal Borough of Greenwich",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-50b6bbc5522a",
+      "url": "https://www.royalgreenwich.gov.uk/children-young-people-and-families",
+      "requested_urls": [
+        "https://www.royalgreenwich.gov.uk/children-young-people-and-families"
+      ],
+      "title": "Children, young people and families | Royal Borough of Greenwich",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-12b6d20ae8a5",
+      "url": "https://www.royalgreenwich.gov.uk/housing",
+      "requested_urls": [
+        "https://www.royalgreenwich.gov.uk/housing"
+      ],
+      "title": "Housing | Royal Borough of Greenwich",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-29e1e7a00170",
+      "url": "https://www.samhsa.gov/find-help",
+      "requested_urls": [
+        "https://www.samhsa.gov/find-help"
+      ],
+      "title": "Find Help and Treatment for Mental Health, Drug, Alcohol Issues | SAMHSA Lock",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-479d101f2b36",
+      "url": "https://www.southwark.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://www.southwark.gov.uk/adult-social-care"
+      ],
+      "title": "Adult social care | Southwark Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c16291d247df",
+      "url": "https://www.southwark.gov.uk/benefits-and-support",
+      "requested_urls": [
+        "https://www.southwark.gov.uk/benefits-and-support"
+      ],
+      "title": "Benefits and support | Southwark Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-739442fd2555",
+      "url": "https://www.southwark.gov.uk/children-young-people-and-families",
+      "requested_urls": [
+        "https://www.southwark.gov.uk/children-young-people-and-families"
+      ],
+      "title": "Children, young people and families | Southwark Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-b9e8f87e3cfa",
+      "url": "https://www.southwark.gov.uk/housing",
+      "requested_urls": [
+        "https://www.southwark.gov.uk/housing"
+      ],
+      "title": "Housing | Southwark Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-fc295f9ade98",
+      "url": "https://www.spca.nz/contact",
+      "requested_urls": [
+        "https://www.spca.nz/contact"
+      ],
+      "title": "Contact • SPCA New Zealand",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-50637f108592",
+      "url": "https://www.studylink.govt.nz/",
+      "requested_urls": [
+        "https://www.studylink.govt.nz/"
+      ],
+      "title": "StudyLink",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5e1da8ed67e1",
+      "url": "https://www.sutton.gov.uk/benefits-and-support/cost-living-support",
+      "requested_urls": [
+        "https://www.sutton.gov.uk/benefits-and-support/cost-living-support"
+      ],
+      "title": "Cost of living support | London Borough of Sutton",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7ee0405e0b68",
+      "url": "https://www.sutton.gov.uk/children-and-families",
+      "requested_urls": [
+        "https://www.sutton.gov.uk/children-and-families"
+      ],
+      "title": "Children and families | London Borough of Sutton",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-785311f01e7b",
+      "url": "https://www.sutton.gov.uk/housing",
+      "requested_urls": [
+        "https://www.sutton.gov.uk/housing"
+      ],
+      "title": "Housing | London Borough of Sutton",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c2a5c991e645",
+      "url": "https://www.sutton.gov.uk/libraries-museums-parks-and-leisure",
+      "requested_urls": [
+        "https://www.sutton.gov.uk/libraries-museums-parks-and-leisure"
+      ],
+      "title": "Libraries, museums, parks and leisure | London Borough of Sutton",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-05acf0cecb1a",
+      "url": "https://www.tenancy.govt.nz/",
+      "requested_urls": [
+        "https://www.tenancy.govt.nz/"
+      ],
+      "title": "Tenancy Services",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-7a8a6fddf7c4",
+      "url": "https://www.towerhamlets.gov.uk/lgnl/advice_and_benefits/benefits/benefits.aspx",
+      "requested_urls": [
+        "https://www.towerhamlets.gov.uk/lgnl/advice_and_benefits/benefits/benefits.aspx"
+      ],
+      "title": "Benefits",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-27e9b0fc7292",
+      "url": "https://www.towerhamlets.gov.uk/lgnl/health__social_care/children_and_family_care/children_and_family_care.aspx",
+      "requested_urls": [
+        "https://www.towerhamlets.gov.uk/lgnl/health__social_care/children_and_family_care/children_and_family_care.aspx"
+      ],
+      "title": "Children and family care",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-937d352d25c2",
+      "url": "https://www.transitchicago.com/reduced-fare-programs/",
+      "requested_urls": [
+        "https://www.transitchicago.com/reduced-fare-programs/"
+      ],
+      "title": "CTA Reduced Fare & Free Ride Programs (Seniors, Students, Children, etc.) - CTA Accessibility Icon Search Icon Hamburger Icon Left Arrow Icon CTA Logo Small Right Arrow Train Circle Info Icon Info Icon Bus Icon Alert Icon Alert Icon Alert Icon cta Twitter Facebook Facebook Mail Print Youtube Instagram Facebook Twitter Youtube Instagram Flickr Arrow pointing down Arrow pointing up Arrow pointing right Arrow pointing left Earth Alert Icon Alert Icon Owl Accessibility Icon Wifi Icon Train with wifi symbol Pick a stop Heart Pointy Magnifying glass Map External link Checkmark Checkmark Clock Clock Gear Chired Star Emergency Special note Share Icon Get Location Icon Get Location Disabled Icon Bug Icon Alert Icon BlueSky",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-a46d3b098da3",
+      "url": "https://www.trussell.org.uk/emergency-food/find-a-foodbank",
+      "requested_urls": [
+        "https://www.trussell.org.uk/emergency-food/find-a-foodbank"
+      ],
+      "title": "Find a food bank | Trussell",
+      "source_type": "service_provider",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-5df6fcc78cc7",
+      "url": "https://www.walthamforest.gov.uk/adult-social-care",
+      "requested_urls": [
+        "https://www.walthamforest.gov.uk/adult-social-care"
+      ],
+      "title": "Adult social care | London Borough of Waltham Forest",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-438a36608929",
+      "url": "https://www.walthamforest.gov.uk/benefits-and-money-advice/cost-living-support",
+      "requested_urls": [
+        "https://www.walthamforest.gov.uk/benefits-and-money-advice/cost-living-support"
+      ],
+      "title": "Cost of living support | London Borough of Waltham Forest",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-356e2b016efa",
+      "url": "https://www.walthamforest.gov.uk/housing",
+      "requested_urls": [
+        "https://www.walthamforest.gov.uk/housing"
+      ],
+      "title": "Housing | London Borough of Waltham Forest",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-65a80dc6f984",
+      "url": "https://www.wandsworth.gov.uk/health-and-social-care/children-and-families/",
+      "requested_urls": [
+        "https://www.wandsworth.gov.uk/health-and-social-care/children-and-families/"
+      ],
+      "title": "Children and families - Wandsworth Borough Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-0e0b27685fd2",
+      "url": "https://www.wandsworth.gov.uk/housing/",
+      "requested_urls": [
+        "https://www.wandsworth.gov.uk/housing/"
+      ],
+      "title": "Housing - Wandsworth Borough Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-4464f7143a97",
+      "url": "https://www.wandsworth.gov.uk/housing/benefits-and-support/",
+      "requested_urls": [
+        "https://www.wandsworth.gov.uk/housing/benefits-and-support/"
+      ],
+      "title": "Benefits and support - Wandsworth Borough Council",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-ba81fc1b9136",
+      "url": "https://www.weather.gov/lot/",
+      "requested_urls": [
+        "https://www.weather.gov/lot/"
+      ],
+      "title": "Chicago, IL",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-256620449722",
+      "url": "https://www.westminster.gov.uk/benefits",
+      "requested_urls": [
+        "https://www.westminster.gov.uk/benefits"
+      ],
+      "title": "Benefits | Westminster City Council Facebook Instagram Twitter Linkedin NextDoor TikTok YouTube",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-aa05b5863a1f",
+      "url": "https://www.westminster.gov.uk/housing",
+      "requested_urls": [
+        "https://www.westminster.gov.uk/housing"
+      ],
+      "title": "Housing | Westminster City Council Facebook Instagram Twitter Linkedin NextDoor TikTok YouTube",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-725ff309b08c",
+      "url": "https://www.westminster.gov.uk/leisure-libraries-and-community/libraries",
+      "requested_urls": [
+        "https://www.westminster.gov.uk/node/20978"
+      ],
+      "title": "Westminster libraries and archives | Westminster City Council Facebook Instagram Twitter Linkedin NextDoor TikTok YouTube",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-6c80de8c5594",
+      "url": "https://www.workandincome.govt.nz/eligibility/children/childcare.html",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/eligibility/children/childcare.html"
+      ],
+      "title": "Childcare | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-127a458a5f94",
+      "url": "https://www.workandincome.govt.nz/eligibility/health-and-disability/dental-treatment",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/eligibility/urgent-costs/dental-treatment.html"
+      ],
+      "title": "Dental treatment | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-c6a340486c0b",
+      "url": "https://www.workandincome.govt.nz/eligibility/urgent-costs/food.html",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/eligibility/urgent-costs/food.html"
+      ],
+      "title": "Food | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-1c09d2b43ffa",
+      "url": "https://www.workandincome.govt.nz/eligibility/urgent-costs/index.html",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/eligibility/urgent-costs/index.html"
+      ],
+      "title": "Urgent or unexpected costs | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-16a6389a7118",
+      "url": "https://www.workandincome.govt.nz/housing/nowhere-to-stay/index.html",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/housing/nowhere-to-stay/index.html"
+      ],
+      "title": "Nowhere to stay | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-587f62dc2106",
+      "url": "https://www.workandincome.govt.nz/products/a-z-benefits/community-services-card.html",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/products/a-z-benefits/community-services-card.html"
+      ],
+      "title": "Community Services Card | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    },
+    {
+      "id": "src-23a7e3cef502",
+      "url": "https://www.workandincome.govt.nz/work/index.html",
+      "requested_urls": [
+        "https://www.workandincome.govt.nz/work/index.html"
+      ],
+      "title": "Work | Work and Income",
+      "source_type": "government_or_public_authority",
+      "checked_on": "2026-11-18",
+      "access_method": "primary_page_content_review",
+      "http_status": 200,
+      "evidence_summary": "Page content supports the named service or navigation route. Individual availability and eligibility were not confirmed by contacting the provider.",
+      "web_reference": ""
+    }
+  ]
+}

@@ -8,18 +8,22 @@
   <link rel="canonical" href="https://singlestepforward.com/find-help.html">
   <title>Find Help | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/styles.css?v=20261115-2">
-  <script src="assets/colorado-resources.js?v=20261115-2" defer></script>
-  <script src="assets/massachusetts-resources.js?v=20261115-2" defer></script>
-  <script src="assets/new-york-resources.js?v=20261115-2" defer></script>
-  <script src="assets/illinois-resources.js?v=20261115-2" defer></script>
-  <script src="assets/city-resources.js?v=20261115-2" defer></script>
-  <script src="assets/resources.js?v=20261115-2" defer></script>
-  <script src="assets/area.js?v=20261115-2" defer></script>
-  <script src="assets/urgent.js?v=20261115-2" defer></script>
-  <script src="assets/guide.js?v=20261115-2" defer></script>
-  <script src="assets/calm.js?v=20261115-2" defer></script>
-  <script src="assets/i18n.js?v=20261115-2" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261118-4">
+  <script src="assets/colorado-resources.js?v=20261118-4" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261118-4" defer></script>
+  <script src="assets/new-york-resources.js?v=20261118-4" defer></script>
+  <script src="assets/illinois-resources.js?v=20261118-4" defer></script>
+  <script src="assets/city-resources.js?v=20261118-4" defer></script>
+  <script src="assets/expanded-editions.js?v=20261118-4" defer></script>
+  <script src="assets/resources.js?v=20261118-4" defer></script>
+  <script src="assets/area.js?v=20261118-4" defer></script>
+  <script src="assets/urgent.js?v=20261118-4" defer></script>
+  <link rel="stylesheet" href="assets/handout.css?v=20261118-4">
+  <script src="assets/vendor/qr.js?v=20261118-4" defer></script>
+  <script src="assets/handout.js?v=20261118-4" defer></script>
+  <script src="assets/guide.js?v=20261118-4" defer></script>
+  <script src="assets/calm.js?v=20261118-4" defer></script>
+  <script src="assets/i18n.js?v=20261118-4" defer></script>
 </head>
 <body class="finder-page">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -37,31 +41,31 @@
         <img src="assets/brand-mark.svg" alt="" width="48" height="48">
         <span><strong>Single Step Forward</strong><small data-area-label>Liberty County, Georgia</small></span>
       </a>
-      <nav aria-label="Main navigation">
+      <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false">Menu</button><nav aria-label="Main navigation" id="main-navigation">
         <a href="index.html#about">About</a>
         <a href="discover.html">Explore anywhere</a>
         <a href="#all-resources">Browse all</a>
-        <a class="button button-small awareness-nav-button" href="learn.html">Learn &amp; include</a>
+        <a class="nav-link" href="learn.html">Learn &amp; include</a>
         <a class="button button-small" href="#guide">Ask Dawn</a>
-        <button class="calm-toggle" type="button" data-calm-toggle aria-pressed="false">Calm View</button>
+        <div class="nav-preferences"><button class="calm-toggle" type="button" data-calm-toggle aria-pressed="false">Calm View</button>
         <label class="language-control"><span aria-hidden="true">文/A</span><span class="sr-only">Language</span><select data-language-select aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></label>
-      </nav>
+      </div></nav>
     </div>
     <div class="location-bar">
       <div class="shell location-inner">
         <div class="area-picker" data-area-picker>
           <img class="functional-icon area-picker-icon" src="assets/icon-reviewed-guide.webp" alt="" width="150" height="150" aria-hidden="true">
           <div class="area-picker-main">
-            <label for="area-select-help">Choose a reviewed local guide</label>
+            <label for="area-select-help">Choose a local guide</label>
             <div class="area-picker-controls">
               <label class="country-select-shell" title="Choose country">
                 <span class="sr-only">Country</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
-                <select data-country-select aria-label="Choose country"><option value="US">United States</option><option value="PR">Puerto Rico</option><option value="CL">Chile</option></select>
+                <select data-country-select aria-label="Choose country"><option value="US">United States</option><option value="PR">Puerto Rico</option><option value="CL">Chile</option><option value="GB">United Kingdom</option><option value="NZ">New Zealand</option></select>
               </label>
               <span class="select-shell">
-                <select id="area-select-help" data-area-select aria-label="Choose a reviewed local guide">
-                  <option value="" disabled>Select a county or city…</option>
+                <select id="area-select-help" data-area-select aria-label="Choose a local guide">
+                  <option value="" disabled>Select a local area…</option>
                   <option value="liberty">Liberty County, GA</option>
                   <option value="dallas">Dallas County, TX</option>
                   <option value="wake">Wake County, NC</option>
@@ -127,7 +131,47 @@
                   <option value="bayamon-pr">Bayamón, Puerto Rico</option>
                   <option value="carolina-pr">Carolina, Puerto Rico</option>
                   <option value="ponce-pr">Ponce, Puerto Rico</option>
-                </select>
+                <option value="suburban-cook-county">Suburban Cook County</option>
+<option value="london-barking-and-dagenham">Barking and Dagenham</option>
+<option value="london-barnet">Barnet</option>
+<option value="london-bexley">Bexley</option>
+<option value="london-brent">Brent</option>
+<option value="london-bromley">Bromley</option>
+<option value="london-camden">Camden</option>
+<option value="london-city-of-london">City of London</option>
+<option value="london-croydon">Croydon</option>
+<option value="london-ealing">Ealing</option>
+<option value="london-enfield">Enfield</option>
+<option value="london-greenwich">Greenwich</option>
+<option value="london-hackney">Hackney</option>
+<option value="london-hammersmith-and-fulham">Hammersmith and Fulham</option>
+<option value="london-haringey">Haringey</option>
+<option value="london-harrow">Harrow</option>
+<option value="london-havering">Havering</option>
+<option value="london-hillingdon">Hillingdon</option>
+<option value="london-hounslow">Hounslow</option>
+<option value="london-islington">Islington</option>
+<option value="london-kensington-and-chelsea">Kensington and Chelsea</option>
+<option value="london-kingston-upon-thames">Kingston upon Thames</option>
+<option value="london-lambeth">Lambeth</option>
+<option value="london-lewisham">Lewisham</option>
+<option value="london-merton">Merton</option>
+<option value="london-newham">Newham</option>
+<option value="london-redbridge">Redbridge</option>
+<option value="london-richmond-upon-thames">Richmond upon Thames</option>
+<option value="london-southwark">Southwark</option>
+<option value="london-sutton">Sutton</option>
+<option value="london-tower-hamlets">Tower Hamlets</option>
+<option value="london-waltham-forest">Waltham Forest</option>
+<option value="london-wandsworth">Wandsworth</option>
+<option value="london-westminster">Westminster</option>
+<option value="nz-auckland-metro">Auckland metropolitan area</option>
+<option value="nz-christchurch-metro">Christchurch metropolitan area</option>
+<option value="nz-wellington-metro">Wellington metropolitan area</option>
+<option value="nz-hamilton-metro">Hamilton metropolitan area</option>
+<option value="nz-tauranga-metro">Tauranga metropolitan area</option>
+<option value="nz-dunedin-metro">Dunedin metropolitan area</option>
+</select>
               </span>
               <button class="button area-open-button" type="button" data-area-open>Open guide</button>
             </div>
@@ -229,7 +273,7 @@
           <p class="eyebrow"><span></span> Source-checked directory</p>
           <h2 id="directory-title">Trusted places to start.</h2>
         </div>
-        <div class="directory-actions">
+        <div class="directory-actions"><a href="before-you-call.html">Before you call or visit</a>
           <button class="button button-quiet" id="print-directory" type="button">Print this list</button>
           <a class="button" href="#guide">Describe your situation</a>
         </div>
@@ -272,7 +316,7 @@
       <noscript>
         <div class="no-results">
           <h3>This directory needs JavaScript to filter.</h3>
-          <p>You can still call <a href="tel:211">211</a> for local referrals, call or text <a href="tel:988">988</a> for crisis support, search <a href="https://www.usa.gov/benefits">official benefit information</a>, find a <a href="https://findahealthcenter.hrsa.gov/">community health center</a>, or find <a href="https://www.parentcenterhub.org/find-your-center/">special-education and disability Parent Centers</a>.</p>
+          <p>In the United States you can call <a href="tel:211">211</a> for local referrals, call or text <a href="tel:988">988</a> for crisis support, search <a href="https://www.usa.gov/benefits">official benefit information</a>, find a <a href="https://findahealthcenter.hrsa.gov/">community health center</a>, or find <a href="https://www.parentcenterhub.org/find-your-center/">special-education and disability Parent Centers</a>.</p>
         </div>
       </noscript>
 
@@ -472,7 +516,7 @@
       <div class="directory-disclaimer">
         <p data-area-scope-note hidden></p>
         <p><strong>Pilot review status:</strong> the link, phone number, service area, and basic purpose were source checked against the organization’s own website or an official public directory on <span data-area-review-date>September 8, 2026</span>. Local reviewer confirmation is still pending unless a listing says otherwise. A source check does not mean there is a current opening, appointment, bed, funding, or guarantee of eligibility.</p>
-        <p><strong>Why not just 211?</strong> This directory links to 211 and also surfaces concrete first actions and official sources. Call or visit the provider’s website to confirm current details.</p>
+        <p data-us-referral><strong>Why not just 211?</strong> This directory links to 211 and also surfaces concrete first actions and official sources. Call or visit the provider’s website to confirm current details.</p>
       </div>
     </section>
 
@@ -509,7 +553,7 @@
         <p class="footer-label">Emergency</p>
         <a href="tel:911" data-global-emergency>Call 911</a>
         <a href="tel:988" data-global-crisis>Call or text 988</a>
-        <a href="tel:211">Call 211</a>
+        <a data-us-referral href="tel:211">Call 211</a>
       </div>
       <div>
         <p class="footer-label">Project</p>
@@ -529,5 +573,24 @@
     <a href="/privacy-policy/">Privacy policy</a><a href="/terms-of-service/">Terms of service</a><a href="/support-the-project/">Support the project</a>
   </div>
   </footer>
-</body>
+<aside class="sheet-tray" id="sheet-tray" hidden aria-label="Print sheet">
+  <span role="status" id="sheet-count"></span><button type="button" id="sheet-review">Review sheet</button>
+</aside>
+<main id="sheet-preview" hidden aria-labelledby="sheet-title">
+  <div class="sheet-tools">
+    <button id="sheet-back" type="button">Back to directory</button>
+    <button id="sheet-clear" type="button">Clear sheet</button>
+    <button id="sheet-print" type="button">Print or save PDF</button>
+  </div>
+  <h1 id="sheet-title" tabindex="-1">Your resource sheet</h1>
+  <p>Links, phone numbers, hours and availability can change. If you can, call before making a trip.</p>
+  <p class="sheet-script">“I’m looking for help with ___. Is this the right place? What should I do first?” If they can’t help, ask “Who would you suggest I contact next?”</p>
+  <div class="sheet-settings">
+    <a href="before-you-call.html" target="_blank" rel="noopener">Before you call or visit</a>
+    <label><input type="checkbox" id="sheet-credit" autocomplete="off"> Include Dawn and a QR link to Single Step Forward on this sheet</label>
+    <small>For a handout without the browser’s page address or title, turn off headers and footers in the print dialog.</small>
+  </div>
+  <div id="sheet-items"></div>
+  <footer id="sheet-source" hidden></footer>
+</main></body>
 </html>
