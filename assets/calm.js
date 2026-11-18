@@ -28,6 +28,29 @@
   }
 
   function init() {
+    const menu = document.querySelector(".menu-toggle");
+    if (menu) {
+      const nav = document.getElementById(menu.getAttribute("aria-controls"));
+      const compact = window.matchMedia("(max-width: 1100px)");
+      const containsTarget = target => menu.contains(target) || nav.contains(target);
+      const setOpen = open => menu.setAttribute("aria-expanded", String(open));
+      menu.addEventListener("click", () => setOpen(menu.getAttribute("aria-expanded") !== "true"));
+      document.addEventListener("pointerdown", event => {
+        if (!containsTarget(event.target)) setOpen(false);
+      });
+      document.addEventListener("focusin", event => {
+        if (!containsTarget(event.target)) setOpen(false);
+      });
+      compact.addEventListener("change", () => setOpen(false));
+      nav.addEventListener("click", event => { if (event.target.closest("a")) setOpen(false); });
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && menu.getAttribute("aria-expanded") === "true") {
+          setOpen(false);
+          menu.focus();
+        }
+      });
+      document.documentElement.classList.add("menu-ready");
+    }
     let active = storedPreference();
     apply(active);
     document.querySelectorAll("[data-calm-toggle]").forEach((button) => {

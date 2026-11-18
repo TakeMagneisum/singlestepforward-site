@@ -3,6 +3,17 @@
 
   const storageKey = "ssf-language";
   const es = new Map(Object.entries({
+    "Add to print sheet":"Añadir a la hoja para imprimir",
+    "Review sheet":"Revisar la hoja",
+    "Your resource sheet":"Su hoja de recursos",
+    "Back to directory":"Volver al directorio",
+    "Clear sheet":"Vaciar la hoja",
+    "Remove":"Quitar",
+    "Print or save PDF":"Imprimir o guardar como PDF",
+    "Before you call or visit":"Antes de llamar o acudir",
+    "Include Dawn and a QR link to Single Step Forward on this sheet":"Incluir a Dawn y un enlace QR a Single Step Forward en esta hoja",
+    "Links, phone numbers, hours and availability can change. If you can, call before making a trip.":"Los enlaces, los teléfonos, los horarios y la disponibilidad pueden cambiar. Si puede, llame antes de salir.",
+    "“I’m looking for help with ___. Is this the right place? What should I do first?” If they can’t help, ask “Who would you suggest I contact next?”":"«Busco ayuda con ___. ¿Es este el lugar indicado? ¿Qué debo hacer primero?» Si no pueden ayudarle, pregunte «¿Con quién más podría comunicarme?»",
     "Skip to main content":"Saltar al contenido principal",
     "Immediate danger?":"¿Peligro inmediato?",
     "Mental health or suicide crisis?":"¿Crisis de salud mental o suicidio?",

@@ -2514,6 +2514,8 @@ window.SSF_RESOURCE_AREAS = {
 
 Object.assign(window.SSF_RESOURCE_AREAS, window.SSF_IMPORTED_RESOURCE_AREAS || {});
 
+Object.assign(window.SSF_RESOURCE_AREAS, window.SSF_EXPANDED_EDITIONS || {});
+
 Object.values(window.SSF_RESOURCE_AREAS).forEach((area) => {
   if (!area.country) area.country = "US";
 });

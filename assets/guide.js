@@ -24,6 +24,7 @@
 
   const categoryLabels = {
     all: "all topics",
+    reentry: "reentry support", migration: "immigration support", local: "local service navigation",
     food: "food",
     housing: "housing and utilities",
     health: "health",
@@ -204,6 +205,7 @@
     card.append(sourceRow, heading, summary, next);
     if (detail.childElementCount) card.append(detail);
     card.append(actions, checked);
+    card.append(window.SSFHandout.choice(area, resource));
     return card;
   }
 
@@ -215,9 +217,9 @@
       const empty = makeElement("div", "no-results");
       empty.append(
         makeElement("h3", "", "No close match yet."),
-        makeElement("p", "", "Try fewer words, choose a topic above, or call 211 for a person who can help search across local services.")
+        makeElement("p", "", routing.fallbackText || "Try fewer words or choose a topic above.")
       );
-      empty.append(makeLink("Call 211", "tel:211", "button", false));
+      if (["US","PR"].includes(area.country || "US")) empty.append(makeLink("Call 211", "tel:211", "button", false));
       grid.append(empty);
       count.textContent = "No directory matches";
       return;
@@ -416,6 +418,20 @@
     return;
   }
 
+  if (area.ledgerEdition && filterList) {
+    const available = new Set(resources.flatMap(resource => resource.categories));
+    for (const button of filterList.querySelectorAll("[data-filter]")) {
+      if (button.dataset.filter !== "all" && !available.has(button.dataset.filter)) button.remove();
+    }
+    for (const category of available) {
+      if (filterList.querySelector('[data-filter="' + category + '"]')) continue;
+      const button = makeElement("button", "filter-chip", categoryLabels[category] || category);
+      button.type = "button";
+      button.dataset.filter = category;
+      button.setAttribute("aria-pressed", "false");
+      filterList.append(button);
+    }
+  }
   filterList?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-filter]");
     if (!button) return;

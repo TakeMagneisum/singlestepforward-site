@@ -2555,3 +2555,116 @@ html[data-calm="true"] .content-callout strong { color:var(--calm-text) !importa
 
 html[data-calm="true"] .learn-topic:hover { transform:none; }
 @media (prefers-reduced-motion:reduce) {.learn-topic:hover,.button:hover {transform:none!important;} }
+
+.menu-toggle { display:none; }
+.site-header select option { color:#142d28; background:#fff; }
+html[data-calm="true"] .site-header select { color-scheme:dark; }
+html[data-calm="true"] .site-header select option { color:#fff; background:#183b36; }
+@media(max-width:1100px){
+ .site-header .nav-wrap {display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;height:auto;gap:8px;padding-block:8px;}
+ .site-header .brand {min-width:0;max-width:calc(100% - 80px);}
+ .menu-ready .menu-toggle {display:block;min-height:44px;padding:5px 14px;border:1px solid currentColor;border-radius:9px;background:#163732;color:white;font-weight:700;}
+ .site-header .nav-wrap nav {display:grid;grid-template-columns:1fr;justify-items:start;width:100%;min-width:0;gap:8px;}
+ .menu-ready .menu-toggle[aria-expanded="false"] + nav {display:none;}
+ .site-header .nav-wrap nav > a {display:inline-flex;align-items:center;min-height:44px;}
+ .site-header .area-picker-main,.site-header .area-picker-controls,.site-header .area-picker {min-width:0;max-width:100%;}
+}
+@media(max-width:640px){
+ .country-select-shell[data-country-name]::after {content:attr(data-country-name);}
+ .area-picker-controls {grid-template-columns:minmax(0,1fr);}
+ .site-header .area-open-button {white-space:normal;}
+}
+@media(max-width:1100px){
+ .subpage-header .nav-wrap{flex-direction:row;}
+ .site-header .nav-wrap nav{overflow:visible;}
+}
+
+/* The header stays in flow. Only the compact navigation floats above the guide picker. */
+.nav-preferences { display: contents; }
+.site-header .country-select-shell[data-country-name] {
+  width: auto !important;
+  flex: 0 0 auto;
+  gap: .45rem;
+  padding-inline: .75rem;
+}
+.site-header .country-select-shell[data-country-name]::after {
+  content: attr(data-country-name);
+  margin: 0;
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-transform: none;
+}
+@media (max-width: 1100px) {
+  .menu-ready .site-header .nav-wrap { position: relative; z-index: 2; flex-wrap: nowrap; }
+  .menu-ready .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    cursor: pointer;
+  }
+  .menu-toggle::after {
+    content: "";
+    width: .48em;
+    height: .48em;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-.12em) rotate(45deg);
+  }
+  .menu-toggle[aria-expanded="true"]::after { transform: translateY(.12em) rotate(225deg); }
+  .menu-ready .site-header .nav-wrap nav {
+    position: absolute;
+    inset-inline-end: 0;
+    top: 100%;
+    width: min(21rem, 100%);
+    max-height: 65vh;
+    max-height: 65dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: .5rem;
+    gap: .125rem;
+    justify-items: stretch;
+    color: var(--calm-text, var(--cypress));
+    background: var(--calm-surface, #fffdf7);
+    border: 1px solid var(--calm-border, #9cada7);
+    border-radius: .9rem;
+    box-shadow: 0 10px 24px rgba(7, 30, 25, .18);
+  }
+  .menu-ready .menu-toggle[aria-expanded="false"] + nav#main-navigation { display: none; }
+  .menu-ready .menu-toggle[aria-expanded="true"] + nav { animation: menu-arrive 150ms ease-out; }
+  .site-header .nav-wrap nav > a {
+    padding: .55rem .8rem;
+    border-radius: .5rem;
+    font-size: .94rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+  .site-header .nav-wrap nav > a:not(.button):is(:hover,:focus-visible) {
+    background: var(--calm-surface-2, #e7efea);
+    text-decoration: underline;
+  }
+  .site-header .nav-wrap nav > .button {
+    margin-block: .2rem;
+    background: var(--amber);
+    border-color: transparent;
+    color: var(--cypress);
+    box-shadow: none;
+  }
+  .nav-preferences {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem .35rem .15rem;
+    margin-top: .2rem;
+    border-top: 1px solid var(--calm-border, #c7d2ca);
+  }
+  .nav-preferences .calm-toggle, .nav-preferences .language-control { min-height: 44px; }
+}
+@keyframes menu-arrive {
+  from { opacity: 0; transform: translateY(-.55rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 480px) {
+  .menu-ready .site-header .nav-wrap nav { width: 100%; }
+}

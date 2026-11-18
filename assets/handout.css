@@ -1,0 +1,40 @@
+.sheet-choice, .sheet-settings label { display:flex; align-items:center; gap:.65rem; min-height:44px; cursor:pointer; font-weight:650 }
+.sheet-choice input, .sheet-settings input { width:1.15rem; height:1.15rem; flex:none; accent-color:#27705f }
+.sheet-tray { position:fixed; bottom: max(.75rem,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); z-index:60; width:max-content; max-width:calc(100% - 1rem); display:flex; align-items:center; gap:1rem; padding:.5rem .6rem .5rem 1rem; border-radius:1rem; border:1px solid #79988c; background:#102b29; color:#fffdf7; box-shadow:0 4px 16px #0003 }
+.has-sheet { padding-bottom:5rem }
+.sheet-tray button,.sheet-tools button,.sheet-remove { border:1px solid currentColor; border-radius:.55rem; min-height:44px; padding:.4rem .85rem; font:inherit; cursor:pointer; color:inherit; background:transparent }
+.sheet-tray button,#sheet-print { background:#f2c55c; color:#102b29; font-weight:700 }
+body.reviewing-sheet > :not(#sheet-preview) { display:none!important }
+#sheet-preview,.call-guide { width:min(calc(100% - 2rem),48rem); margin:auto; padding-block:2rem; overflow-wrap:anywhere }
+#sheet-preview h1,.call-guide h1 { font-size:clamp(2rem,6vw,3.25rem); margin:1.3rem 0 .6rem }
+.sheet-tools,.sheet-settings { display:flex; align-items:center; gap:.55rem; flex-wrap:wrap }
+.sheet-settings { margin-block:1rem; border-block:1px solid; padding:.5rem 0 }
+.sheet-settings label { width:100% }
+.sheet-entry { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:1rem; border-top:1px solid; padding-block:1rem }
+.sheet-entry h2,.call-guide h2 { font-size:1.35rem; line-height:1.2; margin:.4rem 0 }
+.sheet-entry p { margin:.3rem 0 }
+.sheet-meta { font-size:.85em }
+.sheet-code { display:block; width:6rem; max-width:100%; background:white }
+.sheet-code svg { display:block; width:100%; height:auto }
+#sheet-source { display:flex; align-items:center; flex-wrap:wrap; gap:1rem; border-top:1px solid; padding-top:1rem }
+#sheet-source img { width:3rem; height:3rem; object-fit:contain }
+#sheet-source strong,#sheet-source a { display:block }
+.call-guide blockquote,.sheet-script { margin:1rem 0; padding-inline-start:1rem; border-inline-start:3px solid #719988 }
+.call-guide h2 { margin-top:1.6rem }
+@media(max-width:480px){.sheet-entry { grid-template-columns:1fr }.sheet-code { width:5.5rem }}
+@media print {
+  .sheet-choice,.sheet-tray,.sheet-settings,.sheet-tools,.sheet-remove { display:none!important }
+  html:has(.reviewing-sheet),html[data-calm] body.reviewing-sheet,html[data-calm] #sheet-preview { background:white!important; color:black!important; padding:0; margin:0; color-scheme:light }
+  #sheet-preview { width:100%; font:10pt/1.25 Arial,sans-serif }
+  html[data-calm] #sheet-preview * { color:black!important; background:white!important; box-shadow:none!important; text-shadow:none!important }
+  #sheet-preview h1 { margin:0 0 4pt; font: bold 17pt/1.1 Arial,sans-serif }
+  #sheet-preview > p { margin:4pt 0 }
+  .sheet-script { padding-left:6pt }
+  .sheet-entry { display:block; position:relative; min-height:1.15in; padding:7pt 1.23in 7pt 0; break-inside:avoid; page-break-inside:avoid }
+  .sheet-entry h2 { margin:0; font:bold 12pt/1.1 Arial,sans-serif }
+  .sheet-entry p { margin:2pt 0 }
+  .sheet-entry .sheet-code { position:absolute; top:6pt; right:0 }
+  #sheet-preview .sheet-code { width:1.1in }
+  #sheet-source { break-inside:avoid; flex-wrap:nowrap; font-size:9pt }
+  #sheet-source .sheet-code { flex:none; margin-left:auto }
+}

@@ -83,11 +83,11 @@
     const hasSelection = Boolean(selectedArea);
     button.disabled = !hasSelection;
     button.textContent = hasSelection
-      ? "Open " + (selectedArea.shortLabel || selectedArea.name || "selected") + " guide"
+      ? "Open " + (selectedArea.shortLabel || selectedArea.name || selectedArea.label || "selected") + " guide"
       : "Open guide";
     button.setAttribute(
       "aria-label",
-      hasSelection ? "Open the " + selectedArea.label + " reviewed local guide" : "Open reviewed local guide"
+      hasSelection ? "Open the " + selectedArea.label + " local guide" : "Open local guide"
     );
   }
 
@@ -101,13 +101,19 @@
     const requestedCountry = areas[requestedArea]?.country;
     const initialCountry = requestedCountry || (isFinder ? area.country : safeStoredCountry()) || "US";
 
+    const placeholder = select.options[0].cloneNode(true);
+    const choices = new Map(Array.from(select.options).slice(1).map(option => [
+      option.value, { label: option.textContent, country: areas[option.value]?.country || "US" }
+    ]));
+
     function filterAreas(country, preserveSelection) {
-      Array.from(select.options).forEach((option) => {
-        if (!option.value) return;
-        option.hidden = (areas[option.value]?.country || "US") !== country;
-      });
-      const currentVisible = select.value && !select.selectedOptions[0]?.hidden;
-      if (!preserveSelection || !currentVisible) select.value = "";
+      const previous = select.value;
+      select.replaceChildren(placeholder.cloneNode(true));
+      for (const [id, guide] of choices) {
+        if (guide.country === country) select.add(new Option(guide.label, id));
+      }
+      select.value = preserveSelection && choices.get(previous)?.country === country ? previous : "";
+      if (countrySelect) countrySelect.closest("label").dataset.countryName = countrySelect.selectedOptions[0]?.text || "";
       updatePickerButton(select, button);
     }
 
@@ -180,12 +186,15 @@
       const areaInput = document.querySelector("#resource-area");
       if (areaInput && !areaInput.value) areaInput.placeholder = area.label + " or another area";
 
+      if (["GB", "NZ", "CL"].includes(area.country)) {
+        document.querySelectorAll("[data-us-referral]").forEach(element => element.hidden = true);
+      }
       const emergency = area.emergency;
       if (emergency) {
         const emergencyCard = document.querySelector("[data-emergency-card]");
         const crisisCard = document.querySelector("[data-crisis-card]");
         if (emergencyCard) emergencyCard.href = "tel:" + emergency.call.replace(/[^\d*]/g, "");
-        if (crisisCard) crisisCard.href = "tel:" + emergency.crisis.replace(/[^\d*]/g, "");
+        if (crisisCard) crisisCard.href = emergency.crisisHref || "tel:" + emergency.crisis.replace(/[^\d*]/g, "");
         document.querySelector("[data-emergency-label]")?.replaceChildren(emergency.callLabel);
         document.querySelector("[data-emergency-description]")?.replaceChildren(emergency.description);
         document.querySelector("[data-crisis-label]")?.replaceChildren(emergency.crisisLabel);
@@ -195,7 +204,7 @@
           link.textContent = emergency.callLabel;
         });
         document.querySelectorAll("[data-global-crisis]").forEach((link) => {
-          link.href = "tel:" + emergency.crisis.replace(/[^\d*]/g, "");
+          link.href = emergency.crisisHref || "tel:" + emergency.crisis.replace(/[^\d*]/g, "");
           link.textContent = emergency.crisisLabel;
         });
       }
