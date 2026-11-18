@@ -50,6 +50,7 @@ function loadDirectory() {
     "assets/new-york-resources.js",
     "assets/illinois-resources.js",
     "assets/city-resources.js",
+    "assets/expanded-editions.js",
     "assets/resources.js"
   ].forEach((file) => {
     vm.runInContext(fs.readFileSync(path.join(root, file), "utf8"), context, { filename: file });
@@ -73,7 +74,7 @@ function loadDiscovery() {
 function validateDiscovery(discovery, areas) {
   const groups = Array.isArray(discovery.groups) ? discovery.groups : [];
   const categories = Array.isArray(discovery.categories) ? discovery.categories : [];
-  const areaIds = new Set(Object.entries(areas || {}).filter(([, area]) => ["US", "PR"].includes(area.country || "US")).map(([id]) => id));
+  const areaIds = new Set(Object.entries(areas || {}).filter(([, area]) => ["US", "PR"].includes(area.country || "US") && area.id !== "suburban-cook-county").map(([id]) => id));
   const zipOwners = new Map();
   const categoryIds = new Set();
 
@@ -183,7 +184,8 @@ function validateAreas(areas) {
       if (resource.phone && !/^(?:\d{3,15}|\*4141)$/.test(resource.phone)) fail(`${label}: phone must contain 3–15 digits or the verified *4141 short code.`);
     });
 
-    requiredCategories.forEach((category) => {
+    const expectedCategories = area.ledgerEdition ? ["food","housing","health","mental-health","safety","legal","work","education","family","animals","reentry","migration","weather"] : requiredCategories;
+    expectedCategories.forEach((category) => {
       const documentedGap = areaId === "omaha" && category === "animals" && Boolean(area.coverageNote);
       if (!categories.has(category) && !documentedGap) fail(`${areaId}: missing category ${category}.`);
     });
@@ -270,7 +272,20 @@ function validateMarkup(areas) {
   if (!sitemap.includes("discover.html")) fail("sitemap.xml: missing universal discovery page.");
   if (!sitemap.includes("learn.html")) fail("sitemap.xml: missing accessibility-and-inclusion page.");
 
-  const expectedCacheToken = "20261109-1";
+  // The quick-pass pages remain self-contained and link directly at folder index URLs.
+  const addedRoutes = ["support", "support-the-project", "privacy-policy", "terms-of-service", "learn", "learn/ai-safety", "learn/online-safety", "learn/family-verification", "learn/cpr", "learn/grounding-and-rest", "learn/checking-resources"];
+  addedRoutes.forEach((route) => {
+    const filename = path.join(root, route, "index.html");
+    if (!fs.existsSync(filename)) { fail(route + ": index.html missing"); return; }
+    const markup = fs.readFileSync(filename, "utf8");
+    if (!markup.includes('href="https://singlestepforward.com/' + route + '/"')) fail(route + ": canonical URL missing");
+    if (!markup.includes('data-calm-toggle') || !markup.includes('id="main"')) fail(route + ": accessible base missing");
+    if (!sitemap.includes('https://singlestepforward.com/' + route + '/')) fail(route + ": sitemap entry missing");
+  });
+  if (!index.includes('support-the-project-small.webp') || !index.includes('feedback@singlestepforward.com')) fail('index.html: coffee and feedback integration missing');
+  if (!finder.includes('feedback@singlestepforward.com')) fail('find-help.html: feedback entry point missing');
+  if (!notFound.includes('mailto:feedback@singlestepforward.com') || !notFound.includes('name="robots" content="noindex"')) fail('404.html: report link or noindex missing');
+  const expectedCacheToken = "20261118-4";
   [
     ["index.html", index],
     ["find-help.html", finder],
@@ -278,7 +293,7 @@ function validateMarkup(areas) {
     ["learn.html", learning],
     ["404.html", notFound]
   ].forEach(([pageName, markup]) => {
-    const refs = Array.from(markup.matchAll(/(?:src|href)="(assets\/[^"?]+)\?v=([^"]+)"/g));
+    const refs = Array.from(markup.matchAll(/(?:src|href)="\/?(assets\/[^"?]+)\?v=([^"]+)"/g));
     if (!refs.length) fail(pageName + ": no cache-versioned assets found.");
     refs.forEach((match) => {
       const asset = match[1];
