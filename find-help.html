@@ -20,6 +20,8 @@
   <script src="assets/urgent.js?v=20261118-4" defer></script>
   <link rel="stylesheet" href="assets/handout.css?v=20261118-4">
   <script src="assets/vendor/qr.js?v=20261118-4" defer></script>
+  <link rel="stylesheet" href="assets/sheet-pdf.css?v=20261118-4">
+  <script src="assets/sheet-pdf.js?v=20261118-4" defer></script>
   <script src="assets/handout.js?v=20261118-4" defer></script>
   <script src="assets/guide.js?v=20261118-4" defer></script>
   <script src="assets/calm.js?v=20261118-4" defer></script>
@@ -580,9 +582,17 @@
   <div class="sheet-tools">
     <button id="sheet-back" type="button">Back to directory</button>
     <button id="sheet-clear" type="button">Clear sheet</button>
-    <button id="sheet-print" type="button">Print or save PDF</button>
+
   </div>
   <h1 id="sheet-title" tabindex="-1">Your resource sheet</h1>
+  <section class="pdf-tools" aria-label="Print and PDF options">
+    <span id="pdf-count"></span>
+    <button type="button" id="sheet-print">Print or save as PDF</button>
+    <button type="button" id="sheet-pdf">Get PDF directly</button>
+    <div><strong>Having trouble printing?</strong><p>Some mobile browsers may not open the print menu. Get the PDF directly, or look for Print in your browser’s Share menu.</p></div>
+    <span id="pdf-status" role="status"></span>
+    <div id="pdf-result" hidden><a id="pdf-open" target="_blank" rel="noopener">Open PDF</a> <a id="pdf-save" download="Resource-sheet.pdf">Save PDF</a> <button type="button" id="pdf-share" hidden>Share PDF</button></div>
+  </section>
   <p>Links, phone numbers, hours and availability can change. If you can, call before making a trip.</p>
   <p class="sheet-script">“I’m looking for help with ___. Is this the right place? What should I do first?” If they can’t help, ask “Who would you suggest I contact next?”</p>
   <div class="sheet-settings">
