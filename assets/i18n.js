@@ -51,6 +51,7 @@
     "Independent disability and accessibility organizations":"Organizaciones independientes de discapacidad y accesibilidad",
     "Choose a reviewed local guide":"Elige una guía local revisada",
     "Select a county or city…":"Selecciona un condado o ciudad…",
+    "View the Greater London map":"Ver el mapa del Gran Londres",
     "Explore by map":"Explorar por mapa",
     "Choose a country or territory, or search by place name.":"Elige un país o territorio, o busca por nombre.",
     "Country or territory":"País o territorio",
