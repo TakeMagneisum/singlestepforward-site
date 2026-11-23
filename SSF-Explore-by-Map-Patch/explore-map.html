@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore by map | Single Step Forward</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css?v=20261123-map">
+  <link rel="stylesheet" href="assets/explore-map.css">
+  <script src="assets/colorado-resources.js?v=20261118-4" defer></script>
+  <script src="assets/massachusetts-resources.js?v=20261118-4" defer></script>
+  <script src="assets/new-york-resources.js?v=20261118-4" defer></script>
+  <script src="assets/illinois-resources.js?v=20261118-4" defer></script>
+  <script src="assets/city-resources.js?v=20261118-4" defer></script>
+  <script src="assets/expanded-editions.js?v=20261118-4" defer></script>
+  <script src="assets/resources.js?v=20261118-4" defer></script>
+  <script src="assets/calm.js?v=20261118-4" defer></script>
+  <script src="assets/i18n.js?v=20261123-map" defer></script>
+  <script src="assets/maps/london-boundaries.js" defer></script>
+  <script src="assets/explore-map.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Single Step Forward home">
+        <img src="assets/brand-mark.svg" alt="" width="52" height="52">
+        <span><strong>Single Step Forward</strong><small>Awareness and local navigation</small></span>
+      </a>
+      <button type="button" class="menu-toggle" aria-controls="main-navigation" aria-expanded="false">Menu</button><nav aria-label="Main navigation" id="main-navigation">
+        <a href="index.html">Home</a>
+        <a href="find-help.html">Reviewed local guides</a>
+        <a href="learn.html">Learn &amp; include</a>
+        <div class="nav-preferences"><button class="calm-toggle" type="button" data-calm-toggle aria-pressed="false">Calm View</button>
+        <label class="language-control"><span aria-hidden="true">文/A</span><span class="sr-only">Language</span><select data-language-select aria-label="Language"><option value="en">English</option><option value="es">Español</option></select></label>
+      </div></nav>
+    </div>
+  </header>
+  <main id="main" class="shell map-page">
+    <h1>Explore by map</h1>
+    <p>Choose a country or territory, or search by place name.</p>
+    <div class="map-filters">
+      <label for="map-country">Country or territory
+        <select id="map-country"><option value="">All countries and territories</option><option value="US">United States</option><option value="PR">Puerto Rico</option><option value="CL">Chile</option><option value="GB">United Kingdom</option><option value="NZ">New Zealand</option></select>
+      </label>
+      <label for="map-search">Search by place
+        <input id="map-search" type="search">
+      </label>
+      <button id="map-reset" type="button" class="button button-quiet">Reset filters</button>
+    </div>
+    <div class="map-layout">
+      <section id="london-map" class="map-panel" hidden aria-labelledby="london-title">
+        <h2 id="london-title">Greater London</h2>
+        <p>Choose an area to open its guide. Each provider lists its own service area.</p>
+        <p id="map-hover" aria-hidden="true"></p>
+        <svg id="borough-map" viewBox="28 0 820 625" role="group" aria-labelledby="london-title"></svg>
+        <button id="pick-city" class="button button-quiet" type="button">Select City of London</button>
+        <p id="map-selection" aria-live="polite">Select an area on the map.</p>
+        <a id="map-open" class="button" hidden><span>Open guide</span> <span id="map-open-name"></span></a>
+        <p class="map-credit"><a href="https://data.london.gov.uk/dataset/statistical-gis-boundary-files-for-london-20od9">Greater London Authority boundary data</a> · <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence v2</a><br>
+        Contains National Statistics data © Crown copyright and database right [2015].<br>
+        Contains Ordnance Survey data © Crown copyright and database right [2015].</p>
+      </section>
+      <section class="map-panel" aria-labelledby="map-list-title">
+        <h2 id="map-list-title">Local guides</h2>
+        <p id="map-status" role="status"></p>
+        <p id="map-empty" hidden>No matching guides. Try another place or reset the filters.</p>
+        <ul id="map-guides"></ul>
+        <noscript><p><a href="index.html">Browse local guides from the homepage</a>.</p></noscript>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
