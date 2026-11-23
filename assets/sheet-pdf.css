@@ -1,0 +1,7 @@
+.pdf-tools { display:grid;gap:.75rem;border:1px solid var(--calm-border,var(--line));padding:clamp(.8rem,3vw,1.4rem);border-radius:1rem;margin:1rem 0 }
+.pdf-tools button,.pdf-tools a { display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.6rem 1rem;border-radius:.6rem;border:1px solid currentColor;background:transparent;color:inherit;font:inherit;font-weight:700;cursor:pointer }
+.pdf-tools > div:first-of-type { border-top:1px solid var(--calm-border,var(--line));padding-top:1rem }
+.pdf-tools p { margin:.35rem 0 0 }
+#pdf-status:empty { display:none }
+#pdf-result { display:flex;gap:.5rem;flex-wrap:wrap }
+@media print { .pdf-tools {display:none!important} }

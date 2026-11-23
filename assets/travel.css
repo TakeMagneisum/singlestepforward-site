@@ -1,0 +1,38 @@
+.travel-guide details {
+  margin-block: .65rem;
+  padding: .65rem 1rem;
+  border: 1px solid var(--calm-border, #9cada7);
+  border-radius: .65rem;
+  background: var(--calm-surface, #fffdf7);
+}
+.travel-guide summary {
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 44px;
+  align-content: center;
+}
+.travel-guide :focus-visible { outline: 2px solid currentColor; outline-offset: .2rem; }
+#trip-checklist {
+  margin-block: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--calm-border, #9cada7);
+  border-radius: .65rem;
+  background: var(--calm-surface, #fffdf7);
+}
+.trip-lines { padding: 0; list-style: none; }
+.trip-lines li { min-height: 3rem; padding-block: .35rem; border-bottom: 1px solid currentColor; }
+@media print {
+  html:has(.travel-page), html .travel-page, html .travel-page .travel-guide, html .travel-page #trip-checklist {
+    background: white !important;
+    color: black !important;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .travel-page > :not(main),
+  .travel-guide > :not(#trip-checklist),
+  #print-trip { display: none !important; }
+  #trip-checklist h2 { color: black !important; font-size: 18pt; margin-top: 0; }
+  .trip-lines li { min-height: .55in; break-inside: avoid; }
+}

@@ -300,7 +300,10 @@ function validateMarkup(areas) {
       const token = match[2];
       const mapEntry = ["index.html", "find-help.html"].includes(pageName) &&
         ["assets/styles.css", "assets/area.js", "assets/i18n.js"].includes(asset);
-      if (token !== (mapEntry ? "20261123-map" : expectedCacheToken)) fail(pageName + ": inconsistent cache token for " + asset + ".");
+      const travelEntry = pageName === "find-help.html" &&
+        ["assets/resources.js", "assets/guide.js", "assets/i18n.js"].includes(asset);
+      const expected = travelEntry ? "20261123-travel" : mapEntry ? "20261123-map" : expectedCacheToken;
+      if (token !== expected) fail(pageName + ": inconsistent cache token for " + asset + ".");
       if (!fs.existsSync(path.join(root, asset))) fail(pageName + ": missing referenced asset " + asset + ".");
     });
   });

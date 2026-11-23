@@ -187,6 +187,11 @@
     }
     const webLabel = resource.source.toLowerCase().includes("official") ? "Official website ↗" : "Visit website ↗";
     actions.append(makeLink(webLabel, resource.url, resource.phone ? "" : "primary", true));
+    if (resource.publicIntakeSource && resource.address) {
+      const directions = new URL("https://www.google.com/maps/dir/");
+      directions.search = new URLSearchParams({ api: "1", destination: resource.address, travelmode: "transit" });
+      actions.append(makeLink("Transit directions (Google Maps)", directions.href, "", true));
+    }
     const reportText = [
       "Resource: " + resource.title,
       "Guide: " + (area.label || "Reviewed guide"),

@@ -70,6 +70,7 @@ const SSF_LIBERTY_RESOURCES = [
     phone: "19123683660",
     phoneDisplay: "912-368-3660",
     address: "244 W. Memorial Drive, Hinesville, GA 31313",
+    publicIntakeSource: "https://www.libertycountymannahouse.org/", // Checked 2026-11-23.
     url: "https://liberty.gafcp.org/resources/",
     featured: true,
     priority: 5
@@ -1140,6 +1141,7 @@ const SSF_WAKE_RESOURCES = [
     summary: "A Wake County food pantry offering groceries to residents experiencing food insecurity; a referral is not required.",
     next: "Check the current distribution instructions and schedule before visiting; availability can change with demand.",
     address: "1390 Capital Boulevard, Raleigh, NC 27603",
+    publicIntakeSource: "https://www.urbanmin.org/services/food-pantry", // Checked 2026-11-23.
     url: "https://www.urbanmin.org/services/food-pantry",
     featured: true,
     priority: 3
