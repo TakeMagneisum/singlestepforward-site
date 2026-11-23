@@ -143,6 +143,9 @@
   function updatePage() {
     if (isFinder) {
       document.body.dataset.area = areaId;
+      document.querySelectorAll("[data-explore-map]").forEach((link) => {
+        link.href = "explore-map.html?country=" + encodeURIComponent(area.country || "US");
+      });
       const currentUrl = new URL(window.location.href);
       if (currentUrl.searchParams.get("area") !== areaId) {
         currentUrl.searchParams.set("area", areaId);
