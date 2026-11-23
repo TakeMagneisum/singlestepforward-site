@@ -80,7 +80,8 @@
   byId("pick-city").addEventListener("click", () => select(london.E09000001));
 
   function render() {
-    panel.hidden = country.value !== "GB" || shapes.size !== 33;
+    const showLondon = !country.value || country.value === "GB";
+    panel.hidden = !showLondon || shapes.size !== 33;
     const terms = normalize(search.value).split(/\s+/);
     const matches = entries.filter(([, area]) =>
       (!country.value || area.country === country.value) &&
