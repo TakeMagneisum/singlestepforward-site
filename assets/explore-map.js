@@ -74,6 +74,20 @@
   const statesPanel = byId("us-map");
   const stateSearch = byId("state-search");
   let selectedState = "";
+  let selectedCounty = "";
+  const countySearch = byId("county-search");
+  const counties = window.SSFGeorgiaCountyNames || {};
+  const countyEntries = Object.entries(counties).sort((a, b) => a[1].localeCompare(b[1]));
+  // City of Atlanta coverage applies only within city limits in Fulton and DeKalb.
+  const countyGuides = {
+    "13051": ["savannah-chatham"],
+    "13089": ["atlanta"],
+    "13121": ["atlanta"],
+    "13179": ["liberty"]
+  };
+  const guidesForCounty = code => (countyGuides[code] || []).filter(id =>
+    registry[id]?.country === "US" && registry[id]?.stateCode === "GA"
+  );
 
   const names = new Map(Array.from(country.options).filter(option => option.value)
     .map(option => [option.value, option.textContent]));
@@ -131,6 +145,8 @@
     country.value = names.has(code) ? code : "";
     const state = (params.get("state") || "").toUpperCase();
     selectedState = country.value === "US" && Object.hasOwn(states, state) ? state : "";
+    const county = params.get("county") || "";
+    selectedCounty = selectedState === "GA" && Object.hasOwn(counties, county) ? county : "";
     region = !country.value && params.get("region") === "caribbean";
   }
 
@@ -193,6 +209,50 @@
     byId("us-map-graphic").hidden = false;
   }
 
+  function countyURL(code) {
+    return stateURL("GA") + "&county=" + code;
+  }
+
+  function renderCountyLinks() {
+    const value = normalize(countySearch.value);
+    const matches = countyEntries.filter(([, name]) => normalize(name).includes(value));
+    byId("county-links").replaceChildren(...matches.map(([code, name]) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = countyURL(code);
+      link.textContent = name;
+      if (code === selectedCounty) link.setAttribute("aria-current", "location");
+      const count = document.createElement("span");
+      count.textContent = guideCount(guidesForCounty(code).length);
+      item.append(link, count);
+      return item;
+    }));
+    byId("county-search-empty").hidden = matches.length > 0;
+  }
+
+  function drawCountyMap({ viewBox, paths }) {
+    const map = byId("ga-map-svg");
+    const element = tag => document.createElementNS(svgNamespace, tag);
+    map.setAttribute("viewBox", viewBox);
+    map.replaceChildren();
+    for (const [code, name] of countyEntries) {
+      if (!paths[code]) continue;
+      const link = element("a");
+      link.setAttribute("href", countyURL(code));
+      link.setAttribute("tabindex", "-1");
+      const count = guidesForCounty(code).length;
+      if (count) link.setAttribute("class", "has-guides");
+      if (code === selectedCounty) link.setAttribute("aria-current", "location");
+      const title = element("title");
+      title.textContent = name + " · " + guideCount(count);
+      const shape = element("path");
+      shape.setAttribute("d", paths[code]);
+      link.append(title, shape);
+      map.append(link);
+    }
+    byId("ga-map-graphic").hidden = false;
+  }
+
   function overviewLink(label, href, count) {
     const item = document.createElement("li");
     const link = document.createElement("a");
@@ -247,7 +307,7 @@
   }
 
   function renderView() {
-    const view = selectedState ? "US:" + selectedState : country.value || (region ? "caribbean" : "world");
+    const view = selectedCounty ? "GA:" + selectedCounty : selectedState ? "US:" + selectedState : country.value || (region ? "caribbean" : "world");
     if (view === renderedView) return;
     renderedView = view;
     const version = ++viewVersion;
@@ -257,6 +317,14 @@
       renderStateLinks();
       loadMap("SSFUsStatePaths", "assets/maps/us-state-boundaries.js").then(paths => {
         if (version === viewVersion && paths) drawStateMap(paths);
+      });
+    }
+    byId("ga-map").hidden = selectedState !== "GA";
+    byId("map-back-ga").hidden = !selectedCounty;
+    if (selectedState === "GA") {
+      renderCountyLinks();
+      loadMap("SSFGeorgiaCountyGeometry", "assets/maps/georgia-county-boundaries.js").then(geometry => {
+        if (version === viewVersion && geometry) drawCountyMap(geometry);
       });
     }
     panel.hidden = true;
@@ -317,16 +385,19 @@
 
   function render() {
     renderView();
-    const published = selectedState ? stateCounts.has(selectedState) : !country.value || counts.has(country.value);
+    const selectedCountyGuides = selectedCounty ? guidesForCounty(selectedCounty) : null;
+    const published = selectedCountyGuides ? selectedCountyGuides.length > 0 : selectedState ? stateCounts.has(selectedState) : !country.value || counts.has(country.value);
     const stateTitle = byId("map-state-title");
-    stateTitle.textContent = selectedState ? " · " + states[selectedState] : "";
+    stateTitle.textContent = selectedState ? " · " + (counties[selectedCounty] || states[selectedState]) : "";
     stateTitle.hidden = !selectedState;
     byId("map-clear-search").hidden = !search.value;
+    byId("map-atlanta-scope").hidden = !selectedCountyGuides?.includes("atlanta");
     byId("map-unpublished").hidden = published;
     byId("map-coverage").hidden = !country.value || !published;
     byId("map-discover").hidden = country.value !== "US";
     const terms = normalize(search.value).split(/\s+/);
-    const matches = entries.filter(([, area]) =>
+    const matches = entries.filter(([id, area]) =>
+      (!selectedCountyGuides || selectedCountyGuides.includes(id)) &&
       (!country.value || area.country === country.value) &&
       (!selectedState || area.stateCode === selectedState) &&
       terms.every(term => normalize(area.label + " " + area.name).includes(term))
@@ -345,6 +416,7 @@
   country.addEventListener("change", () => {
     region = false;
     selectedState = "";
+    selectedCounty = "";
     writeURL();
     render();
   });
@@ -353,6 +425,7 @@
     render();
   });
   stateSearch.addEventListener("input", renderStateLinks);
+  countySearch.addEventListener("input", renderCountyLinks);
   search.addEventListener("input", render);
   byId("map-clear-search").addEventListener("click", () => {
     search.value = "";
@@ -363,11 +436,13 @@
     if (country.value || region) {
       country.value = "";
       selectedState = "";
+      selectedCounty = "";
       region = false;
       writeURL();
     }
     search.value = "";
     stateSearch.value = "";
+    countySearch.value = "";
     render();
     search.focus();
   });

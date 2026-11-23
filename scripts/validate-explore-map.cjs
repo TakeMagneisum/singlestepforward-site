@@ -159,4 +159,56 @@ assert.equal(nonUs('map-state-title').hidden, true);
 const [, invalidState] = await run('?country=US&state=XX');
 assert.equal(invalidState('map-guides').children.length, usEntries.length);
 console.log(usEntries.length + ' US guides across ' + usStates.size + ' jurisdictions. All 51 state routes, map coverage, search, ZIP fallback, Back/reset, and missing geometry passed.');
+const countyURL = '?country=US&state=GA';
+const [gaWindow, ga, gaLocation, gaEvents] = await run(countyURL);
+assert.equal(ga('ga-map').hidden, false);
+assert.equal(ga('ga-map-graphic').hidden, false);
+const countyNames = gaWindow.SSFGeorgiaCountyNames;
+const countyShapes = gaWindow.SSFGeorgiaCountyGeometry.paths;
+const countyRows = ga('county-links').children;
+assert.equal(Object.keys(countyNames).length, 159);
+assert.equal(countyRows.length, 159);
+assert.deepEqual(Object.keys(countyShapes).sort(), Object.keys(countyNames).sort());
+assert.equal(new Set(countyRows.map(row => row.children[0].href)).size, 159);
+const mapped = {13051:'savannah-chatham', 13089:'atlanta', 13121:'atlanta', 13179:'liberty'};
+const countyCrosswalk = JSON.parse(fs.readFileSync('assets/explore-map.js', 'utf8')
+ .match(/const countyGuides = (\{[\s\S]*?\});/)[1]);
+assert.deepEqual(Object.keys(countyCrosswalk).sort(), Object.keys(mapped).sort());
+for (const [code, ids] of Object.entries(countyCrosswalk)) {
+ assert.deepEqual(ids, [mapped[code]]);
+ assert.equal(areas[ids[0]].country, 'US');
+ assert.equal(areas[ids[0]].stateCode, 'GA');
+}
+for (const row of countyRows) {
+ const link = row.children[0];
+ const code = new URL(link.href, 'file:///explore-map.html').searchParams.get('county');
+ assert.match(code, /^13\d{3}$/);
+ assert.equal(link.textContent, countyNames[code]);
+ assert(countyShapes[code].startsWith('M'));
+ assert(ga('ga-map-svg').children.some(shape => shape.attrs.href === link.href));
+}
+for (const [code, id] of Object.entries(mapped)) {
+ const [, county] = await run(countyURL + '&county=' + code);
+ assert.deepEqual(county('map-guides').children.map(row => row.children[0].href), ['find-help.html?area=' + id]);
+}
+ga('map-search').value = 'Savannah';
+ga('map-search').handlers.input();
+assert.equal(ga('map-guides').children[0].children[0].href, 'find-help.html?area=savannah-chatham');
+ga('county-search').value = 'Chatham';
+ga('county-search').handlers.input();
+assert.equal(ga('county-links').children.length, 1);
+assert.match(ga('county-links').children[0].children[0].href, /county=13051$/);
+const [, noCounties] = await run(countyURL + '&county=13001', ['assets/maps/georgia-county-boundaries.js']);
+assert.equal(noCounties('county-links').children.length, 159);
+assert.notEqual(noCounties('ga-map-graphic').hidden, false);
+assert.equal(noCounties('map-unpublished').hidden, false);
+assert.equal(noCounties('map-discover').hidden, false);
+const [, invalidCounty] = await run(countyURL + '&county=99999');
+assert.equal(invalidCounty('map-guides').children.length, 3);
+gaLocation.search = '?country=US';
+gaEvents.popstate();
+assert.equal(ga('ga-map').hidden, true);
+assert.equal(ga('us-map').hidden, false);
+assert(!usWindow.SSFGeorgiaCountyGeometry);
+console.log('159 Georgia county routes and shapes, crosswalk, Savannah search, ZIP fallback, Back and missing geometry passed.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

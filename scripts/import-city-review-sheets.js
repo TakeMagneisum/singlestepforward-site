@@ -286,10 +286,23 @@ function buildResources(city) {
     if (phone) resource.phone = phone;
     if (data.phoneDisplay) resource.phoneDisplay = data.phoneDisplay;
     resource.url = data.url;
+    if (Object.hasOwn(city.public_intake_addresses || {}, data.resource)) {
+      resource.address = city.public_intake_addresses[data.resource];
+      if (typeof resource.address !== "string" || !resource.address.trim()) {
+        throw new Error(`${city.file}: invalid public intake address for ${data.resource}.`);
+      }
+      resource.publicIntakeSource = data.url;
+    }
     resource.featured = priority <= 8;
     resource.priority = priority;
     return resource;
   });
+
+  for (const title of Object.keys(city.public_intake_addresses || {})) {
+    if (resources.filter(resource => resource.title === title).length !== 1) {
+      throw new Error(`${city.file}: public intake opt-in must match one listing: ${title}.`);
+    }
+  }
 
   const categorySet = new Set(resources.flatMap((resource) => resource.categories));
   if (categorySet.size < 6) {

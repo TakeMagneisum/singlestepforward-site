@@ -1857,6 +1857,39 @@
       "type": "metro",
       "reviewed": "2026-11-18",
       "generate": false
+    },
+    {
+      "id": "savannah-chatham",
+      "file": "savannah-chatham-review.csv",
+      "constant": "SAVANNAH_CHATHAM",
+      "name": "Savannah / Chatham County",
+      "type": "county",
+      "state": "Georgia",
+      "state_code": "GA",
+      "country": "US",
+      "reviewed": "2026-11-23",
+      "generate": true,
+      "register": true,
+      "jurisdiction_note": "This guide covers Savannah and Chatham County. Some programs accept only people or properties within Savannah city limits. Check each listing and confirm eligibility and current intake with the provider.",
+      "public_intake_addresses": {
+        "Chatham County Health Department – Eisenhower Clinic": "1395 Eisenhower Drive, Savannah, GA 31406"
+      },
+      "routing_titles": {
+        "emergency": [
+          "988 Suicide & Crisis Lifeline",
+          "SAFE Shelter domestic violence support"
+        ],
+        "suicide": [
+          "988 Suicide & Crisis Lifeline"
+        ],
+        "violence": [
+          "SAFE Shelter domestic violence support",
+          "Georgia Legal Services Program – civil legal aid"
+        ],
+        "fallback": [
+          "United Way of the Coastal Empire 211"
+        ]
+      }
     }
   ]
 }

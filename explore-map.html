@@ -6,18 +6,19 @@
   <title>Explore by map | Single Step Forward</title>
   <link rel="icon" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css?v=20261123-map">
-  <link rel="stylesheet" href="assets/explore-map.css?v=20261123-us">
+  <link rel="stylesheet" href="assets/explore-map.css?v=20261123-ga">
   <script src="assets/colorado-resources.js?v=20261118-4" defer></script>
   <script src="assets/massachusetts-resources.js?v=20261118-4" defer></script>
   <script src="assets/new-york-resources.js?v=20261118-4" defer></script>
   <script src="assets/illinois-resources.js?v=20261118-4" defer></script>
-  <script src="assets/city-resources.js?v=20261118-4" defer></script>
+  <script src="assets/city-resources.js?v=20261123-ga" defer></script>
   <script src="assets/expanded-editions.js?v=20261118-4" defer></script>
   <script src="assets/resources.js?v=20261118-4" defer></script>
   <script src="assets/calm.js?v=20261118-4" defer></script>
-  <script src="assets/i18n.js?v=20261123-us" defer></script>
+  <script src="assets/i18n.js?v=20261123-ga" defer></script>
   <script src="assets/maps/world-overview.js" defer></script>
-  <script src="assets/explore-map.js?v=20261123-us" defer></script>
+  <script src="assets/maps/georgia-county-names.js" defer></script>
+  <script src="assets/explore-map.js?v=20261123-ga" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -41,6 +42,7 @@
     <p>Choose a country or territory, or search by place name.</p>
     <p id="map-back" hidden><a href="explore-map.html">Back to world map</a></p>
     <p id="map-back-us" hidden><a href="explore-map.html?country=US">All US guides</a></p>
+    <p id="map-back-ga" hidden><a href="explore-map.html?country=US&amp;state=GA">All Georgia guides</a></p>
     <div class="map-filters">
       <label for="map-country">Country or territory
         <select id="map-country"><option value="">All countries and territories</option><option value="US">United States</option><option value="PR">Puerto Rico</option><option value="CL">Chile</option><option value="GB">United Kingdom</option><option value="NZ">New Zealand</option></select>
@@ -89,11 +91,27 @@
         <h2 id="map-list-title"><span>Local guides</span><span id="map-state-title" hidden></span></h2>
         <p id="map-status" role="status"></p>
         <p id="map-coverage" hidden>Guides cover selected local areas. Each provider lists its own service area.</p>
+        <p id="map-atlanta-scope" hidden>The Atlanta guide focuses on the city. Check each provider’s service area.</p>
         <p id="map-unpublished" hidden>No local guides published here yet.</p>
         <p id="map-discover" hidden><a href="discover.html">Explore help by US ZIP code</a></p>
         <p id="map-empty" hidden>No matching guides. Try another place or reset the filters.</p>
         <ul id="map-guides"></ul>
         <noscript><p><a href="index.html">Browse local guides from the homepage</a>.</p></noscript>
+      </section>
+      <section id="ga-map" class="map-panel" hidden aria-labelledby="ga-map-title">
+        <h2 id="ga-map-title">Georgia counties</h2>
+        <div id="ga-map-graphic" hidden>
+          <p><span class="state-legend-swatch" aria-hidden="true"></span> <span>Gold shows counties with local guides.</span></p>
+          <svg id="ga-map-svg" aria-hidden="true"></svg>
+          <p class="map-credit"><a href="https://www.census.gov/geographies/mapping-files/2024/geo/carto-boundary-file.html">County boundaries from the U.S. Census Bureau, 2024</a></p>
+        </div>
+        <div class="map-filters">
+          <label for="county-search">Find a Georgia county
+            <input id="county-search" type="search">
+          </label>
+        </div>
+        <p id="county-search-empty" role="status" hidden>No matching counties.</p>
+        <ul id="county-links" class="overview-links"></ul>
       </section>
     </div>
   </main>

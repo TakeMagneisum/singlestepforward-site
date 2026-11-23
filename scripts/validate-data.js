@@ -120,6 +120,7 @@ function validateDiscovery(discovery, areas) {
   ].forEach(([zip, areaId]) => {
     if (zipOwners.get(zip) !== areaId) fail(`ZIP regression: ${zip} must suggest the ${areaId} guide.`);
   });
+  if (zipOwners.get("31401") !== "savannah-chatham") fail("ZIP regression: 31401 must suggest the Savannah / Chatham County guide.");
   if (zipOwners.has("99999")) fail("ZIP regression: 99999 must remain an unmatched fallback example.");
 
   if (categories.length < 13) fail("Universal discovery must contain at least 13 topic categories.");
@@ -302,7 +303,9 @@ function validateMarkup(areas) {
         ["assets/styles.css", "assets/area.js", "assets/i18n.js"].includes(asset);
       const travelEntry = pageName === "find-help.html" &&
         ["assets/resources.js", "assets/guide.js", "assets/i18n.js"].includes(asset);
-      const expected = travelEntry ? "20261123-travel" : mapEntry ? "20261123-map" : expectedCacheToken;
+      const georgiaEntry = (["index.html", "find-help.html"].includes(pageName) && asset === "assets/city-resources.js") ||
+        (pageName === "discover.html" && asset === "assets/discovery-data.js");
+      const expected = georgiaEntry ? "20261123-ga" : travelEntry ? "20261123-travel" : mapEntry ? "20261123-map" : expectedCacheToken;
       if (token !== expected) fail(pageName + ": inconsistent cache token for " + asset + ".");
       if (!fs.existsSync(path.join(root, asset))) fail(pageName + ": missing referenced asset " + asset + ".");
     });
