@@ -59,3 +59,23 @@
 }
 .overview-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
 .overview-links span { font-size: .8rem; }
+
+@media (min-width: 900px) {
+  .map-layout:has(#us-map:not([hidden])) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+}
+#us-map-svg { display: block; width: 100%; height: auto; margin-block: .75rem; }
+#us-map-svg path {
+  fill: var(--calm-surface-2, #d8e8dd);
+  stroke: var(--calm-text, #264c45);
+  stroke-width: .7;
+  vector-effect: non-scaling-stroke;
+  fill-rule: evenodd;
+  cursor: pointer;
+}
+#us-map-svg .has-guides path { fill: #d8aa4d; }
+#us-map-svg a:hover path { stroke-width: 2; }
+#us-map-svg text { font: 30px system-ui, sans-serif; fill: currentColor; }
+.state-legend-swatch { display: inline-block; width: .8em; height: .8em; background: #d8aa4d; border: 1px solid currentColor; border-radius: .2em; }
+#state-links { max-height: 18rem; overflow-y: auto; padding: .2rem; }
+#state-links li { display: grid; align-content: start; }
+#state-links li span { margin-bottom: .35rem; }

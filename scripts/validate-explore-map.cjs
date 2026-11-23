@@ -102,4 +102,61 @@ assert.equal(noWorld('map-guides').children.length, guideCount);
 const [, noInset] = await run('?region=caribbean', ['assets/maps/caribbean-overview.js']);
 assert.equal(noInset('overview-links').children[0].children[0].href, 'explore-map.html?country=PR');
 console.log('World landing, lazy geometry, Caribbean → Puerto Rico, uncovered country, Back, and map failure fallbacks passed.');
+const usEntries = Object.entries(areas).filter(([, area]) => area.country === 'US');
+const usStates = new Set(usEntries.map(([, area]) => area.stateCode));
+const [usWindow, us, usLocation, usEvents] = await run('?country=US');
+assert.equal(us('us-map').hidden, false);
+assert.equal(us('us-map-graphic').hidden, false);
+assert.equal(us('map-guides').children.length, usEntries.length);
+assert.equal(us('state-links').children.length, 51);
+assert.equal(Object.keys(usWindow.SSFUsStatePaths).length, 51);
+assert(!((await run(""))[0].SSFUsStatePaths));
+const stateLinks = new Map(us('state-links').children.map(row => {
+ const link = row.children[0];
+ return [new URL(link.href, 'file:///explore-map.html').searchParams.get('state'), link.href];
+}));
+for (const [state, href] of stateLinks) {
+ assert(usWindow.SSFUsStatePaths[state]?.startsWith('M'));
+ assert(us('us-map-svg').children.some(el => el.attrs.href === href));
+}
+for (const state of usStates) assert(stateLinks.has(state), state);
+for (const [state, href] of stateLinks) {
+ const [, filtered] = await run(query(href));
+ const expected = usEntries.filter(([, area]) => area.stateCode === state).map(([id]) => id).sort();
+ const actual = filtered('map-guides').children.map(row =>
+   new URL(row.children[0].href, 'file:///explore-map.html').searchParams.get('area')).sort();
+ assert.deepEqual(actual, expected);
+ assert.equal(filtered('map-unpublished').hidden, expected.length > 0);
+ assert.equal(filtered('map-discover').hidden, false);
+ assert.equal(filtered('map-back-us').hidden, false);
+}
+us('state-search').value = 'rhode island';
+us('state-search').handlers.input();
+assert.equal(us('state-links').children.length, 1);
+assert.equal(us('state-links').children[0].children[0].href, stateLinks.get('RI'));
+assert(!usStates.has('RI'));
+const [, california] = await run('?country=US&state=CA');
+california('map-search').value = 'San Diego';
+california('map-search').handlers.input();
+assert.equal(california('map-guides').children.length, 1);
+assert.equal(california('map-guides').children[0].children[0].href, 'find-help.html?area=san-diego');
+california('map-clear-search').handlers.click();
+assert.equal(california('map-guides').children.length, 8);
+usLocation.search = '?country=US&state=CA';
+usEvents.popstate();
+assert.equal(us('us-map').hidden, true);
+usLocation.search = '?country=US';
+usEvents.popstate();
+assert.equal(us('us-map').hidden, false);
+us('map-reset').handlers.click();
+assert.equal(us('overview-map').hidden, false);
+const [, noStates] = await run('?country=US', ['assets/maps/us-state-boundaries.js']);
+assert.notEqual(noStates('us-map-graphic').hidden, false);
+assert.equal(noStates('state-links').children.length, 51);
+assert.equal(noStates('map-guides').children.length, usEntries.length);
+const [, nonUs] = await run('?country=PR&state=CA');
+assert.equal(nonUs('map-state-title').hidden, true);
+const [, invalidState] = await run('?country=US&state=XX');
+assert.equal(invalidState('map-guides').children.length, usEntries.length);
+console.log(usEntries.length + ' US guides across ' + usStates.size + ' jurisdictions. All 51 state routes, map coverage, search, ZIP fallback, Back/reset, and missing geometry passed.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -35,6 +35,22 @@
     "E09000032": "london-wandsworth",
     "E09000033": "london-westminster"
   };
+  // Census postal codes used by the guide registry. Keep these available without geometry.
+  const states = {
+    AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas",
+    CA: "California", CO: "Colorado", CT: "Connecticut", DE: "Delaware",
+    DC: "District of Columbia", FL: "Florida", GA: "Georgia", HI: "Hawaii",
+    ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
+    KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine",
+    MD: "Maryland", MA: "Massachusetts", MI: "Michigan", MN: "Minnesota",
+    MS: "Mississippi", MO: "Missouri", MT: "Montana", NE: "Nebraska",
+    NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey", NM: "New Mexico",
+    NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio",
+    OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island",
+    SC: "South Carolina", SD: "South Dakota", TN: "Tennessee", TX: "Texas",
+    UT: "Utah", VT: "Vermont", VA: "Virginia", WA: "Washington",
+    WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming"
+  };
   const registry = window.SSF_RESOURCE_AREAS;
   const entries = Object.entries(registry).sort((a, b) => a[1].label.localeCompare(b[1].label));
   const byId = id => document.getElementById(id);
@@ -51,6 +67,14 @@
   const supported = new Set(entries.map(([, area]) => area.country));
   const counts = new Map();
   for (const [, area] of entries) counts.set(area.country, (counts.get(area.country) || 0) + 1);
+  const stateCounts = new Map();
+  for (const [, area] of entries) {
+    if (area.country === "US") stateCounts.set(area.stateCode, (stateCounts.get(area.stateCode) || 0) + 1);
+  }
+  const statesPanel = byId("us-map");
+  const stateSearch = byId("state-search");
+  let selectedState = "";
+
   const names = new Map(Array.from(country.options).filter(option => option.value)
     .map(option => [option.value, option.textContent]));
   const overview = byId("overview-map");
@@ -105,6 +129,8 @@
       registerCountryNames({ [code]: /^[A-Z]{2}$/.test(code) ? regionNames.of(code) : code });
     }
     country.value = names.has(code) ? code : "";
+    const state = (params.get("state") || "").toUpperCase();
+    selectedState = country.value === "US" && Object.hasOwn(states, state) ? state : "";
     region = !country.value && params.get("region") === "caribbean";
   }
 
@@ -115,6 +141,56 @@
 
   function countryURL(code) {
     return "explore-map.html?country=" + encodeURIComponent(code);
+  }
+
+  function stateURL(code) {
+    return countryURL("US") + "&state=" + code;
+  }
+
+  function renderStateLinks() {
+    const value = normalize(stateSearch.value);
+    const matches = Object.entries(states).filter(([code, name]) =>
+      normalize(name).includes(value) || normalize(code) === value
+    );
+    byId("state-links").replaceChildren(...matches.map(([code, name]) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = stateURL(code);
+      link.textContent = name;
+      const count = document.createElement("span");
+      count.textContent = guideCount(stateCounts.get(code) || 0);
+      item.append(link, count);
+      return item;
+    }));
+    byId("state-search-empty").hidden = matches.length > 0;
+  }
+
+  function drawStateMap(paths) {
+    const map = byId("us-map-svg");
+    const element = tag => document.createElementNS(svgNamespace, tag);
+    map.replaceChildren();
+    for (const [code, name] of Object.entries(states)) {
+      if (!paths[code]) continue;
+      const link = element("a");
+      link.setAttribute("href", stateURL(code));
+      link.setAttribute("tabindex", "-1");
+      if (stateCounts.has(code)) link.setAttribute("class", "has-guides");
+      const title = element("title");
+      title.textContent = name + " · " + guideCount(stateCounts.get(code) || 0);
+      const shape = element("path");
+      shape.setAttribute("d", paths[code]);
+      link.append(title, shape);
+      map.append(link);
+    }
+    for (const [label, x] of [["Alaska", 132], ["Hawaii", 349]]) {
+      const text = element("text");
+      text.setAttribute("x", x);
+      text.setAttribute("y", 645);
+      text.setAttribute("text-anchor", "middle");
+      text.textContent = label;
+      map.append(text);
+    }
+    byId("us-map-graphic").hidden = false;
   }
 
   function overviewLink(label, href, count) {
@@ -171,10 +247,18 @@
   }
 
   function renderView() {
-    const view = country.value || (region ? "caribbean" : "world");
+    const view = selectedState ? "US:" + selectedState : country.value || (region ? "caribbean" : "world");
     if (view === renderedView) return;
     renderedView = view;
     const version = ++viewVersion;
+    statesPanel.hidden = view !== "US";
+    byId("map-back-us").hidden = !selectedState;
+    if (view === "US") {
+      renderStateLinks();
+      loadMap("SSFUsStatePaths", "assets/maps/us-state-boundaries.js").then(paths => {
+        if (version === viewVersion && paths) drawStateMap(paths);
+      });
+    }
     panel.hidden = true;
     overview.hidden = true;
     byId("map-back").hidden = view === "world";
@@ -233,13 +317,18 @@
 
   function render() {
     renderView();
-    const published = !country.value || counts.has(country.value);
+    const published = selectedState ? stateCounts.has(selectedState) : !country.value || counts.has(country.value);
+    const stateTitle = byId("map-state-title");
+    stateTitle.textContent = selectedState ? " · " + states[selectedState] : "";
+    stateTitle.hidden = !selectedState;
+    byId("map-clear-search").hidden = !search.value;
     byId("map-unpublished").hidden = published;
     byId("map-coverage").hidden = !country.value || !published;
     byId("map-discover").hidden = country.value !== "US";
     const terms = normalize(search.value).split(/\s+/);
     const matches = entries.filter(([, area]) =>
       (!country.value || area.country === country.value) &&
+      (!selectedState || area.stateCode === selectedState) &&
       terms.every(term => normalize(area.label + " " + area.name).includes(term))
     );
     list.replaceChildren(...matches.map(([id, area]) => {
@@ -255,6 +344,7 @@
   }
   country.addEventListener("change", () => {
     region = false;
+    selectedState = "";
     writeURL();
     render();
   });
@@ -262,14 +352,22 @@
     readURL();
     render();
   });
+  stateSearch.addEventListener("input", renderStateLinks);
   search.addEventListener("input", render);
+  byId("map-clear-search").addEventListener("click", () => {
+    search.value = "";
+    render();
+    search.focus();
+  });
   byId("map-reset").addEventListener("click", () => {
     if (country.value || region) {
       country.value = "";
+      selectedState = "";
       region = false;
       writeURL();
     }
     search.value = "";
+    stateSearch.value = "";
     render();
     search.focus();
   });
